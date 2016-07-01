@@ -3131,7 +3131,7 @@ h6 { font-size: 0.750em; }
 .newdeltatopNav #zz13_RootAspMenu:after { content: ''; display: block; float: none; clear: both }
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a { border: none; color: #ffffff; display: block; font: 300 1em "Work Sans", sans-serif; padding: 7px 17px 8px; }
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a:hover, .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a.ms-core-listMenu-selected { background: #0c6eb7; color: #fff !important; }
-.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a > .dynamic-children.additional-background, .ms-core-listMenu-horizontalBox .dynamic-children.additional-background { padding-right: 15px; background: url("/SiteAssets/navigation-arrow.png") right center no-repeat; }
+.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a > .dynamic-children.additional-background, .ms-core-listMenu-horizontalBox .dynamic-children.additional-background { padding-right: 15px; background: url("https://lacoets.github.io/intranet/navigation-arrow.png") right center no-repeat; }
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children > .additional-background{font-weight:300; color:#fff}
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children > .additional-background >span{font-weight:300;}
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children{padding:7px 17px 8px;font-weight:300;}
