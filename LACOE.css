@@ -3581,7 +3581,7 @@ input[type="submit"], input[type="button"],.box-btn,input[type="reset"] { backgr
 .whats-happening .box-heading h3 {background-image: url("../images/whats-happening-icon.png"); background-position:12px center}
 .top-contributor .box-heading h3 {background-image: url("../images/top-contributor-icon.png");}
 .searchicon-box{position: relative;border: 0;display:block;width: 26px;height: 22px;margin: 0px 0 0 0px;
-background: url('/_layouts/15/images/searchresultui.png') no-repeat;-webkit-transition: all 300ms ease-in-out;
+background: url('https://lacoets.github.io/intranet/searchresultui.png') no-repeat;-webkit-transition: all 300ms ease-in-out;
 -moz-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;-o-transition: all 300ms ease-in-out;
 transition: all 300ms ease-in-out;
 /* background-position: 0; *//* background-position-x: 0; *//* background-position-y: 0; */
