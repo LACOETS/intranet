@@ -2985,7 +2985,7 @@ margin: 0 auto; width: 1170px }
 .footer-links ul li a { display: block; font: 300 0.875em 'Work Sans', sans-serif; color: #fff; }
 .social-media { float: right; margin-top: 9px; margin-bottom: 0px; text-align: center; }
 .social-media li { display: inline-block; margin: 0 5px; }
-.social-media li a { background:url("../images/sprite.png") 0 0 no-repeat; display: block; width: 44px; height: 42px; }
+.social-media li a { background:url("https://lacoets.github.io/intranet/sprite.png") 0 0 no-repeat; display: block; width: 44px; height: 42px; }
 .social-media li a.fb { background-position:1px -49px; }
 .social-media li a.fb:hover {background-position:1px -92px; }
 .social-media li a.tw { background-position:1px -134px;  }
@@ -3200,8 +3200,8 @@ ul.dynamic { min-width: 200px; }
 .image-infoslider .bx-controls-direction a:hover{background-color:#e3e3e3 !important}
 .image-infoslider ul li.active-slide { background: #e1e1e0 }
 .image-infoslider .bx-controls-direction a, .calender-slider .bx-controls-direction a { outline: 0 none; text-indent: -9999px; bottom: 0%; width: 26px; z-index: 9999; overflow: hidden; text-align: left; display: inline-block; padding: 4px 0; text-align: center; vertical-align: middle; border-left: #e0e0e0 solid 1px; }
-.image-infoslider .bx-controls-direction a.bx-prev, .calender-slider .bx-controls-direction a.bx-prev { background: url(../images/sprite.png) no-repeat -52px -274px; left: 0; }
-.image-infoslider .bx-controls-direction a.bx-next, .calender-slider .bx-controls-direction a.bx-next { background: url(../images/sprite.png) no-repeat -79px -274px; right: 0; margin-right: 25px; border-right: #e0e0e0 solid 1px; }
+.image-infoslider .bx-controls-direction a.bx-prev, .calender-slider .bx-controls-direction a.bx-prev { background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -52px -274px; left: 0; }
+.image-infoslider .bx-controls-direction a.bx-next, .calender-slider .bx-controls-direction a.bx-next { background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -79px -274px; right: 0; margin-right: 25px; border-right: #e0e0e0 solid 1px; }
 .image-infoslider .bx-has-controls-direction, .calender-slider .bx-has-controls-direction { position: relative; text-align: right }
 .image-infoslider .bx-controls-direction, .calender-slider .bx-controls-direction { display: inline-block; position: relative; background: #f3f3f3; border: #e0e0e0 solid 1px; width: 105px; border-radius: 2px; overflow: hidden; margin-right: 7px; margin-top: -3px }
 .image-infoslider .bx-viewport { height: 303px !important }
@@ -3314,7 +3314,7 @@ ul.dynamic { min-width: 200px; }
 .dept-caldr-header .tbl-content { line-height: 15px; }
 .pagination-page dl dt { background: #f0f0f0 none repeat scroll 0 0; border-bottom: 1px solid #cdcdcd; box-shadow: inset 0px 0px 4px -2px rgba(0,0,0,0.5); }
 .cal-view-icon .box-heading h3 #anchor-cal-view { float: right; position:relative; color: #ffffff; font-size: 0.875em; font-weight: 400; line-height: 21px; margin-left: 25px; padding-left: 25px; vertical-align: middle; margin-right: 20px; margin-top: 3px }
-.cal-view-icon .box-heading h3 #anchor-cal-view b{position:absolute; left:0; top:0; font-weight:normal; width:18px; height:18px;background: url("../images/sprite.png") no-repeat -183px -26px;}
+.cal-view-icon .box-heading h3 #anchor-cal-view b{position:absolute; left:0; top:0; font-weight:normal; width:18px; height:18px;background: url("https://lacoets.github.io/intranet/sprite.png") no-repeat -183px -26px;}
 .cal-view-icon .box-heading h3:after { clear: both; display: block; content: ''; float: none }
 .ellipse { display: none !important }
 .page_navigation { position: absolute; right: 7px; bottom: 7px }
@@ -3396,7 +3396,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .boxes-cntr { margin: 0 -1% }
 .box-heading { margin: 0 -1px 0 0px; border-top-left-radius: 2px; border-top-right-radius: 2px; }
 .box-heading h3 { border-top-left-radius: 2px; border-top-right-radius: 2px; color: #fff; font-weight: 400; font-size: 1.250em; padding: 4px 0 4px 45px; position:relative;background:#1c7ec7; /*border-bottom: #9b9b9b solid 1px*/ }
-.box-heading h3 i{background:url(../images/sprite.png) 0 0 no-repeat; position:absolute; left:12px; top:4px; height:24px; width:24px;}
+.box-heading h3 i{background:url(https://lacoets.github.io/intranet/sprite.png) 0 0 no-repeat; position:absolute; left:12px; top:4px; height:24px; width:24px;}
 .box-style { position: relative; border-radius: 2px; /*box-shadow: 0px 0px 5px 1px rgba(0,0,0, 0.25);*/ border: 1px solid rgba(0, 0, 0, 0.4); border-top: none; background: #fff; }
 .box-style .box-contentinfos { overflow: hidden; }
 .box-contentinfos { padding: 0 13px 13px }
@@ -3455,7 +3455,7 @@ textarea.ms-microfeed-rootOrReplyPostBox { border: none; outline: none }
 .lacoe-reportcard-box .ms-webpart-zone { position: relative }
 .lacoe-reportcard-box .ms-webpart-zone .s4-wpcell-plain { position: absolute; left: 0; top: 0; z-index: 0; background: #fff; width: 100% !important }
 .lacoe-reportcard-box .ms-webpart-zone .s4-wpcell-plain:first-child { z-index: 1; }
-.icon-common { float: right; margin-right: 10px; margin-top: 2px; height:20px; width:20px; background: url('../images/sprite.png') -1px -27px no-repeat;}
+.icon-common { float: right; margin-right: 10px; margin-top: 2px; height:20px; width:20px; background: url('https://lacoets.github.io/intranet/sprite.png') -1px -27px no-repeat;}
 .icon-common:hover{text-decoration:none}
 .icon-common:after { content: ''; clear: both; float: none; display: block }
 /*Pictorial Discussion start  */
@@ -3496,7 +3496,7 @@ body.fontIncrease { font-size: 109%; }
 /*Websitefont increase end*/
 .placeholder-cnt .placeholder { overflow: hidden; background-color: #e7f3fa; border: 1px solid #1c7ec7; border-radius: 2px; color: #4f5356; font: 1em "Work Sans", sans-serif; padding: 8px 12px; }
 .placeholder-cnt .placeholder ul {display:table; }
-.placeholder-cnt .placeholder ul li {display:table-cell; white-space:nowrap; padding-right: 20px; background: url('../images/sprite.png') -291px -284px no-repeat; padding-left: 17px }
+.placeholder-cnt .placeholder ul li {display:table-cell; white-space:nowrap; padding-right: 20px; background: url('https://lacoets.github.io/intranet/sprite.png') -291px -284px no-repeat; padding-left: 17px }
 .placeholder-cnt .placeholder ul li:last-child { padding-right: 0 }
 .placeholder-cnt .placeholder ul:after{content:''; clear:both; display:block; float:none;}
 .box-paginations { position: absolute; right: 0; bottom: 0 }
@@ -3656,10 +3656,10 @@ select:focus{outline:none;}
 .overall-size-fonts{display:none}
 
 /*sprite image css added*/
-.last-prev-img,.page_navigation .first_link{background: url(../images/sprite.png) no-repeat -1px -275px;}
-.pagi-prev-img,.page_navigation .previous_link{background: url(../images/sprite.png) no-repeat -52px -275px;}
-.pagi-next-img,.page_navigation .next_link{background: url(../images/sprite.png) no-repeat -79px -275px;}
-.last-next-img,.page_navigation .last_link{background: url(../images/sprite.png) no-repeat -26px -275px;}
+.last-prev-img,.page_navigation .first_link{background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -1px -275px;}
+.pagi-prev-img,.page_navigation .previous_link{background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -52px -275px;}
+.pagi-next-img,.page_navigation .next_link{background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -79px -275px;}
+.last-next-img,.page_navigation .last_link{background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -26px -275px;}
 
 /*Sprite image css end*/
 
@@ -3688,7 +3688,7 @@ select:focus{outline:none;}
 .grid-2 { width: 16.666666666666664% }
 .grid-1 { width: 8.333333333333332% }
 .scrollTop { position: fixed; right: 20px; bottom: 20px; z-index: 6; display: none; }
-.scrollTop a { display: block; color: #fff; width: 40px; height: 40px; background: url(../images/sprite.png) no-repeat -256px 7px #1C7EC7; }
+.scrollTop a { display: block; color: #fff; width: 40px; height: 40px; background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -256px 7px #1C7EC7; }
 
 /*======================================= Above (768px) ipad Portrait  End ========================================*/
 
