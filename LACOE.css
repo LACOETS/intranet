@@ -3588,7 +3588,7 @@ transition: all 300ms ease-in-out;
 background-position: 2;background-position: 0 -68px;}
 .selectdropwn-search .ms-srch-sb-searchLink:hover, .ms-srch-sb-navLink:hover{background-color:transparent}
 .input-type-select{position:relative}
-.input-type-select:after{content:''; width:30px; height:24px; right:0; top:0; position:absolute; background:url("https://lacoets.github.io/intranet/sprite.png") no-repeat -260px -63px no-repeat; pointer-events: none;}
+.input-type-select:after{content:''; width:30px; height:24px; right:0; top:0; position:absolute; background:url("https://lacoets.github.io/intranet/sprite.png") -260px -63px no-repeat; pointer-events: none;}
 .selectdropwn-search #SmallSearchInputBox1{position: absolute;width: 165px;height:24px;left:0px;outline: none;}
 .selectdropwn-search .input-type-select{width:86%; float:left; overflow:hidden;position:relative;}
 .selectdropwn-search .input-type-select select{width:100%; border:none; outline:none}
