@@ -3456,6 +3456,7 @@ textarea.ms-microfeed-rootOrReplyPostBox { border: none; outline: none }
 .lacoe-reportcard-box .ms-webpart-zone .s4-wpcell-plain { position: absolute; left: 0; top: 0; z-index: 0; background: #fff; width: 100% !important }
 .lacoe-reportcard-box .ms-webpart-zone .s4-wpcell-plain:first-child { z-index: 1; }
 .icon-common { float: right; margin-right: 10px; margin-top: 2px; height:20px; width:20px; background: url('../images/sprite.png') -1px -27px no-repeat;}
+.icon-common:hover{text-decoration:none}
 .icon-common:after { content: ''; clear: both; float: none; display: block }
 /*Pictorial Discussion start  */
 .pictorial-discussion { position: relative; }
@@ -3558,6 +3559,7 @@ input[type="submit"], input[type="button"],.box-btn,input[type="reset"] { backgr
 .faqs-boxcntr .accordion dl:last-child { }
 .faqs-boxcntr { padding-bottom: 25px; margin-bottom: 25px }
 .boxes-cntr.faq-boxescntr{margin:0 auto}
+.boxes-cntr.faq-boxescntr .box-heading h3 i {background-position: -202px 2px;}
 /*FAQS accordion css end*/
 
 .owner-info ul li abbr{float:left; width:25%; font-weight:500}
@@ -3692,4 +3694,6 @@ select:focus{outline:none;}
 
 /*****************Design Team CSS End***************/
 
-a[href='https://lacoe.sharepoint.com/TechSvcs/Lists/DepartmentLinks/AllItems.aspx']{ display: none }
+a[href*='/TechSvcs/Lists/DepartmentLinks/AllItems.aspx']{ display: none }
+a[href*='/TechSvcs/ADS/Lists/DepartmentLinks/AllItems.aspx']{ display: none }
+a[href*='/TechSvcs/ADS/ADS-ADMIN/Lists/DepartmentLinks/AllItems.aspx']{ display: none }
