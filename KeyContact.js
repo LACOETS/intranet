@@ -63,7 +63,7 @@ $(document).ready(function() {
 	    var pictureURL1 = "/_layouts/15/userphoto.aspx?size=L&accountname=" + $htmlEncode(userEntry.Email);
 	    if(userArray[5]==undefined)
 	    {
-	   		profileImg1 = "<div class='keyprofilepic'><img src='/sites/DevEnv/_catalogs/masterpage/images/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
+	   		profileImg1 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
 	    }
 	    else
 	    {
@@ -162,7 +162,7 @@ $(document).ready(function() {
 		    var pictureURL2 = "/_layouts/15/userphoto.aspx?size=L&accountname=" + $htmlEncode(secPrimeEntry.Email);
 		    if(secPrimeArray[5]==undefined)
 		    {
-		   		profileImg2 = "<div class='keyprofilepic'><img src='/sites/DevEnv/_catalogs/masterpage/images/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
+		   		profileImg2 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
 		    }
 		    else
 		    {
@@ -265,7 +265,7 @@ $(document).ready(function() {
         var pictureURL3 = "/_layouts/15/userphoto.aspx?size=L&accountname=" + $htmlEncode(userEntrySec.Email);
         if(userArraySec[5]==undefined)
         {
-       		profileImg3 = "<div class='keyprofilepic'><img src='/sites/DevEnv/_catalogs/masterpage/images/no-user-img-dummy.jpg' alt='No image found for this profile'></div>";
+       		profileImg3 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile'></div>";
        	}
 		else
 		{
@@ -311,7 +311,7 @@ $(document).ready(function() {
         // $('div[id="keyContactSecondary"]').append(htmlSec);
         $('#keyContactSecondary .content').append(htmlSec);	
         }
-   //$('.keyprofilepic').children('img').attr('src','/sites/DevEnv/_catalogs/masterpage/images/no-user-img-dummy.jpg');
+   //$('.keyprofilepic').children('img').attr('src','https://lacoets.github.io/intranet/no-user-img-dummy.jpg');
 });
  </script>
  
