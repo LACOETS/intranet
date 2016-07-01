@@ -1506,7 +1506,7 @@ a.ms-navedit-linkDialogIcon { margin-right: 3px; }
 .ms-displayInline { display: inline; }
 .ms-navedit-errorMsg { max-width: 400px; overflow: hidden; text-overflow: ellipsis; }
 .ms-core-listMenu-horizontalBox .dynamic-children.additional-background { padding-right: 26px; /* [RecolorImage(themeColor:"BodyText",method:"Filling")] */ background-image: url("https://lacoets.github.io/intranet/menu-down.gif"); background-repeat: no-repeat; background-position: right center; cursor: pointer; }
-.ms-core-listMenu-horizontalBox .dynamic .dynamic-children.additional-background { /* [RecolorImage(themeColor:"BodyText",method:"Filling")] */ background-image: url("/_layouts/15/images/menu-right.gif?rev=42"); }
+.ms-core-listMenu-horizontalBox .dynamic .dynamic-children.additional-background { /* [RecolorImage(themeColor:"BodyText",method:"Filling")] */ background-image: url("https://lacoets.github.io/intranet/menu-right.gif"); }
 /*Sheetal Changes Start*/
 .dynamic.dynamic-children.hover, .dynamic a.dynamic:hover { background: #1C7EC7; }
 .static.dynamic-children.hover > ul .dynamic.dynamic-children.hover > a .additional-background { background-image: url("https://lacoets.github.io/intranet/menu-right-hover.gif"); }
