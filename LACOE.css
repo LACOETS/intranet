@@ -3663,6 +3663,7 @@ select:focus{outline:none;}
 
 .o365cs-base.o365cs-topnavBGColor-2{background-color:#0072c6 !important}
 .ms-cui-topBar2 {border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
+.o365cs-base .o365cs-topnavLinkBackground-2{background-color:transparent !important}
 /*Sprite image css end*/
 
 
