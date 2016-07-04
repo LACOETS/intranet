@@ -30,7 +30,7 @@ $(document).ready(function() {
        	          "<And><Geq><FieldRef Name='KeyContact_x0020_End_x0020_Date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Geq>" +
                   "<Leq><FieldRef Name='KeyContacts_x0020_StartDate' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And>" +
        	          "</And></Or></And></Where></Query>",
-	   CAMLQueryOptions: "<QueryOptions><ExpandUserField>True</ExpandUserField></QueryOptions>",
+	   CAMLQueryOptions: "<QueryOptions><ExpandUserField>False</ExpandUserField></QueryOptions>",
 	   completefunc: function (xData, Status) {  
 	      
 	       $(xData.responseXML).SPFilterNode("z:row").each(function() {  
