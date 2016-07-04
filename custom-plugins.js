@@ -43,7 +43,7 @@ $(function(){
 	});
 	$("#resourcelink-last").on("click" ,function() {
 		var count = newresource.getSlideCount();
-		newresource.goToSlide(count-4);
+		newresource.goToSlide(count-1);
 		return false;
 	});
 })
