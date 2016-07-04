@@ -39,10 +39,13 @@ $(document).ready(function() {
 	            //alert(itemCount);
 	              ownerName = $(this).attr("ows_KeyContacts_x0020_EmployeeName");
 				  ownerJobTitle = $(this).attr("ows_Job_x0020_Title");
+				  alert(ownerJobTitle);
 				  ownerEmail = $(this).attr("ows_Email");
+				  alert(ownerEmail);
 				  ownerPhone = $(this).attr("ows_Work_x0020_Phone");
+				  alert(ownerPhone);
 				  ownerPictureURL = $(this).attr("ows_Image_x0020_URL");
-	              //alert(ownerName);
+	              alert(ownerPictureURL);
 	           });  
 	      }
 	});
