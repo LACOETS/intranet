@@ -3674,7 +3674,7 @@ select:focus{outline:none;}
 .resource-link-section table.ms-listviewtable tr:hover{background-color:#E1E1E2 !important}
 .resource-link-section table.ms-listviewtable td:hover{background-color:#E1E1E2}
 .resource-link-section table.ms-listviewtable tr:last-child{border-bottom:none;}
-.resource-link-section table.ms-listviewtable td{width: 100% !important; padding:0 !important; border:none;}
+.resource-link-section table.ms-listviewtable td{width: 100% !important; padding:0 !important; border:none !important;}
 .resource-link-section table.ms-listviewtable td a{padding: 9px 15px 10px 15px;font-size: 1em; display:block; color:#585858}
 .resource-link-section table.ms-listviewtable td a:visited{color:#585858}
 /*New theme resouce link end*/
