@@ -3666,6 +3666,10 @@ select:focus{outline:none;}
 .o365cs-base .o365cs-topnavLinkBackground-2{background-color:transparent !important}
 /*Sprite image css end*/
 
+/*New theme resouce link*/
+.resource-link-section table{width:100%;}
+.resource-link-section table.ms-listviewtable{width:100%;border-collapse: collapse;}
+/*New theme resouce link end*/
 
 /*======================================= Content Area CSS End ========================================*/
 
