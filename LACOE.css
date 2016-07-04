@@ -3667,6 +3667,7 @@ select:focus{outline:none;}
 /*Sprite image css end*/
 
 /*New theme resouce link*/
+.resource-link-section .s4-wpcell > .ms-webpart-chrome, .s4-wpActive > .ms-webpart-chrome{border:none !important}
 .resource-link-section table{width:100%;}
 .resource-link-section table.ms-listviewtable{width:100%;border-collapse: collapse;}
 .resource-link-section table.ms-listviewtable tr{border-bottom: 1px solid #e4e4e4;}
