@@ -179,7 +179,7 @@ $(document).ready(function() {
 		    }
 		    else
 		    {
-							ownerPictureURL = ownerPictureURL.split(',')[0];
+				ownerPictureURL = ownerPictureURL.split(',')[0];
 		   		profileImg2 = "<div class='keyprofilepic'><img src='" + ownerPictureURL  + "' alt='No image found for this profile' ></div>";
 		    }	
 			
@@ -231,6 +231,11 @@ $(document).ready(function() {
 
 //Secondary key contact
     var secondaryName;
+	var secondaryJobTitle;
+	var secondaryEmail;
+	var secondaryPhone;
+	var secondaryPictureURL;
+	
     $().SPServices({  
         webURL: curSiteUrl,
         operation: "GetListItems",  
@@ -247,12 +252,23 @@ $(document).ready(function() {
        	          "<And><Geq><FieldRef Name='KeyContact_x0020_End_x0020_Date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Geq>" +
                   "<Leq><FieldRef Name='KeyContacts_x0020_StartDate' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And>" +
        	          "</Or></And></Where></Query>",
-        CAMLQueryOptions: "<QueryOptions><ExpandUserField>True</ExpandUserField></QueryOptions>",
+        CAMLQueryOptions: "<QueryOptions><ExpandUserField>False</ExpandUserField></QueryOptions>",
         completefunc: function (xData, Status) {  
 	      
             $(xData.responseXML).SPFilterNode("z:row").each(function() {  
                 //alert(xData.responseText);
-                secondaryName= $(this).attr("ows_KeyContacts_x0020_EmployeeName");
+                //secondaryName= $(this).attr("ows_KeyContacts_x0020_EmployeeName");
+				
+				secondaryName = $(this).attr("ows_KeyContacts_x0020_EmployeeName");
+				  secondaryName = secondaryName.split('#')[1];
+				  secondaryJobTitle = $(this).attr("ows_Job_x0020_Title");
+				  //alert(ownerJobTitle);
+				  secondaryEmail = $(this).attr("ows_Email");
+				  //alert(ownerEmail);
+				  secondaryPhone = $(this).attr("ows_Work_x0020_Phone");
+				  //alert(ownerPhone);
+				  secondaryPictureURL = $(this).attr("ows_Image_x0020_URL");
+	              //alert(ownerPictureURL);
             });  
         }
     });
@@ -261,7 +277,7 @@ $(document).ready(function() {
     {
 	
         // 0 - user type value (id+user), 1- account name, 2- personal email, 3- work email, 4 - name, 5 - profile picture path, 6 - , 7- Title
-        var userEntrySec = {};
+        /*var userEntrySec = {};
         var userArraySec = secondaryName.split(",#");
         var userId = userArraySec[0].split(";#")[0];
         userEntrySec.Name = userArraySec[4];
@@ -278,47 +294,52 @@ $(document).ready(function() {
                     WorkPhoneSec= $(this).parent().find("Values").text();
                 });
             }     
-        });
+        });*/
         var profileImg3;
-        var pictureURL3 = "/_layouts/15/userphoto.aspx?size=L&accountname=" + $htmlEncode(userEntrySec.Email);
-        if(userArraySec[5]==undefined)
+        //var pictureURL3 = "/_layouts/15/userphoto.aspx?size=L&accountname=" + $htmlEncode(userEntrySec.Email);
+		
+        if(secondaryPictureURL==undefined)
         {
        		profileImg3 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile'></div>";
        	}
 		else
 		{
-			profileImg3 = "<div class='keyprofilepic'><img src='" + pictureURL3  + "' alt='No image found for this profile' ></div>";
+			secondaryPictureURL = secondaryPictureURL.split(',')[0];
+			profileImg3 = "<div class='keyprofilepic'><img src='" + secondaryPictureURL  + "' alt='No image found for this profile' ></div>";
 		}    
         
-        if (userEntrySec.Name)
+        if (secondaryName)
         {
-            var username=userEntrySec.Name
+            var username=secondaryName;
         }
-        else if(userEntrySec.Name=='' || userEntrySec.Name==null || userEntrySec.Name==undefined)
+        else if(secondaryName=='' || secondaryName==null || secondaryName==undefined)
         {
             var username='--';
         }
-        if (userEntrySec.Title)
+		
+        if (secondaryJobTitle)
         {
-            var usertitle=userEntrySec.Title;
+            var usertitle=secondaryJobTitle;
         }
-        else if(userEntrySec.Title=='' || userEntrySec.Title==null || userEntrySec.Title==undefined)
+        else if(secondaryJobTitle=='' || secondaryJobTitle==null || secondaryJobTitle==undefined)
         {
             var usertitle='--';
         }
-        if (userEntrySec.Email)
+		
+        if (secondaryEmail)
         {
-            var useremail=userEntrySec.Email;
+            var useremail=secondaryEmail;
         }
-        else if(userEntrySec.Email=='' || userEntrySec.Email==null || userEntrySec.Email==undefined)
+        else if(secondaryEmail=='' || secondaryEmail==null || secondaryEmail==undefined)
         {
             var useremail='--';
         }
-        if (WorkPhoneSec)
+		
+        if (secondaryPhone)
         {
-            var userphone=WorkPhoneSec;
+            var userphone=secondaryPhone;
         }
-        else if(WorkPhoneSec=='' || WorkPhoneSec==null || WorkPhoneSec==undefined)
+        else if(secondaryPhone=='' || secondaryPhone==null || secondaryPhone==undefined)
         {
             var userphone='--';
         }
