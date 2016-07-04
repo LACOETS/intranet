@@ -39,6 +39,7 @@ $(document).ready(function() {
 	            //alert(itemCount);
 				
 	              ownerName = $(this).attr("ows_KeyContacts_x0020_EmployeeName");
+				  alert(ownerName);
 				  ownerJobTitle = $(this).attr("ows_Job_x0020_Title");
 				  //alert(ownerJobTitle);
 				  ownerEmail = $(this).attr("ows_Email");
@@ -62,20 +63,18 @@ $(document).ready(function() {
 	    else
 	    {
 			ownerPictureURL = ownerPictureURL.split(',')[0];
-			//alert("in else:" + ownerPictureURL);
-	    	profileImg1 = "<div class='keyprofilepic'><img src='" + ownerPictureURL  + "' alt='No image found for this profile' ></div>";
-			//alert(profileImg1);
-	    }
+			profileImg1 = "<div class='keyprofilepic'><img src='" + ownerPictureURL  + "' alt='No image found for this profile' ></div>";
+		}
 		
-		/*if (userEntry.Name)
+		if (ownerName)
         {
-            var username=userEntry.Name
+            var username=ownerName
         }
-        else if(userEntry.Name=='' || userEntry.Name==null || userEntry.Name==undefined)
+        else if(ownerName=='' || ownerName==null || ownerName==undefined)
         {
             var username='--';
-        }*/
-		var username="VJDS";
+        }
+		
 		
         if (ownerJobTitle)
         {
