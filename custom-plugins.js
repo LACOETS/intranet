@@ -24,6 +24,6 @@
 
 $(function(){
 	$('.resource-link-section table table tbody').bxSlider({
-	
+		mode:'vertical'
 	})
 })
