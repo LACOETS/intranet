@@ -23,30 +23,30 @@ $(document).ready(function() {
 	   async: false,  
 	   listName: "Key Contact",  
 	   //CAMLQuery:"",
-	   /*CAMLQuery: "<Query><Where><And><Eq><FieldRef Name='KeyContacts_x0020_Category' /><Value Type='Choice'>Primary</Value></Eq>" +
+	   CAMLQuery: "<Query><Where><And><Eq><FieldRef Name='KeyContacts_x0020_Category' /><Value Type='Choice'>Primary</Value></Eq>" +
        	          "<Or><And><IsNull><FieldRef Name='KeyContact_x0020_End_x0020_Date' /></IsNull>" +
        	          "<Leq><FieldRef Name='KeyContacts_x0020_StartDate' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And>" +
        	          "<And><Eq><FieldRef Name='IsPrimaryAlternate' /><Value Type='Boolean'>0</Value></Eq>" +
        	          "<And><Geq><FieldRef Name='KeyContact_x0020_End_x0020_Date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Geq>" +
                   "<Leq><FieldRef Name='KeyContacts_x0020_StartDate' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And>" +
        	          "</And></Or></And></Where></Query>",
-	   CAMLQueryOptions: "<QueryOptions><ExpandUserField>False</ExpandUserField></QueryOptions>",*/
+	   CAMLQueryOptions: "<QueryOptions><ExpandUserField>False</ExpandUserField></QueryOptions>",
 	   completefunc: function (xData, Status) {  
 	      
 	       $(xData.responseXML).SPFilterNode("z:row").each(function() {  
-	       alert(xData.responseText);
+	       //alert(xData.responseText);
 	            itemCount = $(xData.responseXML).find("rs\\:data, data").attr("ItemCount");
-	            alert(itemCount);
+	            //alert(itemCount);
 				
 	              ownerName = $(this).attr("ows_KeyContacts_x0020_EmployeeName");
 				  ownerJobTitle = $(this).attr("ows_Job_x0020_Title");
-				  alert(ownerJobTitle);
+				  //alert(ownerJobTitle);
 				  ownerEmail = $(this).attr("ows_Email");
-				  alert(ownerEmail);
+				  //alert(ownerEmail);
 				  ownerPhone = $(this).attr("ows_Work_x0020_Phone");
-				  alert(ownerPhone);
+				  //alert(ownerPhone);
 				  ownerPictureURL = $(this).attr("ows_Image_x0020_URL");
-	              alert(ownerPictureURL);
+	              //alert(ownerPictureURL);
 	           });  
 	      }
 	});
@@ -103,6 +103,7 @@ $(document).ready(function() {
 			
         //var html=""+profileImg+"<div class='owner-info'><ul><li>Name: <span>"+username+"</span></li><li>Title: <span>"+usertitle+"</span></li><li>Email ID: <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span></li><li>Phone No: <span>"+userphone+"</span></li></ul></div>";
         var html=""+profileImg1+"<div class='owner-info'><ul><li><abbr>Name:</abbr> <span>"+username+"</span><div class='clear'></div></li><li><abbr>Title:</abbr> <span>"+usertitle+"</span><div class='clear'></div></li><li><abbr>Email ID:</abbr> <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span><div class='clear'></div></li><li><abbr>Phone No:</abbr> <span>"+userphone+"</span><div class='clear'></div></li></ul></div>";
+		alert(html);
         //		$('div[data-name="KeyContact"]').append(html);
         //	$('div[id="MSOZoneCell_WebPartWPQ2"]').append(html);
         //$('div[id="keyContactPrimary"]').append(html);
