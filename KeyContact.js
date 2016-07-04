@@ -34,9 +34,10 @@ $(document).ready(function() {
 	   completefunc: function (xData, Status) {  
 	      
 	       $(xData.responseXML).SPFilterNode("z:row").each(function() {  
-	       //alert(xData.responseText);
+	       alert(xData.responseText);
 	            itemCount = $(xData.responseXML).find("rs\\:data, data").attr("ItemCount");
-	            //alert(itemCount);
+	            alert(itemCount);
+				
 	              ownerName = $(this).attr("ows_KeyContacts_x0020_EmployeeName");
 				  ownerJobTitle = $(this).attr("ows_Job_x0020_Title");
 				  alert(ownerJobTitle);
