@@ -3669,6 +3669,11 @@ select:focus{outline:none;}
 /*New theme resouce link*/
 .resource-link-section table{width:100%;}
 .resource-link-section table.ms-listviewtable{width:100%;border-collapse: collapse;}
+.resource-link-section table.ms-listviewtable tr{border-bottom: 1px solid #e4e4e4;}
+.resource-link-section table.ms-listviewtable tr:last-child{border-bottom:none;}
+.resource-link-section table.ms-listviewtable td{width: 100% !important;}
+.resource-link-section table.ms-listviewtable td a{padding: 9px 15px 10px 15px;font-size: 1em; display:block; color:#585858}
+.resource-link-section table.ms-listviewtable td a:visited{color:#585858}
 /*New theme resouce link end*/
 
 /*======================================= Content Area CSS End ========================================*/
