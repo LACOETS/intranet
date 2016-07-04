@@ -39,7 +39,7 @@ $(document).ready(function() {
 	            //alert(itemCount);
 				
 	              ownerName = $(this).attr("ows_KeyContacts_x0020_EmployeeName");
-				  alert(ownerName);
+				  ownerName = ownerName.split('#')[1];
 				  ownerJobTitle = $(this).attr("ows_Job_x0020_Title");
 				  //alert(ownerJobTitle);
 				  ownerEmail = $(this).attr("ows_Email");
