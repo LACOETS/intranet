@@ -3680,6 +3680,7 @@ select:focus{outline:none;}
 .resource-link-section table.ms-listviewtable td a:visited{color:#585858}
 .resource-link-section table.ms-listviewtable tbody{position:relative;display:block}
 .resource-link-section table.ms-listviewtable tbody tr{display:block}
+.resource-link-section table.ms-listviewtable .ms-itmHoverEnabled:hover > *{background-color:#E1E1E2; border:none}
 /*New theme resouce link end*/
 
 /*======================================= Content Area CSS End ========================================*/
