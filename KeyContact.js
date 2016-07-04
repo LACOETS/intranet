@@ -128,20 +128,31 @@ $(document).ready(function() {
                   "<And><Geq><FieldRef Name='KeyContact_x0020_End_x0020_Date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Geq>" +
                   "<Leq><FieldRef Name='KeyContacts_x0020_StartDate' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And>" +
                   "</And></And></Where></Query>",
-	   CAMLQueryOptions: "<QueryOptions><ExpandUserField>True</ExpandUserField></QueryOptions>",  
+	   CAMLQueryOptions: "<QueryOptions><ExpandUserField>False</ExpandUserField></QueryOptions>",  
 	   completefunc: function (xData, Status) {
 	   
 	   $(xData.responseXML).SPFilterNode("z:row").each(function() {
 	   //alert(xData.responseText);
 	   primaryCount= $(xData.responseXML).find("rs\\:data, data").attr("ItemCount");
-	   if (primaryCount) secPrimeName= $(this).attr("ows_KeyContacts_x0020_EmployeeName");
+	   if (primaryCount) 
+		   //secPrimeName= $(this).attr("ows_KeyContacts_x0020_EmployeeName");
 	              //alert(secPrimeName);
+				  ownerName = $(this).attr("ows_KeyContacts_x0020_EmployeeName");
+				  ownerName = ownerName.split('#')[1];
+				  ownerJobTitle = $(this).attr("ows_Job_x0020_Title");
+				  //alert(ownerJobTitle);
+				  ownerEmail = $(this).attr("ows_Email");
+				  //alert(ownerEmail);
+				  ownerPhone = $(this).attr("ows_Work_x0020_Phone");
+				  //alert(ownerPhone);
+				  ownerPictureURL = $(this).attr("ows_Image_x0020_URL");
+	              //alert(ownerPictureURL);
 	         });
 	   }
 	   });
 	   if (primaryCount == '1')
 	   {
-		   var secPrimeEntry = {};
+		   /*var secPrimeEntry = {};
 		   var secPrimeArray= secPrimeName.split(",#");
 		   secPrimeEntry.Name = secPrimeArray[4];
 		   secPrimeEntry.Title = secPrimeArray[7];
@@ -158,46 +169,50 @@ $(document).ready(function() {
 			        SecPrimeWorkPhone= $(this).parent().find("Values").text();
 			        });
 			      }     
-			    });
+			    });*/
 		    var profileImg2;
-		    var pictureURL2 = "/_layouts/15/userphoto.aspx?size=L&accountname=" + $htmlEncode(secPrimeEntry.Email);
-		    if(secPrimeArray[5]==undefined)
+		    /*var pictureURL2 = "/_layouts/15/userphoto.aspx?size=L&accountname=" + $htmlEncode(secPrimeEntry.Email);*/
+		    if(ownerPictureURL==undefined)
 		    {
 		   		profileImg2 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
 		    }
 		    else
 		    {
-		   		profileImg2 = "<div class='keyprofilepic'><img src='" + pictureURL2  + "' alt='No image found for this profile' ></div>";
-		    }			
-	        if (secPrimeEntry.Name)
+		   		profileImg2 = "<div class='keyprofilepic'><img src='" + ownerPictureURL  + "' alt='No image found for this profile' ></div>";
+		    }	
+			
+	        if (ownerName)
 			{
-				var username=secPrimeEntry.Name
+				var username=ownerName;
 			}
-			else if(secPrimeEntry.Name=='' || secPrimeEntry.Name==null || secPrimeEntry.Name==undefined)
+			else if(ownerName=='' || ownerName==null || ownerName==undefined)
 			{
 				var username='--';
 			}
-			if (secPrimeEntry.Title)
+			
+			if (ownerJobTitle)
 			{
-				var usertitle=secPrimeEntry.Title
+				var usertitle=ownerJobTitle;
 			}
-			else if(secPrimeEntry.Title=='' || secPrimeEntry.Title==null || secPrimeEntry.Title==undefined)
+			else if(ownerJobTitle=='' || ownerJobTitle==null || ownerJobTitle==undefined)
 			{
 				var usertitle='--';
 			}
-			if (secPrimeEntry.Email)
+			
+			if (ownerEmail)
 			{
-				var useremail=secPrimeEntry.Email
+				var useremail=ownerEmail;
 			}
-			else if(secPrimeEntry.Email=='' || secPrimeEntry.Email==null || secPrimeEntry.Email==undefined)
+			else if(ownerEmail=='' || ownerEmail==null || ownerEmail==undefined)
 			{
 				var useremail='--';
 			}
-			if (SecPrimeWorkPhone)
+			
+			if (ownerPhone)
 			{
-				var userphone=SecPrimeWorkPhone
+				var userphone=ownerPhone;
 			}
-			else if(SecPrimeWorkPhone=='' || SecPrimeWorkPhone==null || SecPrimeWorkPhone==undefined)
+			else if(ownerPhone=='' || ownerPhone==null || ownerPhone==undefined)
 			{
 				var userphone='--';
 			}
