@@ -61,6 +61,7 @@ $(document).ready(function() {
 	    }
 	    else
 	    {
+			ownerPictureURL = ownerPictureURL.split(',')[0];
 	    	profileImg1 = "<div class='keyprofilepic'><img src='" + ownerPictureURL  + "' alt='No image found for this profile' ></div>";
 	    }
 		
