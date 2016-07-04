@@ -62,9 +62,9 @@ $(document).ready(function() {
 	    else
 	    {
 			ownerPictureURL = ownerPictureURL.split(',')[0];
-			alert("in else:" + ownerPictureURL);
+			//alert("in else:" + ownerPictureURL);
 	    	profileImg1 = "<div class='keyprofilepic'><img src='" + ownerPictureURL  + "' alt='No image found for this profile' ></div>";
-			alert(profileImg1);
+			//alert(profileImg1);
 	    }
 		
 		/*if (userEntry.Name)
