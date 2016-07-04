@@ -62,7 +62,9 @@ $(document).ready(function() {
 	    else
 	    {
 			ownerPictureURL = ownerPictureURL.split(',')[0];
+			alert("in else:" + ownerPictureURL);
 	    	profileImg1 = "<div class='keyprofilepic'><img src='" + ownerPictureURL  + "' alt='No image found for this profile' ></div>";
+			alert(profileImg1);
 	    }
 		
 		/*if (userEntry.Name)
@@ -104,7 +106,7 @@ $(document).ready(function() {
 			
         //var html=""+profileImg+"<div class='owner-info'><ul><li>Name: <span>"+username+"</span></li><li>Title: <span>"+usertitle+"</span></li><li>Email ID: <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span></li><li>Phone No: <span>"+userphone+"</span></li></ul></div>";
         var html=""+profileImg1+"<div class='owner-info'><ul><li><abbr>Name:</abbr> <span>"+username+"</span><div class='clear'></div></li><li><abbr>Title:</abbr> <span>"+usertitle+"</span><div class='clear'></div></li><li><abbr>Email ID:</abbr> <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span><div class='clear'></div></li><li><abbr>Phone No:</abbr> <span>"+userphone+"</span><div class='clear'></div></li></ul></div>";
-		alert(html);
+		//alert(html);
         //		$('div[data-name="KeyContact"]').append(html);
         //	$('div[id="MSOZoneCell_WebPartWPQ2"]').append(html);
         //$('div[id="keyContactPrimary"]').append(html);
