@@ -10,6 +10,10 @@ var itemCount;
 $(document).ready(function() {
 	 
     var ownerName;
+	var ownerJobTitle;
+	var ownerEmail;
+	var ownerPhone;
+	var ownerPictureURL;
     var curSiteUrl= $().SPServices.SPGetCurrentSite();
     
 	$().SPServices({  
@@ -34,6 +38,10 @@ $(document).ready(function() {
 	            itemCount = $(xData.responseXML).find("rs\\:data, data").attr("ItemCount");
 	            //alert(itemCount);
 	              ownerName = $(this).attr("ows_KeyContacts_x0020_EmployeeName");
+				  ownerJobTitle = $(this).attr("ows_Job_x0020_Title");
+				  ownerEmail = $(this).attr("ows_Email");
+				  ownerPhone = $(this).attr("ows_Work_x0020_Phone");
+				  ownerPictureURL = $(this).attr("ows_Image_x0020_URL");
 	              //alert(ownerName);
 	           });  
 	      }
@@ -42,63 +50,49 @@ $(document).ready(function() {
 	if (itemCount == '1')
 	{
 		// 0 - user type value (id+user), 1- account name, 2- personal email, 3- work email, 4 - name, 5 - profile picture path, 6 - , 7- Title
-		var userEntry = {};
-		var userArray = ownerName.split(",#");
-		var userId = userArray[0].split(";#")[0];
-		userEntry.Name = userArray[4];
-		userEntry.Title = userArray[7];
-		userEntry.Email = userArray[3];
-		var WorkPhone;
-		$().SPServices({
-		    operation: 'GetUserProfileByName',
-		    AccountName:userArray[1],
-		    async: false,
-		    completefunc: function (xData, Status) {
-		        $(xData.responseXML).find("PropertyData > Name:contains('WorkPhone')").each(function() {
-		        WorkPhone= $(this).parent().find("Values").text();
-		        });
-		      }     
-		    });
-	    var profileImg1;
-	    var pictureURL1 = "/_layouts/15/userphoto.aspx?size=L&accountname=" + $htmlEncode(userEntry.Email);
-	    if(userArray[5]==undefined)
+		
+	    if(ownerPictureURL==undefined)
 	    {
 	   		profileImg1 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
 	    }
 	    else
 	    {
-	    	profileImg1 = "<div class='keyprofilepic'><img src='" + pictureURL1  + "' alt='No image found for this profile' ></div>";
+	    	profileImg1 = "<div class='keyprofilepic'><img src='" + ownerPictureURL  + "' alt='No image found for this profile' ></div>";
 	    }
 		
-		if (userEntry.Name)
+		/*if (userEntry.Name)
         {
             var username=userEntry.Name
         }
         else if(userEntry.Name=='' || userEntry.Name==null || userEntry.Name==undefined)
         {
             var username='--';
-        }
-        if (userEntry.Title)
+        }*/
+		var username="VJDS";
+		
+        if (ownerJobTitle)
         {
-            var usertitle=userEntry.Title
+            var usertitle=ownerJobTitle;
         }
-        else if(userEntry.Title=='' || userEntry.Title==null || userEntry.Title==undefined)
+        else if(ownerJobTitle=='' || ownerJobTitle==null || ownerJobTitle==undefined)
         {
             var usertitle='--';
         }
-        if (userEntry.Email)
+		
+        if (ownerEmail)
         {
-            var useremail=userEntry.Email
+            var useremail=ownerEmail;
         }
-        else if(userEntry.Email=='' || userEntry.Email==null || userEntry.Email==undefined)
+        else if(ownerEmail=='' || ownerEmail==null || ownerEmail==undefined)
         {
             var useremail='--';
         }
-        if (WorkPhone)
+		
+        if (ownerPhone)
         {
-            var userphone=WorkPhone
+            var userphone=ownerPhone
         }
-        else if(WorkPhone=='' || WorkPhone==null || WorkPhone==undefined)
+        else if(ownerPhone=='' || ownerPhone==null || ownerPhone==undefined)
         {
             var userphone='--';
         }
