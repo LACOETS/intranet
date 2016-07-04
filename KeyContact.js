@@ -174,10 +174,12 @@ $(document).ready(function() {
 		    /*var pictureURL2 = "/_layouts/15/userphoto.aspx?size=L&accountname=" + $htmlEncode(secPrimeEntry.Email);*/
 		    if(ownerPictureURL==undefined)
 		    {
+				
 		   		profileImg2 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
 		    }
 		    else
 		    {
+							ownerPictureURL = ownerPictureURL.split(',')[0];
 		   		profileImg2 = "<div class='keyprofilepic'><img src='" + ownerPictureURL  + "' alt='No image found for this profile' ></div>";
 		    }	
 			
