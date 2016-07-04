@@ -23,14 +23,14 @@ $(document).ready(function() {
 	   async: false,  
 	   listName: "Key Contact",  
 	   //CAMLQuery:"",
-	   CAMLQuery: "<Query><Where><And><Eq><FieldRef Name='KeyContacts_x0020_Category' /><Value Type='Choice'>Primary</Value></Eq>" +
+	   /*CAMLQuery: "<Query><Where><And><Eq><FieldRef Name='KeyContacts_x0020_Category' /><Value Type='Choice'>Primary</Value></Eq>" +
        	          "<Or><And><IsNull><FieldRef Name='KeyContact_x0020_End_x0020_Date' /></IsNull>" +
        	          "<Leq><FieldRef Name='KeyContacts_x0020_StartDate' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And>" +
        	          "<And><Eq><FieldRef Name='IsPrimaryAlternate' /><Value Type='Boolean'>0</Value></Eq>" +
        	          "<And><Geq><FieldRef Name='KeyContact_x0020_End_x0020_Date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Geq>" +
                   "<Leq><FieldRef Name='KeyContacts_x0020_StartDate' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And>" +
        	          "</And></Or></And></Where></Query>",
-	   CAMLQueryOptions: "<QueryOptions><ExpandUserField>False</ExpandUserField></QueryOptions>",
+	   CAMLQueryOptions: "<QueryOptions><ExpandUserField>False</ExpandUserField></QueryOptions>",*/
 	   completefunc: function (xData, Status) {  
 	      
 	       $(xData.responseXML).SPFilterNode("z:row").each(function() {  
