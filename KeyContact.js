@@ -34,8 +34,7 @@ $(function($, undefined) {
 		if(pcount==0 || scount==0 || Acount==0)
 		{
 		var userEntry = {};
-		userEntry.Name = (dataRec.Email).split('@')[0]; // substring email to get user name
-		//alert(dataRec.Email);
+		userEntry.Name = (dataRec.Email).split('@')[0]; // substring email to get user name		
 		userEntry.Title = dataRec.Job_x0020_Title;
 		userEntry.Email = dataRec.Email;
 		userEntry.Category=dataRec.KeyContacts_x0020_Category;
@@ -45,7 +44,7 @@ $(function($, undefined) {
 	    var pictureURL1 = dataRec.Image_x0020_URL.Url+'?RenditionID=1'; // Please work on delay image rendering
 	    if(pictureURL1=='' || pictureURL1==null || pictureURL1==undefined)
 	    {
-	   		profileImg1 = "<div class='keyprofilepic'><img src='/sites/DevEnv/_catalogs/masterpage/images/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
+	   		profileImg1 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
 	    }
 	    else
 	    {
