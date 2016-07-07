@@ -12,7 +12,7 @@ $(function($, undefined) {
   SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
       var context = SP.ClientContext.get_current();
-      var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_Category,IsPrimaryAlternate,Email,Work_x0020_Phone,Job_x0020_Title,Image_x0020_URL&$filter=KeyContact_x0020_End_x0020_Date ge datetime'" + new Date().toISOString() + "'"; // filter by current date 
+      var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_Category,IsPrimaryAlternate,Email,Work_x0020_Phone,Job_x0020_Title,Image_x0020_URL&$filter=KeyContact_x0020_End_x0020_Date ge datetime'" + new Date().toISOString() + "'"; // filter by current date // VJ Change - End Date >= Today
       $.ajax({
         url: queryUrl,
         method: "GET",
@@ -34,7 +34,7 @@ $(function($, undefined) {
 		if(pcount==0 || scount==0 || Acount==0)
 		{
 		var userEntry = {};
-		userEntry.Name = (dataRec.Email).split('@')[0]; // substring email to get user name		
+		userEntry.Name = (dataRec.Email).split('@')[0]; // substring email to get user name // VJ Change - Splitted Email by @ to get Name		
 		userEntry.Title = dataRec.Job_x0020_Title;
 		userEntry.Email = dataRec.Email;
 		userEntry.Category=dataRec.KeyContacts_x0020_Category;
@@ -42,7 +42,7 @@ $(function($, undefined) {
 		var WorkPhone= dataRec.Work_x0020_Phone;
 	    var profileImg1;
 	    var pictureURL1 = dataRec.Image_x0020_URL.Url+'?RenditionID=1'; // Please work on delay image rendering
-	    pictureURL1 = "https://lacoe-my.sharepoint.com/_layouts/15/userphoto.aspx?size=L&accountname=" + dataRec.Email;
+	    pictureURL1 = "https://lacoe-my.sharepoint.com/_layouts/15/userphoto.aspx?size=L&accountname=" + dataRec.Email; // Changed the Picture URL
 		if(pictureURL1=='' || pictureURL1==null || pictureURL1==undefined)
 	    {
 	   		profileImg1 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
