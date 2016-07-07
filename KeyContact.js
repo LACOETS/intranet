@@ -12,7 +12,7 @@ $(function($, undefined) {
   SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
       var context = SP.ClientContext.get_current();
-      var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_Category,IsPrimaryAlternate,Email,Work_x0020_Phone,Job_x0020_Title,Image_x0020_URL&$filter=KeyContact_x0020_End_x0020_Date ge datetime'" + today.toISOString() + "'"; // filter by current date 
+      var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_Category,IsPrimaryAlternate,Email,Work_x0020_Phone,Job_x0020_Title,Image_x0020_URL&$filter=KeyContact_x0020_End_x0020_Date ge datetime '" + new Date().toISOString() + "'"; // filter by current date 
       $.ajax({
         url: queryUrl,
         method: "GET",
