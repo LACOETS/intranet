@@ -34,8 +34,8 @@ $(function($, undefined) {
 		if(pcount==0 || scount==0 || Acount==0)
 		{
 		var userEntry = {};
-		userEntry.Name = dataRec.Email; // substring email to get user name
-		alert(dataRec.Email);
+		userEntry.Name = (dataRec.Email).split('@')[0]; // substring email to get user name
+		//alert(dataRec.Email);
 		userEntry.Title = dataRec.Job_x0020_Title;
 		userEntry.Email = dataRec.Email;
 		userEntry.Category=dataRec.KeyContacts_x0020_Category;
