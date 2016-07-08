@@ -12,10 +12,9 @@ $(function($, undefined) {
   SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
       var context = SP.ClientContext.get_current();
-      var obj = new Date().toISOString().split('T')[0];
-	  obj = obj + 'T00%3a00%3a00';
-	  alert(obj);
-	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_Category,KeyContact_x0020_End_x0020_Date,IsPrimaryAlternate,Email,Work_x0020_Phone,Job_x0020_Title,Image_x0020_URL&$filter=KeyContact_x0020_End_x0020_Date ge datetime'" + obj + "'"; // filter by current date // VJ Change - End Date >= Today
+      var todayDate = new Date().toISOString().split('T')[0];
+	  todayDate = todayDate + 'T00%3a00%3a00';	  
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_Category,KeyContact_x0020_End_x0020_Date,IsPrimaryAlternate,Email,Work_x0020_Phone,Job_x0020_Title,Image_x0020_URL&$filter=KeyContact_x0020_End_x0020_Date ge datetime'" + todayDate + "'"; // filter by current date // VJ Change - End Date >= Today
       $.ajax({
         url: queryUrl,
         method: "GET",
@@ -38,7 +37,7 @@ $(function($, undefined) {
 		{
 		var userEntry = {};
 		userEntry.Name = (dataRec.Email).split('@')[0]; // substring email to get user name // VJ Change - Splitted Email by @ to get Name		
-		alert(dataRec.KeyContact_x0020_End_x0020_Date);
+		//alert(dataRec.KeyContact_x0020_End_x0020_Date);
 		userEntry.Title = dataRec.Job_x0020_Title;
 		userEntry.Email = dataRec.Email;
 		userEntry.Category=dataRec.KeyContacts_x0020_Category;
@@ -89,10 +88,10 @@ $(function($, undefined) {
             var userphone='--';
         }
         
-		alert(userEntry.Category);
+		//alert(userEntry.Category);
 		if(userEntry.Category=='Primary' && Acount==0)
 		{
-			alert('In primary IF');
+			
 		pcount=pcount+1;
 		var html=""+profileImg1+"<div class='owner-info'><ul><li><abbr>Name:</abbr> <span>"+username+"</span><div class='clear'></div></li><li><abbr>Title:</abbr> <span>"+usertitle+"</span><div class='clear'></div></li><li><abbr>Email ID:</abbr> <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span><div class='clear'></div></li><li><abbr>Phone No:</abbr> <span>"+userphone+"</span><div class='clear'></div></li></ul></div>";
         $('#keyContactPrimary .content').append(html);
@@ -105,7 +104,7 @@ $(function($, undefined) {
 		}
 		else if(userEntry.Category=='AIC')
 		{
-		alert('In AIC Else If');
+		
 		Acount=Acount+1;
 		$('#keyContactPrimary .content').empty();
 		var html=""+profileImg1+"<div class='owner-info'><ul><li><abbr>Name:</abbr> <span>"+username+"</span><div class='clear'></div></li><li><abbr>Title:</abbr> <span>"+usertitle+"</span><div class='clear'></div></li><li><abbr>Email ID:</abbr> <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span><div class='clear'></div></li><li><abbr>Phone No:</abbr> <span>"+userphone+"</span><div class='clear'></div></li></ul></div>";
