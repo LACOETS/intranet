@@ -3683,6 +3683,23 @@ select:focus{outline:none;}
 .resource-link-section table.ms-listviewtable .ms-itmHoverEnabled:hover > *{background-color:#E1E1E2; border:none}
 /*New theme resouce link end*/
 
+/*New search*/
+.new-searchbox{float:right; margin-top:12px;}
+#SearchBox .ms-srch-sb-border,#SearchBox .ms-srch-sb-borderFocused{border:#1c7ec7 solid 1px !important; background:#fff;}
+#SearchBox input{border:none !important}
+#SearchBox .ms-srch-sb > input{margin:0; height:auto; margin-top:-2px; padding:2px 5px; border:none !important}
+#SearchBox .ms-srch-sb{padding:5px}
+#SearchBox  .ms-qSuggest-container{padding:0}
+#SearchBox  .ms-qSuggest-listItem,#SearchBox .ms-qSuggest-hListItem{font-size:12px !important; padding:5px}
+/*New search*/
+/*Search this page*/
+.ms-WPBody .ms-srchnav{padding-top:25px}
+.ms-WPBody .ms-srchnav .ms-displayInline{font-size:1.25em;}
+.ms-WPBody .ms-srchnav .ms-srchnav-item{padding:0 55px 0 0}
+#Groups .ms-srch-item{border-bottom:solid 1px gray; padding-bottom:15px;}
+/*Search thsi page end*/
+
+
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
