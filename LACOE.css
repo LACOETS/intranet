@@ -3716,6 +3716,12 @@ select:focus{outline:none;}
 #department-box .pagination-page #scriptWPQ2 table td:nth-child(2){width:33.3333%;}
 #department-box .pagination-page #scriptWPQ2 table td:nth-child(3){width: 16.6667%;}
 #department-box .pagination-page #scriptWPQ2 table td:nth-child(4){width: 25%;}
+
+#department-box .pagination-page #scriptWPQ18 table td:nth-child(1){width:25%;}
+#department-box .pagination-page #scriptWPQ18 table td:nth-child(2){width:33.3333%;}
+#department-box .pagination-page #scriptWPQ18 table td:nth-child(3){width: 16.6667%;}
+#department-box .pagination-page #scriptWPQ18 table td:nth-child(4){width: 25%;}
+
 .pagination-page table td table td .ms-number{padding-right:0; text-align:left}
 .pagination-page table td table td .ms-number center{text-align:left}
 .pagination-page .ms-itmHoverEnabled:hover > *{background-color:transparent; border-bottom-color:#e4e4e4;}
