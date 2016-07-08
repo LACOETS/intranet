@@ -87,6 +87,7 @@ $(function($, undefined) {
         
 		if(userEntry.Category=='Primary' && Acount==0)
 		{
+			alert('In primary IF');
 		pcount=pcount+1;
 		var html=""+profileImg1+"<div class='owner-info'><ul><li><abbr>Name:</abbr> <span>"+username+"</span><div class='clear'></div></li><li><abbr>Title:</abbr> <span>"+usertitle+"</span><div class='clear'></div></li><li><abbr>Email ID:</abbr> <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span><div class='clear'></div></li><li><abbr>Phone No:</abbr> <span>"+userphone+"</span><div class='clear'></div></li></ul></div>";
         $('#keyContactPrimary .content').append(html);
