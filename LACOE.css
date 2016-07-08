@@ -3699,6 +3699,56 @@ select:focus{outline:none;}
 #Groups .ms-srch-item{border-bottom:solid 1px gray; padding-bottom:15px;}
 /*Search thsi page end*/
 
+/*New tabination theme*/
+.pagination-page .ms-webpart-zone{display:block}
+.pagination-page .ms-webpart-cell-vertical{display:block}
+.pagination-page .ms-webpart-chrome-vertical{display:block; border:none;}
+.pagination-page table{width:100%}
+.pagination-page table thead{display:none}
+.pagination-page div[id^="scriptPaging"]{display: block;margin: 0 auto;position:absolute; left:50%; margin-left:-40px; bottom:0px}
+.pagination-page table{width:100% !important}
+.pagination-page table td table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px;}
+.pagination-page table td table{table-layout: fixed; border-collapse:collapse}
+.pagination-page table.ms-listviewtable{border-collapse:collapse}
+.pagination-page table td table td.ms-paging{padding-left:4px;}
+
+#department-box .pagination-page #scriptWPQ2 table td:nth-child(1){width:25%;}
+#department-box .pagination-page #scriptWPQ2 table td:nth-child(2){width:33.3333%;}
+#department-box .pagination-page #scriptWPQ2 table td:nth-child(3){width: 16.6667%;}
+#department-box .pagination-page #scriptWPQ2 table td:nth-child(4){width: 25%;}
+.pagination-page table td table td .ms-number{padding-right:0; text-align:left}
+.pagination-page table td table td .ms-number center{text-align:left}
+.pagination-page .ms-itmHoverEnabled:hover > *{background-color:transparent; border-bottom-color:#e4e4e4;}
+.pagination-page table td table td > span,.pagination-page table td table td > a{display:block; white-space: nowrap;width: 100%;overflow: hidden;text-overflow: ellipsis;}
+.pagination-page table td table tr{border-bottom:#e4e4e4 solid 1px !important}
+.pagination-page table td table tr:nth-child(2n) {background: #f7f8f8 !important;}
+.pagination-page .ms-vb.ms-bottompagingline table{width:auto}
+.pagination-page .ms-vb.ms-bottompagingline table tr{border-bottom:none !important;}
+#activity-box .pagination-page table td table td:nth-child(1){width:16.6667%}
+#activity-box .pagination-page table td table td:nth-child(2){width:25%;}
+#activity-box .pagination-page table td table td:nth-child(3){width:16.6667%;}
+#activity-box .pagination-page table td table td:nth-child(4){width:16.6667%;}
+#activity-box .pagination-page table td table td:nth-child(5){width:8.33333%;}
+#activity-box .pagination-page table td table td:nth-child(6){width:16.6667%;}
+
+#risk-box .pagination-page table td table td:nth-child(1){width:16.6667%}
+#risk-box .pagination-page table td table td:nth-child(2){width:25%;}
+#risk-box .pagination-page table td table td:nth-child(3){width:16.6667%;}
+#risk-box .pagination-page table td table td:nth-child(4){width:16.6667%;}
+#risk-box .pagination-page table td table td:nth-child(5){width:8.33333%;}
+#risk-box .pagination-page table td table td:nth-child(6){width:16.6667%;}
+
+#targetdate-box .pagination-page table td table td:nth-child(1){width:16.6667%}
+#targetdate-box .pagination-page table td table td:nth-child(2){width:25%;}
+#targetdate-box .pagination-page table td table td:nth-child(3){width:25%;}
+#targetdate-box .pagination-page table td table td:nth-child(4){width:33.3333%;}
+
+
+.pagination-page div[id^="scriptPaging"] a{display:inline-block;width:auto}
+.pagination-page div[id^="scriptPaging"] table{width:auto; display:inline-block; vertical-align:middle}
+
+/*New tabination theme end*/
+
 
 /*======================================= Content Area CSS End ========================================*/
 
