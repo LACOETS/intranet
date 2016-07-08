@@ -1727,7 +1727,7 @@ th.ms-vh3-nograd { width: 12px; /* [ReplaceColor(themeColor:"SubtleBodyText")] *
 .ms-gb2 { height: 22px; /* [ReplaceColor(themeColor:"SubtleBodyText")] */ color: #777; padding-bottom: 3px; }
 .ms-gbload { height: 22px; /* [ReplaceColor(themeColor:"SubtleBodyText")] */ color: #777; padding-bottom: 3px; }
 .ms-vb, .ms-vb2, .ms-vb-user, .ms-vb-tall, .ms-pb, .ms-pb-selected { /* [ReplaceColor(themeColor:"BodyText")] */ color: #444; vertical-align: top; }
-.ms-vb a:link, .ms-vb2 a:link, .ms-vb-user a:link { text-decoration: none; }
+.ms-vb a:link, .ms-vb2 a:link, .ms-vb-user a:link { text-decoration: underline;color: #004d9c; }
 .ms-vb a.ms-listlink, .ms-vb2 a.ms-listlink, .ms-vb-user a.ms-listlink, .ms-vb a.ms-listlink:visited, .ms-vb a.ms-listlink:visited:hover { /* [ReplaceColor(themeColor:"BodyText")] */ color: #444; text-decoration: none; }
 .ms-vb a:hover, .ms-vb2 a:hover { text-decoration: underline; }
 td.ms-list-addnew > a:hover { text-decoration: none; }
