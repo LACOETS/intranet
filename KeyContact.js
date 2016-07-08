@@ -101,6 +101,7 @@ $(function($, undefined) {
 		}
 		else if(userEntry.Category=='AIC')
 		{
+		alert('In AIC Else If');
 		Acount=Acount+1;
 		$('#keyContactPrimary .content').empty();
 		var html=""+profileImg1+"<div class='owner-info'><ul><li><abbr>Name:</abbr> <span>"+username+"</span><div class='clear'></div></li><li><abbr>Title:</abbr> <span>"+usertitle+"</span><div class='clear'></div></li><li><abbr>Email ID:</abbr> <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span><div class='clear'></div></li><li><abbr>Phone No:</abbr> <span>"+userphone+"</span><div class='clear'></div></li></ul></div>";
