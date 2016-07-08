@@ -36,6 +36,7 @@ $(function($, undefined) {
 		{
 		var userEntry = {};
 		userEntry.Name = (dataRec.Email).split('@')[0]; // substring email to get user name // VJ Change - Splitted Email by @ to get Name		
+		alert(dataRec.KeyContact_x0020_End_x0020_Date);
 		userEntry.Title = dataRec.Job_x0020_Title;
 		userEntry.Email = dataRec.Email;
 		userEntry.Category=dataRec.KeyContacts_x0020_Category;
