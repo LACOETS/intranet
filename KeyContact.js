@@ -85,6 +85,7 @@ $(function($, undefined) {
             var userphone='--';
         }
         
+		alert(userEntry.Category);
 		if(userEntry.Category=='Primary' && Acount==0)
 		{
 			alert('In primary IF');
