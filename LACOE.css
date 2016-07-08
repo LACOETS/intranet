@@ -3745,7 +3745,7 @@ select:focus{outline:none;}
 
 
 .pagination-page div[id^="scriptPaging"] a{display:inline-block;width:auto}
-.pagination-page div[id^="scriptPaging"] table{width:auto; display:inline-block; vertical-align:middle}
+.pagination-page div[id^="scriptPaging"] table{width:auto !important; display:inline-block; vertical-align:middle}
 
 /*New tabination theme end*/
 
