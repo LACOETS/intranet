@@ -3244,8 +3244,8 @@ ul.dynamic { min-width: 200px; }
 /*Upcoming Event*/
 
 /*dept-announcement start*/
-.dept-announcement .image-sliders { width: 450px; }
-.dept-announcement .image-infoslider { width: 319px; }
+.dept-announcement .image-sliders { /*width: 450px;*/ width:58.46% }
+.dept-announcement .image-infoslider { /*width: 319px;*/ width:41.54%; }
 .dept-quicklinks .tabNav ul li { width: 50%; }
 .dept-announcement .image-infoslider ul li a { padding:14px 16px; }
 /*dept-announcement end*/
