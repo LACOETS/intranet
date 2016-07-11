@@ -14,7 +14,7 @@ $(function($, undefined) {
       var context = SP.ClientContext.get_current();
       var todayDate = new Date().toISOString().split('T')[0];
 	  todayDate = todayDate + 'T00%3a00%3a00';	  
-	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_Category,KeyContact_x0020_End_x0020_Date,IsPrimaryAlternate,Email,Work_x0020_Phone,Job_x0020_Title,Image_x0020_URL&$orderby=KeyContact_x0020_End_x0020_Date desc&$filter=KeyContacts_x0020_StartDate le datetime'" + todayDate + "' and KeyContact_x0020_End_x0020_Date ge datetime'" + todayDate + "'"; // filter by current date // VJ Change - End Date >= Today
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_Category,KeyContact_x0020_End_x0020_Date,IsPrimaryAlternate,Email,Work_x0020_Phone,Job_x0020_Title,Image_x0020_URL&$orderby=KeyContact_x0020_End_x0020_Date asc&$filter=KeyContacts_x0020_StartDate le datetime'" + todayDate + "' and KeyContact_x0020_End_x0020_Date ge datetime'" + todayDate + "'"; // filter by current date // VJ Change - End Date >= Today
       $.ajax({
         url: queryUrl,
         method: "GET",
