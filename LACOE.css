@@ -3758,6 +3758,7 @@ select:focus{outline:none;}
 .discussion-tabs .pagination-page table td table td:nth-child(2){width:50%;}
 .discussion-tabs .pagination-page table td table td:nth-child(3){width:33.3333%;}
 
+.OOTBdivNoItems{position:static !important}
 /*New tabination theme end*/
 
 
