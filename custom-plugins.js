@@ -46,4 +46,7 @@ $(function(){
 		newresource.goToSlide(count-1);
 		return false;
 	});
+	$('img[datasrc]').each(function(){
+	$(this).attr('src', $(this).attr('datasrc'));
+	});
 })
