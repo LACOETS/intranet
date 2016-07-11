@@ -46,7 +46,11 @@ $(function(){
 		newresource.goToSlide(count-1);
 		return false;
 	});
-	$('img[datasrc]').each(function(){
-	$(this).attr('src', $(this).attr('datasrc'));
-	});
 })
+
+function runAfterEverythingElse(){
+    $('img[datasrc]').each(function(){
+	$(this).attr('src', $(this).attr('datasrc'));
+});
+}
+_spBodyOnLoadFunctionNames.push("runAfterEverythingElse");
