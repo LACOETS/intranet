@@ -3759,6 +3759,7 @@ select:focus{outline:none;}
 .discussion-tabs .pagination-page table td table td:nth-child(3){width:33.3333%;}
 
 .OOTBdivNoItems{position:static !important}
+.OOTBdivNoItems tr[id^="empty-"] td{color: red;font-size: 0.875em;padding: 10px 1%;}
 /*New tabination theme end*/
 
 
