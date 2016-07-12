@@ -48,6 +48,6 @@ $(function(){
 	});
 });
 
-$(window).load(function(){
+/*$(window).load(function(){
 	setTimeout(function(){ $('.pagination-page').css('width','100%') }, 1000);
-})
+})*/
