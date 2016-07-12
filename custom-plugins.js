@@ -48,6 +48,6 @@ $(function(){
 	});
 });
 
-$(window).load(fnction(){
+$(window).load(function(){
 	setTimeout(function(){ $('.pagination-page').css('width','100%') }, 1000);
 })
