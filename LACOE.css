@@ -3760,7 +3760,7 @@ select:focus{outline:none;}
 
 .OOTBdivNoItems{position:static !important}
 .OOTBdivNoItems tr[id^="empty-"] td{color: red;font-size: 0.875em;padding: 10px 1%;}
-.pagination-page{width:100% !important; display:block}
+
 /*New tabination theme end*/
 
 
