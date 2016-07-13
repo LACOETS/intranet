@@ -45,7 +45,8 @@ $(function($, undefined) {
 		var WorkPhone= dataRec.Work_x0020_Phone;
 	    var profileImg1;
 	    var pictureURL1 = dataRec.Image_x0020_URL.Url+'?RenditionID=1'; // Please work on delay image rendering
-	    pictureURL1 = "https://lacoe-my.sharepoint.com/_layouts/15/userphoto.aspx?size=L&accountname=" + dataRec.Email; // Changed the Picture URL
+	    //pictureURL1 = "https://lacoe-my.sharepoint.com/_layouts/15/userphoto.aspx?size=L&accountname=" + dataRec.Email; // Changed the Picture URL
+	    pictureURL1 = "//outlook.office365.com/owa/service.svc/s/GetPersonaPhoto?email=" + dataRec.Email + "&UA=0&size=HR64x64&sc=1468354588706";
 		if(pictureURL1=='' || pictureURL1==null || pictureURL1==undefined)
 	    {
 	   		profileImg1 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
