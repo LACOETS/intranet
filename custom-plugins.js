@@ -70,10 +70,15 @@ $(window).load(function(){
 		items_per_page : 4	
 	});
 	
-	var url = window.location.href;
-      var selectedlist = url.split('#');
-      alert(selectedlist[1])
-      //$('.downa').attr("href", "#" + selectedlist[1]);
+	var urlLanding = window.location.href;
+	if(urlLanding =="https://lacoe.sharepoint.com/Pages/Home.aspx")
+	  {
+	  	$('#pageTitle').hide();
+	  }
+      else
+      {
+      	$('#pageTitle').show();
+      }
 });
 
 /*$(window).load(function(){
