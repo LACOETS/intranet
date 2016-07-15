@@ -3,20 +3,18 @@
 <head>
 <title> Employee Spotlight</title>
 <script type="text/javascript">
-$(document).ready(function () {
-    alert('123');
+$(document).ready(function () {    
 	$().SPServices({
 		webURL: _spPageContextInfo.webAbsoluteUrl,
         operation: "GetListItems",
         async: false,
         listName: "Employee Spotlight",
-		/*CAMLQuery: "<Query><Where><And><Geq><FieldRef Name='End_x0020_Date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Geq>" +
-                  "<Leq><FieldRef Name='Start_x0020_date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And></Where></Query>",*/
+		CAMLQuery: "<Query><Where><And><Geq><FieldRef Name='End_x0020_Date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Geq>" +
+                  "<Leq><FieldRef Name='Start_x0020_date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And></Where></Query>",
         completefunc: function (xData, Status) {
 				$(xData.responseXML).SPFilterNode("z:row").each(function() {					
-					alert(xData.responseText);
-					var pictureURL = $(this).attr("ows_Picture_x0020_URL");
-					alert('pictureURL:=' + pictureURL);
+					//alert(xData.responseText);
+					var pictureURL = $(this).attr("ows_Picture_x0020_URL");					
 					var EmpName = $(this).attr("ows_Employee_x0020_Name");
 					var JobTitle = $(this).attr("ows_Title");
 					var Description = $(this).attr("ows_Description");
