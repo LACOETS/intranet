@@ -49,7 +49,7 @@ $(function(){
 	
 	/*Hiding title landing*/
 	var urlLanding = window.location.href;
-	if(urlLanding=="https://lacoe.sharepoint.com/Pages/Home.aspx")
+	if(urlLanding=="https://lacoe.sharepoint.com/Pages/Home.aspx" || urlLanding=="https://lacoe.sharepoint.com" || urlLanding=="https://lacoe.sharepoint.com/Pages/Home.aspx#")
 	  {
 	  	$('#pageTitle').hide();
 	  }
