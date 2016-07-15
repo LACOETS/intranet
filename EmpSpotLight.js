@@ -22,7 +22,7 @@ $(document).ready(function () {
 					var Department= $(this).attr("ows_Department");
 					var EmployeeName = EmpName.split('#')[1];
 					var splittedpictureURL = pictureURL.split(',')[0];
-	$('.spotlight-slider').append('<li><div class="img-box-thumb-holder"><div class="spotlight-img"><img src="'+splittedpictureURL+'" id="SpotlightImage" alt="Image1"/></div><div class="spotlight-infotxt"><h4>'+EmployeeName+'</h4><div class="spotlight"><p class="departspot">'+Department +'<br>'+ JobTitle +'</p></div><p>Description:'+Description+'</p></div></div></li>');				
+	$('.spotlight-slider').append('<li><div class="img-box-thumb-holder"><div class="spotlight-img"><img src="'+splittedpictureURL+'" id="SpotlightImage" alt="Image1"/></div><div class="spotlight-infotxt"><h4>'+EmployeeName+'</h4><div class="spotlight"><p class="departspot">'+Department +'|'+ JobTitle +'</p></div><p>Description:'+Description+'</p></div></div></li>');				
 	});
     }//End of complete func
   });//End of SPServices
