@@ -9,8 +9,8 @@ $(document).ready(function () {
         operation: "GetListItems",
         async: false,
         listName: "Emp Spotlight",
-		CAMLQuery: "<Query><Where><And><Geq><FieldRef Name='End_x0020_Date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Geq>" +
-                  "<Leq><FieldRef Name='Start_x0020_date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And></Where></Query>",
+		/*CAMLQuery: "<Query><Where><And><Geq><FieldRef Name='End_x0020_Date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Geq>" +
+                  "<Leq><FieldRef Name='Start_x0020_date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And></Where></Query>",*/
         completefunc: function (xData, Status) {
 				$(xData.responseXML).SPFilterNode("z:row").each(function() {					
 					//alert(xData.responseText);
