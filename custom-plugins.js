@@ -69,6 +69,11 @@ $(window).load(function(){
 		num_page_links_to_display :false,
 		items_per_page : 4	
 	});
+	
+	var url = window.location.href;
+      var selectedlist = url.split('#');
+      alert(selectedlist[1])
+      //$('.downa').attr("href", "#" + selectedlist[1]);
 });
 
 /*$(window).load(function(){
