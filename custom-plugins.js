@@ -46,6 +46,19 @@ $(function(){
 		newresource.goToSlide(count-1);
 		return false;
 	});
+	
+	/*Hiding title landing*/
+	var urlLanding = window.location.href;
+	if(urlLanding=="https://lacoe.sharepoint.com/Pages/Home.aspx")
+	  {
+	  	$('#pageTitle').hide();
+	  }
+      else
+      {
+      	$('#pageTitle').show();
+      }
+	/*hiding title landing*/
+	
 });
 $(window).load(function(){
 
@@ -70,15 +83,6 @@ $(window).load(function(){
 		items_per_page : 4	
 	});
 	
-	var urlLanding = window.location.href;
-	if(urlLanding =="https://lacoe.sharepoint.com/Pages/Home.aspx")
-	  {
-	  	$('#pageTitle').hide();
-	  }
-      else
-      {
-      	$('#pageTitle').show();
-      }
 });
 
 /*$(window).load(function(){
