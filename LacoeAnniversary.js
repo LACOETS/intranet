@@ -4,6 +4,7 @@
 <title> Employee anniversary</title>
 <script type="text/javascript">
 $(document).ready(function () {
+    alert('123');
     $().SPServices({
 		webURL: _spPageContextInfo.webAbsoluteUrl,
         operation: "GetListItems",
