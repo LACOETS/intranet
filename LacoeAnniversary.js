@@ -24,7 +24,7 @@ $(document).ready(function () {
 					var splittedpictureURL = pictureURL.split(',')[0];
 					var annversaryDate = $(this).attr("ows_Start_x0020_date");
 					  
-					$('.aniversarysul').append('<li><div class="box-rowcntr"><div class="box-img-thumbnail"><div class="img-box-thumb-holder"><img src="'+splittedpictureURL+'" id="AnniversaryImage" alt="Image1"/></div></div><div class="news-info-cntr"><div class="news-title-like"><h4>'+EmployeeName+'</h4></div><div class="news-activity-dtl"><p class="news-showdate">'+JobTitle + Department+'</p></div></div><div class="clear"></div></li>');
+					$('.aniversarysul').append('<li><div class="box-rowcntr"><div class="box-img-thumbnail"><div class="img-box-thumb-holder"><img src="'+splittedpictureURL+'" id="AnniversaryImage" alt="Image1"/></div></div><div class="news-info-cntr"><div class="news-title-like"><h4>'+EmployeeName+'</h4></div><div class="news-activity-dtl"><p class="news-showdate">'+JobTitle +'<br>'+ Department+'</p></div></div><div class="clear"></div></li>');
 					 
 	});
     }//End of complete func
