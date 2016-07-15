@@ -4,7 +4,8 @@
 <title> Employee Spotlight</title>
 <script type="text/javascript">
 $(document).ready(function () {
-    $().SPServices({
+    alert('123');
+	$().SPServices({
 		webURL: _spPageContextInfo.webAbsoluteUrl,
         operation: "GetListItems",
         async: false,
