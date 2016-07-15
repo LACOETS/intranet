@@ -7,7 +7,7 @@
 														<div class="poll-block">
 																<input type="hidden" id="surveyId"  />
 																<h2>No questions to be displayed!</h2>
-																<ul class="poll-vote-list">
+																<ul class="poll-vote-list poll-vote-listquestn">
 																		
 																	
 																</ul>
