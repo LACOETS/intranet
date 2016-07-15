@@ -4,7 +4,6 @@
 <title> Employee anniversary</title>
 <script type="text/javascript">
 $(document).ready(function () {
-    alert('123');
     $().SPServices({
 		webURL: _spPageContextInfo.webAbsoluteUrl,
         operation: "GetListItems",
@@ -25,7 +24,7 @@ $(document).ready(function () {
 					var splittedpictureURL = pictureURL.split(',')[0];
 					var annversaryDate = $(this).attr("ows_Start_x0020_date");
 					  
-					$('.aniversarysliderLanding').append('<li class="img-box-thumb-holder"><div class="box-rowcntr"><div class="box-img-thumbnail"><div class="img-box-thumb-holder"><img src="'+splittedpictureURL+'" id="AnniversaryImage" alt="Image1"/></div></div><div class="news-info-cntr"><div class="news-title-like"><h4>'+EmployeeName+'</h4></div><div class="news-activity-dtl"><p class="news-showdate">Title:'+JobTitle+'</p><p class="news-showdate">Department:'+Department+'</p></div></div></li>');
+					$('.Vipul').append('<li class="img-box-thumb-holder"><div class="box-rowcntr"><div class="box-img-thumbnail"><div class="img-box-thumb-holder"><img src="'+splittedpictureURL+'" id="AnniversaryImage" alt="Image1"/></div></div><div class="news-info-cntr"><div class="news-title-like"><h4>'+EmployeeName+'</h4></div><div class="news-activity-dtl"><p class="news-showdate">Title:'+JobTitle+'</p><p class="news-showdate">Department:'+Department+'</p></div></div></li>');
 					 
 	});
     }//End of complete func
@@ -35,7 +34,7 @@ $(document).ready(function () {
 
 </head>
 <body>
-        <ul class="aniversarysliderLanding">           
+        <ul class="Vipul">           
         </ul>
 </body>
 
