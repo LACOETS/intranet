@@ -13,8 +13,9 @@ $(document).ready(function () {
                   "<Leq><FieldRef Name='Start_x0020_date' /><Value IncludeTimeValue='FALSE' Type='DateTime'><Today /></Value></Leq></And></Where></Query>",
         completefunc: function (xData, Status) {
 				$(xData.responseXML).SPFilterNode("z:row").each(function() {					
-					//alert(xData.responseText);
+					alert(xData.responseText);
 					var pictureURL = $(this).attr("ows_Picture_x0020_URL");
+					alert('pictureURL:=' + pictureURL);
 					var EmpName = $(this).attr("ows_Employee_x0020_Name");
 					var JobTitle = $(this).attr("ows_Title");
 					var Description = $(this).attr("ows_Description");
