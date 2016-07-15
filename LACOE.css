@@ -3188,15 +3188,15 @@ ul.dynamic { min-width: 200px; }
 /*Announcement Start*/
 .announcement-box, .dept-calender, .goal-section, .documents-section, .discussion-section, .project-guestbox, .pictorial-discussion,.what-do-think,.faqs-boxcntr,.document-searchbx { background: #fff; position: relative; border-radius: 2px; /*box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.25);*/ border: 1px solid rgba(0, 0, 0, 0.4); border-top: none; }
 .announcement-box .box-heading h3 i{background-position:-1px -1px; }
-.image-sliders { float: left; position: relative; width: 665px; overflow: hidden }
+.image-sliders { float: left; position: relative; width: 664px; overflow: hidden }
 .image-sliders .bx-pager .bx-pager-item a { background: #1c7ec7; opacity: 0.5 }
 .image-sliders .bx-pager .bx-pager-item a.active { opacity: 1; }
 .image-sliders .bx-pager { bottom: 45px }
 .bx-caption { position: absolute; left: 0; bottom: 0; z-index: 99; padding: 8px 10px; color: #fff; background: #000; width: 100%; font-size: 1em; }
 .bx-caption a { color: #fff; }
-.image-infoslider { float: left; width: 505px; position: relative }
+.image-infoslider { float: left; width: 504px; position: relative }
 .image-infoslider ul li { border-bottom: #e4e4e4 solid 1px; width: 100% !important; color: #4d4d4d; font-size: 1em }
-.image-infoslider ul li a { padding: 22px 25px; display: block; text-transform:capitalize; overflow:hidden; white-space: nowrap;text-overflow: ellipsis; }
+.image-infoslider ul li a { padding: 14px 16px; display: block; text-transform:capitalize; overflow:hidden; white-space: nowrap;text-overflow: ellipsis; }
 .image-infoslider .bx-controls-direction a:hover{background-color:#e3e3e3 !important}
 .image-infoslider ul li.active-slide { background: #e1e1e0 }
 .image-infoslider .bx-controls-direction a, .calender-slider .bx-controls-direction a { outline: 0 none; text-indent: -9999px; bottom: 0%; width: 26px; z-index: 9999; overflow: hidden; text-align: left; display: inline-block; padding: 4px 0; text-align: center; vertical-align: middle; border-left: #e0e0e0 solid 1px; }
@@ -3223,8 +3223,8 @@ ul.dynamic { min-width: 200px; }
 
 /*Upcoming Event*/
 .upcoming-event-box { overflow: hidden; border-radius: 2px; box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25); }
-.upcoming-event-box .box-heading h3 { background-image: url(../images/upcoming-event-icon.png) }
-.upcoming-event-box .box-heading h3 a { display: inline-block; vertical-align: middle; font-size: 0.875em; padding-left: 25px; margin-left: 25px; font-weight: 400; color: #fff; background: url(../images/calendar-icon.png) left center no-repeat; line-height: 21px }
+.upcoming-event-box .box-heading h3 i { background-position:-83px -25px; }
+.upcoming-event-box .box-heading h3 a { display: inline-block; vertical-align: middle; font-size: 0.875em; padding-left: 20px; margin-left: 25px; font-weight: 400; color: #fff; line-height: 21px }
 .upc-events-tabs .tabNav ul li { width: 25% }
 .upc-events-tabs { background: #fff; position: relative }
 .upc-events-tabs .tabResult { padding: 20px 25px 15px 25px }
@@ -3316,6 +3316,7 @@ ul.dynamic { min-width: 200px; }
 .cal-view-icon .box-heading h3 #anchor-cal-view { float: right; position:relative; color: #ffffff; font-size: 0.875em; font-weight: 400; line-height: 21px; margin-left: 25px; padding-left: 25px; vertical-align: middle; margin-right: 20px; margin-top: 3px }
 .cal-view-icon .box-heading h3 #anchor-cal-view b{position:absolute; left:0; top:0; font-weight:normal; width:18px; height:18px;background: url("https://lacoets.github.io/intranet/sprite.png") no-repeat -183px -26px;}
 .cal-view-icon .box-heading h3:after { clear: both; display: block; content: ''; float: none }
+#plusCal + #anchor-cal-view {margin-left: 15px;margin-right: 15px;}
 .ellipse { display: none !important }
 .page_navigation { position: absolute; right: 7px; bottom: 7px }
 /*Department Calender end*/
@@ -3404,7 +3405,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .box-contentinfos ul li { margin-top: 19px }
 .img-box-thumb-holder { }
 .box-img-thumbnail { float: left; border: #ccc solid 1px; width: 82px; height: 82px; overflow: hidden; box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2); }
-.news-info-cntr { padding-left: 10px; width: 260px }
+.news-info-cntr { padding-left: 10px; width: 260px; float:left }
 .news-title-like h4 { float: left; width: 174px; font-weight: 400; color: #000; font-size: 1em; }
 .news-title-like .like-link-news { float: right; }
 .like-link-news a { background: url(../images/gray-like.png) left center no-repeat; font-size: 0.875em; color: #818181; padding: 0 0 0 23px }
@@ -3455,7 +3456,7 @@ textarea.ms-microfeed-rootOrReplyPostBox { border: none; outline: none }
 .lacoe-reportcard-box .ms-webpart-zone { position: relative }
 .lacoe-reportcard-box .ms-webpart-zone .s4-wpcell-plain { position: absolute; left: 0; top: 0; z-index: 0; background: #fff; width: 100% !important }
 .lacoe-reportcard-box .ms-webpart-zone .s4-wpcell-plain:first-child { z-index: 1; }
-.icon-common { float: right; margin-right: 10px; margin-top: 2px; height:20px; width:20px; background: url('https://lacoets.github.io/intranet/sprite.png') -1px -27px no-repeat;}
+.icon-common { float: right; margin-right: 10px; margin-left:0 !important; margin-top: 2px; height:20px; width:20px; background: url('https://lacoets.github.io/intranet/sprite.png') -1px -27px no-repeat;}
 .icon-common:hover{text-decoration:none}
 .icon-common:after { content: ''; clear: both; float: none; display: block }
 /*Pictorial Discussion start  */
@@ -3511,7 +3512,7 @@ body.fontIncrease { font-size: 109%; }
 .ques-box { width: 112px; float: left; }
 .ques-img { width: 112px; height: 112px; border: 1px solid #9b9b9b; overflow: hidden; }
 .poll-block { width: 88%; margin: 0 auto; padding: 1% 1%; border: 0px solid #ccc; box-sizing: border-box; float: right; font: 16px 'Work Sans', sans-serif; }
-.poll-block h2 { font: 15px 'Work Sans', sans-serif; padding-bottom: 20px; }
+.poll-block h2 { font: 18px 'Work Sans', sans-serif; padding-bottom: 20px; padding-top:5px; }
 .poll-block ul { margin-top: 2px; }
 ul.poll-results-list { display: none; }
 .poll-vote-list:after { content: ""; display: block; clear: both; }
@@ -3764,6 +3765,58 @@ select:focus{outline:none;}
 .pagination-page div[id^="scriptPaging"].OOTBdivNoItems table{width:100% !important}
 /*New tabination theme end*/
 
+.news-section .box-heading h3 i{background-position:-59px -25px}
+.quicklinks-section.landing-quicklink .box-heading h3 i{background-position: -77px -1px;}
+.emp-spotlight-box .box-heading h3 i{background-position:-235px -50px}
+.lacoe-aniversary-box .box-heading h3 i{background-position:-211px -51px}
+.whatdo-youthink .box-heading h3 i{background-position:-133px -26px}
+.didyouknw-content {padding: 15px;}
+
+/*Employee Spotlight*/
+.emp-spotlight-box .box-contentinfos { padding: 15px; position: relative }
+.spot-lightsbox ul li, .emp-spotlight-box .box-contentinfos ul li:first-child { margin: 0; }
+.spotlight-img { box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5); width:240px;margin:0 auto; margin-bottom: 10px; height:240px; overflow:hidden}
+.spotlight-img img { width: 240px; }
+.spotlight-infotxt h4 { font-size: 1.125em	; color: #000; font-weight: 600 }
+.spotlight-infotxt p { font-size: 1em; font-weight: 300; color: #646464; padding-top: 15px }
+.spotlight-infotxt .spotlight p.departspot{margin-bottom:5px;}
+.spotlight-infotxt .spotlight + p{margin-bottom:0}
+.spotlight-infotxt .spotlight p:last-child{padding-top:0; margin-bottom:0}
+.lacoe-aniversary-box .news-title-like h4 { width: auto; float: none; font-size: 1.125em; font-weight: 600; padding-bottom: 5px; }
+.lacoe-aniversary-box .box-img-thumbnail { width: 115px; height: 115px; }
+.lacoe-aniversary-box .news-info-cntr { width: 225px; }
+.lacoe-aniversary-box ul li, .lacoe-aniversary-box .box-contentinfos ul li:first-child { margin: 0; }
+.lacoe-aniversary-box .box-contentinfos { padding: 15px; position: relative }
+.lacoe-aniversary-box ul li .box-rowcntr { margin-bottom: 20px; }
+.lacoe-aniversary-box ul li:last-child .box-rowcntr{ margin-bottom: 0 }
+.whatdo-youthink .box-contentinfos { padding: 15px; }
+.doyouthinkbox .think-img { border: rgba(0,0,0,0.2) solid 1px; margin-bottom: 20px; }
+.doyouthinkbox .think-img img { width: 100%; }
+.doyouthinkbox h4 { font-size: 1.125em; color: #1c7ec7; font-weight: 400 }
+.doyouthinkbox p { font-size: 1em; color: #000; padding: 15px 0 15px 0 }
+.input-type-radio input[type='radio'] { display: none }
+.input-type-radio label { display: inline-block; vertical-align: middle; color: #000; font-size: 1.250em; background: url(../images/radio.png) 0 2px no-repeat; padding: 0 0 0 18px; line-height: 15px; cursor: pointer }
+.input-type-radio input[type='radio']:checked + label { background-position: 0 -13px }
+.yes-no-option ul li { margin-top: 0; margin-bottom: 15px }
+input[type="submit"], input[type="button"] { background: #1c7ec7; border: none; display: inline-block; vertical-align: middle; color: #fff; font: 0.938em 'Work Sans', sans-serif; padding: 6px 15px; cursor: pointer }
+.subtn-whydo { padding: 20px 0 }
+/*Employee Spotlight end*/
+
+/*What do you think*/
+.whatdo-youthinklanding .ques-box{float:none; margin:0 auto;}
+.whatdo-youthinklanding .poll-block{float:none; width:100%; padding-top:10px;}
+.whatdo-youthinklanding .poll-results-list.final-result-poll li{margin:0; margin-top:0; margin-bottom:15px; padding-right:0; display:block}
+.whatdo-youthinklanding ul.poll-results-list li{float:none; width:100%; margin-bottom:15px; padding-bottom:1px;}
+.poll-vote-list li{float:none; margin-bottom:0; display:block; padding-right:0;}
+/*What do you think*/
+.spotlight-infotxt p.departspot {color: #000;font-size: 0.9em;padding-top: 0;}
+.poll-block .poll-vote-list.poll-vote-listquestn .input-type-radio label{font-size:1.1em}
+.poll-block .poll-vote-list.poll-vote-listquestn li{padding-bottom:15px;}
+span.sep-spotlight{display:inline-block;vertical-align:; padding:0 5px; color:#646464}
+.didyouknw-cntr .box-heading h3 i{background-position:-177px -1px}
+.news-section {
+    position: relative;
+}
 
 /*======================================= Content Area CSS End ========================================*/
 
