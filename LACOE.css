@@ -3510,7 +3510,7 @@ body.fontIncrease { font-size: 109%; }
 .what-do-think .box-heading h3 { background-image: url("Images/what-do-think.png"); }
 .what-do-think-question-section { padding: 2.5% 3%; }
 .ques-box { /*width: 112px; float: left; */ width:100%;}
-.ques-img { /*width: 112px; height: 112px;*/ border: 1px solid #9b9b9b; overflow: hidden; }
+.ques-img { /*width: 112px; height: 112px;*/ border: 1px solid #ccc; overflow: hidden; }
 .ques-img img{width:100%;}
 .poll-block { width: 88%; margin: 0 auto; padding: 1% 1%; border: 0px solid #ccc; box-sizing: border-box; float: right; font: 16px 'Work Sans', sans-serif; }
 .poll-block h2 { font: 18px 'Work Sans', sans-serif; padding-bottom: 20px; padding-top:5px; }
@@ -3538,7 +3538,7 @@ ul.poll-results-list li:last-child { width: 14%; float: left; padding: 0 0 0 0; 
 .submit-button { background: #1c7ec7; border: none; display: inline-block; vertical-align: middle; color: #fff; font: 15px 'Work Sans', sans-serif; padding: 6px 15px; cursor: pointer }
 .submit-button a { color: #fff; }
 .input-type-radio input[type='radio'] { display: none }
-.input-type-radio label { display: inline-block; vertical-align: middle; color: #000; font-size: 1.250em; background: url('Images/radio.png') 0 2px no-repeat; padding: 0 0 0 18px; line-height: 15px; cursor: pointer }
+.input-type-radio label { display: inline-block; vertical-align: middle; color: #000; font-size: 1.250em; background: url('https://lacoets.github.io/intranet/radio.png') 0 2px no-repeat; padding: 0 0 0 18px; line-height: 15px; cursor: pointer }
 .input-type-radio input[type='radio']:checked + label { background-position: 0 -13px }
 .yes-no-option ul li { margin-top: 0; margin-bottom: 15px }
 input[type="submit"], input[type="button"],.box-btn,input[type="reset"] { background: #1c7ec7; border: none; display: inline-block; vertical-align: middle; color: #fff; font: 0.938em 'Work Sans', sans-serif; padding: 6px 15px; cursor: pointer }
@@ -3796,7 +3796,7 @@ select:focus{outline:none;}
 .doyouthinkbox h4 { font-size: 1.125em; color: #1c7ec7; font-weight: 400 }
 .doyouthinkbox p { font-size: 1em; color: #000; padding: 15px 0 15px 0 }
 .input-type-radio input[type='radio'] { display: none }
-.input-type-radio label { display: inline-block; vertical-align: middle; color: #000; font-size: 1.250em; background: url(../images/radio.png) 0 2px no-repeat; padding: 0 0 0 18px; line-height: 15px; cursor: pointer }
+.input-type-radio label { display: inline-block; vertical-align: middle; color: #000; font-size: 1.250em; background: url(https://lacoets.github.io/intranet/radio.png) 0 2px no-repeat; padding: 0 0 0 18px; line-height: 15px; cursor: pointer }
 .input-type-radio input[type='radio']:checked + label { background-position: 0 -13px }
 .yes-no-option ul li { margin-top: 0; margin-bottom: 15px }
 input[type="submit"], input[type="button"] { background: #1c7ec7; border: none; display: inline-block; vertical-align: middle; color: #fff; font: 0.938em 'Work Sans', sans-serif; padding: 6px 15px; cursor: pointer }
