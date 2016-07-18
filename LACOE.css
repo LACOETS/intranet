@@ -3234,7 +3234,7 @@ ul.dynamic { min-width: 200px; }
 .date-showbox { display: inline-block; width: 65px; vertical-align: middle; border-radius: 5px; overflow: hidden; text-align: center; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3) }
 .month-title { background: #1c7ec7; color: #fff; font-weight: 300; font-size: 1em; text-transform: uppercase; padding: 4px 14px }
 .month-date { color: #1c7ec7; font-size: 1.750em; font-weight: 600; padding: 4px 14px }
-.calender-text { font-size: 0.875em; color: #4d4d4d; font-weight: 300; padding: 15px 0 5px 0 }
+.calender-text { font-size: 0.875em; color: #4d4d4d; font-weight: 300; padding: 15px 0 5px 0; white-space: nowrap; width: 100%; overflow: hidden;text-overflow: ellipsis; }
 .calender-likelink { text-align: center }
 .calender-text { text-align: center }
 .calender-text p { line-height: 25px; }
