@@ -3510,7 +3510,8 @@ body.fontIncrease { font-size: 109%; }
 .what-do-think .box-heading h3 { background-image: url("Images/what-do-think.png"); }
 .what-do-think-question-section { padding: 2.5% 3%; }
 .ques-box { width: 112px; float: left; }
-.ques-img { width: 112px; height: 112px; border: 1px solid #9b9b9b; overflow: hidden; }
+.ques-img { /*width: 112px; height: 112px;*/ border: 1px solid #9b9b9b; overflow: hidden; }
+.ques-img img{width:100%;}
 .poll-block { width: 88%; margin: 0 auto; padding: 1% 1%; border: 0px solid #ccc; box-sizing: border-box; float: right; font: 16px 'Work Sans', sans-serif; }
 .poll-block h2 { font: 18px 'Work Sans', sans-serif; padding-bottom: 20px; padding-top:5px; }
 .poll-block ul { margin-top: 2px; }
