@@ -3237,7 +3237,7 @@ ul.dynamic { min-width: 200px; }
 .calender-text { font-size: 0.875em; color: #4d4d4d; font-weight: 300; padding: 15px 0 5px 0; white-space: nowrap; width: 100%; overflow: hidden;text-overflow: ellipsis; }
 .calender-likelink { text-align: center }
 .calender-text { text-align: center }
-.calender-text p { line-height: 25px; }
+.calender-text p { line-height: 25px; white-space: nowrap; width: 100%; overflow: hidden;text-overflow: ellipsis;}
 .calender-slider { text-align: center }
 .calender-slider { position: relative }
 .calender-slider .bx-has-controls-direction { margin-top: 15px }
