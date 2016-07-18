@@ -3775,7 +3775,7 @@ select:focus{outline:none;}
 /*Employee Spotlight*/
 .emp-spotlight-box .box-contentinfos { padding: 15px; position: relative }
 .spot-lightsbox ul li, .emp-spotlight-box .box-contentinfos ul li:first-child { margin: 0; }
-.spotlight-img { box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5); width:240px;margin:0 auto; margin-bottom: 10px; height:240px; overflow:hidden}
+.spotlight-img { box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5); width:240px; margin-bottom: 10px; height:240px; overflow:hidden}
 .spotlight-img img { width: 240px; }
 .spotlight-infotxt h4 { font-size: 1.125em	; color: #000; font-weight: 600 }
 .spotlight-infotxt p { font-size: 1em; font-weight: 300; color: #646464; padding-top: 15px }
@@ -3783,7 +3783,7 @@ select:focus{outline:none;}
 .spotlight-infotxt .spotlight + p{margin-bottom:0}
 .spotlight-infotxt .spotlight p:last-child{padding-top:0; margin-bottom:0}
 .lacoe-aniversary-box .news-title-like h4 { width: auto; float: none; font-size: 1.125em; font-weight: 600; padding-bottom: 5px; }
-.lacoe-aniversary-box .box-img-thumbnail { width: 115px; height: 115px; }
+.lacoe-aniversary-box .box-img-thumbnail { width: 115px; height: 115px; box-shadow:none }
 .lacoe-aniversary-box .news-info-cntr { width: 225px; }
 .lacoe-aniversary-box ul li, .lacoe-aniversary-box .box-contentinfos ul li:first-child { margin: 0; }
 .lacoe-aniversary-box .box-contentinfos { padding: 15px; position: relative }
@@ -3814,9 +3814,29 @@ input[type="submit"], input[type="button"] { background: #1c7ec7; border: none; 
 .poll-block .poll-vote-list.poll-vote-listquestn li{padding-bottom:15px;}
 span.sep-spotlight{display:inline-block;vertical-align:; padding:0 5px; color:#646464}
 .didyouknw-cntr .box-heading h3 i{background-position:-177px -1px}
-.news-section {
-    position: relative;
-}
+
+/*News Section*/
+.news-section { position: relative }
+.news-section .box-contentinfos ul li { margin: 0; margin-bottom:0px; padding-bottom:18px; }
+.news-pagination .page_navigation{}
+.news-pagination{padding-top:13px;}
+.news-pagination dl dd{margin-bottom:15px;}
+.news-activity-dtl .news-submitedby strong{font-weight:normal}
+/*News Section*/
+/*Quick link*/
+.quicklink-paginations {padding-top:13px;}
+.quicklink-paginations dl dd{margin-bottom:12px;}
+.quicklink-paginations .page_navigation {bottom: 7px;right: 7px;}
+.quicklinks-section.landing-quicklink .box-contentinfos{min-height:527px;position: relative;}
+.news-section .box-contentinfos{min-height:527px;}
+.upcoming-event-box.cal-view-icon .OrgEvent{float:none}
+.upcoming-event-box.cal-view-icon .box-paginations {bottom: -7px;right: -18px;}
+/*Quick link*/
+.whatdo-youthinklanding #WebPartWPQ3 .ms-rtestate-field{padding-bottom:0}
+.select-filtercaldr .input-type-select{border:rgba(0,0,0,0.2) solid 1px}
+.select-filtercaldr .input-type-select::after{height:22px;}
+.emp-spotlight-box .spotlight-img{box-shadow:none;border:1px solid #ccc}
+.spotlight-infotxt{padding-bottom:15px}
 
 /*======================================= Content Area CSS End ========================================*/
 
