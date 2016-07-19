@@ -1,7 +1,4 @@
-<div id='EmployeeSpotlight' class="tabBx">
-	<ul class='spotlight-slider'></ul>
-</div>
-
+<ul class='spotlight-slider'></ul>
 
 <script>
 
@@ -28,7 +25,6 @@ $(function($, undefined) {
   function onQuerySuccess(data) {
     var results = data.d.results;	
     $.each(results, function(index, dataRec) {
-		//alert(dataRec);
 		var userEntry = {};
 		if(dataRec.Employee_x0020_Name.FirstName == null || dataRec.Employee_x0020_Name.LastName == null)
 			{
@@ -46,8 +42,7 @@ $(function($, undefined) {
 		userEntry.Department = dataRec.Department;
 		userEntry.Description=dataRec.Description;
 		userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
-		//alert(userEntry.ImageURL);
-        
+		
 		$('.spotlight-slider').append('<li><div class="img-box-thumb-holder"><div class="spotlight-img"><img src="'+userEntry.ImageURL+'" id="SpotlightImage" alt="Image1"/></div><div class="spotlight-infotxt"><h4>'+userEntry.Name+'</h4><div class="spotlight"><p class="departspot">'+userEntry.Title+ '<span class="sep-spotlight">|</span>' + userEntry.Department +'</p></div><p>'+userEntry.Description+'</p></div></div></li>');
     });
   }
