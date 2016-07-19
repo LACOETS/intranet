@@ -1,4 +1,4 @@
-<ul class='spotlight-slider'></ul>
+<ul class="spotlight-slider"></ul>
 
 <script>
 
