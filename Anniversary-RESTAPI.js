@@ -31,7 +31,7 @@ $(function($, undefined) {
     var results = data.d.results;	
     $.each(results, function(index, dataRec) {
 		var userEntry = {};
-		if(dataRec.Employee_x0020_Name.FirstName == null && dataRec.Employee_x0020_Name.LastName == null)
+		if(dataRec.Employee_x0020_Name.FirstName == null || dataRec.Employee_x0020_Name.LastName == null)
 			{
 				userEntry.Name = dataRec.Employee_x0020_Name.EMail.split('@')[0];
 			}
