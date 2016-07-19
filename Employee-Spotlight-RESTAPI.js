@@ -47,7 +47,7 @@ $(function($, undefined) {
     });
   }
   function onQueryError(error) {
-    $("#keyContactPrimary").append(error.statusText)
+    $(".spotlight-slider").append(error.statusText)
   }
 });
 </script>
