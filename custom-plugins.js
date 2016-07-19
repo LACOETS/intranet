@@ -92,59 +92,63 @@ $(window).load(function(){
 $(window).load(function(){
 	calslider1 = $(".cal-sliderdate1").bxSlider({
         minSlides: 1,
-        maxSlides: 5,
+        maxSlides: 4,
         moveSlides: 1,
         slideWidth: 204,
         slideMargin: 20,
         pager:false,
 		controls:false,
-		infiniteLoop: true,
+		infiniteLoop: false,
+		startSlide: 0
     });
 		calslider2 = $(".cal-sliderdate2").bxSlider({
         minSlides: 1,
-        maxSlides: 5,
+        maxSlides: 4,
         moveSlides: 1,
         slideWidth: 204,
         slideMargin: 20,
         pager:false,
 		controls:false,
-		infiniteLoop: true,
+		infiniteLoop: false,
     }); 
 		calslider3 = $(".cal-sliderdate3").bxSlider({
         minSlides: 1,
-        maxSlides: 5,
+        maxSlides: 4,
         moveSlides: 1,
         slideWidth: 204,
         slideMargin: 20,
         pager:false,
 		controls:false,
-		infiniteLoop: true,
+		infiniteLoop: false,
     });
 		calslider4 = $(".cal-sliderdate4").bxSlider({
         minSlides: 1,
-        maxSlides: 5,
+        maxSlides: 4,
         moveSlides: 1,
         slideWidth: 204,
         slideMargin: 20,
         pager:false,
 		controls:false,
-		infiniteLoop: true,
+		infiniteLoop: false,
 		
     });
     
-    $('#sa-next').click(function(){
+    $(document).on('click', '#sa-next', function(){
 		calslider1.goToNextSlide();
 	return false;
 	});
-	$('#sa-prev').click(function(){
+	
+	$(document).on('click', '#sa-prev', function(){
 		calslider1.goToPrevSlide();
 	return false;
 	});
-	$("#sa-first").on("click" ,function() {
+	
+	$(document).on('click', '#sa-first', function(){
 		calslider1.goToSlide(0);
 		return false;
 	});
-	$("#sa-last").on("click" ,function() {
+	
+	$(document).on('click', '#sa-last', function(){
 		var count = calslider1.getSlideCount();
 		calslider1.goToSlide(count-1);
 		return false;
@@ -152,11 +156,11 @@ $(window).load(function(){
 	
 	//
 	
-	$('#b-next').click(function(){
+	$('#b-next').on(function(){
 		calslider2.goToNextSlide();
 	return false;
 	});
-	$('#b-prev').click(function(){
+	$('#b-prev').on(function(){
 		calslider2.goToPrevSlide();
 	return false;
 	});
@@ -172,11 +176,11 @@ $(window).load(function(){
 	
 	//
 	
-	$('#t-next').click(function(){
+	$('#t-next').on(function(){
 		calslider3.goToNextSlide();
 	return false;
 	});
-	$('#t-prev').click(function(){
+	$('#t-prev').on(function(){
 		calslider3.goToPrevSlide();
 	return false;
 	});
@@ -192,11 +196,11 @@ $(window).load(function(){
 	
 	//
 	
-	$('#se-next').click(function(){
+	$('#se-next').on(function(){
 		calslider4.goToNextSlide();
 	return false;
 	});
-	$('#se-prev').click(function(){
+	$('#se-prev').on(function(){
 		calslider4.goToPrevSlide();
 	return false;
 	});

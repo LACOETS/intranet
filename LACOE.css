@@ -3234,10 +3234,10 @@ ul.dynamic { min-width: 200px; }
 .date-showbox { display: inline-block; width: 65px; vertical-align: middle; border-radius: 5px; overflow: hidden; text-align: center; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3) }
 .month-title { background: #1c7ec7; color: #fff; font-weight: 300; font-size: 1em; text-transform: uppercase; padding: 4px 14px }
 .month-date { color: #1c7ec7; font-size: 1.750em; font-weight: 600; padding: 4px 14px }
-.calender-text { font-size: 0.875em; color: #4d4d4d; font-weight: 300; padding: 15px 0 5px 0; white-space: nowrap; width: 100%; overflow: hidden;text-overflow: ellipsis; }
+.calender-text { font-size: 0.875em; color: #4d4d4d; margin:0 auto; font-weight: 300; padding: 15px 0 5px 0; white-space: nowrap; width: 85%; overflow: hidden;text-overflow: ellipsis; }
 .calender-likelink { text-align: center }
 .calender-text { text-align: center }
-.calender-text p { line-height: 25px; white-space: nowrap; width: 100%; overflow: hidden;text-overflow: ellipsis;}
+.calender-text p { line-height: 25px; white-space: nowrap; width: 100%; overflow: hidden;text-overflow: ellipsis; display:block}
 .calender-slider { text-align: center }
 .calender-slider { position: relative }
 .calender-slider .bx-has-controls-direction { margin-top: 15px }
@@ -3715,9 +3715,10 @@ select:focus{outline:none;}
 .pagination-page table td table td.ms-paging{padding-left:4px;}
 
 #department-box .pagination-page table td table td:nth-child(1){width:25%;}
-#department-box .pagination-page table td table td:nth-child(2){width:33.3333%;}
+#department-box .pagination-page table td table td:nth-child(2){width:25%;}
 #department-box .pagination-page table td table td:nth-child(3){width: 16.6667%;}
 #department-box .pagination-page table td table td:nth-child(4){width: 25%;}
+#department-box .pagination-page table td table td:nth-child(5){width: 8.33333%;}
 .pagination-page table td table td .ms-number{padding-right:0; text-align:left}
 .pagination-page table td table td .ms-number center{text-align:left}
 .pagination-page .ms-itmHoverEnabled:hover > *{background-color:transparent; border-bottom-color:#e4e4e4;}
@@ -3838,12 +3839,27 @@ span.sep-spotlight{display:inline-block;vertical-align:; padding:0 5px; color:#6
 .select-filtercaldr .input-type-select::after{height:22px;}
 .emp-spotlight-box .spotlight-img{box-shadow:none;border:1px solid #ccc}
 .spotlight-infotxt{padding-bottom:15px}
+.btn-container.keycontact-viewlink.moveButton{right:120px; width:200px; border:none;}
+
+/*Inner discussion*/
+.innerdiscussion .discussion-tabs .pagination-page table td table td:nth-child(1){width:25%;}
+.innerdiscussion .discussion-tabs .pagination-page table td table td:nth-child(2){width:50%;}
+.innerdiscussion .discussion-tabs .pagination-page table td table td:nth-child(3){width:25%;}
+/*Inner discusiion edn*/
+
+.upcoming-event-box.cal-view-icon .calender-slider{padding-bottom:30px}
+
 
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
 .loader { width: 100%; height: 100%; background: url(Images/loader.gif) no-repeat center center rgba(0,0,0,0.9); position: fixed; left: 0; top: 0; z-index: 999 }
 /*Loader*/
+
+/* IE10+ CSS styles go here hack*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+.select-filtercaldr .input-type-select::after{height:21px}
+}
 
 /*======================================= Above (768px) ipad Portrait ========================================*/
 /*For Desktop Only*/
