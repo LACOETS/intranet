@@ -3215,7 +3215,7 @@ ul.dynamic { min-width: 200px; }
 .custom-nextprev-arrow a:hover{background-color:#e3e3e3}
 .custom-nextprev-arrow a.custom-prev-is { right: 85px; border-radius:2px 0 0 2px }
 .custom-nextprev-arrow a.custom-next-is { right: 7px;border-radius:0px 2px 2px 0px }
-.info-sliderimage > li > img { display: none }
+.info-sliderimage > li > img { display: none !important}
 .imageslider > li > a { display: none }
 .imageslider > li > div.annoucement-bodytxt { display: none }
 .image-infoslider .bx-caption { display: none }
@@ -3590,7 +3590,7 @@ transition: all 300ms ease-in-out;
 background-position: 2;background-position: 0 -68px;}
 .selectdropwn-search .ms-srch-sb-searchLink:hover, .ms-srch-sb-navLink:hover{background-color:transparent}
 .input-type-select{position:relative}
-.input-type-select:after{content:''; width:30px; height:24px; right:0; top:0; position:absolute; background:url("https://lacoets.github.io/intranet/sprite.png") -260px -63px no-repeat; pointer-events: none;}
+.input-type-select:after{content:''; width:30px; height:24px; right:0; top:0; position:absolute; background:url("https://lacoets.github.io/intranet/sprite.png") -260px -65px no-repeat; pointer-events: none;}
 .selectdropwn-search #SmallSearchInputBox1{position: absolute;width: 165px;height:24px;left:0px;outline: none;}
 .selectdropwn-search .input-type-select{width:86%; float:left; overflow:hidden;position:relative;}
 .selectdropwn-search .input-type-select select{width:100%; border:none; outline:none}
@@ -3837,6 +3837,7 @@ span.sep-spotlight{display:inline-block;vertical-align:; padding:0 5px; color:#6
 .whatdo-youthinklanding #WebPartWPQ3 .ms-rtestate-field{padding-bottom:0}
 .select-filtercaldr .input-type-select{border:rgba(0,0,0,0.2) solid 1px}
 .select-filtercaldr .input-type-select::after{height:22px;}
+.select-filtercaldr .input-type-select select option{font-weight:400; color:gray}
 .emp-spotlight-box .spotlight-img{box-shadow:none;border:1px solid #ccc}
 .spotlight-infotxt{padding-bottom:15px}
 .btn-container.keycontact-viewlink.moveButton{right:120px; width:200px; border:none;}
@@ -3848,6 +3849,17 @@ span.sep-spotlight{display:inline-block;vertical-align:; padding:0 5px; color:#6
 /*Inner discusiion edn*/
 
 .upcoming-event-box.cal-view-icon .calender-slider{padding-bottom:30px}
+.innergoalspage #department-box .pagination-page table td table td:nth-child(1){width:8.33333%;}
+.innergoalspage #department-box .pagination-page table td table td:nth-child(2){width:25%;}
+.innergoalspage #department-box .pagination-page table td table td:nth-child(3){width: 33.3333%;}
+.innergoalspage #department-box .pagination-page table td table td:nth-child(4){width: 16.6667%;}
+.innergoalspage #department-box .pagination-page table td table td:nth-child(5){width: 16.6667%;}
+
+.upcoming-event-box.cal-view-icon .calender-slider{min-height:171px;}
+.upcoming-event-box.cal-view-icon .custom-noresult{height:90%; background:#fff; width:100%; position:absolute; left:0; top:28px; border:none}
+.news-section .img-box-thumb-holder img{margin-left:-50%; margin-top:-50%;}
+.innergoals-events-tabs{padding-top:25px;}
+.innergoals-events-tabs .pagination-page div.ms-webpart-zone{min-height:166px}
 
 
 /*======================================= Content Area CSS End ========================================*/
