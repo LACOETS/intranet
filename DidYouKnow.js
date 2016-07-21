@@ -8,7 +8,7 @@ $(function($, undefined) {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
       var todayDate = new Date().toISOString().split('T')[0];
 	  todayDate = todayDate + 'T00%3a00%3a00';	  
-	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Did You Know')/items?$select=Title,Start_x0020_Date,End_x0020_Date,Picture_x0020_URL&$orderby=End_x0020_Date asc&$filter=Start_x0020_Date le datetime'" + todayDate + "' and End_x0020_Date ge datetime'" + todayDate + "'"; 
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Did You Know')/items?$select=Title,Start_x0020_Date,End_x0020_Date,Picture_x0020_URL,Landing_x0020_Site_x0020_Approva&$orderby=End_x0020_Date asc&$filter=Start_x0020_Date le datetime'" + todayDate + "' and End_x0020_Date ge datetime'" + todayDate + "' and Landing_x0020_Site_x0020_Approva eq 'Yes'"; 
       
       $.ajax({
         url: queryUrl,
