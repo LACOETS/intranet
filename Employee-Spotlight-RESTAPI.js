@@ -54,12 +54,13 @@ $(function($, undefined) {
 <script>
 	$(function(){
 	setTimeout(function(){ 
-		$(".spotlight-slider").bxSlider({
+		
+ 	}, 3000);
+ 	$(".spotlight-slider").bxSlider({
 			auto: true,
 		        pager: true,
 		        controls: false
 		});
- 	}, 3000);
  	
 })
 </script>
