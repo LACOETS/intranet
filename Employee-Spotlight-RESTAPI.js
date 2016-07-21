@@ -51,9 +51,15 @@ $(function($, undefined) {
   }
 });
 </script>
+
+<ul class="spotlight-slider"></ul>
+
 <script>
 window.addEventListener("load", function(){
-    alert();
+    $(".spotlight-slider").bxSlider({
+		auto: true,
+	        pager: true,
+	        controls: false
+	});
 });
 </script>
-<ul class="spotlight-slider"></ul>
