@@ -50,4 +50,11 @@ $(function($, undefined) {
     $(".spotlight-slider").append(error.statusText)
   }
 });
+$(function(){
+	$(".spotlight-slider").bxSlider({
+		auto: true,
+	        pager: true,
+	        controls: false
+	})
+})
 </script>
