@@ -3,7 +3,7 @@
 <script>
 
 $(function($, undefined) {
-
+alert('123 Vipul');
   SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
       var todayDate = new Date().toISOString().split('T')[0];
