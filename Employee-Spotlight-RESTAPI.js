@@ -1,4 +1,4 @@
-<ul class="spotlight-slider"></ul>
+
 
 <script>
 
@@ -61,3 +61,4 @@ $(function(){
  	
 })
 </script>
+<ul class="spotlight-slider"></ul>
