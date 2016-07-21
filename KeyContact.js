@@ -54,7 +54,7 @@ $(function($, undefined) {
 	    }
 	    else
 	    {
-	    	profileImg1 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/gray-img.png' data-original='" + pictureURL1  + "' alt='No image found for this profile' ></div>";
+	    	profileImg1 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/gray-img.png' data-original='" + pictureURL1  + "' class='lazy' alt='No image found for this profile' ></div>";
 	    }
 		
 		if (userEntry.Name)
