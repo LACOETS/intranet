@@ -52,12 +52,6 @@ $(function($, undefined) {
 });
 </script>
 <script>
-$(window).on("load", function() { 
-	$(".spotlight-slider").bxSlider({
-		auto: true,
-	        pager: true,
-	        controls: false
-	});
-)}
+
 </script>
 <ul class="spotlight-slider"></ul>
