@@ -32,7 +32,7 @@ $(function($, undefined) {
     });
   }
   function onQueryError(error) {
-    $(".spotlight-slider").append(error.statusText)
+    $(".ulDidYouKnow").append(error.statusText)
   }
 });
 </script>
