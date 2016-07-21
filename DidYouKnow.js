@@ -9,7 +9,7 @@ $(function($, undefined) {
       var context = SP.ClientContext.get_current();
       var todayDate = new Date().toISOString().split('T')[0];
 	  todayDate = todayDate + 'T00%3a00%3a00';	  
-	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Did You Know')/items?Title,StartDate,_EndDate,Picture_x0020_URL&$orderby=_EndDate asc&$filter=StartDate le datetime'" + todayDate + "' and _EndDate ge datetime'" + todayDate + "'"; 
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Did You Know')/items?$select=Title,StartDate,_EndDate,AnnouncementPictureURL&$orderby=_EndDate asc&$filter=StartDate le datetime'" + todayDate + "' and _EndDate ge datetime'" + todayDate + "'"; 
       $.ajax({
         url: queryUrl,
         method: "GET",
