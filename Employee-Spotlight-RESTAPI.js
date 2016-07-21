@@ -52,6 +52,8 @@ $(function($, undefined) {
 });
 </script>
 <script>
-
+window.addEventListener("load", function(){
+    alert();
+});
 </script>
 <ul class="spotlight-slider"></ul>
