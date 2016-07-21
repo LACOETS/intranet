@@ -56,11 +56,11 @@ $(function($, undefined) {
 	setTimeout(function(){ 
 		
  	}, 3000);
- 	$(".spotlight-slider").bxSlider({
+ 	/*$(".spotlight-slider").bxSlider({
 			auto: true,
 		        pager: true,
 		        controls: false
-		});
+		});*/
  	
 })
 </script>
