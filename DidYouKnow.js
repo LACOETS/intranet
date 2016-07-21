@@ -29,7 +29,7 @@ $(function($, undefined) {
 		userEntry.Title = dataRec.Title;		
 		userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
 		
-		$('.ulDidYouKnow').append('<li><div class="img-box-thumb-holder"><div class="spotlight-img"><img src="'+userEntry.ImageURL+'" id="SpotlightImage" alt="Image1"/></div><p>'+userEntry.Title+'</p></div></div></li>');
+		$('.ulDidYouKnow').append('<li><div class="didyouknwbx"><div class="didyouknwbx-img"><img src="'+userEntry.ImageURL+'" id="SpotlightImage" alt="Image1"/></div><div class="didyouknw-txt"><p>'+userEntry.Title+'</p></div><div class="clear"></div></div></div></li>');
     });
   }
   function onQueryError(error) {
