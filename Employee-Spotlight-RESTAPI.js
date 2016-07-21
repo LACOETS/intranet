@@ -50,7 +50,9 @@ $(function($, undefined) {
     $(".spotlight-slider").append(error.statusText)
   }
 });
-$(function(){
+</script>
+<script>
+	$(function(){
 	setTimeout(function(){ 
 		$(".spotlight-slider").bxSlider({
 			auto: true,
