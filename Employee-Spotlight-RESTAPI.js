@@ -52,16 +52,17 @@ $(function($, undefined) {
 });
 </script>
 <script>
-	$(function(){
+/* $(function(){
 	setTimeout(function(){ 
-		
  	}, 3000);
- 	/*$(".spotlight-slider").bxSlider({
-			auto: true,
-		        pager: true,
-		        controls: false
-		});*/
- 	
-})
+}) */
+
+$(window).bind("load", function() { 
+	$(".spotlight-slider").bxSlider({
+		auto: true,
+	        pager: true,
+	        controls: false
+	});
+)}
 </script>
 <ul class="spotlight-slider"></ul>
