@@ -52,11 +52,6 @@ $(function($, undefined) {
 });
 </script>
 <script>
-/* $(function(){
-	setTimeout(function(){ 
- 	}, 3000);
-}) */
-
 $(window).bind("load", function() { 
 	$(".spotlight-slider").bxSlider({
 		auto: true,
