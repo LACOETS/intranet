@@ -28,7 +28,7 @@ $(function($, undefined) {
 		var userEntry = {};
 		userEntry.Title = dataRec.Title;		
 		userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
-		alert(userEntry.ImageURL);
+		
 		$('.ulDidYouKnow').append('<li><div class="img-box-thumb-holder"><div class="spotlight-img"><img src="'+userEntry.ImageURL+'" id="SpotlightImage" alt="Image1"/></div><p>'+userEntry.Title+'</p></div></div></li>');
     });
   }
