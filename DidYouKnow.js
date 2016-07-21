@@ -6,10 +6,9 @@ $(function($, undefined) {
 
   SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
-      var context = SP.ClientContext.get_current();
       var todayDate = new Date().toISOString().split('T')[0];
 	  todayDate = todayDate + 'T00%3a00%3a00';	  
-	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Did You Know')/items?$select=Title,StartDate,_EndDate,AnnouncementPictureURL&$orderby=_EndDate asc&$filter=StartDate le datetime'" + todayDate + "' and _EndDate ge datetime'" + todayDate + "'"; 
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Did You Know')/items?$select=Title,StartDate,%5FEndDate,AnnouncementPictureURL&$orderby=%5FEndDate asc&$filter=StartDate le datetime'" + todayDate + "' and %5FEndDate ge datetime'" + todayDate + "'"; 
       $.ajax({
         url: queryUrl,
         method: "GET",
