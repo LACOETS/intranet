@@ -51,10 +51,12 @@ $(function($, undefined) {
   }
 });
 $(function(){
-	$(".spotlight-slider").bxSlider({
-		auto: true,
-	        pager: true,
-	        controls: false
-	})
+	setTimeout(function(){ 
+		$(".spotlight-slider").bxSlider({
+			auto: true,
+		        pager: true,
+		        controls: false
+		});
+ 	}, 3000);
 })
 </script>
