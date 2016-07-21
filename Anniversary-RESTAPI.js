@@ -46,7 +46,7 @@ $(function($, undefined) {
 		userEntry.Description=dataRec.Description;
 		userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
 		        
-		$('.aniversarysul').append('<li><div class="img-box-thumb-holder"><div class="box-rowcntr"><div class="box-img-thumbnail"><div class="img-box-thumb-holder"><img src="'+userEntry.ImageURL+'" id="AnniversaryImage" alt="Image1"/></div></div><div class="news-info-cntr"><div class="news-title-like"><h4>'+userEntry.Name+'</h4></div><div class="news-activity-dtl"><p class="news-showdate">'+userEntry.Title+'<br>'+ userEntry.Department+'</p></div></div><div class="clear"></div></div></li>');
+		$('.aniversarysul').append('<li><div class="img-box-thumb-holder"><div class="box-rowcntr"><div class="box-img-thumbnail"><div class="img-box-thumb-holder"><img src="https://lacoets.github.io/intranet/gray-img.png" data-original="'+userEntry.ImageURL+'" id="AnniversaryImage" class="lazy" alt="Image1"/></div></div><div class="news-info-cntr"><div class="news-title-like"><h4>'+userEntry.Name+'</h4></div><div class="news-activity-dtl"><p class="news-showdate">'+userEntry.Title+'<br>'+ userEntry.Department+'</p></div></div><div class="clear"></div></div></li>');
     });
   }
   function onQueryError(error) {
