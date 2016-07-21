@@ -52,11 +52,12 @@ $(function($, undefined) {
 });
 $(window).load(function(){
 	setTimeout(function(){ 
-		$(".spotlight-slider").bxSlider({
+		
+ 	}, 1500);
+ 	$(".spotlight-slider").bxSlider({
 			auto: true,
 		        pager: true,
 		        controls: false
 		});
- 	}, 1500);
 })
 </script>
