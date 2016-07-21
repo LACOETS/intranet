@@ -50,11 +50,11 @@ $(function($, undefined) {
 	     //alert(pictureURL1);	
 		if(pictureURL1=='' || pictureURL1==null || pictureURL1==undefined)
 	    {
-	   		profileImg1 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' alt='No image found for this profile' ></div>";
+	   		profileImg1 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/gray-img.png' data-original='https://lacoets.github.io/intranet/no-user-img-dummy.jpg' class='lazy' alt='No image found for this profile' ></div>";
 	    }
 	    else
 	    {
-	    	profileImg1 = "<div class='keyprofilepic'><img src='" + pictureURL1  + "' alt='No image found for this profile' ></div>";
+	    	profileImg1 = "<div class='keyprofilepic'><img src='https://lacoets.github.io/intranet/gray-img.png' data-original='" + pictureURL1  + "' alt='No image found for this profile' ></div>";
 	    }
 		
 		if (userEntry.Name)
