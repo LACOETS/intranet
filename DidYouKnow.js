@@ -9,7 +9,7 @@ $(function($, undefined) {
       var todayDate = new Date().toISOString().split('T')[0];
 	  todayDate = todayDate + 'T00%3a00%3a00';	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Did You Know')/items?$select=Title,Start_x0020_Date,End_x0020_Date,Picture_x0020_URL&$orderby=End_x0020_Date asc&$filter=Start_x0020_Date le datetime'" + todayDate + "' and End_x0020_Date ge datetime'" + todayDate + "'"; 
-      alert(queryUrl);
+      
       $.ajax({
         url: queryUrl,
         method: "GET",
