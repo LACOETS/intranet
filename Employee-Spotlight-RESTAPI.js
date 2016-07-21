@@ -50,14 +50,14 @@ $(function($, undefined) {
     $(".spotlight-slider").append(error.statusText)
   }
 });
-$(window).load(function(){
+$(function(){
 	setTimeout(function(){ 
-		
- 	}, 1500);
- 	$(".spotlight-slider").bxSlider({
+		$(".spotlight-slider").bxSlider({
 			auto: true,
 		        pager: true,
 		        controls: false
 		});
+ 	}, 1500);
+ 	
 })
 </script>
