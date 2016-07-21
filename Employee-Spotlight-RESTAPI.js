@@ -52,7 +52,7 @@ $(function($, undefined) {
 });
 </script>
 <script>
-$(window).bind("load", function() { 
+$(window).on("load", function() { 
 	$(".spotlight-slider").bxSlider({
 		auto: true,
 	        pager: true,
