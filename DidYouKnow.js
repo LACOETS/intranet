@@ -25,6 +25,7 @@ $(function($, undefined) {
   function onQuerySuccess(data) {
     var results = data.d.results;	
     $.each(results, function(index, dataRec) {
+		var userEntry = {};
 		userEntry.Title = dataRec.Title;		
 		userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
 		alert(userEntry.ImageURL);
