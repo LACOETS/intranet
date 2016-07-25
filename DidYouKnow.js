@@ -33,14 +33,17 @@ $(function($, undefined) {
     });
 		
   }
-	$('.ulDidYouKnow').bxSlider({
-		pager:true,
-		controls:false,
-		auto:true	
-	})
+	
   function onQueryError(error) {
     $(".ulDidYouKnow").append(error.statusText)
   }
 	
 });
+$(window).load(function(){
+	$('.ulDidYouKnow').bxSlider({
+		pager:true,
+		controls:false,
+		auto:true	
+	})	
+})
 </script>
