@@ -3194,7 +3194,7 @@ ul.dynamic { min-width: 200px; }
 .image-sliders .bx-pager { bottom: 45px }
 .bx-caption { position: absolute; left: 0; bottom: 0; z-index: 99; padding: 8px 10px; color: #fff; background: #000; width: 100%; font-size: 1em; }
 .bx-caption a { color: #fff; }
-.image-infoslider { float: left; width: 43.15%; position: relative }
+.image-infoslider { float: left; width: 43.152%; position: relative }
 .image-infoslider ul li { border-bottom: #e4e4e4 solid 1px; width: 100% !important; color: #4d4d4d; font-size: 1em }
 .image-infoslider ul li a { padding: 14px 16px; display: block; text-transform:capitalize; overflow:hidden; white-space: nowrap;text-overflow: ellipsis; }
 .image-infoslider .bx-controls-direction a:hover{background-color:#e3e3e3 !important}
@@ -3222,7 +3222,7 @@ ul.dynamic { min-width: 200px; }
 /*Announcement End*/
 
 /*Upcoming Event*/
-.upcoming-event-box { overflow: hidden; border-radius: 2px; box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25); }
+.upcoming-event-box { overflow: hidden; border-radius: 2px; /*box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);*/ }
 .upcoming-event-box .box-heading h3 i { background-position:-83px -25px; }
 .upcoming-event-box .box-heading h3 a { display: inline-block; vertical-align: middle; font-size: 0.875em; padding-left: 20px; margin-left: 25px; font-weight: 400; color: #fff; line-height: 21px }
 .upc-events-tabs .tabNav ul li { width: 25% }
@@ -3245,7 +3245,7 @@ ul.dynamic { min-width: 200px; }
 
 /*dept-announcement start*/
 .dept-announcement .image-sliders { /*width: 450px;*/ width:58.46% }
-.dept-announcement .image-infoslider { /*width: 319px;*/ width:41.54%; }
+.dept-announcement .image-infoslider { /*width: 319px;*/ width:41.542%; }
 .dept-quicklinks .tabNav ul li { width: 50%; }
 .dept-announcement .image-infoslider ul li a { padding:14px 16px; }
 /*dept-announcement end*/
@@ -3770,7 +3770,7 @@ select:focus{outline:none;}
 .news-section .box-heading h3 i{background-position:-59px -25px}
 .quicklinks-section.landing-quicklink .box-heading h3 i{background-position: -77px -1px;}
 .emp-spotlight-box .box-heading h3 i{background-position:-235px -50px}
-.lacoe-aniversary-box .box-heading h3 i{background-position:-211px -51px}
+.lacoe-aniversary-box .box-heading h3 i{background-position:-211px -50px}
 .whatdo-youthink .box-heading h3 i{background-position:-133px -26px}
 .didyouknw-content {padding: 15px; padding-bottom:30px; position:relative}
 
@@ -3899,7 +3899,16 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 #localEvents-box .pagination-page table td table td:nth-child(6){width:14%;}
 #localEvents-box .pagination-page table td table td:nth-child(7){width:14%;}
 
-
+table[id^="bottomPaging"] td table{background: #f3f3f3; border: 1px solid #e0e0e0;border-radius: 2px;overflow: hidden; margin-right:7px; margin-bottom:7px;}
+table[id^="bottomPaging"] td table td{height:25px; padding:0 2px !important}
+table[id^="bottomPaging"] td table td a{border:none}
+table[id^="bottomPaging"] td table td a img{visibility:hidden}
+table[id^="bottomPaging"] td table td.ms-paging{padding:0 5px !important}
+table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:last-child{background:url("https://lacoets.github.io/intranet/sprite.png") no-repeat scroll -78px -274px;border-left:1px solid #e0e0e0 !important}
+table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:last-child a.ms-promlink-button-enabled{background-color:transparent;}
+table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:first-child{background:url("https://lacoets.github.io/intranet/sprite.png") no-repeat scroll -50px -274px;border-right:1px solid #e0e0e0 !important;}
+table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:first-child a.ms-promlink-button-enabled{background-color:transparent;}
+table[id^="bottomPaging"] td table td:hover{background-color: #e3e3e3 !important;}
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
