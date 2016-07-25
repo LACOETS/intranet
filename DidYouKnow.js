@@ -43,7 +43,9 @@ $(window).load(function(){
 	$('.ulDidYouKnow').bxSlider({
 		pager:true,
 		controls:false,
-		auto:true	
+		auto:true,
+		pause:7000,
+		speed:1000
 	})	
 })
 </script>
