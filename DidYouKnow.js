@@ -35,5 +35,10 @@ $(function($, undefined) {
   function onQueryError(error) {
     $(".ulDidYouKnow").append(error.statusText)
   }
+	$('.ulDidYouKnow').bxSlider({
+		pager:true,
+		controls:false,
+		auto:true	
+	})
 });
 </script>
