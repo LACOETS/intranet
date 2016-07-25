@@ -31,14 +31,16 @@ $(function($, undefined) {
 		
 		$('.ulDidYouKnow').append('<li><div class="didyouknwbx"><div class="didyouknwbx-img"><img src="'+userEntry.ImageURL+'" id="SpotlightImage" alt="Image1"/></div><div class="didyouknw-txt"><p>'+userEntry.Title+'</p></div><div class="clear"></div></div></div></li>');
     });
-  }
-  function onQueryError(error) {
-    $(".ulDidYouKnow").append(error.statusText)
+		
   }
 	$('.ulDidYouKnow').bxSlider({
 		pager:true,
 		controls:false,
 		auto:true	
 	})
+  function onQueryError(error) {
+    $(".ulDidYouKnow").append(error.statusText)
+  }
+	
 });
 </script>
