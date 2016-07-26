@@ -33,24 +33,13 @@ $(function($, undefined) {
     });
 		
 		/*Showing slider condition*/
-    var Li_count=$('.ulDidYouKnow li').length;
-		alert(Li_count);
-    if(Li_count < 2)
-    { 
-    	return false;
-    }
-    else
-    {
-			alert('Slider');
-    	$('.ulDidYouKnow').bxSlider({
-				pager:true,
+    $('.ulDidYouKnow').bxSlider({
 				controls:false,
-				auto:true,
 				pause:7000,
-				speed:1000
+				speed:1000,
+				auto: ($(".ulDidYouKnow li").length > 2) ? true: false,
+    		pager: ($(".ulDidYouKnow li").length > 2) ? true: false
 			})
-    }
-		
 		/*Showing slider condition end*/
 		
   }
