@@ -12,9 +12,8 @@ $(document).ready(function(){
 	else if(window.location.href.indexOf('EditForm.aspx') > -1)
 	{
 		goalID = decodeURIComponent(window.location.href.split('?')[1]);
-		alert(goalID);
-		//goalID = decodeURIComponent(goalID.split('?')[1].split('=')[1].split('&')[0]);
-		//alert('In If goalID:=' + goalID);
+		goalID = goalID.split('?')[1];
+		alert('In Else goalID:=' + goalID);
 	}
 	GetGoalName(goalID);
 });//End of Doc ready
