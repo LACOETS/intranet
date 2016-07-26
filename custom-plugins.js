@@ -69,6 +69,7 @@ $(function(){
       }
 	/*hiding title landing*/
 	
+	
 });
 $(window).load(function(){
 
@@ -226,4 +227,11 @@ $(window).load(function(){
 
     $('.upcoming-event-box.cal-view-icon .tabResult').css('height','auto');
     $('.upcoming-event-box.cal-view-icon .tabResult').children('.calenader-loading').fadeOut();
+    
+    $('.tabNav').each(function(){
+		$(this).children('ul').children('li').css({
+			'width' : (100 / ( $(this).children('ul').children('li').length ) ) +  '%'
+		})		
+	})
 })
+

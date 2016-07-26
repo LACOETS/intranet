@@ -3709,7 +3709,7 @@ select:focus{outline:none;}
 .pagination-page table thead{display:none}
 .pagination-page div[id^="scriptPaging"]{display: block;margin: 0 auto;position:absolute; right:0%; bottom:0px}
 .pagination-page table{width:100% !important}
-.pagination-page table td table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px;}
+.pagination-page table td table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .pagination-page table td table{table-layout: fixed; border-collapse:collapse}
 .pagination-page table.ms-listviewtable{border-collapse:collapse}
 .pagination-page table td table td.ms-paging{padding-left:4px;}
@@ -3727,19 +3727,25 @@ select:focus{outline:none;}
 .pagination-page table td table tr:nth-child(2n) {background: #f7f8f8 !important;}
 .pagination-page .ms-vb.ms-bottompagingline table{width:auto}
 .pagination-page .ms-vb.ms-bottompagingline table tr{border-bottom:none !important;}
-#activity-box .pagination-page table td table td:nth-child(1){width:16.6667%}
-#activity-box .pagination-page table td table td:nth-child(2){width:25%;}
-#activity-box .pagination-page table td table td:nth-child(3){width:16.6667%;}
+#activity-box .pagination-page table td table td:nth-child(1){width:8.33333%}
+#activity-box .pagination-page table td table td:nth-child(2){width:16.6667%;}
+#activity-box .pagination-page table td table td:nth-child(3){width:25%;}
 #activity-box .pagination-page table td table td:nth-child(4){width:16.6667%;}
 #activity-box .pagination-page table td table td:nth-child(5){width:8.33333%;}
-#activity-box .pagination-page table td table td:nth-child(6){width:13.6667%;}
+#activity-box .pagination-page table td table td:nth-child(6){width:8.33333%;}
+#activity-box .pagination-page table td table td:nth-child(7){width:8.33333%;}
+#activity-box .pagination-page table td table td:nth-child(8){width:8.33333%;}
 
-#risk-box .pagination-page table td table td:nth-child(1){width:16.6667%}
-#risk-box .pagination-page table td table td:nth-child(2){width:25%;}
-#risk-box .pagination-page table td table td:nth-child(3){width:16.6667%;}
+
+#risk-box .pagination-page table td table td:nth-child(1){width:8.33333%}
+#risk-box .pagination-page table td table td:nth-child(2){width:16.6667%;}
+#risk-box .pagination-page table td table td:nth-child(3){width:25%;}
 #risk-box .pagination-page table td table td:nth-child(4){width:16.6667%;}
 #risk-box .pagination-page table td table td:nth-child(5){width:8.33333%;}
-#risk-box .pagination-page table td table td:nth-child(6){width:16.6667%;}
+#risk-box .pagination-page table td table td:nth-child(6){width:8.33333%;}
+#risk-box .pagination-page table td table td:nth-child(7){width:8.33333%;}
+#risk-box .pagination-page table td table td:nth-child(8){width:8.33333%;}
+
 
 #targetdate-box .pagination-page table td table td:nth-child(1){width:16.6667%}
 #targetdate-box .pagination-page table td table td:nth-child(2){width:25%;}
@@ -3909,6 +3915,9 @@ table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:last-child a.ms-promlink-
 table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:first-child{background:url("https://lacoets.github.io/intranet/sprite.png") no-repeat scroll -50px -274px;border-right:1px solid #e0e0e0 !important;}
 table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:first-child a.ms-promlink-button-enabled{background-color:transparent;}
 table[id^="bottomPaging"] td table td:hover{background-color: #e3e3e3 !important;}
+
+.image-slidersimgcntr{width:100%; position:relative; overflow:hidden; height:336px;}
+.image-infoslider .image-slidersimgcntr{display:none}
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
