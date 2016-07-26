@@ -4,20 +4,13 @@
 <script type="text/javascript">
 var goalID;
 $(document).ready(function(){
-	if(window.location.href.indexOf('NewForm.aspx') > -1){
+	//if(window.location.href.indexOf('NewForm.aspx') > -1){
 		goalID = decodeURIComponent(window.location.href.split('?')[1].split('=')[1]);
 		goalID = goalID.split('?')[1].split('=')[1].split('&')[0];
 		alert('In If goalID:=' + goalID);
-		
-	}//End of If
-	else if(window.location.href.indexOf('EditForm.aspx') > -1)
-	{
-	  goalID = window.location.href.split('=')[1].split('&')[0];
-	  alert('In else:=' + goalID);
-	}
-	GetGoalName(goalID);
+		GetGoalName(goalID);
+	//}//End of If
 });//End of Doc ready
-
 
 function GetGoalName(goalID){
 SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
