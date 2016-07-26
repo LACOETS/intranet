@@ -35,11 +35,12 @@ $(function($, undefined) {
 		/*Showing slider condition*/
     var Li_count=$('.ulDidYouKnow').children('li').length;
     if(Li_count < 2)
-    {
+    { 
     	return false;
     }
     else
     {
+			alert('Slider');
     	$('.ulDidYouKnow').bxSlider({
 				pager:true,
 				controls:false,
