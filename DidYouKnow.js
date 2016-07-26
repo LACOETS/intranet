@@ -38,8 +38,8 @@ $(function($, undefined) {
 				pause:7000,
 				speed:1000,
 				infiniteLoop: false,
-				auto: ($(".ulDidYouKnow li").length > 2) ? true: false,
-    		pager: ($(".ulDidYouKnow li").length > 2) ? true: false
+				auto: ($(".ulDidYouKnow li").length > 1) ? true: false,
+    		pager: ($(".ulDidYouKnow li").length > 1) ? true: false
 			})
 		/*Showing slider condition end*/
 		
