@@ -33,7 +33,7 @@ $(function($, undefined) {
     });
 		
 		/*Showing slider condition*/
-    var Li_count=$('.ulDidYouKnow').children('li').length;
+    var Li_count=$('.ulDidYouKnow li').length;
 		alert(Li_count);
     if(Li_count < 2)
     { 
