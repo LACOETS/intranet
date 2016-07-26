@@ -12,7 +12,7 @@ $(document).ready(function(){
 	else if(window.location.href.indexOf('EditForm.aspx') > -1)
 	{
 		goalID = decodeURIComponent(window.location.href.split('?')[1]);
-		goalID = goalID.split('?')[1];
+		goalID = goalID.split('?')[1].split('=')[1];
 		alert('In Else goalID:=' + goalID);
 	}
 	GetGoalName(goalID);
