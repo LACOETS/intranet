@@ -31,6 +31,13 @@ $(function($, undefined) {
 		
 		$('.ulDidYouKnow').append('<li><div class="didyouknwbx"><div class="didyouknwbx-img"><img src="'+userEntry.ImageURL+'" id="SpotlightImage" alt="Image1"/></div><div class="didyouknw-txt"><p>'+userEntry.Title+'</p></div><div class="clear"></div></div></div></li>');
     });
+    $('.ulDidYouKnow').bxSlider({
+		pager:true,
+		controls:false,
+		auto:true,
+		pause:7000,
+		speed:1000
+	})
 		
   }
 	
@@ -39,13 +46,7 @@ $(function($, undefined) {
   }
 	
 });
-$(window).load(function(){
-	$('.ulDidYouKnow').bxSlider({
-		pager:true,
-		controls:false,
-		auto:true,
-		pause:7000,
-		speed:1000
-	})	
-})
+/*$(window).load(function(){
+		
+})*/
 </script>
