@@ -46,9 +46,9 @@ $(function($, undefined) {
 		$('.spotlight-slider').append('<li><div class="img-box-thumb-holder"><div class="spotlight-img"><img src="https://lacoets.github.io/intranet/gray-img.png" data-original="'+userEntry.ImageURL+'" id="SpotlightImage" class="lazy" alt="Image1"/></div><div class="spotlight-infotxt"><h4>'+userEntry.Name+'</h4><div class="spotlight"><p class="departspot">'+userEntry.Title+ '<span class="sep-spotlight">|</span>' + userEntry.Department +'</p></div><p>'+userEntry.Description+'</p></div></div></li>');
     });
     $(".spotlight-slider").bxSlider({
-		auto: true,
-	        pager: true,
-	        controls: false
+	        controls: false,
+	        auto: ($(".spotlight-slider li").length > 1) ? true: false,
+    		pager: ($(".spotlight-slider li").length > 1) ? true: false
    });
   }
   function onQueryError(error) {
