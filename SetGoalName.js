@@ -13,7 +13,7 @@ $(document).ready(function(){
 	{
 		goalID = decodeURIComponent(window.location.href.split('?')[1]);
 		goalID = goalID.split('?')[1].split('=')[1];
-		//alert('In Else goalID:=' + goalID);
+		alert('In Else goalID:=' + goalID);
 	}
 	GetGoalName(goalID);
 });//End of Doc ready
