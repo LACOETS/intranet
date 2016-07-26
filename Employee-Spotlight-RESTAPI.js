@@ -47,6 +47,7 @@ $(function($, undefined) {
     });
     $(".spotlight-slider").bxSlider({
 	        controls: false,
+	        infiniteLoop: false,
 	        auto: ($(".spotlight-slider li").length > 1) ? true: false,
     		pager: ($(".spotlight-slider li").length > 1) ? true: false
    });
