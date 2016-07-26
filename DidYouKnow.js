@@ -37,6 +37,7 @@ $(function($, undefined) {
 				controls:false,
 				pause:7000,
 				speed:1000,
+				infiniteLoop: false,
 				auto: ($(".ulDidYouKnow li").length > 2) ? true: false,
     		pager: ($(".ulDidYouKnow li").length > 2) ? true: false
 			})
