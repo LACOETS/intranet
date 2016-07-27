@@ -3918,6 +3918,12 @@ table[id^="bottomPaging"] td table td:hover{background-color: #e3e3e3 !important
 
 .image-slidersimgcntr{width:100%; position:relative; overflow:hidden; height:336px;}
 .image-infoslider .image-slidersimgcntr{display:none}
+
+#restricted-box .pagination-page table + table tr:first-child{display:block}
+#restricted-box .pagination-page table + table tr{border-bottom:none !important}
+#restricted-box .pagination-page table + table{position:absolute; right:7px; bottom:0px; width:100px !important}
+#restricted-box .pagination-page table + table td{width:100px !important}
+
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
