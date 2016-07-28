@@ -75,6 +75,7 @@ function GetLikeCount() {
                 }
             }
         }
+        alert('Before ChangeLikeText:=' + likeDisplay + " : " + itemc);
         ChangeLikeText(likeDisplay, itemc);
 
     }), Function.createDelegate(this, function (sender, args) {
@@ -84,8 +85,9 @@ function GetLikeCount() {
 }
 
 function ChangeLikeText(like, count) {    
-    alert('in ChangeLikeText');
+    alert('In ChangeLikeText:=' + like + " " + ":" + count);
     if (like) {
+        alert('In If');
         $("a.LikeButton").text('Like');
     }
     else {
