@@ -29,7 +29,7 @@ var itemId = JSRequest.QueryString["ID"];
     if (likeButtonText != "") {
         if (likeButtonText == "Like")
             like = true;
-         alert(_spPageContextInfo.pageListId.substring(1, 37));
+         //alert(_spPageContextInfo.pageListId.substring(1, 37));
         var aContextObject = new SP.ClientContext();
         SP.SOD.executeFunc('reputation.js', 'Microsoft.Office.Server.ReputationModel.Reputation', function () {
             Microsoft.Office.Server.ReputationModel.
@@ -40,7 +40,7 @@ var itemId = JSRequest.QueryString["ID"];
 
             aContextObject.executeQueryAsync(
                 function () {
-                    //alert(String(like));
+                    alert('Before Getlikecount');
                     GetLikeCount();
                 }, function (sender, args) {
                     alert('F0');
@@ -63,7 +63,7 @@ function GetLikeCount() {
     context.load(item, "LikedBy", "ID", "LikesCount");
     context.executeQueryAsync(Function.createDelegate(this, function (success) {
         // Check if the user id of the current users is in the collection LikedBy. 
-        //alert('In executequery');
+        alert('In executequery');
         var likeDisplay = true;
         var $v_0 = item.get_item('LikedBy');        
         var itemc = item.get_item('LikesCount');
