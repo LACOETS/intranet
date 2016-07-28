@@ -52,6 +52,7 @@ function GetLikeCount() {
 	JSRequest.EnsureSetup(); 
 	//Get a query string parameter called Id. i.e - "page.aspx?Id=11" will return 11
 	var itemId = JSRequest.QueryString["ID"];
+	alert('itemId:=' + itemId);
     var context = new SP.ClientContext(_spPageContextInfo.webServerRelativeUrl);
     var list = context.get_web().get_lists().getById(_spPageContextInfo.pageListId);
     var item = list.getItemById(itemId);//list.getItemById(_spPageContextInfo.pageItemId);
@@ -59,7 +60,7 @@ function GetLikeCount() {
     context.load(item, "LikedBy", "ID", "LikesCount");
     context.executeQueryAsync(Function.createDelegate(this, function (success) {
         // Check if the user id of the current users is in the collection LikedBy. 
-        
+        alert('In executequery');
         var likeDisplay = true;
         var $v_0 = item.get_item('LikedBy');        
         var itemc = item.get_item('LikesCount');
@@ -97,6 +98,7 @@ function ChangeLikeText(like, count) {
 }
 
 $(document).ready(function () {
+alert('123');
 ExecuteOrDelayUntilScriptLoaded(GetLikeCount, "sp.js");
     //GetLikeCount();
     $("a.LikeButton").click(function () {
