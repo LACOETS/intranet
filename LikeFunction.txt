@@ -55,7 +55,7 @@ function GetLikeCount() {
     var context = new SP.ClientContext(_spPageContextInfo.webServerRelativeUrl);
     var list = context.get_web().get_lists().getById(_spPageContextInfo.pageListId);
     var item = list.getItemById(itemId);//list.getItemById(_spPageContextInfo.pageItemId);
-    context.load(list);
+    //context.load(list);
     context.load(item, "LikedBy", "ID", "LikesCount");
     context.executeQueryAsync(Function.createDelegate(this, function (success) {
         // Check if the user id of the current users is in the collection LikedBy. 
@@ -66,7 +66,7 @@ function GetLikeCount() {
         if (!SP.ScriptHelpers.isNullOrUndefined($v_0)) {
           for (var $v_1 = 0, $v_2 = $v_0.length; $v_1< $v_2; $v_1++) {
                 var $v_3 = $v_0[$v_1];				
-				if ($v_3.$1W_1 === _spPageContextInfo.userId) {
+		if ($v_3.$1W_1 === _spPageContextInfo.userId) {
                 //if ($v_3.$1E_1 === _spPageContextInfo.userId) {
                     //cb(true, item.get_item('LikesCount'));
                     //alert("Liked by me");
