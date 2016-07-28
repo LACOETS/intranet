@@ -1,0 +1,57 @@
+﻿input[type="password"], input[type="text"], input[type="file"], textarea, .ms-inputBox,select {font-size: 14px;}
+#internalTheming input[type="text"]:focus,#internalTheming textarea:focus,#internalTheming input[type="password"]:focus,#internalTheming input[type="number"]:focus{border-color:#ababab}
+
+#internalTheming table td{vertical-align:top !important}
+#internalTheming table#onetIDListForm{width:90%;}
+#internalTheming table#onetIDListForm table.ms-formtable tr{border-bottom:#e5e5e5 solid 1px !important;}
+#internalTheming table#onetIDListForm table.ms-formtable table tr{border-bottom:none !important;}
+
+#internalTheming table#onetIDListForm table.ms-formtable tr td{vertical-align:top;padding:10px 0}
+#internalTheming table#onetIDListForm table.ms-formtable table tr td{padding:0}
+
+#internalTheming .ms-formtable #SPFieldText{font-size:18px; font-weight:500; color:#1c7ec7 }
+#internalTheming table table{font-size:16px;}
+.ms-standardheader{font-size:14px;}
+#internalTheming table table.ms-formtable + table{margin-top:50px; margin-bottom:20px !important;}
+#internalTheming table table.ms-formtable td#SPFieldNote *{font-family: 'Work Sans', sans-serif !important; font-size:16px !important;}
+.ms-rtestate-field p, p.ms-rteElement-P{line-height:20px;}
+
+#internalTheming table#onetIDListForm table:first-child{width:100%;}
+#internalTheming table#onetIDListForm > table > table.ms-formtable{width:100%;}
+#internalTheming table#onetIDListForm > table > table.ms-formtable table{width:auto}
+#internalTheming table table.ms-formtable td span[dir^="none"]{display:inline-block}
+#internalTheming table table.ms-formtable td span[dir^="none"] div{font-family: 'Work Sans', sans-serif !important; font-size:16px !important;}
+
+/*Inner page AllItems theme only*/
+
+#internalTheming #scriptWPQ1 .ms-list-addnew .ms-list-addnew-imgSpan20 {  }
+#internalTheming #scriptWPQ1 .ms-list-addnew.ms-textXLarge { font-size: 14px; padding-bottom: 25px; text-transform: uppercase; }
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv { border-bottom: #bcbec0 solid 1px; border-top: #bcbec0 solid 1px; }
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv:after,
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv .ms-InlineSearch-DivBaseline .ms-InlineSearch-Outline-Baseline:after {
+clear: both; float: none; display: block; content: ''; }
+#internalTheming #scriptWPQ1 .ms-pivotControl-container .ms-pivotControl-surfacedOpt-selected { font-size: 12px; margin-top: 12px; }
+#internalTheming #scriptWPQ1 .ms-pivotControl-container { padding-bottom: 0 }
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv { padding-bottom: 0 }
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv .ms-InlineSearch-DivBaseline { float:left; margin-left:5%;}
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv .ms-pivotControl-container { float: left }
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv .ms-InlineSearch-DivBaseline .ms-InlineSearch-Outline-Baseline { float: none; border-top: none !important; border-bottom: none !important; height: auto; margin-top: 0; border-color: #bcbec0 !important }
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv .ms-InlineSearch-DivBaseline .ms-InlineSearch-SearchProgress { display: none !important }
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv .ms-InlineSearch-DivBaseline input.ms-InlineSearch-SearchBox-Baseline.ms-InlineSearch-SearchBox-Baseline { height: auto; float: left; width: 140px; padding: 12px 5px; }
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv .ms-InlineSearch-DivBaseline .ms-inlineSearch-searchImgSpanBase { float: right; height: 42px; margin-top: 0; width: 32px; border: none !important; background: url('https://lacoets.github.io/intranet/gray-search.png') center center no-repeat; border-left: #bcbec0 solid 1px !important; }
+#internalTheming #scriptWPQ1 .ms-csrlistview-controldiv .ms-InlineSearch-DivBaseline .ms-inlineSearch-searchImgSpanBase img { opacity: 0; }
+#internalTheming .ms-vh, #internalTheming .ms-vh2, #internalTheming .ms-vhImage, #internalTheming .ms-vh2-nograd, #internalTheming .ms-vh3-nograd, #internalTheming .ms-vh2-nograd-icon, #internalTheming .ms-vh2-nofilter-icon, #internalTheming .ms-ph { padding: 10px 17px 10px 5px; }
+#internalTheming .ms-vh, #internalTheming .ms-vh2, #internalTheming .ms-vh-icon, #internalTheming .ms-vh-icon-empty, #internalTheming .ms-vh2-nofilter, #internalTheming .ms-vh2-nofilter-notextalign, #internalTheming .ms-vh2-nofilter-perm, #internalTheming .ms-vhImage, #internalTheming .ms-vh2-nograd, #internalTheming .ms-vh3-nograd, #internalTheming .ms-vh2-nograd-icon, #internalTheming .ms-vh2-nofilter-icon, #internalTheming .ms-ph { color: #808285; text-align: left; text-decoration: none; vertical-align: middle; white-space: nowrap; }
+#internalTheming.ms-vh2-nofilter, #internalTheming.ms-vh2-nofilter-notextalign, #internalTheming.ms-vh2-nofilter-perm, #internalTheming.ms-vh a, #internalTheming.ms-vh2, #internalTheming.ms-vh2 a { color: #808285; }
+#internalTheming .ms-viewheadertr.ms-vhltr th { border-bottom: 1px solid #bcbec0; }
+#internalTheming .ms-itmHoverEnabled.ms-itmhover { border-bottom: 1px solid #bcbec0; }
+#internalTheming .ms-itmHoverEnabled.ms-itmhover td { border-bottom: 1px solid #bcbec0;font-size:14px; color: #262626; padding: 6px 5px; border-left: none; border-right: none; border-collapse: collapse; }
+#internalTheming table.ms-listviewtable { border-collapse: collapse; border-color: #bcbec0; width: 100%; }
+#internalTheming .ms-vb-imgFirstCell.ms-vb-imgFirstCell.ms-vb-imgFirstCell { border-width: 0 0 1px; }
+
+#internalTheming #contentRow{margin: 0 auto; max-width: 1170px; overflow-x:scroll; margin-bottom:25px;}
+/*Inner page AllItems theme only*/
+
+
+
+
