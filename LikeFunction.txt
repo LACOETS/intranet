@@ -25,11 +25,11 @@ var itemId = JSRequest.QueryString["ID"];
     //SP.SOD.executeFunc("sp.ui.reputation.js", "SP.ClientContext", function() {
     var like = false;
     var likeButtonText = $("a.LikeButton").text();
-    alert("likeButtonText:=" + likeButtonText);
+    //alert("likeButtonText:=" + likeButtonText);
     if (likeButtonText != "") {
         if (likeButtonText == "Like")
             like = true;
-
+         alert(_spPageContextInfo.pageListId.substring(1, 37));
         var aContextObject = new SP.ClientContext();
         SP.SOD.executeFunc('reputation.js', 'Microsoft.Office.Server.ReputationModel.Reputation', function () {
             Microsoft.Office.Server.ReputationModel.
