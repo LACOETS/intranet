@@ -40,10 +40,10 @@ var itemId = JSRequest.QueryString["ID"];
 
             aContextObject.executeQueryAsync(
                 function () {
-                    alert('Before Getlikecount');
+                    //alert('Before Getlikecount');
                     GetLikeCount();
                 }, function (sender, args) {
-                    alert('F0');
+                    //alert('F0');
                 });
         });
     }
@@ -63,7 +63,7 @@ function GetLikeCount() {
     context.load(item, "LikedBy", "ID", "LikesCount");
     context.executeQueryAsync(Function.createDelegate(this, function (success) {
         // Check if the user id of the current users is in the collection LikedBy. 
-        alert('In executequery');
+        //alert('In executequery');
         var likeDisplay = true;
         var $v_0 = item.get_item('LikedBy');        
         var itemc = item.get_item('LikesCount');
