@@ -3567,7 +3567,7 @@ input[type="submit"], input[type="button"],.box-btn,input[type="reset"] { backgr
 .owner-info ul li abbr{float:left; width:25%; font-weight:500}
 .owner-info ul li span{float:left; width:75%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 .keycontact-cntr .ms-webpart-cell-vertical,.keycontact-cntr .ms-webpart-chrome-vertical,.keycontact-cntr .ms-webpart-zone{display:block}
-.keycontact-viewlink{position:absolute; right:0px; bottom:0px; width:100%; border-top:1px solid #e4e4e4; padding:4px}
+.keycontact-viewlink{position:absolute; left:0px; bottom:0px; width:85%; border-top:1px solid #e4e4e4; padding:4px}
 .nomarginbottom{margin-bottom:0 !important}
 .keycontact-cntr.dept-quicklinks .tabResult .tabBx .content{padding:15px 15px 0 15px; border-bottom:none;}
 .jointcomunityTxt{display:inline-block; font-weight:600; color:#535351; vertical-align:middle}
