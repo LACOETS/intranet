@@ -30,7 +30,7 @@ var itemId = JSRequest.QueryString["ID"];
             like = true;
          //alert(_spPageContextInfo.pageListId.substring(1, 37));
         var aContextObject = new SP.ClientContext();
-		SP.SOD.registerSod('reputation.js', '/_layouts/15/reputation.js');
+		
         SP.SOD.executeFunc('reputation.js', 'Microsoft.Office.Server.ReputationModel.Reputation', function () {
 		//EnsureScriptFunc('reputation.js', 'Microsoft.Office.Server.ReputationModel.Reputation', function () {
             Microsoft.Office.Server.ReputationModel.
@@ -108,6 +108,7 @@ $(document).ready(function () {
 
 ExecuteOrDelayUntilScriptLoaded(GetLikeCount, "sp.js");
     //GetLikeCount();
+	SP.SOD.registerSod('reputation.js', '/_layouts/15/reputation.js');
     $("a.LikeButton").click(function () {
        LikePage();
 	   //ExecuteOrDelayUntilScriptLoaded(LikePage, "reputation.js");
