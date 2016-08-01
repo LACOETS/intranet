@@ -105,10 +105,10 @@ function ChangeLikeText(like, count) {
 }
 
 $(document).ready(function () {
-
+SP.SOD.registerSod('reputation.js', '/_layouts/15/reputation.js');
 ExecuteOrDelayUntilScriptLoaded(GetLikeCount, "sp.js");
     //GetLikeCount();
-	SP.SOD.registerSod('reputation.js', '/_layouts/15/reputation.js');
+	
     $("a.LikeButton").click(function () {
        LikePage();
 	   //ExecuteOrDelayUntilScriptLoaded(LikePage, "reputation.js");
