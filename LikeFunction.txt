@@ -107,7 +107,8 @@ $(document).ready(function () {
 ExecuteOrDelayUntilScriptLoaded(GetLikeCount, "sp.js");
     //GetLikeCount();
     $("a.LikeButton").click(function () {
-        LikePage();
+       // LikePage();
+	   ExecuteOrDelayUntilScriptLoaded(LikePage, "reputation.js");
 		
     });
 });
