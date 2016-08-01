@@ -1,5 +1,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js" type="text/javascript"></script>
-<SharePointWebControls:ScriptLink language="javascript" name="reputation.js" OnDemand="false" LoadAfterUI="true" runat="server" Localizable="false" />
 
 <div class="LikeSection"><span class="likecount"></span><a href="#" onclick="LikePage()" class="LikeButton"></a></div>
 <style type="text/css"> 
