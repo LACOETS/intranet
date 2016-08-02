@@ -67,7 +67,7 @@
 								for (var i = 0; i < items.length; i++) {           
 								
 								console.log(items[i].Id);
-								$("#TSSiteMembers").append("<li><font color='Green'>" + items[i].Title + "</font></li>"); 
+								$("#TSSiteMembers").append("<li class='greenline'><font color='Green'>" + items[i].Title + "</font></li>"); 
 								////
 									var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/sitegroups/GetById("+items[i].Id+")/Users";   // pass group Id here
 									$.ajax({
@@ -118,7 +118,7 @@
 										//var items = response.d.results; 
 									for (var i = 0; i < response.valueOf("@odata").value.length; i++) { 
 										
-										$("#TSSiteMembers").append("<li><font color='Red'>" + response.valueOf("@odata").value[i].displayName + "</font></li>"); 
+										$("#TSSiteMembers").append("<li class='redline'><font color='Red'>" + response.valueOf("@odata").value[i].displayName + "</font></li>"); 
 										//start
 										var filesUriNew= config.endpoints.graphApiUri + "/v1.0/groups/"+ response.valueOf("@odata").value[i].id +"/members";
 										console.log(filesUriNew);
@@ -135,7 +135,7 @@
 																
 															for (var j = 0; j < response1.valueOf("@odata").value.length; j++) { 
 																console.log(response1.valueOf("@odata").value[j].displayName);
-																$("#TSSiteMembers").append("<li>" + response1.valueOf("@odata").value[j].displayName + "</li>"); 
+																$("#TSSiteMembers").append("<li  class='normalline'>" + response1.valueOf("@odata").value[j].displayName + "</li>"); 
 																
 															} 
 														   
