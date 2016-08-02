@@ -1,5 +1,9 @@
-<strong>Site Members:</strong>  
-      <div id="TSSiteMembers"></div>  
+<div class="view-memberlisting">
+	<h3>Site Members:</h3>
+	<div class="allViewlistShow">  
+		<ul id="TSSiteMembers"></ul> 
+	</div> 
+</div>
 
 <script src="//secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js"></script>
 <script type="text/javascript">
