@@ -3945,6 +3945,8 @@ table[id^="bottomPaging"] td table td:hover{background-color: #e3e3e3 !important
 .innerwhatdo-think .ques-img img {
   height: 265px;
   margin-left: -140px;
+  width:auto;
+  max-width:none
 }
 
 /*======================================= Content Area CSS End ========================================*/
