@@ -3939,6 +3939,10 @@ table[id^="bottomPaging"] td table td:hover{background-color: #e3e3e3 !important
 .LE-noOrgwidth #localEvents-box .pagination-page table td table td:nth-child(5){width:16.6667%}
 .LE-noOrgwidth #localEvents-box .pagination-page table td table td:nth-child(6){width:16.6667%}
 
+.pictorial-discussion #custom-arrow11,.pictorial-discussion #custom-arrow12{display:none}
+.pictorial-discussion #custom-arrow14{border-right:none; padding-left:1px;}
+
+
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
