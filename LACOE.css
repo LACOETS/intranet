@@ -3944,6 +3944,14 @@ table[id^="bottomPaging"] td table td:hover{background-color: #e3e3e3 !important
 
 
 .innerwhatdo-think .poll-results-list.final-result-poll li:last-child{margin-bottom:0}
+.connectedwp{margin-top:-25px;}
+.connectedwp .goal-section{min-height:277px;}
+.dept-announcement .image-sliders{height:336px; overflow:hidden !important}
+.image-slidersimgcntr img{width:100%;}
+.calenader-loading {min-height: 50px;background: url(https://lacoets.github.io/intranet/ajax-loader.gif) center center no-repeat #fff;
+height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
+.image-sliders ul li{background:#000}
+.announcement-sliders .calenader-loading{height:336px; top:0}
 
 /*======================================= Content Area CSS End ========================================*/
 
