@@ -3953,6 +3953,21 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 .image-sliders ul li{background:#000}
 .announcement-sliders .calenader-loading{height:336px; top:0}
 
+
+/*Documents inner page Sidebar*/
+.DocumentswithSidebar{}
+.docLeftside{float:left; width:20%; background:#f7f8f8;border-right:1px solid #e4e4e4; min-height:209px;}
+.docRytSide {
+  float: left;
+  width: 80%;
+}
+.docRytSide .pagination-page dd{display:block}
+.docLeftside .ms-ref-refiner{padding-right:0}
+.docLeftside .ms-ref-refiner #Container{padding:20px; border-bottom:1px solid #e4e4e4}
+.docLeftside .ms-disabled.ms-alignCenter{padding:5px;}
+
+/*Document inner page sidebar end*/
+
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
