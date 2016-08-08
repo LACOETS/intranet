@@ -26,7 +26,7 @@ function getEditorPeoplePickerValues(fieldName) { // Field Title
         var i;
         for (i = 0; i < editorsInfo.length; ++i) {
             editorNames += editorsInfo[i].Key;  //Key EntityData.Email DisplayText 
-            alert(editorNames);            
+            //alert(editorNames);            
             CallMasterList();
         }
 }//End of getEditorPeoplePickerValues    
@@ -72,20 +72,20 @@ function onQueryError1(error) {
   }//End of onQueryError1
 
 function AddUserUsingSPServices(groupName){
-alert('In AddUserUsingSPServices:=' + editorNames + " " + groupName);
+//alert('In AddUserUsingSPServices:=' + editorNames + " " + groupName);
 $().SPServices({
        operation: "AddUserToGroup",
        groupName: groupName,
        userLoginName: editorNames,
        async: false,
        completefunc: function(data,status){
-          //alert(status);
+          alert(status);
           if(status=="success"){
-          	//alert("User added to group");
+          	alert("User added to group");
           	returnValue = true;
           }
           else{
-          	//alert("User NOT added to group!!");
+          	alert("User NOT added to group!!");
           	returnValue = false;
           }
        }// End of completefunc
