@@ -3876,16 +3876,16 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 .didyouknwbx .didyouknwbx-img img{width:100%;}
 .didyouknwbx .didyouknw-txt{}
 
-#restricted-box .pagination-page table{width:100% !important}
-#restricted-box .pagination-page table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px;}
-#restricted-box .pagination-page table{table-layout: fixed; border-collapse:collapse}
-#restricted-box .pagination-page table.ms-listviewtable{border-collapse:collapse}
+.dataviewWebpart-table .pagination-page table{width:100% !important}
+.dataviewWebpart-table .pagination-page table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px;}
+.dataviewWebpart-table .pagination-page table{table-layout: fixed; border-collapse:collapse}
+.dataviewWebpart-table .pagination-page table.ms-listviewtable{border-collapse:collapse}
 
-#restricted-box .pagination-page table tr{border-bottom:#e4e4e4 solid 1px !important}
-#restricted-box .pagination-page table tr:nth-child(2n) {background: #f7f8f8 !important;}
-#restricted-box .pagination-page .ms-vb.ms-bottompagingline table{width:auto}
-#restricted-box .pagination-page .ms-vb.ms-bottompagingline table tr{border-bottom:none !important;}
-#restricted-box .pagination-page table tr:first-child{display:none}
+.dataviewWebpart-table .pagination-page table tr{border-bottom:#e4e4e4 solid 1px !important}
+.dataviewWebpart-table .pagination-page table tr:nth-child(2n) {background: #f7f8f8 !important;}
+.dataviewWebpart-table .pagination-page .ms-vb.ms-bottompagingline table{width:auto}
+.dataviewWebpart-table .pagination-page .ms-vb.ms-bottompagingline table tr{border-bottom:none !important;}
+.dataviewWebpart-table .pagination-page table tr:first-child{display:none}
 
 #restricted-box .pagination-page table td:nth-child(1){width:16.6667%}
 #restricted-box .pagination-page table td:nth-child(2){width:33.3333%;}
@@ -3965,8 +3965,27 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 .docLeftside .ms-ref-refiner{padding-right:0}
 .docLeftside .ms-ref-refiner #Container{padding:20px; border-bottom:1px solid #e4e4e4}
 .docLeftside .ms-disabled.ms-alignCenter{padding:5px;}
+.dataComesoon{padding:10px; color:#f00}
+
+#restricted-boxlocal .pagination-page table td table td:nth-child(1){width:16.6667%}
+#restricted-boxlocal .pagination-page table td table td:nth-child(2){width:33.3333%}
+#restricted-boxlocal .pagination-page table td table td:nth-child(3){width:16.6667%}
+#restricted-boxlocal .pagination-page table td table td:nth-child(4){width:16.6667%}
+#restricted-boxlocal .pagination-page table td table td:nth-child(5){width:16.6667%}
 
 /*Document inner page sidebar end*/
+
+#next30days-box-doc .pagination-page table td:nth-child(1){width:25%}
+#next30days-box-doc .pagination-page table td:nth-child(2){width:33.3333%}
+#next30days-box-doc .pagination-page table td:nth-child(3){width:16.6667%}
+#next30days-box-doc .pagination-page table td:nth-child(4){width:25%}
+
+#past30days-box-doc .pagination-page table td:nth-child(1){width:25%}
+#past30days-box-doc .pagination-page table td:nth-child(2){width:33.3333%}
+#past30days-box-doc .pagination-page table td:nth-child(3){width:16.6667%}
+#past30days-box-doc .pagination-page table td:nth-child(4){width:25%}
+
+.keycontact-cntr .keycontact-viewlink{width:100%;}
 
 /*======================================= Content Area CSS End ========================================*/
 
