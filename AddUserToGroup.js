@@ -26,7 +26,7 @@ function getEditorPeoplePickerValues(fieldName) { // Field Title
         var i;
         for (i = 0; i < editorsInfo.length; ++i) {
             editorNames += editorsInfo[i].Key;  //Key EntityData.Email DisplayText 
-            //alert(editorNames);            
+            alert(editorNames);            
             CallMasterList();
         }
 }//End of getEditorPeoplePickerValues    
@@ -72,7 +72,7 @@ function onQueryError1(error) {
   }//End of onQueryError1
 
 function AddUserUsingSPServices(groupName){
-//alert('In AddUserUsingSPServices:=' + editorNames + " " + groupName);
+alert('In AddUserUsingSPServices:=' + editorNames + " " + groupName);
 $().SPServices({
        operation: "AddUserToGroup",
        groupName: groupName,
