@@ -81,11 +81,11 @@ $().SPServices({
        completefunc: function(data,status){
           //alert(status);
           if(status=="success"){
-          	console.log("User added to group");
+          	//console.log("User added to group");
           	returnValue = true;
           }
           else{
-          	console.log("User NOT added to group!!");
+          	//console.log("User NOT added to group!!");
           	returnValue = false;
           }
        }// End of completefunc
