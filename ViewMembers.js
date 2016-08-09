@@ -51,6 +51,7 @@
     }
 	
 	var requestGroupUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/RoleAssignments/groups?select=ID";   // pass group Id here
+						alert('requestGroupUri:=' + requestGroupUri);
 						$.ajax({
 							  type: "GET",
 							  url: requestGroupUri,
@@ -66,7 +67,7 @@
 								
 								for (var i = 0; i < items.length; i++) {           
 								
-								console.log(items[i].Id);
+								alert(items[i].Id + " "  + items[i].Title);
 								$("#TSSiteMembers").append("<li class='greenline'><font color='Green'>" + items[i].Title + "</font></li>"); 
 								////
 									var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/sitegroups/GetById("+items[i].Id+")/Users";   // pass group Id here
@@ -168,8 +169,3 @@
   });
 })();
 </script>
-
-
-
-
-
