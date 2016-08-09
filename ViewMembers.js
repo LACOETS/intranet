@@ -68,9 +68,11 @@
 								for (var i = 0; i < items.length; i++) {           
 								
 								//alert(items[i].Id + " "  + items[i].Title);
-								if(items[i].Title != "Extranet Approvers" || items[i].Title != "Intranet Approvers" ){
-									$("#TSSiteMembers").append("<li class='greenline'><font color='Green'>" + items[i].Title + "</font></li>");
+								if(items[i].Title === "Extranet Approvers" || items[i].Title === "Intranet Approvers"){									
 									
+								}
+								else{
+									$("#TSSiteMembers").append("<li class='greenline'><font color='Green'>" + items[i].Title + "</font></li>");
 								}
 								
 								
