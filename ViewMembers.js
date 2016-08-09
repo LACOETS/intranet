@@ -135,6 +135,8 @@
 								//alert("Successfully fetched users !!.");
 									for (var i = 0; i < response.valueOf("@odata").value.length; i++) {
 										//alert(response.valueOf("@odata").value[i]);
+										var userImageURL = "//outlook.office365.com/owa/service.svc/s/GetPersonaPhoto?email=" + response.valueOf("@odata").value[i].userPrincipalName + "&UA=0&size=HR64x64&sc=1468354588706";
+										alert(userImageURL);
 										$("#TSSiteMembers").append("<li  class='normalline'>" + response.valueOf("@odata").value[i].displayName + " (" + response.valueOf("@odata").value[i].userPrincipalName + ")" + "</li>");
 									}							
 								
