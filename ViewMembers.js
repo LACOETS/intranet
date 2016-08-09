@@ -1,5 +1,4 @@
-<div class="view-memberlisting">
-	<h3>Site Members:</h3>
+<div class="view-memberlisting">	
 	<div class="allViewlistShow">  
 		<ul id="TSSiteMembers"></ul> 
 	</div> 
@@ -68,17 +67,19 @@
 								for (var i = 0; i < items.length; i++) {           
 								
 								//alert(items[i].Id + " "  + items[i].Title);
-								if(items[i].Title === "Extranet Approvers" || items[i].Title === "Intranet Approvers"){									
+								if(items[i].Title === "Extranet Approvers" || items[i].Title === "Intranet Approvers" || items[i].Title === "Style Resource Readers" || items[i].Title.indexOf('Visitors')>-1){									
 									
 								}
 								else{
 									$("#TSSiteMembers").append("<li class='greenline'><font color='Green'>" + items[i].Title + "</font></li>");
-								}
+								
 								
 								
 								 
 								////
-									var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/sitegroups/GetById("+items[i].Id+")/Users";   // pass group Id here
+									var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/sitegroups/GetById("+items[i].Id+")/Users";   // pass group Id here	
+									//requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/sitegroups/GetById("+items[i].Id+")/Users?$filter=items[i].Title eq 'Extranet Approvers'";
+									
 									$.ajax({
 									  type: "GET",
 									  url: requestUri,
@@ -91,10 +92,12 @@
 									}).done(function (data) {
 													
 										var items = data.d.results;
+										//alert(items);
 										querystring="";
 										for (var i = 0; i < items.length; i++) {           
+										//alert(items[i].Title);
 										querystring=querystring + "startswith(displayName,'"+ items[i].Title +"') or " ;    
-										console.log(querystring);
+										//alert(querystring);
 										}
 											   
 									  //console.log(response);
@@ -102,7 +105,7 @@
 									  console.log("Fetching site members failed.");
 									});
 								////
-								console.log(querystring.substring(0,querystring.lastIndexOf("or")-1));
+								//alert(querystring.substring(0,querystring.lastIndexOf("or")-1));
 						querystring=querystring.substring(0,querystring.lastIndexOf("or")-1);
 						// Execute GET request to Files API.
 						//var currentUserApiBaseUri = graphApiUri + "/beta/" + config.subscriptionId + "/users/" + user.userName;
@@ -111,9 +114,39 @@
 						//var filesUri = config.endpoints.graphApiUri + "/v1.0/groups?$select=displayName";
 						//var filesUri = config.endpoints.graphApiUri + "/v1.0/groups?$filter=startswith(displayName,'TIS-ECS')";
 						//var filesUri = config.endpoints.graphApiUri + "/v1.0/groups?$filter=startswith(displayName,'TIS-ECS') or startswith(displayName,'TIS-OPS')";
-						var filesUri = config.endpoints.graphApiUri + "/v1.0/groups?$filter="+querystring;
+						//Original:var filesUri = config.endpoints.graphApiUri + "/v1.0/groups?$filter="+querystring;
 						// --
 						   //var filesUri = config.endpoints.graphApiUri + "/v1.0/groups/22aed7ba-18b3-4f0d-baff-04d5028b1726/members";
+						
+						
+						
+						/*********Intelli Code Starts*******/
+
+						var filesUriUsers = config.endpoints.graphApiUri + "/v1.0/users?$filter="+querystring;
+						//alert('filesUriUsers:=' + filesUriUsers);
+						$.ajax({
+						  type: "GET",
+						  url: filesUriUsers,
+						  async: false,
+						  headers: {
+							'Authorization': 'Bearer ' + token,
+						  }
+						}).done(function (response) {
+								//alert("Successfully fetched users !!.");
+									for (var i = 0; i < response.valueOf("@odata").value.length; i++) {
+										//alert(response.valueOf("@odata").value[i]);
+										$("#TSSiteMembers").append("<li  class='normalline'>" + response.valueOf("@odata").value[i].displayName + " (" + response.valueOf("@odata").value[i].userPrincipalName + ")" + "</li>");
+									}							
+								
+								}).fail(function () {
+						  alert("Fetching users failed.");
+						});
+						
+						/*********Intelli Code Ends*******/
+						
+						
+						var filesUri = config.endpoints.graphApiUri + "/v1.0/groups?$filter="+querystring;						
+						//alert("filesUri :=" + filesUri);
 						$.ajax({
 						  type: "GET",
 						  url: filesUri,
@@ -123,14 +156,14 @@
 						  }
 						}).done(function (response) {
 										console.log("Successfully fetched site members.");
-							console.log(response);
+							//alert(response);
 										//var items = response.d.results; 
 									for (var i = 0; i < response.valueOf("@odata").value.length; i++) { 
-										
-										$("#TSSiteMembers").append("<li class='redline'><font color='Red'>" + response.valueOf("@odata").value[i].displayName + "</font></li>"); 
+											//$("#TSSiteMembers").append("<li class='redline'><font color='Red'>" + response.valueOf("@odata").value[i].displayName + "</font></li>");
+										 //alert(response.valueOf("@odata").value[i].displayName);
 										//start
 										var filesUriNew= config.endpoints.graphApiUri + "/v1.0/groups/"+ response.valueOf("@odata").value[i].id +"/members";
-										console.log(filesUriNew);
+										//alert(filesUriNew);
 										 $.ajax({
 												  type: "GET",
 												  url: filesUriNew,
@@ -144,8 +177,8 @@
 																
 															for (var j = 0; j < response1.valueOf("@odata").value.length; j++) { 
 																console.log(response1.valueOf("@odata").value[j].displayName);
-																$("#TSSiteMembers").append("<li  class='normalline'>" + response1.valueOf("@odata").value[j].displayName + "</li>"); 
-																
+																$("#TSSiteMembers").append("<li  class='normalline'>" + response1.valueOf("@odata").value[j].displayName + " (" + response1.valueOf("@odata").value[j].userPrincipalName + ")" + "</li>"); 
+																//displayName userPrincipalName 
 															} 
 														   
 												  //console.log(response);
@@ -162,6 +195,7 @@
 								
 								
 								}
+								}//else close
 									   
 							  //console.log(response);
 							}).fail(function () {
