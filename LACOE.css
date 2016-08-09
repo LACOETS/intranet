@@ -3986,6 +3986,8 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 #past30days-box-doc .pagination-page table td:nth-child(4){width:25%}
 
 .keycontact-cntr .keycontact-viewlink{width:100%;}
+.select-filtercaldr .input-type-select{width:250px}
+.select-filtercaldr .input-type-select select{width:100%;}
 
 /*======================================= Content Area CSS End ========================================*/
 
