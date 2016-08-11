@@ -137,7 +137,7 @@
 										//alert(response.valueOf("@odata").value[i]);
 										var userImageURL = "//outlook.office365.com/owa/service.svc/s/GetPersonaPhoto?email=" + response.valueOf("@odata").value[i].userPrincipalName + "&UA=0&size=HR64x64&sc=1468354588706";
 										//alert(userImageURL);
-										$("#TSSiteMembers").append("<li  class='normalline'>" +"<img src='"+userImageURL+"' alt='User Image' />" + " " + response.valueOf("@odata").value[i].displayName + " <a href=mailto:'" + response.valueOf("@odata").value[i].userPrincipalName + "'>" + response.valueOf("@odata").value[i].userPrincipalName + "</a>" + "</li>");
+										$("#TSSiteMembers").append("<li  class='normalline'>" +"<img src='"+userImageURL+"' alt='User Image' />" + " " + response.valueOf("@odata").value[i].displayName + " <a href='mailto:" + response.valueOf("@odata").value[i].userPrincipalName + "'>" + response.valueOf("@odata").value[i].userPrincipalName + "</a>" + "</li>");
 										//$("#TSSiteMembers").append("<li  class='normalline'>" + response.valueOf("@odata").value[i].displayName + " (" + response.valueOf("@odata").value[i].userPrincipalName + ")" + "</li>");
 									}							
 								
@@ -180,7 +180,7 @@
 																
 															for (var j = 0; j < response1.valueOf("@odata").value.length; j++) { 
 																console.log(response1.valueOf("@odata").value[j].displayName);
-																$("#TSSiteMembers").append("<li  class='normalline'>" + response1.valueOf("@odata").value[j].displayName + " (" + response1.valueOf("@odata").value[j].userPrincipalName + ")" + "</li>"); 
+																$("#TSSiteMembers").append("<li  class='normalline'>" + response1.valueOf("@odata").value[j].displayName + " <a href='mailto:" + response1.valueOf("@odata").value[j].userPrincipalName + "'>" + response1.valueOf("@odata").value[j].userPrincipalName + "</a>" + "</li>"); 
 																//displayName userPrincipalName 
 															} 
 														   
