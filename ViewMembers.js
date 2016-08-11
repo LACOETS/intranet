@@ -1,10 +1,79 @@
-<div class="view-memberlisting">	
-	<div class="allViewlistShow">  
-		<ul id="TSSiteMembers"></ul> 
-	</div> 
+<div class="view-memberlisting">
+		<div class="allViewlistShow">
+				<ul id="TSSiteMembers">
+				</ul>
+		</div>
 </div>
 
-<script src="//secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js"></script>
+<section class="content-area">
+		<div class="container">
+				<div class="newviewMember boxes-cntr">
+						<div class="grid-4">
+								<div class="memberkeyHedn">
+										<h2>Technology Services Approvers</h2>
+								</div>
+								<div class="view_memberinfo">
+										<div class="viewperson">
+												<div class="viewmbr-img"> <img src="images/Generic-user-img.jpg"> </div>
+												<div class="viewmbr-txt">
+														<div class="memberNameview"> <a href="#">Garcia Edward</a> </div>
+														<div class="memberEmailview"> <a href="#">Garcia_Edward@lacoe.edu</a> </div>
+												</div>
+												<div class="clear"></div>
+										</div>
+										<div class="viewperson">
+												<div class="viewmbr-img"> <img src="images/Generic-user-img.jpg"> </div>
+												<div class="viewmbr-txt">
+														<div class="memberNameview"> <a href="#">Garcia Edward</a> </div>
+														<div class="memberEmailview"> <a href="#">Garcia_Edward@lacoe.edu</a> </div>
+												</div>
+												<div class="clear"></div>
+										</div>
+										<div class="viewperson">
+												<div class="viewmbr-img"> <img src="images/Generic-user-img.jpg"> </div>
+												<div class="viewmbr-txt">
+														<div class="memberNameview"> <a href="#">Garcia Edward</a> </div>
+														<div class="memberEmailview"> <a href="#">Garcia_Edward@lacoe.edu</a> </div>
+												</div>
+												<div class="clear"></div>
+										</div>
+								</div>
+						</div>
+						<div class="grid-4">
+								<div class="memberkeyHedn">
+										<h2>Technology Services Members</h2>
+								</div>
+								<div class="view_memberinfo">
+										<div class="viewperson">
+												<div class="viewmbr-img"> <img src="images/Generic-user-img.jpg"> </div>
+												<div class="viewmbr-txt">
+														<div class="memberNameview"> <a href="#">Garcia Edward</a> </div>
+														<div class="memberEmailview"> <a href="#">Garcia_Edward@lacoe.edu</a> </div>
+												</div>
+												<div class="clear"></div>
+										</div>
+								</div>
+						</div>
+						<div class="grid-4">
+								<div class="memberkeyHedn">
+										<h2>Technology Services Owners</h2>
+								</div>
+								<div class="view_memberinfo">
+										<div class="viewperson">
+												<div class="viewmbr-img"> <img src="images/Generic-user-img.jpg"> </div>
+												<div class="viewmbr-txt">
+														<div class="memberNameview"> <a href="#">Garcia Edward</a> </div>
+														<div class="memberEmailview"> <a href="#">Garcia_Edward@lacoe.edu</a> </div>
+												</div>
+												<div class="clear"></div>
+										</div>
+								</div>
+						</div>
+						<div class="clear"></div>
+				</div>
+		</div>
+</section>
+<script src="//secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js"></script> 
 <script type="text/javascript">
 (function () {
 	"use strict";
@@ -71,7 +140,7 @@
 									
 								}
 								else{
-									$("#TSSiteMembers").append("<li class='greenline'><font color='Green'>" + items[i].Title + "</font></li>");
+									$(".memberkeyHedn h2").append("items[i].Title");
 								
 								
 								
@@ -214,4 +283,4 @@
 						
   });
 })();
-</script>
+</script> 
