@@ -32,15 +32,15 @@ $(window).load(function() {
  	$('.home-landingslider .image-sliders .image-slidersimgcntr img').nailthumb({width:664,height:336,method:'resize',fitDirection:'center center'});
  	$('.smallSlider .image-sliders .image-slidersimgcntr img').nailthumb({width:450,height:336,method:'resize',fitDirection:'center center'});
  	
- 	$('#more20pagination1').pajinate({
+ 	/*$('#more20pagination1').pajinate({
 			num_page_links_to_display :false,
 			items_per_page : 20	
 		});
 	$('#more20pagination2').pajinate({
 			num_page_links_to_display :false,
 			items_per_page : 20	
-		});
-	$(document).on('click', '.docLeftside a', function(){
+		});*/
+	/*$(document).on('click', '.docLeftside a', function(){
 	setTimeout(function(){
 			$('#more20pagination1').pajinate({
 				num_page_links_to_display :false,
@@ -64,7 +64,7 @@ $(window).load(function() {
 		});
 			
 			}, 1500);
-	});
+	});*/
  });
 
 

@@ -3227,14 +3227,15 @@ ul.dynamic { min-width: 200px; }
 .upcoming-event-box .box-heading h3 a { display: inline-block; vertical-align: middle; font-size: 0.875em; padding-left: 20px; margin-left: 25px; font-weight: 400; color: #fff; line-height: 21px }
 .upc-events-tabs .tabNav ul li { width: 25% }
 .upc-events-tabs { background: #fff; position: relative }
-.upc-events-tabs .tabResult { padding: 20px 25px 15px 25px }
-.select-filtercaldr { text-align: right; padding-bottom: 25px; margin-right:-18px; }
+.upc-events-tabs .tabResult { padding: 0px 25px 15px 25px }
+.select-filtercaldr { text-align: right; padding-bottom: 10px; margin-right:-25px; }
 .select-filtercaldr .input-type-select { border: none; position: relative; text-align: left; display: inline-block }
 .select-filtercaldr .input-type-select select { border: none; color: #1c7ec7; font: 600 1em 'Work Sans', sans-serif; }
 .date-showbox { display: inline-block; width: 65px; vertical-align: middle; border-radius: 5px; overflow: hidden; text-align: center; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3) }
 .month-title { background: #1c7ec7; color: #fff; font-weight: 300; font-size: 1em; text-transform: uppercase; padding: 4px 14px }
 .month-date { color: #1c7ec7; font-size: 1.750em; font-weight: 600; padding: 4px 14px }
-.calender-text { font-size: 0.875em; color: #4d4d4d; margin:0 auto; font-weight: 300; padding: 15px 0 5px 0; white-space: nowrap; width: 85%; overflow: hidden;text-overflow: ellipsis; }
+.calender-text { font-size: 0.875em; color: #4d4d4d; margin:0 auto; font-weight: 300; padding: 5px 0 0px 0; white-space: nowrap; width: 85%; overflow: hidden;text-overflow: ellipsis; }
+.calender-text p{padding-bottom:5px;}
 .calender-likelink { text-align: center }
 .calender-text { text-align: center }
 .calender-text p { line-height: 25px; white-space: nowrap; width: 100%; overflow: hidden;text-overflow: ellipsis; display:block}
@@ -3299,10 +3300,10 @@ ul.dynamic { min-width: 200px; }
 .cal-li-width1 { width: 13%; }
 .cal-li-width2 { width: 14%; }
 .cal-li-width3 { width: 15%; }
-.cal-li-width4 { width: 20%; }
+.cal-li-width4 { width: 12%; }
 .cal-li-width5 { width: 10%; }
-.cal-li-width6 { width: 14%; }
-.cal-li-width7 { width: 14%; }
+.cal-li-width6 { width: 19%; }
+.cal-li-width7 { width: 46%; }
 .pagination-cntrbx, .page_navigation { background: #f3f3f3; border: #e0e0e0 solid 1px; border-radius: 2px; overflow: hidden; float: right }
 .pagination-cntrbx:after, .page_navigation:after { clear: both; float: none; display: block; content: ''; }
 .pagination-cntrbx a, .page_navigation a, .pagination-cntrbx span { display: inline-block; float: left; vertical-align: middle; text-align: center; width: 25px; height: 25px; padding-top: 2px; border-right: #e0e0e0 solid 1px; cursor: pointer; }
@@ -3861,7 +3862,7 @@ span.sep-spotlight{display:inline-block;vertical-align:; padding:0 5px; color:#6
 .innergoalspage #department-box .pagination-page table td table td:nth-child(4){width: 16.6667%;}
 .innergoalspage #department-box .pagination-page table td table td:nth-child(5){width: 16.6667%;}
 
-.upcoming-event-box.cal-view-icon .calender-slider{min-height:171px;}
+.upcoming-event-box.cal-view-icon .calender-slider{min-height:156px;}
 .upcoming-event-box.cal-view-icon .custom-noresult{height:90%; background:#fff; width:100%; position:absolute; left:0; top:28px; border:none}
 .news-section .img-box-thumb-holder img{margin-left:-50%; margin-top:-50%;}
 .innergoals-events-tabs{padding-top:25px;}
@@ -3898,12 +3899,14 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 .dept-events-tabs.dept-events-tabsextra .tabNav ul li { width: 20%; }
 
 #localEvents-box .pagination-page table td table td:nth-child(1){width:13%}
-#localEvents-box .pagination-page table td table td:nth-child(2){width:14%;}
-#localEvents-box .pagination-page table td table td:nth-child(3){width:15%;}
-#localEvents-box .pagination-page table td table td:nth-child(4){width:20%;}
-#localEvents-box .pagination-page table td table td:nth-child(5){width:10%;}
-#localEvents-box .pagination-page table td table td:nth-child(6){width:14%;}
-#localEvents-box .pagination-page table td table td:nth-child(7){width:14%;}
+#localEvents-box .pagination-page table td table td:nth-child(2){width:46%;}
+#localEvents-box .pagination-page table td table td:nth-child(3){width:12%;}
+#localEvents-box .pagination-page table td table td:nth-child(4){width:10%;}
+#localEvents-box .pagination-page table td table td:nth-child(5){width:19%;}
+/*#localEvents-box .pagination-page table td table td:nth-child(6){width:14%;}
+#localEvents-box .pagination-page table td table td:nth-child(7){width:14%;}*/
+
+#localEvents-box .pagination-page table td table td:nth-child(2) a,#localEvents-box .pagination-page table td table td:nth-child(2) div{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 100%; display:block}
 
 table[id^="bottomPaging"] td table{background: #f3f3f3; border: 1px solid #e0e0e0;border-radius: 2px;overflow: hidden; margin-right:7px; margin-bottom:7px;}
 table[id^="bottomPaging"] td table td{height:25px; padding:0 2px !important}
@@ -3956,7 +3959,7 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 
 /*Documents inner page Sidebar*/
 .DocumentswithSidebar{}
-.docLeftside{float:left; width:20%; background:#f7f8f8;border-right:1px solid #e4e4e4; min-height:209px;}
+.docLeftside{float:left; width:20%; background:#f7f8f8;border-right:1px solid #e4e4e4; min-height:300px;}
 .docRytSide {
   float: left;
   width: 80%;
@@ -4001,6 +4004,43 @@ background: url(https://lacoets.github.io/intranet/Select.png) 27px 14px no-repe
 }
 
 .arrowboxinergol .box-heading h3:after{background: url(https://lacoets.github.io/intranet/Triangle.png) 0px 0px no-repeat transparent; content:''; width:30px; position:absolute; left:20px; height:50px; top:-15px}
+
+.docRytSide.localsinglRyt{float:none; width:100%;}
+.docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child{right:0; top:4px; position:absolute; width:31.7%; }
+.docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="submit"], .docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="button"]{padding:1px 10px; color:#fff; border:#fff solid 1px; margin-left:0 }
+.docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="text"]{border-color:#fff; padding:4px 5px; margin-right:10px; color:#fff; margin-top:-1px;}
+
+ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
+.pagination-page.eventspaginatnstle .ms-promlink-header.eventsposdiv-pagin{position:absolute; bottom:0; right:12px; width:auto}
+.eventsposdiv-pagin .ms-promlink-headerNav .ms-promlink-button{
+  border: none;
+  cursor: pointer;
+  float: left;
+  height: 25px;
+  padding:0;
+  padding-top: 2px;
+  text-align: center;
+  vertical-align: middle;
+  width: 25px;
+}
+.eventsposdiv-pagin .ms-promlink-headerNav{background: #f3f3f3 none repeat scroll 0 0;border: 1px solid #e0e0e0;border-radius: 2px;}
+.eventsposdiv-pagin .ms-promlink-headerNav a:first-child{background:url("https://lacoets.github.io/intranet/sprite.png") no-repeat scroll -52px -275px}
+.eventsposdiv-pagin .ms-promlink-headerNav a:last-child{border-left:#e0e0e0 solid 1px;background:url("https://lacoets.github.io/intranet/sprite.png") no-repeat scroll -79px -275px;}
+.eventsposdiv-pagin .ms-promlink-headerNav a:hover{background-color: #e3e3e3;}
+.eventsposdiv-pagin .ms-promlink-headerNav a img{opacity:0}
+.eventspaginatnstle + .ms-srch-result-noResults{color: red;
+  font-size: 0.875em;
+  margin: 0 auto;
+  padding: 10px 1%;
+}
+
+
+.LocalFilter .ms-rte-embedcode.ms-rte-embedwp input[type="text"]{width:94%; margin:10px auto; height:30px;}
+.LocalFilter .ms-rte-embedcode.ms-rte-embedwp div{padding-left:0 !important; text-align:center}
+.LocalFilter .ms-rte-embedcode.ms-rte-embedwp input[type="text"] + input[type="button"]{margin-left:0}
+#shared-box .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto;}
+#published-box .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto;}
+
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
