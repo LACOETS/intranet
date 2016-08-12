@@ -4040,6 +4040,8 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .LocalFilter .ms-rte-embedcode.ms-rte-embedwp input[type="text"] + input[type="button"]{margin-left:0}
 #shared-box .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto; font-size:14px;}
 #published-box .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto; font-size:14px;}
+#shared-box .docRytSide .ms-webpart-zone.ms-fullWidth h3{margin-bottom:10px; vertical-align:middle}
+#published-box  .docRytSide .ms-webpart-zone.ms-fullWidth h3{margin-bottom:10px; vertical-align:middle}
 
 /*======================================= Content Area CSS End ========================================*/
 
