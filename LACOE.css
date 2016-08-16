@@ -4006,9 +4006,9 @@ background: url(https://lacoets.github.io/intranet/Select.png) 27px 14px no-repe
 .arrowboxinergol .box-heading h3:after{background: url(https://lacoets.github.io/intranet/Triangle.png) 0px 0px no-repeat transparent; content:''; width:30px; position:absolute; left:20px; height:50px; top:-15px}
 
 .docRytSide.localsinglRyt{float:none; width:100%;}
-.dept-events-tabsextra .DocumentswithSidebar .docRytSide .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child{right:0; top:4px; position:absolute; width:31.7%; }
-.dept-events-tabsextra .DocumentswithSidebar .docRytSide .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="submit"], .dept-events-tabsextra .DocumentswithSidebar  .docRytSide .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="button"]{padding:1px 10px; color:#fff; border:#fff solid 1px; margin-left:0 }
-.dept-events-tabsextra .DocumentswithSidebar .docRytSide .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="text"]{border-color:#fff; padding:4px 5px; margin-right:10px; color:#fff; margin-top:-1px;}
+.dept-events-tabsextra .DocumentswithSidebar .docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child{right:0; top:4px; position:absolute; width:31.7%; }
+.dept-events-tabsextra .DocumentswithSidebar .docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="submit"], .dept-events-tabsextra .DocumentswithSidebar  .docRytSide .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="button"]{padding:1px 10px; color:#fff; border:#fff solid 1px; margin-left:0 }
+.dept-events-tabsextra .DocumentswithSidebar .docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="text"]{border-color:#fff; padding:4px 5px; margin-right:10px; color:#fff; margin-top:-1px;}
 
 ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .pagination-page.eventspaginatnstle .ms-promlink-header.eventsposdiv-pagin{position:absolute; bottom:0; right:12px; width:auto}
