@@ -105,6 +105,7 @@ clear: both; float: none; display: block; content: ''; }
 .allViewlistShow .member_info
 {
 	clear:both;
+	min-height:75px
 }
 .allViewlistShow .person_details, .allViewlistShow .prof_pic
 {
