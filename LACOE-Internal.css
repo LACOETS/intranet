@@ -58,7 +58,64 @@ clear: both; float: none; display: block; content: ''; }
 .view-memberlisting h3{padding-top:10px;}
 .allViewlistShow ul li{padding:8px 0;}
 .allViewlistShow ul li.greenline{font-weight:700; clear:both; float:none; text-transform:uppercase}
-.allViewlistShow ul li.normalline{float:left; margin-left:35px;list-style-type:disc; list-style-position:inside}
+.allViewlistShow ul li.normalline{float:left; margin-left:35px;list-style-type:disc; list-style-position:inside; background:#fff}
 .allViewlistShow ul li.normalline + li.redline{margin-left:35px;}
 .allViewlistShow ul li.redline{float:left;list-style-type:disc; list-style-position:inside}
 
+.allViewlistShow ul
+{
+	display:table;
+}
+.allViewlistShow ul li.greenline
+{
+	background-color:#1c7ec7;	
+	margin-bottom:1%;	
+}
+.allViewlistShow ul li.greenline h4
+{
+	color:#fff!important;
+	padding:0px;
+	margin:0px;
+	padding-left:10px;
+}
+.allViewlistShow ul li.normalline
+{
+	list-style-type:none;
+    border: 1px solid rgba(132, 132, 132, 0.69);
+    width:32%;
+    margin:0px 0px 1% 1%!important;
+    /*box-shadow: 5px 5px 3px #888888;*/
+    padding:12px 8px;  
+}
+.allViewlistShow ul li p
+{
+	line-height: 12px;
+}
+.allViewlistShow ul li p.title
+{
+	font-size:18px;
+	font-weight:500;
+	padding-top:15px;
+}
+.allViewlistShow ul li p.email
+{
+	font-size:15px;
+	color:#ddd;
+}
+.allViewlistShow .member_info
+{
+	clear:both;
+}
+.allViewlistShow .person_details, .allViewlistShow .prof_pic
+{
+	float:left;
+	margin-left:5px;
+}
+.allViewlistShow .prof_pic
+{
+	min-height:64px;
+	min-width:64px;
+	background:url("https://lacoets.github.io/intranet/Generic-user-img.jpg") no-repeat center center;
+}
+.member_info .person_details{width:78%;}
+.member_info:after{clear:both; display:block; content:''; float:none}
