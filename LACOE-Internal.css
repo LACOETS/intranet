@@ -8,8 +8,9 @@
 
 #internalTheming table#onetIDListForm table.ms-formtable tr td{vertical-align:top;padding:10px 0}
 #internalTheming table#onetIDListForm table.ms-formtable table tr td{padding:0}
+#internalTheming table td{border-left:none !important; border-right:none !important}
 
-#internalTheming .ms-formtable #SPFieldText{font-size:18px; font-weight:500; color:#1c7ec7 }
+#internalTheming .ms-formtable #SPFieldText{font-size:18px; font-weight:400; color:#1c7ec7 }
 #internalTheming table table{font-size:16px;}
 .ms-standardheader{font-size:14px;}
 #internalTheming table table.ms-formtable + table{margin-top:50px; margin-bottom:20px !important;}

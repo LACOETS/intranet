@@ -3231,7 +3231,7 @@ ul.dynamic { min-width: 200px; }
 .select-filtercaldr { text-align: right; padding-bottom: 10px; margin-right:-25px; }
 .select-filtercaldr .input-type-select { border: none; position: relative; text-align: left; display: inline-block }
 .select-filtercaldr .input-type-select select { border: none; color: #1c7ec7; font: 600 1em 'Work Sans', sans-serif; }
-.date-showbox { display: inline-block; width: 65px; vertical-align: middle; border-radius: 5px; overflow: hidden; text-align: center; box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3) }
+.date-showbox { display: inline-block; width: 67px; vertical-align: middle; border-radius: 5px; overflow: hidden; text-align: center; border:#ccc solid 1px; }
 .month-title { background: #1c7ec7; color: #fff; font-weight: 300; font-size: 1em; text-transform: uppercase; padding: 4px 14px }
 .month-date { color: #1c7ec7; font-size: 1.750em; font-weight: 600; padding: 4px 14px }
 .calender-text { font-size: 0.875em; color: #4d4d4d; margin:0 auto; font-weight: 300; padding: 5px 0 0px 0; white-space: nowrap; width: 85%; overflow: hidden;text-overflow: ellipsis; }
@@ -3405,9 +3405,9 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .box-contentinfos ul li:first-child { margin-top: 15px }
 .box-contentinfos ul li { margin-top: 19px }
 .img-box-thumb-holder { }
-.box-img-thumbnail { float: left; border: #ccc solid 1px; width: 82px; height: 82px; overflow: hidden; box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2); }
+.box-img-thumbnail { float: left; border: #ccc solid 1px; width: 82px; height: 82px; overflow: hidden; }
 .news-info-cntr { padding-left: 10px; width: 75.9%; float:left }
-.news-title-like h4 { float: left; width: 174px; font-weight: 400; color: #000; font-size: 1em; }
+.news-title-like h4 { float: left; width: 174px; font-weight: 400; color: #000; font-size: 1em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
 .news-title-like .like-link-news { float: right; }
 .like-link-news a { background: url(../images/gray-like.png) left center no-repeat; font-size: 0.875em; color: #818181; padding: 0 0 0 23px }
 .news-activity-dtl .news-submitedby { color: #1c7ec7; font-size: 0.875em; padding: 10px 0px 2px 0 }
@@ -3671,7 +3671,7 @@ select:focus{outline:none;}
 
 /*New theme resouce link*/
 .resource-link-section .s4-wpcell > .ms-webpart-chrome, .s4-wpActive > .ms-webpart-chrome{border:none}
-.resource-link-section table{width:100%;}
+.resource-link-section table{width:100.1%;}
 .resource-link-section table.ms-listviewtable{width:100%;border-collapse: collapse;}
 .resource-link-section table.ms-listviewtable tr{border-bottom: 1px solid #e4e4e4;}
 .resource-link-section table.ms-listviewtable thead{display:none}
@@ -4009,6 +4009,7 @@ background: url(https://lacoets.github.io/intranet/Select.png) 27px 14px no-repe
 .dept-events-tabsextra .DocumentswithSidebar .docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child{right:0; top:4px; position:absolute; width:31.7%; }
 .dept-events-tabsextra .DocumentswithSidebar .docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="submit"], .dept-events-tabsextra .DocumentswithSidebar  .docRytSide .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="button"]{padding:1px 10px; color:#fff; border:#fff solid 1px; margin-left:0 }
 .dept-events-tabsextra .DocumentswithSidebar .docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="text"]{border-color:#fff; padding:4px 5px; margin-right:10px; color:#fff; margin-top:-1px;}
+.dept-events-tabsextra .DocumentswithSidebar .docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="submit"]:hover, .dept-events-tabsextra .DocumentswithSidebar  .docRytSide .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child input[type="button"]:hover{background-color:#00497e}
 
 ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .pagination-page.eventspaginatnstle .ms-promlink-header.eventsposdiv-pagin{position:absolute; bottom:0; right:12px; width:auto}
@@ -4042,6 +4043,9 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 #published-box .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto; font-size:14px;}
 #shared-box .docRytSide .ms-webpart-zone.ms-fullWidth h3{margin-bottom:10px; vertical-align:middle}
 #published-box  .docRytSide .ms-webpart-zone.ms-fullWidth h3{margin-bottom:10px; vertical-align:middle}
+
+.lcoe-report-card .keycontact-viewlink{width:100%}
+.header .ms-srch-sb > .ms-srch-sb-navLink{margin-left:-5px;}
 
 /*======================================= Content Area CSS End ========================================*/
 
