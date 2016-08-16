@@ -3873,7 +3873,7 @@ span.sep-spotlight{display:inline-block;vertical-align:; padding:0 5px; color:#6
 height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 
 .emp-spotlight-box .ms-webpart-zone,.emp-spotlight-box .ms-webpart-cell-vertical,.emp-spotlight-box .ms-webpart-chrome-vertical{display:block}
-.didyouknwbx .didyouknwbx-img{float:left; width:116px; margin-right:15px;}
+.didyouknwbx .didyouknwbx-img{float:left; width:116px; margin-right:15px; border:#ccc solid 1px;}
 .didyouknwbx .didyouknwbx-img img{width:100%;}
 .didyouknwbx .didyouknw-txt{}
 
