@@ -1,9 +1,10 @@
+﻿
 <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-<head>
+    <head>
     <title>TestingSearchAlphabetical</title>
     <script type="text/javascript" src="https://lacoets.github.io/intranet/jquery-listnav.js"></script>
     <link rel="stylesheet" href="https://lacoets.github.io/intranet/listnav.css">
-   <link rel="stylesheet" href="https://lacoets.github.io/intranet/style.css">
+    <link rel="stylesheet" href="https://lacoets.github.io/intranet/style.css">
     <script type="text/javascript">    
         function GetBranchByProtocol() { 
          $("#ulSearch").empty();          
@@ -96,8 +97,7 @@
           //Code on page load End
     </script>
 
-
-<!--[if gte mso 9]><xml>
+    <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
 <mso:Extranet_x0020_Approval msdt:dt="string"></mso:Extranet_x0020_Approval>
 <mso:Unit_x0020_Approval msdt:dt="string"></mso:Unit_x0020_Approval>
@@ -111,29 +111,28 @@
 <mso:FileLeafRef msdt:dt="string">TestingSearchAlphabetical.html</mso:FileLeafRef>
 </mso:CustomDocumentProperties>
 </xml><![endif]-->
-</head>
-<body>
-
-    <div>
-        <input type="text" id="searchText" placeholder="Search" /><input  value="" style="border-style: none; background: url('https://lacoets.github.io/intranet/searchbutton3.gif') no-repeat; width: 24px; height: 20px;" onclick="GetBranchByProtocol()" />        
-    </div><br>
-    <div id="displayDiv">
-       
-        <ul id="ulSearch">  
-           
-            </ul> 
-    </div>
-    <div id="ulSearchBottom" >
-       
-        <ul id="ulSearch2">        
-            </ul>            
-    </div>    
-<br>
-<div id="itemCreateion" style=" border: 2px solid black; width:830px; height:75px; visibility:hidden" >
-<ul>
-<li><strong>If did you not find the word you were looking for or the discription was not clear. Click here to submit your comments </strong><input type="button" value="Add an Item" onclick="window.open('https://lacoe.sharepoint.com/Lists/School%20List/NewForm.aspx?IsDlg=1')"></li>
-</ul>
-Additional information at FAQ
-</div>
+    </head>
+    <body>
+		<div class="glosarySearch">
+				<input type="text" id="searchText" placeholder="Search" />
+				<input  value="" style="border-style: none; background: url('https://lacoets.github.io/intranet/searchbutton3.gif') no-repeat; width: 24px; height: 20px;" onclick="GetBranchByProtocol()" />
+		</div>
+		<br>
+		<div id="displayDiv">
+				<ul id="ulSearch">
+				</ul>
+		</div>
+		<div id="ulSearchBottom" >
+				<ul id="ulSearch2">
+				</ul>
+		</div>
+		<br>
+		<div id="itemCreateion" style=" border: 2px solid black; width:830px; height:75px; visibility:hidden" >
+				<ul>
+						<li><strong>If did you not find the word you were looking for or the discription was not clear. Click here to submit your comments </strong>
+								<input type="button" value="Add an Item" onclick="window.open('https://lacoe.sharepoint.com/Lists/School%20List/NewForm.aspx?IsDlg=1')">
+						</li>
+				</ul>
+				Additional information at FAQ </div>
 </body>
 </html>
