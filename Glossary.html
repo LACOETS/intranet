@@ -52,7 +52,7 @@
                         listItemGoogleURL = oListItem.get_item("Long_x0020_Name");
                         listItemID= oListItem.get_item("ID");
                         var string1="https://lacoe.sharepoint.com/Lists/School%20List/DispForm.aspx?ID="+listItemID;
-                         $("#ulSearch").append('<li><div class="leftshortnameGA" style="width:220px; float:left;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</div>'+'<div class="rightlongnamGA">'+listItemGoogleURL +'</div></li>');
+                         $("#ulSearch").append('<li><div class="leftshortnameGA">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</div>'+'<div class="rightlongnamGA">'+listItemGoogleURL +'</div></li>');
                         //$("#ulSearch").append('<li style="height:25px; width:860px">'+'<span style="width:400; float:left; margin-right: 206px;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</span>'+ '<span style="">' + listItemGoogleURL +'</span>' + '</li>');
                       }                    
                     if ($('#ulSearch-nav').length > 0) {                   
@@ -113,27 +113,33 @@
 </xml><![endif]-->
     </head>
     <body>
-		<div class="glosarySearch">
+<div class="glosarySearch">
 				<div class="searchCntrglry">
-					<div class="SearchTxtbxgsry"><input type="text" id="searchText" placeholder="Search"></div>
-					<div class="Searchbtngsry"><input type="button" value="" onclick="GetBranchByProtocol()"></div>
-					<div class="clear"></div>
-				</div>
+				<div class="SearchTxtbxgsry">
+								<input type="text" id="searchText" placeholder="Search">
+						</div>
+				<div class="Searchbtngsry">
+								<input type="button" value="" onclick="GetBranchByProtocol()">
+						</div>
+				<div class="clear"></div>
 		</div>
-		<div id="displayDiv">
-				<div class="searchdivGA"><ul id="ulSearch">
-				</ul></div>
 		</div>
-		<div id="ulSearchBottom" >
+<div id="displayDiv">
+				<div class="searchdivGA">
+						<ul id="ulSearch">
+						</ul>
+		</div>
+		</div>
+<div id="ulSearchBottom" >
 				<ul id="ulSearch2">
-				</ul>
+		</ul>
 		</div>
-		<div id="itemCreateion" style=" border: 2px solid black; width:830px; height:75px; visibility:hidden" >
+<div id="itemCreateion" style=" border: 2px solid black; width:830px; height:75px; visibility:hidden" >
 				<ul>
-						<li><strong>If you did not find the word you were looking for or the description was not clear. Please click here to submit your comments </strong>
+				<li><strong>If you did not find the word you were looking for or the description was not clear. Please click here to submit your comments </strong>
 								<input type="button" value="Add an Item" onclick="window.open('https://lacoe.sharepoint.com/Lists/School%20List/NewForm.aspx?IsDlg=1')">
 						</li>
-				</ul>
+		</ul>
 				Additional information at FAQ </div>
 </body>
 </html>
