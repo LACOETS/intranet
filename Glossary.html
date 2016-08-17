@@ -1,11 +1,10 @@
-﻿
-<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-    <head>
-    <title>TestingSearchAlphabetical</title>
-    <script type="text/javascript" src="https://lacoets.github.io/intranet/jquery-listnav.js"></script>
-    <link rel="stylesheet" href="https://lacoets.github.io/intranet/listnav.css">
-    <link rel="stylesheet" href="https://lacoets.github.io/intranet/style.css">
-    <script type="text/javascript">    
+﻿<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>TestingSearchAlphabetical</title>
+<script type="text/javascript" src="https://lacoets.github.io/intranet/jquery-listnav.js"></script>
+<link rel="stylesheet" href="https://lacoets.github.io/intranet/listnav.css">
+<link rel="stylesheet" href="https://lacoets.github.io/intranet/style.css">
+<script type="text/javascript">    
         function GetBranchByProtocol() { 
          $("#ulSearch").empty();          
             var textVal = $("#searchText").val();
@@ -97,7 +96,7 @@
           //Code on page load End
     </script>
 
-    <!--[if gte mso 9]><xml>
+<!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
 <mso:Extranet_x0020_Approval msdt:dt="string"></mso:Extranet_x0020_Approval>
 <mso:Unit_x0020_Approval msdt:dt="string"></mso:Unit_x0020_Approval>
@@ -111,35 +110,38 @@
 <mso:FileLeafRef msdt:dt="string">TestingSearchAlphabetical.html</mso:FileLeafRef>
 </mso:CustomDocumentProperties>
 </xml><![endif]-->
-    </head>
-    <body>
+</head>
+<body>
 <div class="glosarySearch">
-				<div class="searchCntrglry">
+		<div class="searchCntrglry">
 				<div class="SearchTxtbxgsry">
-								<input type="text" id="searchText" placeholder="Search">
-						</div>
+						<input type="text" id="searchText" placeholder="Search">
+				</div>
 				<div class="Searchbtngsry">
-								<input type="button" value="" onclick="GetBranchByProtocol()">
-						</div>
+						<input type="button" value="" onclick="GetBranchByProtocol()">
+				</div>
 				<div class="clear"></div>
 		</div>
-		</div>
+</div>
 <div id="displayDiv">
-				<div class="searchdivGA">
-						<ul id="ulSearch">
-						</ul>
+		<div class="searchdivGA">
+				<ul id="ulSearch">
+				</ul>
 		</div>
-		</div>
+</div>
 <div id="ulSearchBottom" >
-				<ul id="ulSearch2">
+		<ul id="ulSearch2">
 		</ul>
-		</div>
-<div id="itemCreateion" style=" border: 2px solid black; width:830px; height:75px; visibility:hidden" >
-				<ul>
-				<li><strong>If you did not find the word you were looking for or the description was not clear. Please click here to submit your comments </strong>
-								<input type="button" value="Add an Item" onclick="window.open('https://lacoe.sharepoint.com/Lists/School%20List/NewForm.aspx?IsDlg=1')">
-						</li>
+</div>
+<div class="GAnotebx">
+	<h3>If you did not find the word you were looking for or the description was not clear. Please click here to submit your comments</h3>
+</div>
+<div id="itemCreateion">
+		<ul>
+				<li><strong> </strong>
+						<input type="button" value="Add an Item" onclick="window.open('https://lacoe.sharepoint.com/Lists/School%20List/NewForm.aspx?IsDlg=1')">
+				</li>
 		</ul>
-				Additional information at FAQ </div>
+		Additional information at FAQ </div>
 </body>
 </html>
