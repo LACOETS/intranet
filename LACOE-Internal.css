@@ -121,3 +121,47 @@ clear: both; float: none; display: block; content: ''; }
 }
 .member_info .person_details{width:78%;}
 .member_info:after{clear:both; display:block; content:''; float:none}
+
+
+/*Glossary Acronyms*/
+.glosarySearch{text-align:left; padding:15px 0 25px 0}
+.searchCntrglry{width:250px; display:inline-block; background:#fff; border:1px solid #1c7ec7}
+.SearchTxtbxgsry{float:left; width:85%; text-align:left}
+.SearchTxtbxgsry input[type='text']{width:100%; border:none !important; padding:6px 10px; padding-right:0; color:#777}
+.Searchbtngsry{float:left; width:15%; text-align:center}
+.Searchbtngsry input[type='button']{width:100%; padding:5px 0; min-width:0; margin-left:0; background:url("https://lacoets.github.io/intranet/gray-search.png") no-repeat center center;
+;background-color:transparent}
+.shortnamTXtGA,.longnamTXtGA{float:left; width:70%;padding:10px;}
+.shortnamTXtGA{width:30%;}
+.navtexthedng,.searchdivGA #ulSearch{width:993px;}
+.searchdivGA #ulSearch:after{clear:both; display:block; float:none; content:'';}
+.leftshortnameGA,.rightlongnamGA{float:left; width:70%;}
+.leftshortnameGA{width:30%;}
+.navtexthedng{margin-top:20px;}
+.searchdivGA #ulSearch li{border-bottom:1px solid #e4e4e4; background:#fff; padding:10px; font-size:14px; color:#444}
+.searchdivGA #ulSearch li:nth-child(2n){background:#f7f8f8;}
+.navtexthedng {background: #000; color:#fff}
+#displayDiv{margin-bottom:20px;}
+.searchdivGA #ulSearch{border:#ccc solid 1px;}
+#ulSearchBottom{margin-bottom:20px;}
+.searchdivGA .ln-letters a:hover, .searchdivGA .ln-letters .ln-selected{background-color: #e3e3e3;}
+.GAnotebx h3 {
+  border: #1c7ec7 solid 1px;
+  display: inline-block;
+  font-size: 13px;
+  padding: 7px;
+}
+.GAnotebx{text-align:center;}
+.addItembxGA{text-align:left;}
+.addItembxGA input[type="button"] {
+  font-size: 13px;
+  height: 34px;
+  margin-left: 0;
+  min-width: 0;
+  padding: 7px;
+}
+.addItembxGA ul li{padding:15px 0}
+.GAcontainer{width:994px;}
+.GAnotebx{float:left}
+.additembtnGA{float:right}
+/*Glossary Acronyms end*/
