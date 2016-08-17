@@ -1,0 +1,139 @@
+﻿<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <title>TestingSearchAlphabetical</title>
+    <script type="text/javascript" src="https://lacoe.sharepoint.com/SiteAssets/AlphabeticalSearch/jquery-listnav.js"></script>
+    <link rel="stylesheet" href="https://lacoe.sharepoint.com/SiteAssets/AlphabeticalSearch/listnav.css">
+   <link rel="stylesheet" href="https://lacoe.sharepoint.com/SiteAssets/AlphabeticalSearch/style.css">
+    <script type="text/javascript">    
+        function GetBranchByProtocol() { 
+         $("#ulSearch").empty();          
+            var textVal = $("#searchText").val();
+            if (textVal != '') {
+            var listName='School List';
+                var clientContext = new SP.ClientContext.get_current();
+                var site = clientContext.get_site();
+                var web = clientContext.get_web();
+                var oList = clientContext.get_web().get_lists().getByTitle(listName);
+                var camlQuery = new SP.CamlQuery();
+                camlQuery.set_viewXml('<View><Query><Where><Contains><FieldRef Name=\'Title\'/><Value Type=\'Text\'>' + textVal + '</Value></Contains></Where></Query></View>');
+                 this.collListItem = oList.getItems(camlQuery);
+                clientContext.load(collListItem);
+               clientContext.load(site,'ServerRelativeUrl', 'Url');
+                
+                clientContext.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded), Function.createDelegate(this, this.onQueryFailed));
+               
+            }
+            else {
+                $("#ulSearch").empty();
+                if ($('#ulSearch-nav').length > 0) { 
+                $('#ulSearch-nav').remove();
+                    $('#ulSearch-nav').remove();
+                    document.getElementById('itemCreateion').style.visibility = 'hidden'; 
+                }
+                alert('Search box cannot leave empty');
+            }
+        }
+            function onQuerySucceeded(sender, args) {
+                var listItemInfo = '';
+                var listItemGoogleURL = '';
+                var listItemUrl = '';
+                var listItemEnumerator = collListItem.getEnumerator();  
+               $("#ulSearch").empty();
+               $("#ulSearch2").empty();
+
+                   var count = 0;
+                   var count = collListItem.get_count(); 
+                   if(count>0)  
+                   {    
+                    while (listItemEnumerator.moveNext()) {
+                        var oListItem = listItemEnumerator.get_current();
+                        listItemInfo = oListItem.get_item("Title");
+                        listItemGoogleURL = oListItem.get_item("Long_x0020_Name");
+                        listItemID= oListItem.get_item("ID");
+                        var string1="https://lacoe.sharepoint.com/Lists/School%20List/DispForm.aspx?ID="+listItemID;
+                         $("#ulSearch").append('<li style="height:25px; width:860px">'+'<span">'+'<ul style="width:220px; float:left;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</ul>'+'<ul style="width:635px; float:left;">'+listItemGoogleURL +'</ul>'+'</span>' + '</li>');
+                        //$("#ulSearch").append('<li style="height:25px; width:860px">'+'<span style="width:400; float:left; margin-right: 206px;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</span>'+ '<span style="">' + listItemGoogleURL +'</span>' + '</li>');
+                      }                    
+                    if ($('#ulSearch-nav').length > 0) {                   
+                    $('#ulSearch-nav').remove();                                                      
+                    $('#ulSearch').listnav();
+                    $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
+                    var node = document.createElement("strong");
+                       var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
+                       node.appendChild(textnode);
+                       document.getElementById("ulSearch-nav").appendChild(node); 
+                      }
+                      else{                      
+                       $('#ulSearch').listnav();                       
+                       $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
+                       var node = document.createElement("strong");
+                       var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
+                       node.appendChild(textnode);
+                       document.getElementById("ulSearch-nav").appendChild(node);   
+                       }                         
+                                       
+                   }
+                   else
+                   {
+                    $('#ulSearch-nav').remove();
+                   alert("Items are not available wiht this word");
+                  
+
+                   }
+                 document.getElementById('itemCreateion').style.visibility = 'visible';
+
+                
+            }
+
+            function onQueryFailed(sender, args) {               
+                alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace());
+            }
+			 //Code on page load Start 
+            $( window ).load(function() {
+            $('#searchText').val("a");
+             GetBranchByProtocol();
+         });
+          //Code on page load End
+    </script>
+
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:Extranet_x0020_Approval msdt:dt="string"></mso:Extranet_x0020_Approval>
+<mso:Unit_x0020_Approval msdt:dt="string"></mso:Unit_x0020_Approval>
+<mso:Division_x0020_Approval msdt:dt="string"></mso:Division_x0020_Approval>
+<mso:Section_x0020_Approval msdt:dt="string"></mso:Section_x0020_Approval>
+<mso:Department_x0020_Approval msdt:dt="string"></mso:Department_x0020_Approval>
+<mso:FSObjType msdt:dt="string">0</mso:FSObjType>
+<mso:FileDirRef msdt:dt="string">sites/DevEnv/SiteAssets/AlphabeticalSearch</mso:FileDirRef>
+<mso:ContentTypeId msdt:dt="string">0x010100D6F838E71E277744ABDA38725828A0ED</mso:ContentTypeId>
+<mso:ContentType msdt:dt="string">Document</mso:ContentType>
+<mso:FileLeafRef msdt:dt="string">TestingSearchAlphabetical.html</mso:FileLeafRef>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <div>
+        <input type="text" id="searchText" placeholder="Search" /><input  value="" style="border-style: none; background: url('https://lacoe.sharepoint.com/SiteAssets/AlphabeticalSearch/searchbutton3.gif') no-repeat; width: 24px; height: 20px;" onclick="GetBranchByProtocol()" />        
+    </div><br>
+    <div id="displayDiv">
+       
+        <ul id="ulSearch">  
+           
+            </ul> 
+    </div>
+    <div id="ulSearchBottom" >
+       
+        <ul id="ulSearch2">        
+            </ul>            
+    </div>    
+<br>
+<div id="itemCreateion" style=" border: 2px solid black; width:830px; height:75px; visibility:hidden" >
+<ul>
+<li><strong>If did you not find the word you were looking for or the discription was not clear. Click here to submit your comments </strong><input type="button" value="Add an Item" onclick="window.open('https://lacoe.sharepoint.com/Lists/School%20List/NewForm.aspx?IsDlg=1')"></li>
+</ul>
+Additional information at FAQ
+</div>
+</body>
+</html>
