@@ -52,7 +52,7 @@
                         listItemGoogleURL = oListItem.get_item("Long_x0020_Name");
                         listItemID= oListItem.get_item("ID");
                         var string1="https://lacoe.sharepoint.com/Lists/School%20List/DispForm.aspx?ID="+listItemID;
-                         $("#ulSearch").append('<li><div class="leftshortnameGA">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</div>'+'<div class="rightlongnamGA">'+listItemGoogleURL +'</div></li>');
+                         $("#ulSearch").append('<li><div class="leftshortnameGA">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</div>'+'<div class="rightlongnamGA">'+listItemGoogleURL +'</div><div class="clear"></div></li>');
                         //$("#ulSearch").append('<li style="height:25px; width:860px">'+'<span style="width:400; float:left; margin-right: 206px;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</span>'+ '<span style="">' + listItemGoogleURL +'</span>' + '</li>');
                       }                    
                     if ($('#ulSearch-nav').length > 0) {                   
