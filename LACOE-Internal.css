@@ -129,7 +129,7 @@ clear: both; float: none; display: block; content: ''; }
 .SearchTxtbxgsry{float:left; width:85%; text-align:left}
 .SearchTxtbxgsry input[type='text']{width:100%; border:none !important; padding:6px 10px; padding-right:0; color:#777}
 .Searchbtngsry{float:left; width:15%; text-align:center}
-.Searchbtngsry input[type='button']{width:100%; padding:5px 0; min-width:0; margin-left:0; background:url("https://lacoets.github.io/intranet/gray-search.png") no-repeat center center;
+.Searchbtngsry input[type='button']{width:100%; padding:5px 0; min-width:0; margin-left:0; background:url("https://lacoets.github.io/intranet/gray-search-small.png") no-repeat center center;
 ;background-color:transparent}
 .shortnamTXtGA,.longnamTXtGA{float:left; width:70%;padding:10px;}
 .shortnamTXtGA{width:30%;}
@@ -158,10 +158,11 @@ clear: both; float: none; display: block; content: ''; }
   height: 34px;
   margin-left: 0;
   min-width: 0;
-  padding: 7px;
+  padding: 7px 25px;
 }
-.addItembxGA ul li{padding:15px 0}
+.addItembxGA ul li{padding:15px 0 5px 0}
 .GAcontainer{width:994px;}
 .GAnotebx{float:left}
 .additembtnGA{float:right}
+.noteTXTGAbtm{font-size: 12px;}
 /*Glossary Acronyms end*/
