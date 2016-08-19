@@ -1,10 +1,10 @@
-﻿<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 <head>
-    <title>Glossary</title>
-    <script type="text/javascript" src="https://lacoets.github.io/intranet/jquery-listnav.js"></script>
-    <link rel="stylesheet" href="https://lacoets.github.io/intranet/listnav.css">
-    <link rel="stylesheet" href="https://lacoets.github.io/intranet/style.css">
-    <script type="text/javascript">    
+<title>Glossary</title>
+<script type="text/javascript" src="https://lacoets.github.io/intranet/jquery-listnav.js"></script>
+<link rel="stylesheet" href="https://lacoets.github.io/intranet/listnav.css">
+<link rel="stylesheet" href="https://lacoets.github.io/intranet/style.css">
+<script type="text/javascript">    
         //Code on page load 
             $( window ).load(function() {
              	GetAllItems();             	
@@ -209,29 +209,42 @@ function CloseDialogCallback(dialogResult, returnValue)
 </xml><![endif]-->
 </head>
 <body>
-
-    <div>
-        <input type="text" id="searchText" placeholder="Search" /><input  value="" style="border-style: none; background: url('https://lacoets.github.io/intranet/searchbutton3.gif') no-repeat; width: 24px; height: 20px;" onclick="GetBranchByProtocol()"/>              
-    </div><br>
-    <div id="displayDiv">
-               <ul id="ulSearch">  
-          
-            </ul> 
-    </div>
-    <div id="ulSearchBottom" >
-       
-        <ul id="ulSearch2">        
-            </ul>            
-    </div>    
-<br>
-<div id="itemCreateion" style=" border: 2px solid black; width:830px; height:75px;" > <!--visibility:hidden-->
-<ul>
-<li><strong>If did you not find the word you were looking for or the discription was not clear. Click here to submit your comments </strong>
-	<input type="button" value="Add an Item" onclick="openInDialog(500,500,true,true,true,_spPageContextInfo.webAbsoluteUrl + '/Lists/Glossary/NewForm.aspx?RootFolder=&IsDlg=1');">
-    <!--<a href="#" onclick="openInDialog(500,500,true,true,true,'https://lacoe365.sharepoint.com/sites/DevEnv/Lists/Glossary/NewForm.aspx?RootFolder=&IsDlg=1');">Add an Item</a>-->
-</li>
-</ul>
-Additional information at FAQ
+<div class="GAcontainer">
+		<div class="glosarySearch">
+				<div class="searchCntrglry">
+						<div class="SearchTxtbxgsry">
+								<input type="text" id="searchText" placeholder="Search">
+						</div>
+						<div class="Searchbtngsry">
+								<input type="button" value="" onclick="GetBranchByProtocol()">
+						</div>
+						<div class="clear"></div>
+				</div>
+		</div>
+		<div id="displayDiv">
+				<div class="searchdivGA">
+						<ul id="ulSearch">
+						</ul>
+				</div>
+		</div>
+		<div id="ulSearchBottom" >
+				<ul id="ulSearch2">
+				</ul>
+		</div>
+		<div id="itemCreateion" class="addItembxGA">
+				<ul>
+						<li>
+								<div class="GAnotebx">
+										<h3>"If you did not find the word you were looking for or the description was not clear. Please click here to submit your comments"</h3>
+								</div>
+								<div class="additembtnGA">
+										<input type="button" value="Add an Item" onclick="openInDialog(500,500,true,true,true,_spPageContextInfo.webAbsoluteUrl + '/Lists/Glossary/NewForm.aspx?RootFolder=&IsDlg=1');">
+								</div>
+								<div class="clear"></div>
+						</li>
+				</ul>
+				<div class="noteTXTGAbtm">Additional information at FAQ</div>
+		</div>
 </div>
 </body>
 </html>
