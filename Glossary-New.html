@@ -129,25 +129,28 @@
                         listItemLongName = oListItem.get_item("Long_x0020_Name");
                         listItemID= oListItem.get_item("ID");
                         var string1="https://lacoe.sharepoint.com/Lists/Glossary/DispForm.aspx?ID="+listItemID;
-                         $("#ulSearch").append('<li style="height:25px; width:860px">'+'<span">'+'<ul style="width:220px; float:left;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</ul>'+'<ul style="width:635px; float:left;">'+listItemLongName +'</ul>'+'</span>' + '</li>');
-                        //$("#ulSearch").append('<li style="height:25px; width:860px">'+'<span style="width:400; float:left; margin-right: 206px;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</span>'+ '<span style="">' + listItemLongName +'</span>' + '</li>');
+                        // $("#ulSearch").append('<li style="height:25px; width:860px">'+'<span">'+'<ul style="width:220px; float:left;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</ul>'+'<ul style="width:635px; float:left;">'+listItemLongName +'</ul>'+'</span>' + '</li>');
+                        	$("#ulSearch").append('<li><div class="leftshortnameGA">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</div>'+'<div class="rightlongnamGA">'+listItemLongName +'</div><div class="clear"></div></li>');
+												//$("#ulSearch").append('<li style="height:25px; width:860px">'+'<span style="width:400; float:left; margin-right: 206px;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</span>'+ '<span style="">' + listItemLongName +'</span>' + '</li>');
                       }                    
                     if ($('#ulSearch-nav').length > 0) {                   
                     $('#ulSearch-nav').remove();                                                      
                     $('#ulSearch').listnav();
                     $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
-                    var node = document.createElement("strong");
-                       var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
-                       node.appendChild(textnode);
-                       document.getElementById("ulSearch-nav").appendChild(node); 
+                    //var node = document.createElement("strong");
+                       //var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
+                       //node.appendChild(textnode);
+                       //document.getElementById("ulSearch-nav").appendChild(node); 
+											 $("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA">Short Name</div><div class="longnamTXtGA">Long Name</div><div class="clear"></div></div>'); 
                       }
                       else{                      
                        $('#ulSearch').listnav();                       
                        $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
-                       var node = document.createElement("strong");
-                       var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
-                       node.appendChild(textnode);
-                       document.getElementById("ulSearch-nav").appendChild(node);   
+                       //var node = document.createElement("strong");
+                       //var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
+                       //node.appendChild(textnode);
+                       //document.getElementById("ulSearch-nav").appendChild(node); 
+											 $("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA">Short Name</div><div class="longnamTXtGA">Long Name</div><div class="clear"></div></div>');  
                        }                         
                                        
                    }
