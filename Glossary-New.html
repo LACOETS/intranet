@@ -128,7 +128,7 @@
                         listItemInfo = oListItem.get_item("Title");
                         listItemLongName = oListItem.get_item("Long_x0020_Name");
                         listItemID= oListItem.get_item("ID");
-                        var string1="https://lacoe365.sharepoint.com/sites/DevEnv/Lists/Glossary/DispForm.aspx?ID="+listItemID;
+                        var string1="https://lacoe.sharepoint.com/Lists/Glossary/DispForm.aspx?ID="+listItemID;
                          $("#ulSearch").append('<li style="height:25px; width:860px">'+'<span">'+'<ul style="width:220px; float:left;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</ul>'+'<ul style="width:635px; float:left;">'+listItemLongName +'</ul>'+'</span>' + '</li>');
                         //$("#ulSearch").append('<li style="height:25px; width:860px">'+'<span style="width:400; float:left; margin-right: 206px;">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemInfo +'</a>'+'</span>'+ '<span style="">' + listItemLongName +'</span>' + '</li>');
                       }                    
