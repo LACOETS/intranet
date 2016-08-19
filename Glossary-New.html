@@ -46,8 +46,8 @@
 				//userEntry.Description=dataRec.Description;
 				   
 	               
-				$('#ulSearch').append('<li style="height:25px; width:860px">'+'<span">'+'<ul style="width:220px; float:left;">'+'<a href="" target="_blank">'  + userEntry.Title +'</a>'+'</ul>'+'<ul style="width:635px; float:left;">'+userEntry.LongName+'</ul>'+'</span>' + '</li>');
-				
+				//$('#ulSearch').append('<li style="height:25px; width:860px">'+'<span">'+'<ul style="width:220px; float:left;">'+'<a href="" target="_blank">'  + userEntry.Title +'</a>'+'</ul>'+'<ul style="width:635px; float:left;">'+userEntry.LongName+'</ul>'+'</span>' + '</li>');
+				$("#ulSearch").append('<li><div class="leftshortnameGA">'+'<a href="#" ONCLICK="GoToLink(this);return false;" target="_blank">'  + userEntry.Title +'</a>'+'</div>'+'<div class="rightlongnamGA">'+userEntry.LongName+'</div><div class="clear"></div></li>');
 		    });//End of each
 		    
 		    //$('#ulSearch').listnav();
@@ -56,18 +56,20 @@
                 $('#ulSearch-nav').remove();                                                      
                 $('#ulSearch').listnav();
                 $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
-                var node = document.createElement("strong");
-                var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
-                node.appendChild(textnode);
-                document.getElementById("ulSearch-nav").appendChild(node); 
+                //var node = document.createElement("strong");
+                //var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
+                //node.appendChild(textnode);
+                //document.getElementById("ulSearch-nav").appendChild(node); 
+								$("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA">Short Name</div><div class="longnamTXtGA">Long Name</div><div class="clear"></div></div>');
               }
 	          else{                      
 		           $('#ulSearch').listnav();                       
 		           $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
-		           var node = document.createElement("strong");
-		           var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
-		           node.appendChild(textnode);
-		           document.getElementById("ulSearch-nav").appendChild(node);   
+		           //var node = document.createElement("strong");
+		           //var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
+		           //node.appendChild(textnode);
+		          // document.getElementById("ulSearch-nav").appendChild(node);
+							$("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA">Short Name</div><div class="longnamTXtGA">Long Name</div><div class="clear"></div></div>');   
 	           }  
 			
 			
