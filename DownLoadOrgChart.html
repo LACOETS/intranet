@@ -1,0 +1,78 @@
+﻿<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <title>Download PDF</title>
+     <script type="text/javascript">  
+      var ddlval;
+      var newUrl;
+        $(document).ready(function () {  
+            DepartmentDrpDownBind();
+            $('#Deptdrp').change(function() {
+              ddlval=$("#drpDepartment option:selected").text();
+               nUrl = $('#drpDepartment :selected').val();              
+               $('a.aTarget').attr('href', nUrl);
+    });
+});  
+
+        function DepartmentDrpDownBind() {  
+            var listName = "Org Charts";  
+            var url = _spPageContextInfo.webAbsoluteUrl;  
+      
+            getListItems(listName, url, function (data) {  
+                var items = data.d.results;  
+                 
+                var inputElement = 'Department Name : <select id="drpDepartment"> <option value="#">Select</option>';  
+                   // Add all the new items  
+                for (var i = 0; i < items.length; i++) {  
+                     var itemId = items[i].Department_x0020_Name,  
+                        itemVal = items[i].Title;
+                      // itemVal = items[i].Department_x0020_Name;  //getPDFURL(ddlval)
+                     inputElement += '<option value="' + itemVal + '"selected>' + itemId + '</option>';  
+                    
+                   }  
+                    inputElement += '</select>';  
+                    $('#Deptdrp').append(inputElement);  
+      
+                  $("#drpDepartment").each(function () {  
+                    $('option', this).each(function () {  
+      
+                        if ($(this).text() == 'Select') {  
+                            $(this).attr('selected', 'selected')  
+                        };  
+                    });  
+                });  
+                   // assign the change event to provide an alert of the selected option value  
+                  $('#drpDepartment').on('change', function () {  
+                 // alert($(this).val());  
+                      });  
+                 
+              }, function (data) {  
+                alert("Ooops, an error occured. Please try again");  
+            });  
+        }  
+        // READ operation  
+        // listName: The name of the list you want to get items from  
+        // siteurl: The url of the site that the list is in.  
+        // success: The function to execute if the call is sucesfull  
+        // failure: The function to execute if the call fails  
+        function getListItems(listName, siteurl, success, failure) {  
+            $.ajax({  
+                url: siteurl + "/_api/web/lists/getbytitle('" + listName + "')/items?$orderby=Department_x0020_Name asc",  
+                method: "GET",  
+                headers: { "Accept": "application/json; odata=verbose" },  
+                success: function (data) {  
+                    success(data);  
+                },  
+                error: function (data) {  
+                    failure(data);  
+                }  
+            });  
+        } //End of getListItems
+        
+
+    </script>
+</head>
+<body>
+    <div id="Deptdrp" style="width:500px;"></div><br>
+	<div><a href="#" id="btnDownloadPDF" class="aTarget" download>Download PDF</a></div>     
+</body>
+</html>
