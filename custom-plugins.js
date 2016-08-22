@@ -84,7 +84,8 @@ $(function(){
 	newresource=$('.resource-link-section table table tbody').bxSlider({
 		mode:'vertical',
 		pager:false,
-		controls:false
+		controls:false,
+		infiniteLoop: false
 	});
 	$('#resourcelink-next').click(function(){
 	newresource.goToNextSlide();

@@ -3936,7 +3936,7 @@ table[id^="bottomPaging"] td table td:hover{background-color: #e3e3e3 !important
 .innerwhatdo-think ul.poll-results-list li:nth-child(2n) .percentage{right:3.5%}
 
 .LE-noOrgwidth #localEvents-box .pagination-page table td table td:nth-child(1){width:16.6667%}
-.LE-noOrgwidth #localEvents-box .pagination-page table td table td:nth-child(2){width:16.6667%}
+.LE-noOrgwidth #localEvents-box .pagination-page table td table td:nth-child(2){width:33.3333%}
 .LE-noOrgwidth #localEvents-box .pagination-page table td table td:nth-child(3){width:16.6667%}
 .LE-noOrgwidth #localEvents-box .pagination-page table td table td:nth-child(4){width:16.6667%}
 .LE-noOrgwidth #localEvents-box .pagination-page table td table td:nth-child(5){width:16.6667%}
@@ -3980,6 +3980,7 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 
 #next30days-box-doc .pagination-page table td:nth-child(1){width:25%}
 #next30days-box-doc .pagination-page table td:nth-child(2){width:33.3333%}
+#next30days-box-doc .pagination-page table td:nth-child(2) a{display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 100%;}
 #next30days-box-doc .pagination-page table td:nth-child(3){width:16.6667%}
 #next30days-box-doc .pagination-page table td:nth-child(4){width:25%}
 
@@ -4046,7 +4047,12 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 
 .lcoe-report-card .keycontact-viewlink{width:100%}
 .header .ms-srch-sb > .ms-srch-sb-navLink{margin-left:-5px;}
-.keycontact-cntr .keyprofilepic{width:109px; height:109px; border:#ccc solid 1px;}
+.keycontact-cntr .keyprofilepic{width:109px; height:109px; border:#ccc solid 1px; background:url("https://lacoets.github.io/intranet/key-contact-profile-default-image.png") center center no-repeat;}
+
+.innerwhatdo-think .poll-block .poll-vote-list.poll-vote-listquestn li{float:left; width:50%;}
+.innerwhatdo-think .poll-block .poll-vote-list.poll-vote-listquestn li:last-child{float:none; width:100%; clear:both; padding-bottom:0}
+.innerwhatdo-think .poll-block h2{padding-bottom:10px;}
+
 
 /*======================================= Content Area CSS End ========================================*/
 
