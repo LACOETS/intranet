@@ -3396,7 +3396,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .alternate-iconlink.active i { background-position: 0 -17px }
 /*Box structure Start*/
 .boxes-cntr { margin: 0 -1% }
-.box-heading { margin: 0 -1px 0 0px; border-top-left-radius: 2px; border-top-right-radius: 2px; }
+.box-heading { margin: 0 0px 0 0px; border-top-left-radius: 2px; border-top-right-radius: 2px; }
 .box-heading h3 { border-top-left-radius: 2px; border-top-right-radius: 2px; color: #fff; font-weight: 400; font-size: 1.250em; padding: 4px 0 4px 45px; position:relative;background:#1c7ec7; /*border-bottom: #9b9b9b solid 1px*/ }
 .box-heading h3 i{background:url(https://lacoets.github.io/intranet/sprite.png) 0 0 no-repeat; position:absolute; left:12px; top:4px; height:24px; width:24px;}
 .box-style { position: relative; border-radius: 2px; /*box-shadow: 0px 0px 5px 1px rgba(0,0,0, 0.25);*/ border: 1px solid rgba(0, 0, 0, 0.4); border-top: none; background: #fff; }
@@ -4052,6 +4052,8 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .innerwhatdo-think .poll-block .poll-vote-list.poll-vote-listquestn li{float:left; width:50%;}
 .innerwhatdo-think .poll-block .poll-vote-list.poll-vote-listquestn li:last-child{float:none; width:100%; clear:both; padding-bottom:0}
 .innerwhatdo-think .poll-block h2{padding-bottom:10px;}
+.all-page-heading{padding-bottom:11px;}
+.nospacebottom-cntr .container{padding-bottom:0}
 
 
 /*======================================= Content Area CSS End ========================================*/
