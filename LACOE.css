@@ -3960,7 +3960,7 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 
 /*Documents inner page Sidebar*/
 .DocumentswithSidebar{}
-.docLeftside{float:left; width:20%; background:#f7f8f8;border-right:1px solid #e4e4e4; min-height:300px;}
+.docLeftside{float:left; width:20%; background:#f7f8f8;border-right:1px solid #e4e4e4; min-height:500px;}
 .docRytSide {
   float: left;
   width: 80%;
@@ -4045,6 +4045,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 #published-box .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto; font-size:14px;}
 #shared-box .docRytSide .ms-webpart-zone.ms-fullWidth h3{margin-bottom:10px; vertical-align:middle}
 #published-box  .docRytSide .ms-webpart-zone.ms-fullWidth h3{margin-bottom:10px; vertical-align:middle}
+#next30days-box-doc .docRytSide .ms-webpart-zone.ms-fullWidth,#past30days-box-doc .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto; font-size:14px;}
 
 .lcoe-report-card .keycontact-viewlink{width:100%}
 .header .ms-srch-sb > .ms-srch-sb-navLink{margin-left:-5px;}
@@ -4055,7 +4056,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .innerwhatdo-think .poll-block h2{padding-bottom:10px;}
 .all-page-heading{padding-bottom:11px;}
 .nospacebottom-cntr .container{padding-bottom:0}
-
+#Zone1.community-txtbtn{display:none}
 
 /*======================================= Content Area CSS End ========================================*/
 
