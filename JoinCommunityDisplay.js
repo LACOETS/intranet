@@ -45,6 +45,9 @@
                     });//End of each
                 } //End of complete func
             }); //End of SPServices
+						$('.community-txtbtn #joincomunity input[type="button"]').click(function(){
+							$(this).parents('#Zone1').hide();
+						})
         });   //End of Doc Ready
     </script>
 
