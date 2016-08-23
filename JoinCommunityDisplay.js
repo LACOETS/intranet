@@ -31,6 +31,7 @@
 							   
 							   if(loggedinUserEmail == splittedEmail.toLowerCase().trim()){
 										$("#joincomunityText").hide();
+										$("#JoinText").hide();
 										$("#Zone1").hide();
 										$(this).parents('#Zone1').remove();
 								   }
