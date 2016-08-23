@@ -32,6 +32,7 @@
 							   if(loggedinUserEmail == splittedEmail.toLowerCase().trim()){
 										$("#JoinText").hide();
 										$("#Zone1").hide();
+										$(this).parents('#Zone1').remove();
 								   }
 							else{
 								//alert('Mismatch');
