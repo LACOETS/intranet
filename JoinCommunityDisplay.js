@@ -28,7 +28,8 @@
 								var tokens = userEmail.split(delimiter).slice(start);
 								var splittedEmail = tokens.join(delimiter);
 								//alert("splittedEmail:=" + splittedEmail.toLowerCase().trim());							  
-							   
+							   alert(loggedinUserEmail);
+								 alert(splittedEmail.toLowerCase().trim());
 							   if(loggedinUserEmail == splittedEmail.toLowerCase().trim()){
 									 alert();
 										$("#joincomunityText").hide();
