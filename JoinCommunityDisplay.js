@@ -1,5 +1,6 @@
 <script type="text/javascript"> 
         $(document).ready(function () {           
+		   alert('top');
 		   var userName = $().SPServices.SPGetCurrentUser(
             	 {
 					fieldName: "EMail"
