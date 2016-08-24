@@ -1,0 +1,180 @@
+<html>
+<head>
+    <title>MyPage</title>    
+        <style > select.normal {
+            width: 100px;
+            position: static;
+        }
+
+        select.expand {
+            width: auto;
+            position: absolute;
+        }
+        #divisiondrp{width:250px}
+    </style>
+    
+    <script>
+
+        $(document).ready(function () {
+            schoolDrpDownBind();
+            
+            $('select').attr('style', 'width:200px;');
+            //$('select').change(function () {
+            //    $(this).width($('select option:selected').width());
+            //});
+            //$("#select").wi
+        });
+
+        function IncreaseWidth() {
+            var el;
+
+            $("select")
+              .each(function () {
+                  el = $(this);
+                  el.data("origWidth", el.outerWidth()) // IE 8 can haz padding
+              })
+              .mouseenter(function () {
+                  $(this).css("width", "100%");
+              })
+              .bind("blur change", function () {
+                  el = $(this);
+                  el.css("width", el.data("origWidth"));
+              });
+        }
+
+        function schoolDrpDownBind() {
+
+            var listName = "School List";
+            var url = _spPageContextInfo.webAbsoluteUrl;
+
+            getListItems(listName, url, function (data) {
+                var items = data.d.results;
+                var inputElement = '<select id="drSchoolList" style="width:100%"> <option  value="">Select School</option>';
+
+
+                // Add all the new items  
+                for (var i = 0; i < items.length; i++) {
+                    var itemId = items[i].Title,
+                      itemVal = items[i].Title;
+                    inputElement += '<option value="' + itemId + '"selected>' + itemId + '</option>';
+                }
+                inputElement += '</select>';
+                //document.getElementById('drSchoolList').style.width = '100%';
+                //$('#drSchoolList').attr('style', 'width:100%;');
+                $('#divisiondrp').append(inputElement);
+
+                $("#drSchoolList").each(function () {
+                    $('option', this).each(function () {
+                        if ($(this).text() == 'Select School') {
+                            $(this).attr('selected', 'selected')
+                        };
+                    });
+                });
+                // assign the change event to provide an alert of the selected option value  
+                $('#drSchoolList').on('change', function () {
+                    if ($("select option:selected").text() != "Select School") {
+                        //alert($(this).val());
+                        var select = $("select option:selected").text();
+                        GetBranchByProtocol(select);
+                    }
+                    else {
+                        $("#divisiondrp").attr('style', 'width:100%;');
+                        $("#urlTag").empty();
+                        $("#url").empty();
+                        $("#description").empty();
+                        alert("Please select School");
+
+                    }
+                });
+
+            }, function (data) {
+                alert("Ooops, an error occured. Please try again");
+            });
+        }
+        // READ operation  
+        // listName: The name of the list you want to get items from  
+        // siteurl: The url of the site that the list is in.  
+        // success: The function to execute if the call is sucesfull  
+        // failure: The function to execute if the call fails  
+        function getListItems(listName, siteurl, success, failure) {
+            $.ajax({
+                url: siteurl + "/_api/web/lists/getbytitle('" + listName + "')/items?$orderby=Title asc",
+                method: "GET",
+                headers: { "Accept": "application/json; odata=verbose" },
+                success: function (data) {
+                    success(data);
+                },
+                error: function (data) {
+                    failure(data);
+                }
+            });
+        }
+
+        function GetBranchByProtocol(select) {
+            // alert('protocolid' + protocolid);
+            var clientContext = new SP.ClientContext.get_current();
+            var oList = clientContext.get_web().get_lists().getByTitle('School List');
+
+            var camlQuery = new SP.CamlQuery();
+
+            camlQuery.set_viewXml('<View><Query><Where><Eq><FieldRef Name=\'Title\' /><Value Type=\'Text\'>' + select + '</Value></Eq></Where></Query></View>');
+            this.collListItem = oList.getItems(camlQuery);
+
+            clientContext.load(collListItem);
+            clientContext.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded), Function.createDelegate(this, this.onQueryFailed));
+            // clientContext.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded2), Function.createDelegate(this, this.onQueryFailed));
+        }
+
+        function onQuerySucceeded(sender, args) {
+            var listItemInfo = '';
+            var listItemGoogleURL = '';
+            var listItemUrl = '';
+            var listItemEnumerator = collListItem.getEnumerator();
+            var schoolName = $("select option:selected").text();
+            while (listItemEnumerator.moveNext()) {
+                var oListItem = listItemEnumerator.get_current();
+                listItemInfo = oListItem.get_item('Description');
+                listItemGoogleURL = oListItem.get_item("Google_x0020_Map_x0020_URL").get_url();
+                listItemUrl = oListItem.get_item("School_x0020_URL").get_url();
+            }
+            var div1 = document.getElementById('description');
+
+            div1.innerHTML = listItemInfo;
+
+            //var textUrl = listItemURL.val();
+            var div3 = document.getElementById('url');
+            $("#urlTag").empty();
+            $("#url").empty();
+            $("#urlTag").append("<a href='" + listItemGoogleURL + "' target='_blank'>" + listItemGoogleURL + " </a> ");
+            $("#url").append("<a href='" + listItemUrl + "' target='_blank'>" + schoolName + "</a> ");
+
+        }
+
+
+        function onQueryFailed(sender, args) {
+            //alert('fail');
+            alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace());
+        }
+    </script>
+
+</head>
+<body>
+    
+                <div id="divisiondrp"></div>
+                <br />
+                <br />
+                <div id="description"></div>
+                <br />
+                <br />
+                <div id="urlTag">
+                </div>
+                <br />
+                <br />
+                <div id="url">
+                </div>
+                <br />
+                <br />
+                <div id="convertToUrl"></div>
+            
+</body>
+</html>
