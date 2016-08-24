@@ -1,6 +1,12 @@
-﻿<script type="text/javascript"> 
-        $(document).ready(function() {           
-		   //alert('top');
+﻿<script type="text/javascript">
+
+        $(document).ready(function() {
+        	var butnexist=$('#JoinButton').length;
+    		if(butnexist==1)
+		   {
+		   			   $('#Zone1 #joincomunity').append('<span id="JoinText">Wish to join ! Please click this to join and collaborate with our members</span>');
+
+		   }
 		   var userName = $().SPServices.SPGetCurrentUser(
             	 {
 					fieldName: "EMail"
@@ -34,9 +40,9 @@
 								//alert("splittedEmail:=" + userEmail.toLowerCase().trim());							  
 							   if(loggedinUserEmail === userEmail.toLowerCase().trim()){
 									 //alert();
-										//$("#joincomunityText").hide();
-										$("#JoinText").hide();
-										//$("#Zone1").hide();
+										//$("#joincomunityText").hide();						
+										//$("#JoinText").hide();
+										$("#Zone1").hide();
 										//$(this).parents('#Zone1').remove();
 								   }
 							else{
@@ -49,8 +55,13 @@
 							//alert('Exception: ' + e.message);
 						}
                     });//End of each
+                    
                 } //End of complete func
+                
+                
+                
             }); //End of SPServices
+            
 						
         });   //End of Doc Ready
     </script>
