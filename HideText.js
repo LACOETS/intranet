@@ -4,7 +4,7 @@
         	var butnexist=$('#JoinButton').length;
     		if(butnexist==1)
 		   {
-		   			   $('#Zone1 #joincomunity').append('<span id="JoinText">Wish to join ! Please click this to join and collaborate with our members</span>');
+		   			   $('#Zone1 #joincomunity').append('<span id="JoinText">Wish to join! Please click this to join and collaborate with our members.</span>');
 
 		   }
 		   var userName = $().SPServices.SPGetCurrentUser(
