@@ -12,9 +12,9 @@
                 webURL: "https://lacoe.sharepoint.com/GreenTeam/",				
                 operation: "GetListItems",
                 async: false,
-                listName: "Members",
-                CAMLViewFields: "<ViewFields Properties='True'/>",                
-		CAMLQueryOptions: "<QueryOptions><ExpandUserField>True</ExpandUserField></QueryOptions>",
+                listName: "Community Members",
+                //CAMLViewFields: "<ViewFields Properties='True'/>",                
+		//CAMLQueryOptions: "<QueryOptions><ExpandUserField>True</ExpandUserField></QueryOptions>",
                 completefunc: function (xData, Status) {
                     $(xData.responseXML).SPFilterNode("z:row").each(function () {
                        alert(xData.responseText);
