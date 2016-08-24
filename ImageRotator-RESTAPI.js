@@ -53,7 +53,7 @@
 				userEntry.Name = dataRec.Name;
 				var imageURL = _spPageContextInfo.webAbsoluteUrl + "/LACOE%20Images/About%20Us/" + userEntry.Name;
 				//alert(imageURL);
-				$('.fullstaticslider').append('<li><img src="'+imageURL+'" id="ImgRotateImage" alt="Rotate Image"/></li>');
+				$('.fullstaticslider1').append('<li><img src="'+imageURL+'" id="ImgRotateImage" alt="Rotate Image"/></li>');
 				//$('.fullstaticslider').append('<li>ABCDS</li>');
 				
 		    });//End of each
@@ -70,7 +70,7 @@
 <section class="fullimage-banner">
    <div class="container">
       <div class="fullslider-images">
-	       <ul class="fullstaticslider">
+	       <ul class="fullstaticslider1">
 	       </ul>
                         
             </div>
