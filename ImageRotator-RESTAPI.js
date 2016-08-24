@@ -60,9 +60,11 @@
   		}//End of onQuerySuccess
   		
   		$(document).ready(function () {
-  			$('.fullstaticslider1').bxSlider({
-	  		 auto:true,
-	  		});
+  			setTimeout(function(){ 
+	  			$('.fullstaticslider1').bxSlider({
+		  		 auto:true,
+		  		});
+  			}, 500);
   		});
   		
   function onQueryError(error) {
