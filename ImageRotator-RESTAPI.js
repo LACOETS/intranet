@@ -58,6 +58,11 @@
 				
 		    });//End of each
   		}//End of onQuerySuccess
+  		
+  		$('.fullstaticslider1').bxSlider({
+  		 auto:true,
+  		});
+  		
   function onQueryError(error) {
     alert(error.statusText)
   }
