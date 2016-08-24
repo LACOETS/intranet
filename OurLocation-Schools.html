@@ -34,7 +34,7 @@ select.expand { width: auto; position: absolute; }
             var url = _spPageContextInfo.webAbsoluteUrl;
             getListItems(listName, url, function (data) {
                 var items = data.d.results;
-                var inputElement = '<select id="drSchoolList" style="width:100%"> <option  value="">Select School</option>';
+                var inputElement = '<select id="drSchoolList"> <option  value="">Select School</option>';
                 // Add all the new items  
                 for (var i = 0; i < items.length; i++) {
                     var itemId = items[i].Title,
@@ -60,7 +60,7 @@ select.expand { width: auto; position: absolute; }
                         GetBranchByProtocol(select);
                     }
                     else {
-                        $("#divisiondrp").attr('style', 'width:100%;');
+                        //$("#divisiondrp").attr('style', 'width:100%;');
                         $("#urlTag").empty();
                         $("#url").empty();
                         $("#description").empty();
