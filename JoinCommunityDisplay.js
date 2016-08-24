@@ -17,7 +17,7 @@
 				CAMLQueryOptions: "<QueryOptions><ExpandUserField>True</ExpandUserField></QueryOptions>",
                 completefunc: function (xData, Status) {
                     $(xData.responseXML).SPFilterNode("z:row").each(function () {
-                       //alert(xData.responseText);
+                       alert(xData.responseText);
 					   try{
 							   //after adding CAMLQueryOptions this field returns all the fields propeties of user i.e. Displayname,ID,email id, domain login, sip ID etc all separate by #
 							   var MemberName = $(this).attr("ows_Member");
@@ -50,9 +50,7 @@
                     });//End of each
                 } //End of complete func
             }); //End of SPServices
-						$('.community-txtbtn #joincomunity input[type="button"]').click(function(){
-							$(this).parents('#Zone1').remove();
-						})
+						
         });   //End of Doc Ready
     </script>
 
