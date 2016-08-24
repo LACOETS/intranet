@@ -30,6 +30,7 @@
 								//alert("splittedEmail:=" + splittedEmail.toLowerCase().trim());							  
 							   
 							   if(loggedinUserEmail == splittedEmail.toLowerCase().trim()){
+									 alert();
 										$("#joincomunityText").hide();
 										$("#JoinText").hide();
 										$("#Zone1").hide();
