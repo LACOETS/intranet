@@ -3575,10 +3575,10 @@ input[type="submit"], input[type="button"],.box-btn,input[type="reset"] { backgr
 .jointcomunityTxt .ms-webpart-zone.ms-fullWidth{display:inline-block; vertical-align:middle}
 .jointcomunityTxt .ms-webpart-cell-vertical{display:inline-block; vertical-align:middle}
 .jointcomunityTxt .ms-webpart-chrome-vertical{display:inline-block; vertical-align:middle}
-.joincom-btn{display:inline-block; vertical-align:middle}
-.joincom-btn input[type='submit'],.joincom-btn input[type='button']{background:#85c900; color:#000; font-weight:400; padding:7px 30px; vertical-align:middle; margin-bottom:0}
+.joincom-btn {border: 1px solid #85c900;display: inline-block;vertical-align: middle;padding-left: 10px;}
+.joincom-btn input[type='submit'],.joincom-btn input[type='button']{background:#85c900; color:#000; font-weight:400; padding:7px 15px; vertical-align:middle; margin-bottom:0}
 .joincom-btn .ms-comm-joinButtonContainer{margin-bottom:0}
-.community-txtbtn{padding-bottom:25px}
+.community-txtbtn{padding-bottom:27px}
 .quicklinks-section.keycontact-cntr .box-heading h3 i{background-position:-26px -1px}
 .feeds-section .box-heading h3 i{background-position:-202px -23px}
 .whats-happening .box-heading h3 i{background-position:-108px -25px}
@@ -4056,7 +4056,10 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .innerwhatdo-think .poll-block h2{padding-bottom:10px;}
 .all-page-heading{padding-bottom:11px;}
 .nospacebottom-cntr .container{padding-bottom:0}
-#Zone1.community-txtbtn{display:none}
+#joincomunity div:first-child{float:right}
+#joincomunity #JoinText{float:left; padding-top:6px; font-size:16px;}
+#joincomunity:after{clear:both; float:none; display:block; content:''}
+#joincomunity{position:relative}
 
 /*======================================= Content Area CSS End ========================================*/
 
