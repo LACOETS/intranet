@@ -59,7 +59,7 @@
 		    });//End of each
   		}//End of onQuerySuccess
   		
-  		$(document).ready(function () {
+  		$(window).load(function () {
   			setTimeout(function(){ 
 	  			$('.fullstaticslider1').bxSlider({
 		  		 auto:true,
