@@ -1,7 +1,12 @@
 <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 <head>
 <style>
-.addClass{color: grey;}	
+#btnDownloadPDF.disabled{
+	color: grey;
+	opacity: 0.5
+  	pointer-events: none
+  	cursor: default
+}	
 </style>	
     <title>Download PDF</title>
      <script type="text/javascript">  
@@ -10,6 +15,9 @@
         $(document).ready(function () {  
             DepartmentDrpDownBind();
             $('#Deptdrp').change(function() {
+              if(ddlval == "Select"){
+              	$('#btnDownloadPDF').prop("disabled", true);
+              }
               nUrl = $('#drpDepartment :selected').val();  
               $('a.aTarget').attr('href', nUrl);
               });
@@ -19,9 +27,10 @@
 	            if(ddlval == "Select"){	            	
 	            	//alert('Please select Department to download PDF !!');
 	            	//$('#btnDownloadPDF').prop("disabled", true);
-	            	$("#btnDownloadPDF").removeAttr('href');
-	            	$('#btnDownloadPDF').addClass('disabled');
-	            	alert();
+	            	//$("#btnDownloadPDF").removeAttr('href');
+	            	//$('#btnDownloadPDF').addClass('disabled');
+	            	//$("#btnDownloadPDF").addClass('disabled');
+	            	//alert();
 	            	}
 	              });
           });  
