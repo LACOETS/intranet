@@ -14,7 +14,8 @@
                 $('#btnDownloadPDF').on('click',function(){            
 	            ddlval=$("#drpDepartment option:selected").text();
 	            if(ddlval == "Select"){	            	
-	            	alert('Please select Department to download PDF !!');
+	            	//alert('Please select Department to download PDF !!');
+	            	$('#btnDownloadPDF').prop("disabled", true);
 	            	}
 	              });
           });  
