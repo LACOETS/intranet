@@ -73,7 +73,9 @@
   }
 
     </script>
-
+		<style>
+			.fullstaticslider li img{width:100%;}
+		</style>
 </head>
 <body>
 
@@ -86,6 +88,7 @@
             </div>
          </div> 
   </section>
+	
 </body>
 
 </html>
