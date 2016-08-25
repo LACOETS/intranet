@@ -30,6 +30,10 @@ $(function($, undefined)
                                 	      "<dd>" + userEntry.Description  + "</dd>" + 
                                        "</dl>");
     });
+    $('.faqs-pagination').pajinate({
+		num_page_links_to_display :false,
+		items_per_page : 5	
+	});
   }
   function onQueryError(error) {
     $("#keyContactPrimary").append(error.statusText)
@@ -39,10 +43,7 @@ $(function($, undefined)
 </script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('.faqs-pagination').pajinate({
-			num_page_links_to_display :false,
-			items_per_page : 5	
-		});
+		
 	}); 
 </script> 
 
