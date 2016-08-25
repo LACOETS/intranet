@@ -15,11 +15,11 @@
         $(document).ready(function () {  
             DepartmentDrpDownBind();
             $('#Deptdrp').change(function() {
-              alert('123');
+              ddlval=$("#drpDepartment option:selected").text();
               if(ddlval == "Select"){
               	alert();
-              	//$('#btnDownloadPDF').prop("disabled", true);
-              	$("#btnDownloadPDF").addClass('disabled');
+              	$('#btnDownloadPDF').prop("disabled", true);
+              	//$("#btnDownloadPDF").addClass('disabled');
               }
               nUrl = $('#drpDepartment :selected').val();  
               $('a.aTarget').attr('href', nUrl);
