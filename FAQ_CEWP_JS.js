@@ -41,11 +41,12 @@ $(function($, undefined)
 });
 });  // document ready
 </script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		
-	}); 
-</script> 
+<div class="faqs-pagination">
+  <div class="accordion pagination-rowholder" id="FAQAccordion">
+  </div>
+  <div class="page_navigation">
+  </div>
+</div>
 
  
  
