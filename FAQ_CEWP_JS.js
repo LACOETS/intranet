@@ -41,7 +41,6 @@ $(function($, undefined)
 });
 });  // document ready
 </script>
-tushar
 <div class="faqs-pagination">
   <div class="accordion pagination-rowholder" id="FAQAccordion">
   </div>
