@@ -16,7 +16,9 @@
             DepartmentDrpDownBind();
             $('#Deptdrp').change(function() {
               if(ddlval == "Select"){
-              	$('#btnDownloadPDF').prop("disabled", true);
+              	alert();
+              	//$('#btnDownloadPDF').prop("disabled", true);
+              	$("#btnDownloadPDF").addClass('disabled');
               }
               nUrl = $('#drpDepartment :selected').val();  
               $('a.aTarget').attr('href', nUrl);
