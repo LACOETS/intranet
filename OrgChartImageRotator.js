@@ -58,6 +58,16 @@
 				
 		    });//End of each
   		}//End of onQuerySuccess
+			
+			$(window).load(function(){
+				setTimeout(function(){ 
+				
+					$('.fullstaticslider').bxSlider({
+						auto:true,
+						})
+				
+				}, 250);
+			})
   function onQueryError(error) {
     alert(error.statusText)
   }
