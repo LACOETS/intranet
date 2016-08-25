@@ -1,8 +1,7 @@
 <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 <head>
-	
-    <title>Download PDF</title>
-     <script type="text/javascript">  
+<title>Download PDF</title>
+<script type="text/javascript">  
       var ddlval;
       var newUrl;
         $(document).ready(function () {  
@@ -34,7 +33,7 @@
             getListItems(listName, url, function (data) {  
                 var items = data.d.results;  
                  
-                var inputElement = 'Department Name : <select id="drpDepartment"> <option value="#">Select</option>';  
+                var inputElement = '<div class="departnametxts">Department Name :</div> <div class="departDropdnshw"><select id="drpDepartment"> <option value="#">Select</option>';  
                    // Add all the new items  
                 for (var i = 0; i < items.length; i++) {  
                      var itemId = items[i].Title,  
@@ -43,7 +42,7 @@
                      inputElement += '<option value="' + itemVal + '"selected>' + itemId + '</option>';  
                     
                    }  
-                    inputElement += '</select>';  
+                    inputElement += '</select></div><div class="clear"></div>';  
                     $('#Deptdrp').append(inputElement);  
       
                   $("#drpDepartment").each(function () {  
@@ -84,12 +83,16 @@
         
 
     </script>
-		<style>
-			.ms-webpart-chrome-title h2{color: #1c7ec7;font-size: 24px; padding-bottom:25px;}
-		</style>
+<style>
+.ms-webpart-chrome-title h2 { color: #1c7ec7; font-size: 24px; padding-bottom: 25px; }
+.departDropdnshw { background: #fff none repeat scroll 0 0; border: 1px solid #1c7ec7; position: relative; width: 250px; }
+.departDropdnshw select { border: medium none; display: block; padding: 5px; width: 100%; }
+.departDropdnshw::after { background: rgba(0, 0, 0, 0) url("https://lacoets.github.io/intranet/sprite.png") no-repeat scroll -264px -60px; content: ""; height: 30px; position: absolute; right: 0; top: 0; width: 30px; }
+</style>
 </head>
 <body>
-    <div id="Deptdrp" ></div><br>
-	<div><a href="#" id="btnDownloadPDF" class="aTarget" download>Download PDF</a></div>     
+<div id="Deptdrp" ></div>
+<br>
+<div><a href="#" id="btnDownloadPDF" class="aTarget" download>Download PDF</a></div>
 </body>
 </html>
