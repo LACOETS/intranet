@@ -3189,7 +3189,7 @@ ul.dynamic { min-width: 200px; }
 /*Announcement Start*/
 .announcement-box, .dept-calender, .goal-section, .documents-section, .discussion-section, .project-guestbox, .pictorial-discussion,.what-do-think,.faqs-boxcntr,.document-searchbx { background: #fff; position: relative; border-radius: 2px; /*box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.25);*/ border: 1px solid rgba(0, 0, 0, 0.4); border-top: none; }
 .announcement-box .box-heading h3 i{background-position:-1px -1px; }
-.image-sliders { float: left; position: relative; width: 56.85%; overflow: hidden }
+.image-sliders { float: left; position: relative; width: 56.84%; overflow: hidden }
 .image-sliders .bx-pager .bx-pager-item a { background: #1c7ec7; opacity: 0.5 }
 .image-sliders .bx-pager .bx-pager-item a.active { opacity: 1; }
 .image-sliders .bx-pager { bottom: 45px }
@@ -4063,6 +4063,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 #joincomunity #JoinText{float:left; padding-top:6px; font-size:16px;}
 #joincomunity:after{clear:both; float:none; display:block; content:''}
 #joincomunity{position:relative}
+.landing-quicklink #application-box{margin:0 -13px;}
 
 /*======================================= Content Area CSS End ========================================*/
 
