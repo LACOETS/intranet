@@ -3406,7 +3406,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .box-contentinfos ul li:first-child { margin-top: 15px }
 .box-contentinfos ul li { margin-top: 19px }
 .img-box-thumb-holder { }
-.box-img-thumbnail { float: left; border: #ccc solid 1px; width: 82px; height: 82px; overflow: hidden; }
+.box-img-thumbnail { float: left; border: #ccc solid 1px; width: 55px; height: 55px; overflow: hidden; }
 .news-info-cntr { padding-left: 10px; width: 75.9%; float:left }
 .news-title-like h4 { float: left; width: 174px; font-weight: 400; color: #000; font-size: 1em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
 .news-title-like .like-link-news { float: right; }
@@ -4063,7 +4063,16 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 #joincomunity #JoinText{float:left; padding-top:6px; font-size:16px;}
 #joincomunity:after{clear:both; float:none; display:block; content:''}
 #joincomunity{position:relative}
-.landing-quicklink #application-box{margin:0 -13px;}
+.landing-quicklink #application-box table table tr{background:none !important; border-bottom:none !important}
+.landing-quicklink #application-box table table tr:first-child td{}
+.landing-quicklink #application-box table table td{padding:0; vertical-align:top; text-align:left; width:auto; background:none; padding-left:10px; padding-top:12px;}
+.landing-quicklink #application-box table table td:first-child{width:55px; padding-left:0px}
+.landing-quicklink #application-box table table td:first-child img{border:1px solid #ccc}
+.landing-quicklink #application-box table table td a{color:#000; font-size:16px; font-weight:400}
+.news-section .box-contentinfos{position:relative} 
+.news-section .custom-noresult{position:absolute;left:0; top:0; height:100%; width:100%; border:none; background:#fff; padding-left:10px}
+
+
 
 /*======================================= Content Area CSS End ========================================*/
 
