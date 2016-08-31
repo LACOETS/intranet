@@ -54,7 +54,8 @@ $(function($, undefined) {
   function onQueryError(error) {
     $(".ulDidYouKnow").append(error.statusText);
   } 
-$('.didyouknw-content .bx-pager-link').click(function() {
+
+$(document).on('click','.bx-pager-link',function() {
 	setTimeout(function() {
 		sliderdiyou.startAuto();
 	},1000);
