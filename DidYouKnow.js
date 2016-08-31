@@ -58,13 +58,14 @@ $(function($, undefined) {
   }
 	
 });
-$(document).ready(function(){
+
+/* $(document).ready(function(){
 var slider1;
 	$('.didyouknw-content .bx-pager-item a').click(function() {
 	setTimeout(function() {
 	slider1.startAuto();
 	    },1000);		
-})
+}) */
 /*$(window).load(function(){
 		
 })*/
