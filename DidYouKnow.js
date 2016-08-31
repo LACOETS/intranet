@@ -48,7 +48,7 @@ $(function($, undefined) {
 			infiniteLoop: false,
 			auto: ($(".ulDidYouKnow li").length > 1) ? true: false,
 		    	pager: ($(".ulDidYouKnow li").length > 1) ? true: false
-		});
+		})
 	/*Showing slider condition end*/
   }
 	
@@ -56,7 +56,7 @@ $(function($, undefined) {
     $(".ulDidYouKnow").append(error.statusText)
   } 
 
-
+}
 
 
 /* $(document).ready(function(){
