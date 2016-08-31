@@ -40,7 +40,7 @@ $(function($, undefined) {
     });
 		
 	/*Showing slider condition*/
-		var sliderdiyou=$('.ulDidYouKnow').bxSlider({
+		sliderdiyou=$('.ulDidYouKnow').bxSlider({
 			controls:false,
 			pause:7000,
 			speed:1000,
