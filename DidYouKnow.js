@@ -49,6 +49,7 @@ $(function($, undefined) {
 			auto: ($(".ulDidYouKnow li").length > 1) ? true: false,
 		    	pager: ($(".ulDidYouKnow li").length > 1) ? true: false
 		});
+		alert(slider1);
 	/*Showing slider condition end*/
   }
 	
