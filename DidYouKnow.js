@@ -53,7 +53,7 @@ $(function($, undefined) {
   }
 	
   function onQueryError(error) {
-    $(".ulDidYouKnow").append(error.statusText)
+    $(".ulDidYouKnow").append(error.statusText);
   } 
 
 }
