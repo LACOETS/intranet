@@ -27,7 +27,7 @@ $(function($, undefined) {
     $.each(results, function(index, dataRec) {
 		var userEntry = {};
 		userEntry.Title = dataRec.Title;		
-		//userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
+		userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
 		if(userEntry.ImageURL.indexOf('.jpeg') > -1 || userEntry.ImageURL.indexOf('.jpg') > -1 || userEntry.ImageURL.indexOf('.gif') > -1 || userEntry.ImageURL.indexOf('.png') > -1)
 		{
 			alert('In If');
