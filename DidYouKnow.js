@@ -1,7 +1,7 @@
 <ul class="ulDidYouKnow"></ul>
 
 <script>
-
+var sliderdiyou;
 $(function($, undefined) {
   SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
@@ -40,7 +40,7 @@ $(function($, undefined) {
     });
 		
 	/*Showing slider condition*/
-		$('.ulDidYouKnow').bxSlider({
+		var sliderdiyou=$('.ulDidYouKnow').bxSlider({
 			controls:false,
 			pause:7000,
 			speed:1000,
