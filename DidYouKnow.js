@@ -41,6 +41,7 @@ $(function($, undefined) {
     });
 		
 		/*Showing slider condition*/
+		$(document).ready(function(){
     slider1=$('.ulDidYouKnow').bxSlider({
 				controls:false,
 				pause:7000,
@@ -48,6 +49,7 @@ $(function($, undefined) {
 				infiniteLoop: false,
 				auto: ($(".ulDidYouKnow li").length > 1) ? true: false,
     				pager: ($(".ulDidYouKnow li").length > 1) ? true: false
+			});
 			});
 
 		/*Showing slider condition end*/
