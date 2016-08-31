@@ -4063,12 +4063,12 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 #joincomunity #JoinText{float:left; padding-top:6px; font-size:16px;}
 #joincomunity:after{clear:both; float:none; display:block; content:''}
 #joincomunity{position:relative}
-.landing-quicklink #application-box table table tr{background:none !important; border-bottom:none !important}
-.landing-quicklink #application-box table table tr:first-child td{}
-.landing-quicklink #application-box table table td{padding:0; vertical-align:top; text-align:left; width:auto; background:none; padding-left:10px; padding-top:12px;}
-.landing-quicklink #application-box table table td:first-child{width:55px; padding-left:0px}
-.landing-quicklink #application-box table table td:first-child img{border:1px solid #ccc}
-.landing-quicklink #application-box table table td a{color:#000; font-size:16px; font-weight:400}
+.landing-quicklink #application-box table td[id^="scriptWPQ"] table tr{background:none !important; border-bottom:none !important}
+.landing-quicklink #application-box table td[id^="scriptWPQ"] table tr:first-child td{}
+.landing-quicklink #application-box table td[id^="scriptWPQ"] table td{padding:0; vertical-align:top; text-align:left; width:auto; background:none; padding-left:10px; padding-top:12px;}
+.landing-quicklink #application-box table td[id^="scriptWPQ"] table td:first-child{width:55px; padding-left:0px}
+.landing-quicklink #application-box table td[id^="scriptWPQ"] table td:first-child img{border:1px solid #ccc}
+.landing-quicklink #application-box table td[id^="scriptWPQ"] table td a{color:#000; font-size:16px; font-weight:400}
 .news-section .box-contentinfos{position:relative} 
 .news-section .custom-noresult{position:absolute;left:0; top:0; height:100%; width:100%; border:none; background:#fff; padding-left:10px}
 
