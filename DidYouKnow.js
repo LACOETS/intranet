@@ -56,7 +56,7 @@ $(function($, undefined) {
   } 
 $('.didyouknw-content .bx-pager-item a').click(function() {
 	setTimeout(function() {
-		slider1.startAuto();
+		sliderdiyou.startAuto();
 	},1000);
 })
 
