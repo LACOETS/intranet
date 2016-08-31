@@ -43,7 +43,14 @@ $(function($, undefined) {
 		/*Showing slider condition*/
 		
     
-			
+			$('.ulDidYouKnow').bxSlider({
+				controls:false,
+				pause:7000,
+				speed:1000,
+				infiniteLoop: false,
+				auto: ($(".ulDidYouKnow li").length > 1) ? true: false,
+    				pager: ($(".ulDidYouKnow li").length > 1) ? true: false
+			});
 
 		/*Showing slider condition end*/
 		
@@ -56,14 +63,6 @@ $(function($, undefined) {
 });
 $(document).ready(function(){
 var slider1;
-slider1=$('.ulDidYouKnow').bxSlider({
-				controls:false,
-				pause:7000,
-				speed:1000,
-				infiniteLoop: false,
-				auto: ($(".ulDidYouKnow li").length > 1) ? true: false,
-    				pager: ($(".ulDidYouKnow li").length > 1) ? true: false
-			});
 	$('.didyouknw-content .bx-pager-item a').click(function() {
 	setTimeout(function() {
 	slider1.startAuto();
