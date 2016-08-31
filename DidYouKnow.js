@@ -54,7 +54,7 @@ $(function($, undefined) {
 	
   function onQueryError(error) {
     $(".ulDidYouKnow").append(error.statusText)
-  }
+  } 
 
 
 
