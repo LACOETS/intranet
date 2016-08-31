@@ -27,8 +27,15 @@ $(function($, undefined) {
     $.each(results, function(index, dataRec) {
 		var userEntry = {};
 		userEntry.Title = dataRec.Title;		
-		userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
-		
+		//userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
+		if(userEntry.ImageURL.indexOf('.jpeg') > -1 || userEntry.ImageURL.indexOf('.jpg') > -1 || userEntry.ImageURL.indexOf('.gif') > -1 || userEntry.ImageURL.indexOf('.png') > -1)
+		{
+			userEntry.ImageURL = dataRec.Picture_x0020_URL.Url;
+		}
+		else
+		{
+			userEntry.ImageURL = "https://lacoets.github.io/intranet/DUK.png";
+		}
 		$('.ulDidYouKnow').append('<li><div class="didyouknwbx"><div class="didyouknwbx-img"><img src="'+userEntry.ImageURL+'" id="SpotlightImage" alt="Image1"/></div><div class="didyouknw-txt"><p>'+userEntry.Title+'</p></div><div class="clear"></div></div></div></li>');
     });
 		
