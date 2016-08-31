@@ -40,31 +40,32 @@ $(function($, undefined) {
 		$('.ulDidYouKnow').append('<li><div class="didyouknwbx"><div class="didyouknwbx-img"><img src="'+userEntry.ImageURL+'" id="SpotlightImage" alt="Image1"/></div><div class="didyouknw-txt"><p>'+userEntry.Title+'</p></div><div class="clear"></div></div></div></li>');
     });
 		
-		/*Showing slider condition*/
-			$('.ulDidYouKnow').bxSlider({
-				controls:false,
-				pause:7000,
-				speed:1000,
-				infiniteLoop: false,
-				auto: ($(".ulDidYouKnow li").length > 1) ? true: false,
-    				pager: ($(".ulDidYouKnow li").length > 1) ? true: false
-			});
-		/*Showing slider condition end*/
-		
+	/*Showing slider condition*/
+		var slider1=$('.ulDidYouKnow').bxSlider({
+			controls:false,
+			pause:7000,
+			speed:1000,
+			infiniteLoop: false,
+			auto: ($(".ulDidYouKnow li").length > 1) ? true: false,
+		    	pager: ($(".ulDidYouKnow li").length > 1) ? true: false
+		});
+	/*Showing slider condition end*/
   }
 	
   function onQueryError(error) {
     $(".ulDidYouKnow").append(error.statusText)
   }
+
+
+$('.didyouknw-content .bx-pager-item a').click(function() {
+setTimeout(function() {
+slider1.startAuto();
+    },1000);
 	
 });
 
 /* $(document).ready(function(){
-var slider1;
-	$('.didyouknw-content .bx-pager-item a').click(function() {
-	setTimeout(function() {
-	slider1.startAuto();
-	    },1000);		
+		
 }) */
 /*$(window).load(function(){
 		
