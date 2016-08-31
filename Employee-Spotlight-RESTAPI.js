@@ -55,7 +55,7 @@ $(function($, undefined) {
   function onQueryError(error) {
     $(".spotlight-slider").append(error.statusText)
   }
-  $(document).on('click','.bx-pager-item a',function() {
+  $(document).on('click','.spot-lightsbox .bx-pager-item a',function() {
 	setTimeout(function() {
 		sliderdiyou.startAuto();
 	},1000);
