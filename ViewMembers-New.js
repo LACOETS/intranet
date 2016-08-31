@@ -14,7 +14,7 @@
   // Copy the client ID of your AAD app here once you have registered one, configured the required permissions, and
   // allowed implicit flow https://msdn.microsoft.com/en-us/office/office365/howto/get-started-with-office-365-unified-api
   var clientId = "0b354934-c56d-491d-bb43-5665028fd0a0";
-  alert('clientId:-' + clientId);
+  //alert('clientId:-' + clientId);
   var querystring="";
   window.config = {
     subscriptionId: subscriptionId,                 
@@ -28,6 +28,7 @@
   var authContext = new AuthenticationContext(config);	
   // Check For & Handle Redirect From AAD After Login
   var isCallback = authContext.isCallback(window.location.hash);
+  alert(isCallback);
   authContext.handleWindowCallback();	
   if (isCallback && !authContext.getLoginError()) {
     window.location = authContext._getItem(authContext.CONSTANTS.STORAGE.LOGIN_REQUEST);
