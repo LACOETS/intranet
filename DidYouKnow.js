@@ -1,7 +1,7 @@
 <ul class="ulDidYouKnow"></ul>
 
 <script>
-
+var slider1;
 $(function($, undefined) {
 
   SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
@@ -41,7 +41,7 @@ $(function($, undefined) {
     });
 		
 		/*Showing slider condition*/
-    $('.ulDidYouKnow').bxSlider({
+    slider1=$('.ulDidYouKnow').bxSlider({
 				controls:false,
 				pause:7000,
 				speed:1000,
@@ -59,6 +59,12 @@ $(function($, undefined) {
   }
 	
 });
+$(document).ready(function(){
+	$('.didyouknw-content .bx-pager-item a').click(function() {
+	setTimeout(function() {
+	slider1.startAuto();
+	    },1000);		
+})
 /*$(window).load(function(){
 		
 })*/
