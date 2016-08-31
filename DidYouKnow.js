@@ -28,6 +28,7 @@ $(function($, undefined) {
 		var userEntry = {};
 		userEntry.Title = dataRec.Title;		
 		userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
+		alert(userEntry.ImageURL);
 		if(userEntry.ImageURL.indexOf('.jpeg') > -1 || userEntry.ImageURL.indexOf('.jpg') > -1 || userEntry.ImageURL.indexOf('.gif') > -1 || userEntry.ImageURL.indexOf('.png') > -1)
 		{
 			alert('In If');
