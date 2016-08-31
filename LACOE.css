@@ -3408,11 +3408,11 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .img-box-thumb-holder { }
 .box-img-thumbnail { float: left; border: #ccc solid 1px; width: 55px; height: 55px; overflow: hidden; }
 .news-info-cntr { padding-left: 10px; width: 75.9%; float:left }
-.news-title-like h4 { float: left; width: 174px; font-weight: 400; color: #000; font-size: 1em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
+.news-title-like h4 { float: left; width: 174px; font-weight: 400; color: #1c7ec7; font-size: 1em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
 .news-title-like .like-link-news { float: right; }
 .like-link-news a { background: url(../images/gray-like.png) left center no-repeat; font-size: 0.875em; color: #818181; padding: 0 0 0 23px }
-.news-activity-dtl .news-submitedby { color: #1c7ec7; font-size: 0.875em; padding: 10px 0px 2px 0 }
-.news-activity-dtl .news-showdate { font-size: 0.875em; color: #646464; font-weight: 300 }
+.news-activity-dtl .news-submitedby { color: #646464; font-size: 0.875em; padding: 10px 0px 2px 0 }
+.news-activity-dtl .news-showdate { font-size: 0.875em; color: #000; font-weight: 300 }
 /*.box-paginations { clear: both; padding-top: 10px }
 .pagination-cntrbx { background: #f3f3f3; border: #e0e0e0 solid 1px; border-radius: 2px; overflow: hidden; float: right }
 .pagination-cntrbx a { display: inline-block; vertical-align: middle; text-align: center; width: 25px; height: 22px; padding-top: 2px; border-right: #e0e0e0 solid 1px; }
