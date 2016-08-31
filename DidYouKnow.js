@@ -54,6 +54,12 @@ $(function($, undefined) {
   function onQueryError(error) {
     $(".ulDidYouKnow").append(error.statusText);
   } 
+$('.didyouknw-content .bx-pager-item a').click(function() {
+	setTimeout(function() {
+		slider1.startAuto();
+	},1000);
+})
+
 
 });
 
