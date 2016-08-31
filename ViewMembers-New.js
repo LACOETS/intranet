@@ -28,7 +28,7 @@
   var authContext = new AuthenticationContext(config);	
   // Check For & Handle Redirect From AAD After Login
   var isCallback = authContext.isCallback(window.location.hash);
-  alert(isCallback);
+  //alert(isCallback);
   //alert(window.location.hash);
   authContext.handleWindowCallback();	
   if (isCallback && !authContext.getLoginError()) {
