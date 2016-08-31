@@ -4071,7 +4071,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .landing-quicklink #application-box table td[id^="scriptWPQ"] table td a{color:#000; font-size:16px; font-weight:400}
 .news-section .box-contentinfos{position:relative} 
 .news-section .custom-noresult{position:absolute;left:0; top:0; height:100%; width:100%; border:none; background:#fff; padding-left:10px}
-
+.news-section .box-img-thumbnail{background:none center center no-repeat; background-size: cover;}
 
 
 /*======================================= Content Area CSS End ========================================*/
