@@ -3,7 +3,6 @@
 <script>
 
 $(function($, undefined) {
-
   SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
       var todayDate = new Date().toISOString().split('T')[0];
@@ -48,7 +47,7 @@ $(function($, undefined) {
 			infiniteLoop: false,
 			auto: ($(".ulDidYouKnow li").length > 1) ? true: false,
 		    	pager: ($(".ulDidYouKnow li").length > 1) ? true: false
-		})
+		});
 	/*Showing slider condition end*/
   }
 	
@@ -56,6 +55,6 @@ $(function($, undefined) {
     $(".ulDidYouKnow").append(error.statusText);
   } 
 
-}
+}}
 
 </script>
