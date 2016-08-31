@@ -29,21 +29,21 @@
   // Check For & Handle Redirect From AAD After Login
   var isCallback = authContext.isCallback(window.location.hash);
   alert(isCallback);
-  alert(window.location.hash);
+  //alert(window.location.hash);
   authContext.handleWindowCallback();	
   if (isCallback && !authContext.getLoginError()) {
     window.location = authContext._getItem(authContext.CONSTANTS.STORAGE.LOGIN_REQUEST);
   }	
   // If not logged in force login
   var user = authContext.getCachedUser();
-  alert(user);
+  //alert(user);
   if (user) {
-    alert('Logged in already');
+    //alert('Logged in already');
   } 
   else {
     // NOTE: you may want to render the page for anonymous users and render
     // a login button which runs the login function upon click.
-    alert('In else');
+    //alert('In else');
     authContext.login();
   }	
   // Acquire token for Files resource.
@@ -55,7 +55,7 @@
     }
 	
 	var requestGroupUri = _spPageContextInfo.webAbsoluteUrl + "/_api/web/RoleAssignments/groups?select=ID";   // pass group Id here
-						alert('requestGroupUri:=' + requestGroupUri);
+						//alert('requestGroupUri:=' + requestGroupUri);
 						$.ajax({
 							  type: "GET",
 							  url: requestGroupUri,
@@ -125,7 +125,7 @@
 						
 						//alert('querystring:=' + querystring);
 						var filesUriUsers = config.endpoints.graphApiUri + "/v1.0/users?$filter="+querystring;
-						alert('filesUriUsers:=' + filesUriUsers);
+						//alert('filesUriUsers:=' + filesUriUsers);
 						$.ajax({
 						  type: "GET",
 						  url: filesUriUsers,
@@ -134,12 +134,12 @@
 							'Authorization': 'Bearer ' + token,
 						  }
 						}).done(function (response) {
-								alert("Successfully fetched users !!.");
+								//alert("Successfully fetched users !!.");
 									for (var i = 0; i < response.valueOf("@odata").value.length; i++) {
 										//alert(response.valueOf("@odata").value[i]);
 										//alert("chota" + response.valueOf("@odata").value[i].id);
 										var userImageURL = "//outlook.office365.com/owa/service.svc/s/GetPersonaPhoto?email=" + response.valueOf("@odata").value[i].userPrincipalName + "&UA=0&size=HR64x64&sc=1468354588706";
-										alert(userImageURL);
+										//alert(userImageURL);
 										$("#TSSiteMembers").append("<li  class='normalline'>" +"<div class='member_info'><div class='prof_pic'><img class='lazy' data-original='"+userImageURL+"' src='https://lacoets.github.io/intranet/Generic-user-img.jpg.png'  /></div>" + "<div class='person_details'><p class='title'> <a href='https://lacoe-my.sharepoint.com/_layouts/15/me.aspx?u=" + response.valueOf("@odata").value[i].id + "&v=work' target='_blank'>" + response.valueOf("@odata").value[i].displayName + "</a></p><p class='email'> <a href='mailto:" + response.valueOf("@odata").value[i].userPrincipalName + "'>" + response.valueOf("@odata").value[i].userPrincipalName + "</a></p></div></div>" + "</li>");
 										//$("#TSSiteMembers").append("<li  class='normalline'>" + response.valueOf("@odata").value[i].displayName + " (" + response.valueOf("@odata").value[i].userPrincipalName + ")" + "</li>");
 									}							
