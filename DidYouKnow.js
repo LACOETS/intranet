@@ -41,7 +41,7 @@ $(function($, undefined) {
     });
 		
 	/*Showing slider condition*/
-		var slider1=$('.ulDidYouKnow').bxSlider({
+		$('.ulDidYouKnow').bxSlider({
 			controls:false,
 			pause:7000,
 			speed:1000,
@@ -49,7 +49,6 @@ $(function($, undefined) {
 			auto: ($(".ulDidYouKnow li").length > 1) ? true: false,
 		    	pager: ($(".ulDidYouKnow li").length > 1) ? true: false
 		});
-		alert(slider1);
 	/*Showing slider condition end*/
   }
 	
@@ -58,15 +57,16 @@ $(function($, undefined) {
   }
 
 
-$('.didyouknw-content .bx-pager-item a').click(function() {
+
+
+/* $(document).ready(function(){
+	var slider1;
+	$('.didyouknw-content .bx-pager-item a').click(function() {
 setTimeout(function() {
 slider1.startAuto();
     },1000);
 	
-});
-
-/* $(document).ready(function(){
-		
+});	
 }) */
 /*$(window).load(function(){
 		
