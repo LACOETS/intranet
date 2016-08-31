@@ -3412,7 +3412,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .news-title-like .like-link-news { float: right; }
 .like-link-news a { background: url(../images/gray-like.png) left center no-repeat; font-size: 0.875em; color: #818181; padding: 0 0 0 23px }
 .news-activity-dtl .news-submitedby { color: #646464; font-size: 0.875em; padding: 10px 0px 2px 0; font-weight:300 }
-.news-activity-dtl .news-showdate { font-size: 0.875em; color: #000; font-weight: 400 }
+.news-activity-dtl .news-showdate { font-size: 0.785em; color: #000; font-weight: 400 }
 /*.box-paginations { clear: both; padding-top: 10px }
 .pagination-cntrbx { background: #f3f3f3; border: #e0e0e0 solid 1px; border-radius: 2px; overflow: hidden; float: right }
 .pagination-cntrbx a { display: inline-block; vertical-align: middle; text-align: center; width: 25px; height: 22px; padding-top: 2px; border-right: #e0e0e0 solid 1px; }
