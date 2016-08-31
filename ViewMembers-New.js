@@ -29,18 +29,21 @@
   // Check For & Handle Redirect From AAD After Login
   var isCallback = authContext.isCallback(window.location.hash);
   alert(isCallback);
+  alert(window.location.hash);
   authContext.handleWindowCallback();	
   if (isCallback && !authContext.getLoginError()) {
     window.location = authContext._getItem(authContext.CONSTANTS.STORAGE.LOGIN_REQUEST);
   }	
   // If not logged in force login
   var user = authContext.getCachedUser();
+  alert(user);
   if (user) {
-    // Logged in already
+    alert('Logged in already');
   } 
   else {
     // NOTE: you may want to render the page for anonymous users and render
     // a login button which runs the login function upon click.
+    alert('In else');
     authContext.login();
   }	
   // Acquire token for Files resource.
