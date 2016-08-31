@@ -59,7 +59,7 @@ $(function($, undefined) {
 	setTimeout(function() {
 		sliderdiyou.startAuto();
 	},1000);
-})
+  })
   
 });
 </script>
