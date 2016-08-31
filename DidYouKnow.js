@@ -55,7 +55,7 @@ $(function($, undefined) {
     $(".ulDidYouKnow").append(error.statusText);
   } 
 
-$(document).on('click','.bx-pager-item a',function() {
+$(document).on('click','.didyouknw-content .bx-pager-item a',function() {
 	setTimeout(function() {
 		sliderdiyou.startAuto();
 	},1000);
