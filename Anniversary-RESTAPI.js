@@ -66,7 +66,6 @@ $(function($, undefined) {
 		var pictureURL = dataRec.Picture_x0020_URL.Url;
 		alert(pictureURL);
 		var userImage= "//outlook.office365.com/owa/service.svc/s/GetPersonaPhoto?email=" + userEntry.Email + "&UA=0&size=HR120x120&sc=1468354588706";        
-		alert(userImage);
 		$('.aniversarysul').append('<li><div class="img-box-thumb-holder"><div class="box-rowcntr"><div class="box-img-thumbnail"><div class="img-box-thumb-holder"><img src="https://lacoets.github.io/intranet/gray-img.png" data-original="'+userImage+'" id="AnniversaryImage" class="lazy" alt="Image1"/></div></div><div class="news-info-cntr"><div class="news-title-like"><h4>'+userEntry.Name+'</h4></div><div class="news-activity-dtl"><p class="news-showdate">'+userEntry.Title+'<br>'+ userEntry.Department+'</p></div></div><div class="clear"></div></div></li>');
     });
   }
