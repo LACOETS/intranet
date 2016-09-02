@@ -41,6 +41,7 @@ $(function($, undefined) {
 					{dataRec.Employee_x0020_Name.LastName = '';}
 				userEntry.Name = dataRec.Employee_x0020_Name.FirstName + " " + dataRec.Employee_x0020_Name.LastName;
 			}
+		alert(dataRec.Title);
 		if(dataRec.Title != "" || dataRec.Title != " " || dataRec.Title != null || dataRec.Title != undefined || dataRec.Title != "No Title"){
 			userEntry.Title = dataRec.Title;
 		}
@@ -50,7 +51,7 @@ $(function($, undefined) {
 		}
 		
 		userEntry.Email = dataRec.Email;
-		
+		alert(dataRec.Department);
 		if(dataRec.Department != "" || dataRec.Department != " " || dataRec.Department != null || dataRec.Department != undefined){
 			userEntry.Department = dataRec.Department;
 		}
