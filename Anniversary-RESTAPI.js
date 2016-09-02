@@ -14,7 +14,7 @@ $(function($, undefined) {
       var context = SP.ClientContext.get_current();
       var todayDate = new Date().toISOString().split('T')[0];
 	  todayDate = todayDate + 'T00%3a00%3a00';	  
-	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Anniversary')/items?$expand=Employee_x0020_Name/ID&$select=Employee_x0020_Name/FirstName,Employee_x0020_Name/LastName,Employee_x0020_Name/EMail,Title,Department,Description,Start_x0020_date,End_x0020_Date,Picture_x0020_URL&$orderby=End_x0020_Date asc&$filter=Start_x0020_date le datetime'" + todayDate + "' and End_x0020_Date ge datetime'" + todayDate + "'"; 
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Anniversary')/items?$expand=Employee_x0020_Name/ID&$select=Employee_x0020_Name/FirstName,Employee_x0020_Name/LastName,Employee_x0020_Name/EMail,Title,Department,Description,Start_x0020_date,End_x0020_Date,Picture_x0020_URL,Email&$orderby=End_x0020_Date asc&$filter=Start_x0020_date le datetime'" + todayDate + "' and End_x0020_Date ge datetime'" + todayDate + "'"; 
       $.ajax({
         url: queryUrl,
         method: "GET",
@@ -41,12 +41,26 @@ $(function($, undefined) {
 					{dataRec.Employee_x0020_Name.LastName = '';}
 				userEntry.Name = dataRec.Employee_x0020_Name.FirstName + " " + dataRec.Employee_x0020_Name.LastName;
 			}
-		userEntry.Title = dataRec.Title;
-		userEntry.Department = dataRec.Department;
+		if(dataRec.Title != "" || dataRec.Title != " " || dataRec.Title != null || dataRec.Title != undefined || dataRec.Title != "No Title"){
+			userEntry.Title = dataRec.Title;
+		}
+		else
+		{
+			userEntry.Title = "--";
+		}
+		if(dataRec.Department != "" || dataRec.Department != " " || dataRec.Department != null || dataRec.Department != undefined){
+			userEntry.Department = dataRec.Department;
+		}
+		else
+		{
+			userEntry.Department = "--";
+		}
+		
+		
 		userEntry.Description=dataRec.Description;
-		userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
-		        
-		$('.aniversarysul').append('<li><div class="img-box-thumb-holder"><div class="box-rowcntr"><div class="box-img-thumbnail"><div class="img-box-thumb-holder"><img src="https://lacoets.github.io/intranet/gray-img.png" data-original="'+userEntry.ImageURL+'" id="AnniversaryImage" class="lazy" alt="Image1"/></div></div><div class="news-info-cntr"><div class="news-title-like"><h4>'+userEntry.Name+'</h4></div><div class="news-activity-dtl"><p class="news-showdate">'+userEntry.Title+'<br>'+ userEntry.Department+'</p></div></div><div class="clear"></div></div></li>');
+		//userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
+		var userImage= "//outlook.office365.com/owa/service.svc/s/GetPersonaPhoto?email=" + userEntry.Email + "&UA=0&size=HR240x240&sc=1468354588706";        
+		$('.aniversarysul').append('<li><div class="img-box-thumb-holder"><div class="box-rowcntr"><div class="box-img-thumbnail"><div class="img-box-thumb-holder"><img src="https://lacoets.github.io/intranet/gray-img.png" data-original="'+userImage+'" id="AnniversaryImage" class="lazy" alt="Image1"/></div></div><div class="news-info-cntr"><div class="news-title-like"><h4>'+userEntry.Name+'</h4></div><div class="news-activity-dtl"><p class="news-showdate">'+userEntry.Title+'<br>'+ userEntry.Department+'</p></div></div><div class="clear"></div></div></li>');
     });
   }
   function onQueryError(error) {
