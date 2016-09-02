@@ -48,6 +48,9 @@ $(function($, undefined) {
 		{
 			userEntry.Title = "--";
 		}
+		
+		userEntry.Email = dataRec.Email;
+		
 		if(dataRec.Department != "" || dataRec.Department != " " || dataRec.Department != null || dataRec.Department != undefined){
 			userEntry.Department = dataRec.Department;
 		}
