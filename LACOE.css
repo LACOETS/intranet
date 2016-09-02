@@ -3796,7 +3796,8 @@ select:focus{outline:none;}
 .spotlight-infotxt .spotlight + p{margin-bottom:0}
 .spotlight-infotxt .spotlight p:last-child{padding-top:0; margin-bottom:0}
 .lacoe-aniversary-box .news-title-like h4 { width: auto; float: none; font-size: 1.125em; font-weight: 600; padding-bottom: 5px; }
-.lacoe-aniversary-box .box-img-thumbnail { width: 115px; height: 115px; box-shadow:none }
+.lacoe-aniversary-box .box-img-thumbnail { width: 115px; height: 115px; box-shadow:none; border: #ccc solid 1px;
+    background: url("https://lacoets.github.io/intranet/key-contact-profile-default-image.png") center center no-repeat; }
 .lacoe-aniversary-box .news-info-cntr { width: 225px; }
 .lacoe-aniversary-box ul li, .lacoe-aniversary-box .box-contentinfos ul li:first-child { margin: 0; }
 .lacoe-aniversary-box .box-contentinfos { padding: 15px; position: relative }
