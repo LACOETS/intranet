@@ -37,22 +37,22 @@ $(function($, undefined) {
 				userEntry.Name = dataRec.Employee_x0020_Name.FirstName + " " + dataRec.Employee_x0020_Name.LastName;
 			}
 
-		if(dataRec.Title != "" || dataRec.Title != " " || dataRec.Title != null || dataRec.Title != undefined || dataRec.Title != "No Title"){
-			userEntry.Title = dataRec.Title;
+		if(dataRec.Title == null){
+			userEntry.Title = "--";
 		}
 		else
 		{
-			userEntry.Title = "--";
+			userEntry.Title = dataRec.Title;
 		}
 		//alert(userEntry.Title);
 		userEntry.Email = dataRec.Email;
 		//alert(userEntry.Email);
-		if(dataRec.Department != "" || dataRec.Department != " " || dataRec.Department != null || dataRec.Department != undefined){
-			userEntry.Department = dataRec.Department;
+		if(dataRec.Department == null){
+			userEntry.Department = "--";
 		}
 		else
 		{
-			userEntry.Department = "--";
+			userEntry.Department = dataRec.Department;
 		}
 		userEntry.Description=dataRec.Description;
 		//userEntry.ImageURL=dataRec.Picture_x0020_URL.Url;
