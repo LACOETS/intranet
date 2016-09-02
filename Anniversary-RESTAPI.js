@@ -41,17 +41,18 @@ $(function($, undefined) {
 					{dataRec.Employee_x0020_Name.LastName = '';}
 				userEntry.Name = dataRec.Employee_x0020_Name.FirstName + " " + dataRec.Employee_x0020_Name.LastName;
 			}
-		alert(dataRec.Title);
-		if(dataRec.Title != "null"){
-			userEntry.Title = dataRec.Title;
+		//alert(dataRec.Title);
+		if(dataRec.Title == null){
+			userEntry.Title = "--";
+			//userEntry.Title = dataRec.Title;
 		}
 		else
 		{
-			userEntry.Title = "--";
+			userEntry.Title = dataRec.Title;
 		}
 		
 		userEntry.Email = dataRec.Email;
-		alert(dataRec.Department);
+		//alert(dataRec.Department);
 		if(dataRec.Department != "null"){
 			userEntry.Department = dataRec.Department;
 		}
