@@ -44,7 +44,6 @@ $(function($, undefined) {
 		//alert(dataRec.Title);
 		if(dataRec.Title == null){
 			userEntry.Title = "--";
-			//userEntry.Title = dataRec.Title;
 		}
 		else
 		{
@@ -53,12 +52,12 @@ $(function($, undefined) {
 		
 		userEntry.Email = dataRec.Email;
 		//alert(dataRec.Department);
-		if(dataRec.Department != "null"){
-			userEntry.Department = dataRec.Department;
+		if(dataRec.Department == null){
+			userEntry.Department = "--";
 		}
 		else
 		{
-			userEntry.Department = "--";
+			userEntry.Department = dataRec.Department;
 		}
 		
 		
