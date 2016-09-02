@@ -37,7 +37,7 @@ $(function($, undefined) {
 				userEntry.Name = dataRec.Employee_x0020_Name.FirstName + " " + dataRec.Employee_x0020_Name.LastName;
 			}
 
-		if(dataRec.Title != "" || dataRec.Title != " " || dataRec.Title != null || dataRec.Title != undefined){
+		if(dataRec.Title != "" || dataRec.Title != " " || dataRec.Title != null || dataRec.Title != undefined || dataRec.Title != "No Title"){
 			userEntry.Title = dataRec.Title;
 		}
 		else
