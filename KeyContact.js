@@ -91,9 +91,10 @@ $(function($, undefined) {
         }
         
 		//alert(userEntry.Category);
-		if(userEntry.Category=='Primary' && pcount==0)
+		if(userEntry.Category=='AIC' && pcount==0)
 		{
-		//Acount=Acount+1;	
+		//Acount=Acount+1;
+		$('#keyContactPrimary .content').empty();
 		pcount=pcount+1;
 		var html=""+profileImg1+"<div class='owner-info'><ul><li><abbr>Name:</abbr> <span>"+username+"</span><div class='clear'></div></li><li><abbr>Title:</abbr> <span>"+usertitle+"</span><div class='clear'></div></li><li><abbr>Email ID:</abbr> <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span><div class='clear'></div></li><li><abbr>Phone No:</abbr> <span>"+userphone+"</span><div class='clear'></div></li></ul></div>";
         $('#keyContactPrimary .content').append(html);
@@ -104,10 +105,10 @@ $(function($, undefined) {
 		var htmlSec=""+profileImg1+"<div class='owner-info'><ul><li><abbr>Name:</abbr> <span style='float:right'>"+username+"</span><div class='clear'></div></li><li><abbr>Title:</abbr> <span>"+usertitle+"</span><div class='clear'></div></li><li><abbr>Email ID:</abbr> <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span><div class='clear'></div></li><li><abbr>Phone No:</abbr> <span>"+userphone+"</span><div class='clear'></div></li></ul></div>";
 		$('#keyContactSecondary .content').append(htmlSec);
 		}
-		else if(userEntry.Category=='AIC' && pcount==0)
+		else if(userEntry.Category=='Primary' && pcount==0)
 		{
 		
-		pcount=pcount+1;
+		//pcount=pcount+1;
 		$('#keyContactPrimary .content').empty();
 		var html=""+profileImg1+"<div class='owner-info'><ul><li><abbr>Name:</abbr> <span>"+username+"</span><div class='clear'></div></li><li><abbr>Title:</abbr> <span>"+usertitle+"</span><div class='clear'></div></li><li><abbr>Email ID:</abbr> <span><a href='mailto:"+useremail+"'> "+useremail+"</a></span><div class='clear'></div></li><li><abbr>Phone No:</abbr> <span>"+userphone+"</span><div class='clear'></div></li></ul></div>";
         $('#keyContactPrimary .content').append(html);
