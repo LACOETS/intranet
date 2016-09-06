@@ -30,7 +30,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 function AddIteminList(_contactUsText)
 {
    // var context = new SP.ClientContext.get_current();
-	 	var context = new SP.ClientContext("https://lacoe.sharepoint.com");
+    var context = new SP.ClientContext(_spPageContextInfo.siteAbsoluteUrl);
     var web = context.get_web();
     var list = web.get_lists().getByTitle('Feedback');
     var listItemCreationInfo = new SP.ListItemCreationInformation();
