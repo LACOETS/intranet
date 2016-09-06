@@ -1,4 +1,3 @@
-<script type="text/javascript">
 
 SP.SOD.executeFunc("callout.js", "Callout", function () {    
     var _link = document.getElementById("ContactusLink");
@@ -115,4 +114,3 @@ function CallOutonCloseEvent()
     }
 }
 
-</script>
