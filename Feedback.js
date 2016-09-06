@@ -1,7 +1,7 @@
 <script type="text/javascript">
 
 SP.SOD.executeFunc("callout.js", "Callout", function () {    
-    var _link = document.getElementById("ContactusLink");
+    var _link = document.getElementById("FeedbackLink");
     var listCallout = CalloutManager.createNew({ 
         launchPoint: _link,
         beakOrientation: "leftRight", 
@@ -30,7 +30,8 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 
 function AddIteminList(_contactUsText)
 {
-    var context = new SP.ClientContext.get_current();
+   // var context = new SP.ClientContext.get_current();
+	 	var context = new SP.ClientContext("https://lacoe.sharepoint.com");
     var web = context.get_web();
     var list = web.get_lists().getByTitle('Feedback');
     var listItemCreationInfo = new SP.ListItemCreationInformation();
@@ -52,7 +53,7 @@ function failed(sender, args) { alert('failed to add a List Item:' + args.get_me
 function overriteCustomAction()
 {    
     //Get Existing Callout    
-    var launchPoint = document.getElementById('ContactusLink');    
+    var launchPoint = document.getElementById('FeedbackLink');    
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     if (callout != null)
     {        
@@ -77,7 +78,7 @@ function overriteCustomAction()
 }
 function ResetCustomAction() {
     //Get Existing Callout
-    var launchPoint = document.getElementById('ContactusLink');
+    var launchPoint = document.getElementById('FeedbackLink');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     if (callout != null) {
         var custAct = callout.getActionMenu();
@@ -101,7 +102,7 @@ function ResetCustomAction() {
 }
 function CallOutonCloseEvent()
 {
-    var launchPoint = document.getElementById('ContactusLink');
+    var launchPoint = document.getElementById('FeedbackLink');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     if (callout != null)
     {        
@@ -115,4 +116,3 @@ function CallOutonCloseEvent()
 }
 
 </script>
-<div id="ContactusLink" style="width:38%;">If you have any Issue or Concerns, please feel free to <u><span class=\"ms-commandLink\" style=\"text-align: left;font-size: 14px; cursor: pointer;\">Report an Issue</span></u></div>
