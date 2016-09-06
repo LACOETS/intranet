@@ -115,4 +115,4 @@ function CallOutonCloseEvent()
 }
 
 </script>
-<div id="ContactusLink" style="width:38%;">If you have any Issue or Concerns, please feel free to <u><span class=\"ms-commandLink\" style=\"text-align: left;font-size: 14px; cursor: pointer;\">Report an Issue</span></u></div>
+<div id="" style="width:38%;">If you have any Issue or Concerns, please feel free to <u><span class=\"ms-commandLink\" style=\"text-align: left;font-size: 14px; cursor: pointer;\">Report an Issue</span></u></div>
