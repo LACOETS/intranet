@@ -28,7 +28,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 
 function AddIteminList1(_contactUsText)
 {
-    alert('In AddIteminList1:=' + _contactUsText);
+   // alert('In AddIteminList1:=' + _contactUsText);
     //var context = new SP.ClientContext.get_current();
     var context = new SP.ClientContext("https://lacoe.sharepoint.com");
     var web = context.get_web();
@@ -43,7 +43,7 @@ function AddIteminList1(_contactUsText)
 function success1() { 
 
     var _confirmationBLOCK1 = document.getElementById('confirmationBLOCK1');
-    alert('In success1:-' + _confirmationBLOCK1);
+    //alert('In success1:-' + _confirmationBLOCK1);
     _confirmationBLOCK1.style.visibility = 'visible';
     overriteCustomAction1();
     
@@ -53,11 +53,11 @@ function failed(sender, args) { alert('failed to add a List Item:' + args.get_me
 
 function overriteCustomAction1()
 {    
-    alert('In overriteCustomAction1');
+    //alert('In overriteCustomAction1');
     //Get Existing Callout    
     var launchPoint = document.getElementById('ContactusLink1');    
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
-    alert('In overriteCustomAction1 callout:=' + callout);
+    //alert('In overriteCustomAction1 callout:=' + callout);
     if (callout != null)
     {        
         var custAct = callout.getActionMenu();
