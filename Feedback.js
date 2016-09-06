@@ -4,8 +4,8 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
     var listCallout = CalloutManager.createNew({ 
         launchPoint: _link,
         beakOrientation: "leftRight", 
-        ID: "CallOutID", 
-        title: "Report an Issue", 
+        ID: "CallOutIDs", 
+        title: "Feedback", 
         content: "<div class=\"ms-soften\" style=\"margin-top:2px; \"><hr/></div>"
 + "<div id='confirmationBLOCK' style=\"margin-top:13px;visibility:hidden;\">Thank you for Contacting Us!</div>"
 + "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><textarea maxlength='255' id='CommentsArea' style=\"width:100%;height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\">Add your Comments here...</textarea></div>", 
