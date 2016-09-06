@@ -1,0 +1,118 @@
+<script type="text/javascript">
+
+SP.SOD.executeFunc("callout.js", "Callout", function () {    
+    var _link = document.getElementById("ContactusLink");
+    var listCallout = CalloutManager.createNew({ 
+        launchPoint: _link,
+        beakOrientation: "leftRight", 
+        ID: "CallOutID", 
+        title: "Report an Issue", 
+        content: "<div class=\"ms-soften\" style=\"margin-top:2px; \"><hr/></div>"
++ "<div id='confirmationBLOCK' style=\"margin-top:13px;visibility:hidden;\">Thank you for Contacting Us!</div>"
++ "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><textarea maxlength='255' id='CommentsArea' style=\"width:100%;height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\">Add your Comments here...</textarea></div>", 
+    });
+
+    //Creating a Submit Custom Action
+    var customAction = new CalloutActionOptions();
+    customAction.text = 'Submit';
+    customAction.tooltip = 'Save Item in Issue List';
+    customAction.onClickCallback = function(event, action)
+    {
+        var _contactUsTextarea = document.getElementById('CommentsArea');
+        //Adding the new Contact Us Item in the List.
+        AddIteminList(_contactUsTextarea.value);
+        _contactUsTextarea.style.visibility='hidden';
+    };
+    var _newCustomAction = new CalloutAction(customAction);
+    listCallout.addAction(_newCustomAction);    
+    //listCallout.set({ openOptions: { event: "hover" } });    
+});
+
+function AddIteminList(_contactUsText)
+{
+    var context = new SP.ClientContext.get_current();
+    var web = context.get_web();
+    var list = web.get_lists().getByTitle('IntranetReportedIssue');
+    var listItemCreationInfo = new SP.ListItemCreationInformation();
+    var newItem = list.addItem(listItemCreationInfo);
+    newItem.set_item('Title', _contactUsText);
+    newItem.update();
+    context.executeQueryAsync(Function.createDelegate(this, this.success), Function.createDelegate(this, this.failed));
+}
+
+function success() { 
+
+    var _confirmationblock = document.getElementById('confirmationBLOCK');
+    _confirmationblock.style.visibility = 'visible';
+    overriteCustomAction();
+    
+}
+
+function failed(sender, args) { alert('failed to add a List Item:' + args.get_message()); }
+function overriteCustomAction()
+{    
+    //Get Existing Callout    
+    var launchPoint = document.getElementById('ContactusLink');    
+    var callout = CalloutManager.getFromLaunchPoint(launchPoint);
+    if (callout != null)
+    {        
+        var custAct = callout.getActionMenu();
+        var calloutAction = new CalloutAction({
+            text: "Close window",
+            tooltip: "Close Dialog Box",            
+            onClickCallback: function() {                
+                callout.close();
+                ResetCustomAction();
+            }
+        });
+
+        //Handling [X] event
+        callout.addEventCallback("closing", function () { CallOutonCloseEvent(); });
+
+        //overwrite the callout action to the callout control.
+        //Here only one calloutAction i.e. Submit. So I am using [0] here        
+        custAct.getActions()[0] = calloutAction;
+        callout.refreshActions();
+    }    
+}
+function ResetCustomAction() {
+    //Get Existing Callout
+    var launchPoint = document.getElementById('ContactusLink');
+    var callout = CalloutManager.getFromLaunchPoint(launchPoint);
+    if (callout != null) {
+        var custAct = callout.getActionMenu();
+
+        //New Call Out Action
+        var calloutAction = new CalloutAction({
+            text: "Submit",
+            tooltip: "Save Item in Report an Issue List",            
+            onClickCallback: function () {
+                var _contactUsTextarea = document.getElementById('CommentsArea');
+
+                //Adding the new Contact Us Item in the List.
+                AddIteminList(_contactUsTextarea.value);
+                _contactUsTextarea.style.visibility = 'hidden';
+            }
+        });
+        //Reset to Default.                
+        custAct.getActions()[0] = calloutAction;
+        callout.refreshActions();
+    }
+}
+function CallOutonCloseEvent()
+{
+    var launchPoint = document.getElementById('ContactusLink');
+    var callout = CalloutManager.getFromLaunchPoint(launchPoint);
+    if (callout != null)
+    {        
+        var custAct = callout.getActionMenu();
+        var actText = custAct.getActions()[0].getText();
+        if (actText == "Close window")
+        {
+            ResetCustomAction();
+        }       
+    }
+}
+
+</script>
+<div id="ContactusLink" style="width:38%;">If you have any Issue or Concerns, please feel free to <u><span class=\"ms-commandLink\" style=\"text-align: left;font-size: 14px; cursor: pointer;\">Report an Issue</span></u></div>
