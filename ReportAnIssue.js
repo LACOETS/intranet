@@ -30,7 +30,8 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 
 function AddIteminList(_contactUsText)
 {
-    var context = new SP.ClientContext.get_current();
+    //var context = new SP.ClientContext.get_current();
+	var context = new SP.ClientContext("https://lacoe.sharepoint.com");
     var web = context.get_web();
     var list = web.get_lists().getByTitle('IntranetReportedIssue');
     var listItemCreationInfo = new SP.ListItemCreationInformation();
@@ -115,4 +116,3 @@ function CallOutonCloseEvent()
 }
 
 </script>
-<div id="" style="width:38%;">If you have any Issue or Concerns, please feel free to <u><span class=\"ms-commandLink\" style=\"text-align: left;font-size: 14px; cursor: pointer;\">Report an Issue</span></u></div>
