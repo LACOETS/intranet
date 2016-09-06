@@ -102,7 +102,7 @@ var results = data.d.results;
 	});//End of each
 }//End of onQuerySuccess1
 function onQueryError1(error) {
-   		alert("error: " + JSON.stringify(error));
+   		//alert("error: " + JSON.stringify(error));
   }//End of onQueryError1
 
 function AddUserUsingSPServices(groupName){
@@ -156,7 +156,7 @@ function onQuerySuccess(data) {
 		alert("New User added successfully in SharePoint Group");     
      }//End of onQuerySuccess
 function onQueryError(error) {
-   		alert("error in AddUserUsingREST: " + JSON.stringify(error));
+   		//alert("error in AddUserUsingREST: " + JSON.stringify(error));
   }//End of onQueryError
   
 function GetGroupID(groupName){
@@ -195,7 +195,7 @@ function onQuerySuccess2(data) {
 		});    */
      }//End of onQuerySuccess2
 function onQueryError2(error) {
-   		alert("error in GetGroupID: " + JSON.stringify(error));
+   		//alert("error in GetGroupID: " + JSON.stringify(error));
   }//End of onQueryError2  
   
 </script>
