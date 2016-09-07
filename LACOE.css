@@ -3788,8 +3788,7 @@ select:focus{outline:none;}
 /*Employee Spotlight*/
 .emp-spotlight-box .box-contentinfos { padding: 15px; position: relative }
 .spot-lightsbox ul li, .emp-spotlight-box .box-contentinfos ul li:first-child { margin: 0; }
-.spotlight-img {  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5); width:240px; margin-bottom: 10px; height:240px; overflow:hidden}
-.img-box-thumb-holder .spotlight-img {border: #ccc solid 1px; background: url("https://lacoets.github.io/intranet/default-image-240.png") center center no-repeat;}
+.spotlight-img { box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5); width:240px; margin-bottom: 10px; height:240px; overflow:hidden}
 .spotlight-img img { width: 240px; }
 .spotlight-infotxt h4 { font-size: 1.125em	; color: #000; font-weight: 600 }
 .spotlight-infotxt p { font-size: 1em; font-weight: 300; color: #646464; padding-top: 15px }
@@ -3797,8 +3796,7 @@ select:focus{outline:none;}
 .spotlight-infotxt .spotlight + p{margin-bottom:0}
 .spotlight-infotxt .spotlight p:last-child{padding-top:0; margin-bottom:0}
 .lacoe-aniversary-box .news-title-like h4 { width: auto; float: none; font-size: 1.125em; font-weight: 600; padding-bottom: 5px; }
-.lacoe-aniversary-box .box-img-thumbnail { width: 115px; height: 115px; box-shadow:none; border: #ccc solid 1px;
-    background: url("https://lacoets.github.io/intranet/default-image-120.png") center center no-repeat; }
+.lacoe-aniversary-box .box-img-thumbnail { width: 115px; height: 115px; box-shadow:none }
 .lacoe-aniversary-box .news-info-cntr { width: 225px; }
 .lacoe-aniversary-box ul li, .lacoe-aniversary-box .box-contentinfos ul li:first-child { margin: 0; }
 .lacoe-aniversary-box .box-contentinfos { padding: 15px; position: relative }
@@ -3969,6 +3967,7 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 .docRytSide {
   float: left;
   width: 80%;
+  padding-bottom:48px;
 }
 .docRytSide .pagination-page dd{display:block}
 .docLeftside .ms-ref-refiner{padding-right:0}
@@ -4074,6 +4073,14 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .news-section .box-contentinfos{position:relative} 
 .news-section .custom-noresult{position:absolute;left:0; top:0; height:100%; width:100%; border:none; background:#fff; padding-left:10px}
 .news-section .box-img-thumbnail{background:none center center no-repeat; background-size: cover;}
+.cal-view-icon.withsearchbx .box-heading{background:#1c7ec7}
+.cal-view-icon.withsearchbx .box-heading h3{float:left}
+.cal-view-icon.withsearchbx .box-heading h3 + div.ms-webpart-chrome-fullWidth{float:right; min-width:auto; margin-top:4px; margin-right:4px;}
+
+
+.cal-view-icon.withsearchbx input[type="submit"], .cal-view-icon.withsearchbx input[type="button"]{padding:1px 10px; color:#fff; border:#fff solid 1px; margin-left:0 }
+.cal-view-icon.withsearchbx input[type="text"]{border-color:#fff; padding:4px 5px; margin-right:10px; color:#fff; margin-top:-1px;}
+.cal-view-icon.withsearchbx input[type="submit"]:hover, .cal-view-icon.withsearchbx input[type="button"]:hover{background-color:#00497e}
 
 
 /*======================================= Content Area CSS End ========================================*/
