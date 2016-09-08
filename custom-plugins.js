@@ -292,7 +292,8 @@ $(window).load(function(){
 	})
 })
 
-$(document).ready(function () {
+/*Tabination active class after refresh start*/
+/*$(document).ready(function () {
 	$(".tabNav li a").click(function () {
 			var id = $(this);
 		//alert(id)
@@ -311,5 +312,5 @@ $(document).ready(function () {
 			
 		}
 			
-});
+});*/
 /*Tabination active class after refresh end*/
