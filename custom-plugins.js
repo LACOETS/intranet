@@ -149,6 +149,10 @@ $(window).load(function(){
 		num_page_links_to_display :false,
 		items_per_page : 4	
 	});
+	$('#standardforms-pagination').pajinate({
+		num_page_links_to_display :false,
+		items_per_page : 10	
+	});
 	
 });
 

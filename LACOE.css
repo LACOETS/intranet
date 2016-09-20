@@ -3390,6 +3390,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .blog-section.box-style, .goal-section, .top-contributor, .whats-happening, .feeds-section { min-height: 269px; }
 .box-style.lcoe-report-card { min-height: 560px; }
 .document-searchbx{min-height:327px;}
+.document-searchbx.standardformsrch{min-height:577px;}
 .documents-section.grid-12, .discussion-section.grid-12 { min-height: 269px; background: #fff; }
 .documents-section.grid-12 { margin: 0 0 22px; padding: 0; }
 .discussion-section.grid-12 { padding: 0 }
