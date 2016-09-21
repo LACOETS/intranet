@@ -1,4 +1,4 @@
-<script src="https://lacoe.sharepoint.com/SiteAssets/ABC.js" type="text/javascript"></script>
+<script src="https://lacoets.github.io/intranet/WhatDoYouThinkLanding-RESTAPI.js" type="text/javascript"></script>
 
 <div class="ques-box">
 														<div class="ques-img"> <img src="https://lacoets.github.io/intranet/question-img1.jpg" alt="" /> </div>
