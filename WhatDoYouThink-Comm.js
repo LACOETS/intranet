@@ -1,49 +1,121 @@
 var currentSiteurl = _spPageContextInfo.webServerRelativeUrl;
 //alert(currentSiteurl);
+var returnVar=false;
 $(document).ready(function () {
-    if (getTodaysSurvey()) {
-        checkUserResponse();
-    }
-});
+     //alert('In Doc ready');
+    getTodaysSurvey();
+    //alert(getTodaysSurvey());   
+  
+});//End of doc ready
+
 
 function getTodaysSurvey() {
-    var rowCount = 0;
+    //alert('In getTodaysSurvey');    
+    //checkUserResponse();
     var date = new Date();
     var todaysDate = date.getFullYear() + '-' + (date.getMonth() < 10 ? '0' : '') + getmonth(date) + '-' + (date.getDate() < 10 ? '0' : '') + date.getDate();
-
-    $().SPServices({
-        webURL: currentSiteurl,
-        operation: "GetListItems",
-        async: false,
-        listName: "Survey",
-        CAMLQuery: "<Query><Where><And><Leq><FieldRef Name='Start_x0020_Date' /><Value IncludeTimeValue='TRUE' Type='DateTime'>" + todaysDate + "</Value></Leq><And><Geq><FieldRef Name='End_x0020_Date' /><Value IncludeTimeValue='TRUE' Type='DateTime'>" + todaysDate + "</Value></Geq><Eq><FieldRef Name='ApprovalStatus' /><Value Type='Text'>Yes</Value></Eq></And></And></Where></Query>",
-        completefunc: function (xData, Status) {
-
-            $(xData.responseXML).SPFilterNode("z:row").each(function () {
-                // debugger
-                GenerateAnswer($(this).attr('ows_Answer'));
-                $('.poll-block').find('h2').text($(this).attr('ows_Question').toString());
-                $('#surveyId').val($(this).attr('ows_ID').toString())
-                rowCount++;
-                return;
-            });
-        }  //End of comp function
+    //alert('todaysDate:-' + todaysDate);
+    SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
+      var context = SP.ClientContext.get_current();
+      var restURL = "/_api/web/lists/getbytitle('Survey')/items?$select=ID,Question,Answer,ApprovalStatus,Start_x0020_Date,End_x0020_Date&$filter=Start_x0020_Date le '" + todaysDate + "' and End_x0020_Date ge '" + todaysDate + "' and ApprovalStatus eq 'Yes'";	  
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
+     // alert('queryUrl:=' + queryUrl);
+      $.ajax({
+        url: queryUrl,
+        method: "GET",
+        headers: {
+          "Accept": "application/json; odata=verbose"
+        },
+        success: function (data) {
+        		//alert('In onQuerySuccess1');    
+		    var rowCount = 0;
+		    var results = data.d.results;	
+		    //alert(results);
+		    $.each(results, function(index, dataRec) {
+				//alert(dataRec.Answer);
+				var userEntry = {};		
+				userEntry.Answer = dataRec.Answer;
+				userEntry.Question = dataRec.Question;
+				userEntry.ID = dataRec.ID;
+				//alert('userEntry.Question :=' + userEntry.Question);
+				//alert('userEntry.ID:=' + userEntry.ID);
+				GenerateAnswer(userEntry.Answer);
+		
+				$('.poll-block').find('h2').text(userEntry.Question);
+		        $('#surveyId').val(userEntry.ID);
+		        rowCount++;
+		        return;
+		    });//End of each
+		    
+		    if (rowCount == 0) { //Question is not present in Survey
+		        //alert('In if rowcount 0');
+		        $('.poll-vote-list').css('display', 'none');
+		        $('.poll-results-list').css('display', 'none');
+		        //return returnVar;
+		        //return false;
+		    }//End of If
+		    else // Question is present
+		        {        	
+		        	//alert('In else row count !=0');
+		        	//returnVar=true;
+		        	//return true; 
+		        	checkUserResponse();
+		        }		 
+		      },
+        error: onQueryError1
+      });//End of ajax
     });
+  });
+}//End of getTodaysSurvey
 
-    if (rowCount == 0) {
+/*function onQuerySuccess1(data) {
+    alert('In onQuerySuccess1');    
+    var rowCount = 0;
+    var results = data.d.results;	
+    //alert(results);
+    $.each(results, function(index, dataRec) {
+		//alert(dataRec.Answer);
+		var userEntry = {};		
+		userEntry.Answer = dataRec.Answer;
+		userEntry.Question = dataRec.Question;
+		userEntry.ID = dataRec.ID;
+		//alert('userEntry.Question :=' + userEntry.Question);
+		//alert('userEntry.ID:=' + userEntry.ID);
+		GenerateAnswer(userEntry.Answer);
 
+		$('.poll-block').find('h2').text(userEntry.Question);
+        $('#surveyId').val(userEntry.ID);
+        rowCount++;
+        return;
+    });//End of each
+    
+    if (rowCount == 0) { //Question is not present in Survey
+        //alert('In if rowcount 0');
         $('.poll-vote-list').css('display', 'none');
         $('.poll-results-list').css('display', 'none');
-        return false;
-
-    }
-    else
-        return true;
-}
+        return returnVar;
+        //return false;
+    }//End of If
+    else // Question is present
+        {        	
+        	alert('In else row count !=0');
+        	returnVar=true;
+        	return returnVar; 
+        	//checkUserResponse();
+        } 
+        
+  }//End of onQuerySuccess1
+ */
+ function onQueryError1(error) {
+ 			alert('error :=' + error.statusText);
+    } //End of onQueryError1
 
 function GenerateAnswer(val) {
+    //alert('In GenerateAnswer :=' + val);
     var tags = '';
     var answers = val.split('#;');
+    //alert('answers:=' + answers);
     for (i = 0; i < answers.length; i++) {
         if (answers[i] != '') {
             tags += '<li class="input-type-radio">' +
@@ -54,85 +126,155 @@ function GenerateAnswer(val) {
     }
     $('.poll-vote-list').empty();
     $('.poll-vote-list').append(tags);
-    $('.poll-vote-list').append('<li class=""> <a class="submit-button box-btn" href="javascript:void(0);" onclick="CreateNewItem();">Submit</a> </li>');
-}
+    $('.poll-vote-list').append('<li class=""> <a class="submit-button box-btn" href="#" onclick="CreateNewItem();">Submit</a> </li>');
+}//End of GenerateAnswer
 
 function CreateNewItem() {
+    //alert('In CreateNewItem');
     var answer = $('input:radio:checked').next('label:first').html()
+    //alert('answer:=' + answer);
     if (answer != undefined) {
         var currentUser = _spPageContextInfo.userLoginName;
+        //alert(currentUser);
         var surveyId = $('#surveyId').val();
-        $().SPServices({
-            webURL: currentSiteurl,
-            operation: "UpdateListItems",
-            async: false,
-            batchCmd: "New",
-            listName: "SurveyResponse",
-            valuepairs: [["Title", 'Title'], ["SurveyID", surveyId], ["UserID", currentUser], ["Answer", answer]],
-            completefunc: function (xData, Status) {
-                if (Status == "success") {
-                    GetTotalResponse();
-                    ShowInput(true);
-                }
-
-                else
-                    ShowInput(false);
-
-            }
-        });
-    }
+        //alert(surveyId);
+        
+        var itemType = GetItemTypeForListName('SurveyResponse');
+        //alert('itemType :=' + itemType);
+        var item = {
+	        "__metadata": { "type": itemType },
+	        "Title": "Title","SurveyID" : surveyId,"UserID" : currentUser,"Answer" : answer
+    	};//End of item
+    	//alert("JSON.stringify(item):=" + " " + JSON.stringify(item));
+        SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+    	  SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
+		      var context = SP.ClientContext.get_current();
+		      var restURL = "/_api/web/lists/getbytitle('SurveyResponse')/items";	  
+			  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
+			      $.ajax({
+			        url: queryUrl,
+			        type: "POST",
+			        contentType: "application/json;odata=verbose",
+			        data: JSON.stringify(item),
+			        headers: {
+			            "Accept": "application/json;odata=verbose",
+		            	"X-RequestDigest": $("#__REQUESTDIGEST").val()		            	            	
+		            },
+			        success: function (data) {
+			        	GetTotalResponse();
+						//ShowInput(true);
+					},
+			        error: onQueryError2
+			      });//End of ajax
+	         });
+	   });
+}//End of If
     else {
-
         alert('Please select your response before submitting');
         $('.poll-vote-list').css('display', 'block');
         $('.poll-results-list').css('display', 'none');
-    }
-}
+    }//End of else
+}//End of CreateNewItem
+
+// Get List Item Type metadata
+function GetItemTypeForListName(name) {
+    //alert('In GetItemTypeForListName');
+    return "SP.Data." + name.charAt(0).toUpperCase() + name.split(" ").join("").slice(1) + "ListItem";
+}//End of GetItemTypeForListName
+
+function onQuerySuccess2(data) {
+//alert('In onQuerySuccess2');
+GetTotalResponse();
+ShowInput(true);
+}//End of onQuerySuccess2
+
+function onQueryError2(error) {
+	alert('In onQueryError2' + error.statusText);
+	ShowInput(false);
+//alert('error :=' + error.statusText);
+} //End of onQueryError2
+
 
 function checkUserResponse() {
-    var result = false;
-    var currentUser = _spPageContextInfo.userLoginName;
+var surveyId = $('#surveyId').val();
+//alert('In checkUserResponse :=' + surveyId);
+var currentUser = _spPageContextInfo.userLoginName;
+//alert('currentUser :=' + currentUser);
 
-    $().SPServices({
-        webURL: currentSiteurl,
-        operation: "GetListItems",
-        async: false,
-        listName: "SurveyResponse",
-        CAMLQuery: "<Query><Where><Eq><FieldRef Name='UserID'/><Value Type='Text'>" + currentUser + "</Value></Eq></Where></Query>",
-        completefunc: function (xData, Status) {
-            $(xData.responseXML).SPFilterNode("z:row").each(function () {
-                result = true;
-                GetTotalResponse();
-
-            });
-        }  //End of comp function
+SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
+      //var context = SP.ClientContext.get_current();      
+	  var restURL = "/_api/web/lists/getbytitle('SurveyResponse')/items?$select=UserID&$filter=UserID eq '" + currentUser + "' and SurveyID eq '" + surveyId + "'";	  
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
+      $.ajax({
+        url: queryUrl,
+        method: "GET",
+        headers: {
+          "Accept": "application/json; odata=verbose"
+        },
+        success: onQuerySuccess3,
+        error: onQueryError3
+      });//End of ajax
     });
-    //End of SPServices
+  });
+      
+   
+}//End of checkUserResponse
+//checkuserresponse
+function onQuerySuccess3(data) {
+//alert('In onQuerySuccess3');
+var result = false;
+
+ var results = data.d.results;	
+    $.each(results, function(index, dataRec) {
+		result = true;
+        GetTotalResponse();
+    });//End of each
+    //alert('result:-' + result);
     ShowInput(result);
-}
+}//End of onQuerySuccess3
+
+function onQueryError3(error) {
+	//alert('In onQueryError3');
+	alert('error In onQueryError3:=' + error.statusText);
+} //End of onQueryError3
 
 
 function GetTotalResponse() {    
-    var answer = [];
     var surveyId = $('#surveyId').val();
-    $().SPServices({
-        webURL: currentSiteurl,
-        operation: "GetListItems",
-        async: false,
-        listName: "SurveyResponse",
-        CAMLQuery: "<Query><Where><Eq><FieldRef Name='SurveyID'/><Value Type='Number'>" + surveyId + "</Value></Eq></Where></Query>",
-        completefunc: function (xData, Status) {
-            $(xData.responseXML).SPFilterNode("z:row").each(function () {
-                answer.push($(this).attr('ows_Answer').toString());
-                /*if($(this).attr('ows_Answer').toString()=='Yes')
-                   yesResponse++;
-               else
-                   noResponse++;
-               totalResponse++;*/
-            });
-        }  //End of comp function
+    //alert('In GetTotalResponse: surveyId ' + surveyId);
+    SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
+      var context = SP.ClientContext.get_current();      
+	  var restURL = "/_api/web/lists/getbytitle('SurveyResponse')/items?$select=SurveyID,Answer&$filter=SurveyID eq '" + surveyId + "'";	  
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
+      //alert(queryUrl);
+      $.ajax({
+        url: queryUrl,
+        method: "GET",
+        headers: {
+          "Accept": "application/json; odata=verbose"
+        },
+        success: onQuerySuccess4,
+        error: onQueryError4
+      });//End of ajax
     });
+  });
+}//End of GetTotalResponse
 
+function onQuerySuccess4(data) {
+//alert('In onQuerySuccess4');
+var answer = [];
+
+ var results = data.d.results;	
+    //alert(results);
+    $.each(results, function(index, dataRec) {
+		var userEntry = {};		
+		userEntry.Answer = dataRec.Answer;
+		//alert(userEntry.Answer);
+		answer.push(userEntry.Answer);
+    });//End of each
+    
     var counts = {};
     jQuery.each(answer, function (key, value) {
 
@@ -142,9 +284,7 @@ function GetTotalResponse() {
             counts[value]++;
         }
     });
-
-    //var answerslist=[];
-    //var answer=$('.poll-vote-list input[radio]').next('label:first').html()	
+	
     var anscount = 0;
     var resultstr = '';
     $('.poll-vote-list input:radio').next('label').each(function () {
@@ -154,7 +294,7 @@ function GetTotalResponse() {
         else {
             anscount = 0;
         }
-        //answerslist.push($(this).text());
+        //alert("anscount :=" + anscount);
         resultstr += '<li>' +
 		'<div class="">' +
 		'<span>' + $(this).text() + '<span class="polling-status"> (' + anscount + ' Polls)</span></span> <span class="percentage">' + Math.round(anscount * 100 / answer.length) + '%</span>' +
@@ -170,19 +310,27 @@ function GetTotalResponse() {
     '</li>';
     $('.poll-results-list').empty();
     $('.poll-results-list').append(resultstr);
-}
+    //alert('End of onQuerySuccess4');
+    ShowInput(true);
+}//End of onQuerySuccess4
+
+function onQueryError4(error) {
+		alert('error In onQueryError3:=' + error.statusText);
+} //End of onQueryError4
 
 function ShowInput(isshow) {
+//alert('In ShowInput:=' + isshow);
     if (isshow) {
         $('.poll-vote-list').css('display', 'none');
         $('.poll-results-list').css('display', 'block');
         progressBar();
     }
     else {
+        //alert('In Else ShowInput');
         $('.poll-vote-list').css('display', 'block');
         $('.poll-results-list').css('display', 'none');
     }
-}
+}//End of ShowInput
 
 // getDate() is not giving proper moth hence created this method
 function getmonth(stringdate) {
@@ -211,9 +359,10 @@ function getmonth(stringdate) {
         return 11
     else if (month == 'Dec')
         return 12
-}
+}//End of getmonth
 
 function progressBar() {
+//alert('In progressBar');
     $('.poll-results-list li .percentage').each(function () {
         var value = $(this).text();
         $(this).closest('li').find('.nul').removeClass('inner-bar null').addClass('voted');
@@ -221,4 +370,4 @@ function progressBar() {
         $(this).closest('li').find('.voted').delay('1000').animate({ width: value }, 1000);
         $('.percentage').delay('2000').fadeIn('fast');
     });
-}
+}//End of progressBar
