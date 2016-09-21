@@ -2,7 +2,7 @@ var currentSiteurl = _spPageContextInfo.webServerRelativeUrl;
 //alert(currentSiteurl);
 var returnVar=false;
 $(document).ready(function () {
-    //alert('In Doc ready');
+     //alert('In Doc ready');
     getTodaysSurvey();
     //alert(getTodaysSurvey());   
   
@@ -20,7 +20,7 @@ function getTodaysSurvey() {
       var context = SP.ClientContext.get_current();
       var restURL = "/_api/web/lists/getbytitle('Survey')/items?$select=ID,Question,Answer,ApprovalStatus,Start_x0020_Date,End_x0020_Date&$filter=Start_x0020_Date le '" + todaysDate + "' and End_x0020_Date ge '" + todaysDate + "' and ApprovalStatus eq 'Yes'";	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
-      //alert('queryUrl:=' + queryUrl);
+     // alert('queryUrl:=' + queryUrl);
       $.ajax({
         url: queryUrl,
         method: "GET",
@@ -69,8 +69,8 @@ function getTodaysSurvey() {
   });
 }//End of getTodaysSurvey
 
-function onQuerySuccess1(data) {
-    //alert('In onQuerySuccess1');    
+/*function onQuerySuccess1(data) {
+    alert('In onQuerySuccess1');    
     var rowCount = 0;
     var results = data.d.results;	
     //alert(results);
@@ -99,14 +99,14 @@ function onQuerySuccess1(data) {
     }//End of If
     else // Question is present
         {        	
-        	//alert('In else row count !=0');
+        	alert('In else row count !=0');
         	returnVar=true;
         	return returnVar; 
         	//checkUserResponse();
         } 
         
   }//End of onQuerySuccess1
- 
+ */
  function onQueryError1(error) {
  			alert('error :=' + error.statusText);
     } //End of onQueryError1
@@ -196,7 +196,8 @@ function onQueryError2(error) {
 
 
 function checkUserResponse() {
-//alert('In checkUserResponse');
+var surveyId = $('#surveyId').val();
+//alert('In checkUserResponse :=' + surveyId);
 var currentUser = _spPageContextInfo.userLoginName;
 //alert('currentUser :=' + currentUser);
 
@@ -219,7 +220,7 @@ SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
       
    
 }//End of checkUserResponse
-
+//checkuserresponse
 function onQuerySuccess3(data) {
 //alert('In onQuerySuccess3');
 var result = false;
@@ -240,7 +241,6 @@ function onQueryError3(error) {
 
 
 function GetTotalResponse() {    
-    //alert('In GetTotalResponse');
     var surveyId = $('#surveyId').val();
     //alert('In GetTotalResponse: surveyId ' + surveyId);
     SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
@@ -248,6 +248,7 @@ function GetTotalResponse() {
       var context = SP.ClientContext.get_current();      
 	  var restURL = "/_api/web/lists/getbytitle('SurveyResponse')/items?$select=SurveyID,Answer&$filter=SurveyID eq '" + surveyId + "'";	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
+      //alert(queryUrl);
       $.ajax({
         url: queryUrl,
         method: "GET",
@@ -266,9 +267,11 @@ function onQuerySuccess4(data) {
 var answer = [];
 
  var results = data.d.results;	
+    //alert(results);
     $.each(results, function(index, dataRec) {
 		var userEntry = {};		
 		userEntry.Answer = dataRec.Answer;
+		//alert(userEntry.Answer);
 		answer.push(userEntry.Answer);
     });//End of each
     
@@ -323,6 +326,7 @@ function ShowInput(isshow) {
         progressBar();
     }
     else {
+        //alert('In Else ShowInput');
         $('.poll-vote-list').css('display', 'block');
         $('.poll-results-list').css('display', 'none');
     }
