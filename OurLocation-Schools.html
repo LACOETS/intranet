@@ -1,7 +1,7 @@
-<html>
+﻿<html>
 <head>
 <title>MyPage</title>
-<style >
+<style type="text/css">
 #divisiondrp { width: 250px; background:#fff;border: 1px solid #1c7ec7; position:relative}
 #divisiondrp select{border:none; display:block;padding: 5px; width:100%; height:30px;}
 #divisiondrp:after{content:''; position:absolute; right:0; top:0; height:30px; width:30px; background:url("https://lacoets.github.io/intranet/sprite.png") -264px -60px no-repeat;}
@@ -9,29 +9,11 @@
 #urlTag a{font-size:1em;}
 #url a{color:#1c7ec7; font-size:24px;}
 </style>
-<script>
-        $(document).ready(function () {
-            schoolDrpDownBind();
-            //$('select').change(function () {
-            //    $(this).width($('select option:selected').width());
-            //});
-            //$("#select").wi
+<script type="text/javascript">
+        $(document).ready(function () {            
+            schoolDrpDownBind();            
         });
-        /*function IncreaseWidth() {
-            var el;
-            $("select")
-              .each(function () {
-                  el = $(this);
-                  el.data("origWidth", el.outerWidth()) // IE 8 can haz padding
-              })
-              .mouseenter(function () {
-                  $(this).css("width", "100%");
-              })
-              .bind("blur change", function () {
-                  el = $(this);
-                  el.css("width", el.data("origWidth"));
-              });
-        }*/
+        
         function schoolDrpDownBind() {
             var listName = "School List";
             var url = _spPageContextInfo.webAbsoluteUrl;
@@ -93,7 +75,7 @@
             });
         }
         function GetBranchByProtocol(select) {
-            // alert('protocolid' + protocolid);
+            //alert('In GetBranchByProtocol :=' + select);
             var clientContext = new SP.ClientContext.get_current();
             var oList = clientContext.get_web().get_lists().getByTitle('School List');
             var camlQuery = new SP.CamlQuery();
@@ -104,16 +86,32 @@
             // clientContext.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded2), Function.createDelegate(this, this.onQueryFailed));
         }
         function onQuerySucceeded(sender, args) {
+            //alert('In onQuerySucceeded');
             var listItemInfo = '';
             var listItemGoogleURL = '';
             var listItemUrl = '';
             var listItemEnumerator = collListItem.getEnumerator();
             var schoolName = $("select option:selected").text();
             while (listItemEnumerator.moveNext()) {
+                //alert('In while !!');
                 var oListItem = listItemEnumerator.get_current();
-                listItemInfo = oListItem.get_item('Description');
-                listItemGoogleURL = oListItem.get_item("Google_x0020_Map_x0020_URL").get_url();
-                listItemUrl = oListItem.get_item("School_x0020_URL").get_url();
+                //alert(oListItem.get_item('Description'));
+                if(oListItem.get_item('Description') == null)
+                	listItemInfo = "---";
+                else
+                	listItemInfo = oListItem.get_item('Description');
+                //alert(oListItem.get_item("Google_x0020_Map_x0020_URL"));
+                if(oListItem.get_item("Google_x0020_Map_x0020_URL") == null)
+                	listItemGoogleURL = "---";
+                else
+                	listItemGoogleURL = oListItem.get_item("Google_x0020_Map_x0020_URL").get_url();
+                //alert(oListItem.get_item("School_x0020_URL"));
+                //alert(listItemGoogleURL);
+                if(oListItem.get_item("School_x0020_URL") == null)
+                	listItemUrl = "---";
+                else
+                	listItemUrl = oListItem.get_item("School_x0020_URL").get_url();
+                //alert(listItemUrl);	
             }
             var div1 = document.getElementById('description');
             div1.innerHTML = listItemInfo;
@@ -122,7 +120,10 @@
             $("#urlTag").empty();
             $("#url").empty();
             $("#urlTag").append("<a href='" + listItemGoogleURL + "' target='_blank'>" + listItemGoogleURL + " </a> ");
-            $("#url").append("<a href='" + listItemUrl + "' target='_blank'>" + schoolName + "</a> ");
+            if(listItemUrl == "---")
+            	$("#url").append(schoolName);
+            else
+                $("#url").append("<a href='" + listItemUrl + "' target='_blank'>" + schoolName + "</a> ");
         }
         function onQueryFailed(sender, args) {
             //alert('fail');
