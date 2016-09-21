@@ -203,7 +203,7 @@ var currentUser = _spPageContextInfo.userLoginName;
 SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
       //var context = SP.ClientContext.get_current();      
-	  var restURL = "/_api/web/lists/getbytitle('SurveyResponse')/items?$select=UserID&$filter=UserID eq '" + currentUser + "'";	  
+	  var restURL = "/_api/web/lists/getbytitle('SurveyResponse')/items?$select=UserID&$filter=UserID eq '" + currentUser + "' and SurveyID eq '" + surveyId + "'";	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
       $.ajax({
         url: queryUrl,
