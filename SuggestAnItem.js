@@ -39,18 +39,18 @@ function AddIteminList1(_contactUsText)
     var newItem = list.addItem(listItemCreationInfo);
     newItem.set_item('Title', _contactUsText);
     newItem.update();
-    ctx.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded), Function.createDelegate(this, this.onQueryFailed));
+    ctx.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded123), Function.createDelegate(this, this.onQueryFailed123));
 }
 
-function onQuerySucceeded() {
+function onQuerySucceeded123() {
     var _confirmationBLOCK2 = document.getElementById('confirmationBLOCK2');
-    alert('In onQuerySucceeded:-' + _confirmationBLOCK2);
+    alert('In onQuerySucceeded123:-' + _confirmationBLOCK2);
     _confirmationBLOCK2.style.visibility = 'visible';
     overritecustomAction22();
     
 }
 
-function onQueryFailed(sender, args) { alert('onQueryFailed to add a List Item:' + args.get_message()); }
+function onQueryFailed123(sender, args) { alert('onQueryFailed123 to add a List Item:' + args.get_message()); }
 
 function overritecustomAction22()
 {    
