@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://lacoets.github.io/intranet/style.css">
 <script type="text/javascript">    
         //Code on page load 
+            //onclick="openInDialog(500,500,true,true,true,_spPageContextInfo.webAbsoluteUrl + '/Lists/Glossary/NewForm.aspx?RootFolder=&IsDlg=1');
             $( window ).load(function() {
              	GetAllItems();
 							/*setTimeout(function(){ $('#ulSearch').wrap('<div id="glosarypagination" class="pagination-page"></div>');
@@ -252,7 +253,7 @@ function CloseDialogCallback(dialogResult, returnValue)
 										<h3>"If you did not find the word you were looking for or the description was not clear. Please click here to submit your comments"</h3>
 								</div>
 								<div class="additembtnGA">
-										<input type="button" value="Suggest an Item" onclick="openInDialog(500,500,true,true,true,_spPageContextInfo.webAbsoluteUrl + '/Lists/Glossary/NewForm.aspx?RootFolder=&IsDlg=1');">
+										<input type="button" id="btnSuggest" value="Suggest an Item">
 								</div>
 								<div class="clear"></div>
 						</li>
