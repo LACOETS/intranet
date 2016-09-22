@@ -73,7 +73,7 @@ function overritecustomAction22()
         });
 
         //Handling [X] event
-        callout.addEventCallback("closing", function () { CallOutonCloseEvent1(); });
+        callout.addEventCallback("closing", function () { CallOutonCloseEvent12(); });
 
         //overwrite the callout action to the callout control.
         //Here only one calloutAction i.e. Submit. So I am using [0] here        
@@ -105,7 +105,7 @@ function ResetcustomAction21() {
         callout.refreshActions();
     }
 }
-function CallOutonCloseEvent1()
+function CallOutonCloseEvent12()
 {
     var launchPoint = document.getElementById('btnSuggest');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
