@@ -32,8 +32,9 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 
 function AddIteminList1(_contactUsText)
 {
+alert('123');
 var itemType = GetItemTypeForListName('Glossary Suggestions');
-        //alert('itemType :=' + itemType);
+        alert('itemType :=' + itemType);
         var item = {
 	        "__metadata": { "type": itemType },
 	        "Title": _contactUsText
@@ -43,7 +44,8 @@ var itemType = GetItemTypeForListName('Glossary Suggestions');
 		      //var context = SP.ClientContext.get_current();
 		      var restURL = "/_api/web/lists/getbytitle('Glossary Suggestions')/items";	  
 			  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
-			      $.ajax({
+			      alert(queryUrl);
+				  $.ajax({
 			        url: queryUrl,
 			        type: "POST",
 			        contentType: "application/json;odata=verbose",
