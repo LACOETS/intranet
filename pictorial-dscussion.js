@@ -6,7 +6,7 @@ $(document).ready(function ()
   var WebPath= _spPageContextInfo.webServerRelativeUrl;
   
   $('.empty-pictorial').find('.ms-rtestate-field').children('#ulPictorialDisc').remove();
-	var pagination='<div class="box-paginations"><div class="pagination-cntrbx"><a class="last-prev-img" id="custom-arrow11" href="javascript:void(0)"></a><a class="pagi-prev-img" id="custom-arrow13" href="javascript:void(0)"></a><a class="pagi-next-img" id="custom-arrow14" href="javascript:void(0)"></a><a id="last-next-img" class="custom-next-is" href="javascript:void(0)"></a></div></div>';
+	var pagination='<div class="box-paginations"><div class="pagination-cntrbx"><a class="last-prev-img" id="custom-arrow11" href="javascript:void(0)"></a><a class="pagi-prev-img" id="custom-arrow13" href="javascript:void(0)"></a><a class="pagi-next-img" id="custom-arrow14" href="javascript:void(0)"></a><a id="last-next-img" class="custom-next-is" style="display:none" href="javascript:void(0)"></a></div></div>';
 	var sliderstuc='<ul id="ulPictorialDisc" class="cal-sliderdate5"></ul>';
 	$('.empty-pictorial').find('.ms-rtestate-field').html(sliderstuc + pagination);
 	
