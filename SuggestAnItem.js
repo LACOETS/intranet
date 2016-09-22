@@ -1,3 +1,5 @@
+<script type="text/javascript">
+$(document).ready(function(){
 SP.SOD.executeFunc("callout.js", "Callout", function () {    
     var _link = document.getElementById("btnSuggest"); 
     var listCallout = CalloutManager.createNew({ 
@@ -117,3 +119,5 @@ function CallOutonCloseEvent1()
         }       
     }
 }
+});//End of Doc Ready
+</script>
