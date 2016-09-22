@@ -32,6 +32,41 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 
 function AddIteminList1(_contactUsText)
 {
+var itemType = GetItemTypeForListName('Glossary Suggestions');
+        //alert('itemType :=' + itemType);
+        var item = {
+	        "__metadata": { "type": itemType },
+	        "Title": _contactUsText
+    	};//End of item
+ SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+    	  SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
+		      //var context = SP.ClientContext.get_current();
+		      var restURL = "/_api/web/lists/getbytitle('Glossary Suggestions')/items";	  
+			  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
+			      $.ajax({
+			        url: queryUrl,
+			        type: "POST",
+			        contentType: "application/json;odata=verbose",
+			        data: JSON.stringify(item),
+			        headers: {
+			            "Accept": "application/json;odata=verbose",
+		            	"X-RequestDigest": $("#__REQUESTDIGEST").val()		            	            	
+		            },
+			        success: onQuerySucceeded123,
+			        error: onQueryFailed123
+			      });//End of ajax
+	         });
+	   });
+}
+
+// Get List Item Type metadata
+function GetItemTypeForListName(name) {
+    //alert('In GetItemTypeForListName');
+    return "SP.Data." + name.charAt(0).toUpperCase() + name.split(" ").join("").slice(1) + "ListItem";
+}//End of GetItemTypeForListName
+
+/*function AddIteminList1(_contactUsText)
+{
    alert('In AddIteminList1:=' + _contactUsText);
     var ctx = new SP.ClientContext.get_current();
     //var ctx = new SP.ClientContext("https://lacoe.sharepoint.com");
@@ -42,9 +77,9 @@ function AddIteminList1(_contactUsText)
     newItem.set_item('Title', _contactUsText);
     newItem.update();
     ctx.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded123), Function.createDelegate(this, this.onQueryFailed123));
-}
+}*/
 
-function onQuerySucceeded123() {
+function onQuerySucceeded123(data) {
     var _confirmationBLOCK2 = document.getElementById('confirmationBLOCK2');
     alert('In onQuerySucceeded123:-' + _confirmationBLOCK2);
     _confirmationBLOCK2.style.visibility = 'visible';
