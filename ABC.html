@@ -30,44 +30,8 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
     //listCallout.set({ openOptions: { event: "hover" } });    
 });
 
+
 function AddIteminList1(_contactUsText)
-{
-alert('123');
-var itemType = GetItemTypeForListName('Glossary%20Suggestions');
-        alert('itemType :=' + itemType);
-        var item = {
-	        "__metadata": { "type": itemType },
-	        "Title": _contactUsText
-    	};//End of item
- SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
-    	  SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
-		      //var context = SP.ClientContext.get_current();
-		      var restURL = "/_api/web/lists/getbytitle('Glossary Suggestions')/items";	  
-			  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
-			      alert(queryUrl);
-				  $.ajax({
-			        url: queryUrl,
-			        type: "POST",
-			        contentType: "application/json;odata=verbose",
-			        data: JSON.stringify(item),
-			        headers: {
-			            "Accept": "application/json;odata=verbose",
-		            	"X-RequestDigest": $("#__REQUESTDIGEST").val()		            	            	
-		            },
-			        success: onQuerySucceeded123,
-			        error: onQueryFailed123
-			      });//End of ajax
-	         });
-	   });
-}
-
-// Get List Item Type metadata
-function GetItemTypeForListName(name) {
-    //alert('In GetItemTypeForListName');
-    return "SP.Data." + name.charAt(0).toUpperCase() + name.split(" ").join("").slice(1) + "ListItem";
-}//End of GetItemTypeForListName
-
-/*function AddIteminList1(_contactUsText)
 {
    alert('In AddIteminList1:=' + _contactUsText);
     var ctx = new SP.ClientContext.get_current();
@@ -79,20 +43,16 @@ function GetItemTypeForListName(name) {
     newItem.set_item('Title', _contactUsText);
     newItem.update();
     ctx.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded123), Function.createDelegate(this, this.onQueryFailed123));
-}*/
-
-function onQuerySucceeded123(data) {
-    var _confirmationBLOCK2 = document.getElementById('confirmationBLOCK2');
-    alert('In onQuerySucceeded123:-' + _confirmationBLOCK2);
-    _confirmationBLOCK2.style.visibility = 'visible';
-    overritecustomAction22();
-    
 }
 
-//function onQueryFailed123(sender, args) { alert('onQueryFailed123 to add a List Item:' + args.get_message()); }
+function onQuerySucceeded123(data) {
+        alert('In onQuerySucceeded123:-' + _confirmationBLOCK2);
+    var _confirmationBLOCK2 = document.getElementById('confirmationBLOCK2');
+    _confirmationBLOCK2.style.visibility = 'visible';
+    overritecustomAction22();    
+}
 
-function onQueryFailed123(error) { alert('error In onQueryError3:=' + error.statusText); }
-
+function onQueryFailed123(sender, args) { alert('onQueryFailed123 to add a List Item:' + args.get_message()); }
 
 function overritecustomAction22()
 {    
