@@ -30,7 +30,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 
 function AddIteminList1(_contactUsText)
 {
-   // alert('In AddIteminList1:=' + _contactUsText);
+   alert('In AddIteminList1:=' + _contactUsText);
     //var context = new SP.ClientContext.get_current();
     var context = new SP.ClientContext("https://lacoe.sharepoint.com");
     var web = context.get_web();
@@ -45,7 +45,7 @@ function AddIteminList1(_contactUsText)
 function success2() { 
 
     var _confirmationBLOCK2 = document.getElementById('confirmationBLOCK2');
-    //alert('In success2:-' + _confirmationBLOCK2);
+    alert('In success2:-' + _confirmationBLOCK2);
     _confirmationBLOCK2.style.visibility = 'visible';
     overritecustomAction22();
     
@@ -55,11 +55,11 @@ function failed(sender, args) { alert('failed to add a List Item:' + args.get_me
 
 function overritecustomAction22()
 {    
-    //alert('In overritecustomAction22');
+    alert('In overritecustomAction22');
     //Get Existing Callout    
     var launchPoint = document.getElementById('btnSuggest');    
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
-    //alert('In overritecustomAction22 callout:=' + callout);
+    alert('In overritecustomAction22 callout:=' + callout);
     if (callout != null)
     {        
         var custAct = callout.getActionMenu();
@@ -83,7 +83,8 @@ function overritecustomAction22()
 }
 function ResetcustomAction21() {
     //Get Existing Callout
-    var launchPoint = document.getElementById('btnSuggest');
+    alert('In ResetcustomAction21');
+	var launchPoint = document.getElementById('btnSuggest');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     if (callout != null) {
         var custAct = callout.getActionMenu();
@@ -107,7 +108,8 @@ function ResetcustomAction21() {
 }
 function CallOutonCloseEvent12()
 {
-    var launchPoint = document.getElementById('btnSuggest');
+    alert('In CallOutonCloseEvent12');
+	var launchPoint = document.getElementById('btnSuggest');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     if (callout != null)
     {        
