@@ -5,7 +5,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
         launchPoint: _link,
         beakOrientation: "leftRight", 
         ID: "CallOutID2", 
-        title: "Suggestion", 
+        title: "Glossary Suggestion", 
         content: "<div class=\"ms-soften\" style=\"margin-top:2px; \"><hr/></div>"
 + "<div id='confirmationBLOCK2' style=\"margin-top:13px;visibility:hidden;\">Thank you for your suggestion !</div>"
 + "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><textarea maxlength='255' id='CommentsArea2' style=\"width:100%;height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\">Add your Suggestions here...</textarea></div>", 
