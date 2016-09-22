@@ -13,7 +13,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 
     //Creating a Submit Custom Action
     var customAction = new CalloutActionOptions();
-    customAction.text = 'Suggest';
+    customAction.text = 'Suggest Glossary Name';
     customAction.tooltip = 'Save Item in Glossary Suggestions List';
     customAction.onClickCallback = function(event, action)
     {
