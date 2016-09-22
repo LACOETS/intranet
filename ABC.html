@@ -33,7 +33,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 function AddIteminList1(_contactUsText)
 {
 alert('123');
-var itemType = GetItemTypeForListName('Glossary Suggestions');
+var itemType = GetItemTypeForListName('Glossary%20Suggestions');
         alert('itemType :=' + itemType);
         var item = {
 	        "__metadata": { "type": itemType },
@@ -42,7 +42,7 @@ var itemType = GetItemTypeForListName('Glossary Suggestions');
  SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     	  SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
 		      //var context = SP.ClientContext.get_current();
-		      var restURL = "/_api/web/lists/getbytitle('Glossary Suggestions')/items";	  
+		      var restURL = "/_api/web/lists/getbytitle('Glossary%20Suggestions')/items";	  
 			  var queryUrl = _spPageContextInfo.webAbsoluteUrl + restURL; 
 			      alert(queryUrl);
 				  $.ajax({
