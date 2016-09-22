@@ -3146,7 +3146,7 @@ ul.dynamic { min-width: 200px; }
 
 /*Ticker*/
 .placeholder-cnt { }
-.placeholder-cnt .container { padding: 10px 0 10px; }
+.placeholder-cnt .container { /*padding: 10px 0 10px;*/ padding:1px 0; }
 .placeholder-cnt .placeholder { border-radius: 2px; color: #4f5356; font: 1em "Work Sans", sans-serif; }
 .placeholder-cnt .tickercontainer { background-color: #f0f8fd; border: 1px solid #1c7ec7; margin: 0; width: auto; overflow: hidden; height: 37px; border-radius: 2px }
 .placeholder-cnt ul.newsticker { font: 1em "Work Sans", sans-serif; }
@@ -4059,7 +4059,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .innerwhatdo-think .poll-block .poll-vote-list.poll-vote-listquestn li{float:left; width:50%;}
 .innerwhatdo-think .poll-block .poll-vote-list.poll-vote-listquestn li:last-child{float:none; width:100%; clear:both; padding-bottom:0}
 .innerwhatdo-think .poll-block h2{padding-bottom:10px;}
-.all-page-heading{padding-bottom:11px;}
+.all-page-heading{padding-bottom:0px; margin-bottom:-7px;}
 .nospacebottom-cntr .container{padding-bottom:0}
 #joincomunity div:first-child{float:right}
 #joincomunity #JoinText{float:left; padding-top:6px; font-size:16px;}
@@ -4082,7 +4082,6 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .cal-view-icon.withsearchbx input[type="submit"], .cal-view-icon.withsearchbx input[type="button"]{padding:1px 10px; color:#fff; border:#fff solid 1px; margin-left:0 }
 .cal-view-icon.withsearchbx input[type="text"]{border-color:#fff; padding:4px 5px; margin-right:10px; color:#fff; margin-top:-1px;}
 .cal-view-icon.withsearchbx input[type="submit"]:hover, .cal-view-icon.withsearchbx input[type="button"]:hover{background-color:#00497e}
-
 
 /*======================================= Content Area CSS End ========================================*/
 
