@@ -27,30 +27,30 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
     listCallout.addAction(_newcustomAction2);    
     //listCallout.set({ openOptions: { event: "hover" } });    
 });
-});//End of Doc Ready
+
 function AddIteminList1(_contactUsText)
 {
    alert('In AddIteminList1:=' + _contactUsText);
-    //var ctx = new SP.ClientContext.get_current();
-    var ctx = new SP.ClientContext("https://lacoe.sharepoint.com");
+    var ctx = new SP.ClientContext.get_current();
+    //var ctx = new SP.ClientContext("https://lacoe.sharepoint.com");
     var web = ctx.get_web();
-    var list = web.get_lists().getByTitle('Glossary%20Suggestions');
+    var list = web.get_lists().getByTitle('Glossary Suggestions');
     var listItemCreationInfo = new SP.ListItemCreationInformation();
     var newItem = list.addItem(listItemCreationInfo);
     newItem.set_item('Title', _contactUsText);
     newItem.update();
-    ctx.executeQueryAsync(Function.createDelegate(this, this.success2), Function.createDelegate(this, this.failed));
+    ctx.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded), Function.createDelegate(this, this.onQueryFailed));
 }
 
-function success2() {
+function onQuerySucceeded() {
     var _confirmationBLOCK2 = document.getElementById('confirmationBLOCK2');
-    alert('In success2:-' + _confirmationBLOCK2);
+    alert('In onQuerySucceeded:-' + _confirmationBLOCK2);
     _confirmationBLOCK2.style.visibility = 'visible';
     overritecustomAction22();
     
 }
 
-function failed(sender, args) { alert('failed to add a List Item:' + args.get_message()); }
+function onQueryFailed(sender, args) { alert('onQueryFailed to add a List Item:' + args.get_message()); }
 
 function overritecustomAction22()
 {    
@@ -120,5 +120,5 @@ function CallOutonCloseEvent12()
         }       
     }
 }
-
+});//End of Doc Ready
 </script>
