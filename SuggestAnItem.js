@@ -1,4 +1,3 @@
-<script type="text/javascript">
 SP.SOD.executeFunc("callout.js", "Callout", function () {    
     var _link = document.getElementById("btnSuggest"); 
     var listCallout = CalloutManager.createNew({ 
@@ -7,23 +6,23 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
         ID: "CallOutID2", 
         title: "Glossary Suggestion", 
         content: "<div class=\"ms-soften\" style=\"margin-top:2px; \"><hr/></div>"
-+ "<div id='confirmationBLOCK2' style=\"margin-top:13px;visibility:hidden;\">Thank you for your suggestion !</div>"
++ "<div id='confirmationBLOCK2' style=\"margin-top:13px;visibility:hidden;\">Thanks you for your suggestion !</div>"
 + "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><textarea maxlength='255' id='CommentsArea2' style=\"width:100%;height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\">Add your Suggestions here...</textarea></div>", 
     });
 
     //Creating a Submit Custom Action
-    var customAction = new CalloutActionOptions();
-    customAction.text = 'Suggest Glossary Name';
-    customAction.tooltip = 'Save Item in Glossary Suggestions List';
-    customAction.onClickCallback = function(event, action)
+    var customAction2 = new CalloutActionOptions();
+    customAction2.text = 'Suggest Glossary Name';
+    customAction2.tooltip = 'Save Item in Glossary Suggestions List';
+    customAction2.onClickCallback = function(event, action)
     {
-        var _contactUsTextarea = document.getElementById('CommentsArea2');
+        var _contactUsTextarea2 = document.getElementById('CommentsArea2');
         //Adding the new Contact Us Item in the List.
-        AddIteminList1(_contactUsTextarea.value);
-        _contactUsTextarea.style.visibility='hidden';
+        AddIteminList1(_contactUsTextarea2.value);
+        _contactUsTextarea2.style.visibility='hidden';
     };
-    var _newCustomAction = new CalloutAction(customAction);
-    listCallout.addAction(_newCustomAction);    
+    var _newcustomAction2 = new CalloutAction(customAction2);
+    listCallout.addAction(_newcustomAction2);    
     //listCallout.set({ openOptions: { event: "hover" } });    
 });
 
@@ -46,19 +45,19 @@ function success2() {
     var _confirmationBLOCK2 = document.getElementById('confirmationBLOCK2');
     //alert('In success2:-' + _confirmationBLOCK2);
     _confirmationBLOCK2.style.visibility = 'visible';
-    overriteCustomAction2();
+    overritecustomAction22();
     
 }
 
 function failed(sender, args) { alert('failed to add a List Item:' + args.get_message()); }
 
-function overriteCustomAction2()
+function overritecustomAction22()
 {    
-    //alert('In overriteCustomAction2');
+    //alert('In overritecustomAction22');
     //Get Existing Callout    
     var launchPoint = document.getElementById('btnSuggest');    
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
-    //alert('In overriteCustomAction2 callout:=' + callout);
+    //alert('In overritecustomAction22 callout:=' + callout);
     if (callout != null)
     {        
         var custAct = callout.getActionMenu();
@@ -67,7 +66,7 @@ function overriteCustomAction2()
             tooltip: "Close Dialog Box",            
             onClickCallback: function() {                
                 callout.close();
-                ResetCustomAction1();
+                ResetcustomAction21();
             }
         });
 
@@ -80,7 +79,7 @@ function overriteCustomAction2()
         callout.refreshActions();
     }    
 }
-function ResetCustomAction1() {
+function ResetcustomAction21() {
     //Get Existing Callout
     var launchPoint = document.getElementById('btnSuggest');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
@@ -92,11 +91,11 @@ function ResetCustomAction1() {
             text: "Submit",
             tooltip: "Save Item in Glossary Suggestions List",            
             onClickCallback: function () {
-                var _contactUsTextarea = document.getElementById('CommentsArea2');
+                var _contactUsTextarea2 = document.getElementById('CommentsArea2');
 
                 //Adding the new Contact Us Item in the List.
-                AddIteminList1(_contactUsTextarea.value);
-                _contactUsTextarea.style.visibility = 'hidden';
+                AddIteminList1(_contactUsTextarea2.value);
+                _contactUsTextarea2.style.visibility = 'hidden';
             }
         });
         //Reset to Default.                
@@ -114,8 +113,7 @@ function CallOutonCloseEvent1()
         var actText = custAct.getActions()[0].getText();
         if (actText == "Close window")
         {
-            ResetCustomAction1();
+            ResetcustomAction21();
         }       
     }
 }
-</script>
