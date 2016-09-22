@@ -87,7 +87,10 @@ function onQuerySucceeded123(data) {
     
 }
 
-function onQueryFailed123(sender, args) { alert('onQueryFailed123 to add a List Item:' + args.get_message()); }
+//function onQueryFailed123(sender, args) { alert('onQueryFailed123 to add a List Item:' + args.get_message()); }
+
+function onQueryFailed123(error) { alert('error In onQueryError3:=' + error.statusText); }
+
 
 function overritecustomAction22()
 {    
