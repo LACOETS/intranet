@@ -27,23 +27,22 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
     listCallout.addAction(_newcustomAction2);    
     //listCallout.set({ openOptions: { event: "hover" } });    
 });
-
+});//End of Doc Ready
 function AddIteminList1(_contactUsText)
 {
    alert('In AddIteminList1:=' + _contactUsText);
-    //var context = new SP.ClientContext.get_current();
-    var context = new SP.ClientContext("https://lacoe.sharepoint.com");
-    var web = context.get_web();
-    var list = web.get_lists().getByTitle('Glossary Suggestions');
+    //var ctx = new SP.ClientContext.get_current();
+    var ctx = new SP.ClientContext("https://lacoe.sharepoint.com");
+    var web = ctx.get_web();
+    var list = web.get_lists().getByTitle('Glossary%20Suggestions');
     var listItemCreationInfo = new SP.ListItemCreationInformation();
     var newItem = list.addItem(listItemCreationInfo);
     newItem.set_item('Title', _contactUsText);
     newItem.update();
-    context.executeQueryAsync(Function.createDelegate(this, this.success2), Function.createDelegate(this, this.failed));
+    ctx.executeQueryAsync(Function.createDelegate(this, this.success2), Function.createDelegate(this, this.failed));
 }
 
-function success2() { 
-
+function success2() {
     var _confirmationBLOCK2 = document.getElementById('confirmationBLOCK2');
     alert('In success2:-' + _confirmationBLOCK2);
     _confirmationBLOCK2.style.visibility = 'visible';
@@ -121,5 +120,5 @@ function CallOutonCloseEvent12()
         }       
     }
 }
-});//End of Doc Ready
+
 </script>
