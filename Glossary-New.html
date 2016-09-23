@@ -136,6 +136,7 @@
                    var count = collListItem.get_count(); 
                    if(count>0)  
                    {    
+                    $("label[for='lblNoWord']").hide();
                     while (listItemEnumerator.moveNext()) {
                         var oListItem = listItemEnumerator.get_current();
                         listItemInfo = oListItem.get_item("Title");
