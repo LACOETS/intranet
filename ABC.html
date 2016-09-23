@@ -18,19 +18,19 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
     customAction.tooltip = 'Save Item in Issue List';
     customAction.onClickCallback = function(event, action)
     {
-        alert('123');
+        //alert('123');
 		var _contactUsTextarea = document.getElementById('CommentsArea3');
         //Adding the new Contact Us Item in the List.
-        AddIteminList1(_contactUsTextarea.value);
+        AddIteminList12(_contactUsTextarea.value);
         _contactUsTextarea.style.visibility='hidden';
     };
     var _newCustomAction = new CalloutAction(customAction);
     listCallout.addAction(_newCustomAction);    
     //listCallout.set({ openOptions: { event: "hover" } });    
 });
-function AddIteminList1(_contactUsText)
+function AddIteminList12(_contactUsText)
 {
-     alert('In AddIteminList1:=' + _contactUsText);
+     alert('In AddIteminList12:=' + _contactUsText);
     //var context = new SP.ClientContext.get_current();
     var context = new SP.ClientContext("https://lacoe.sharepoint.com");
     var web = context.get_web();
@@ -88,7 +88,7 @@ function ResetCustomAction1() {
             onClickCallback: function () {
                 var _contactUsTextarea = document.getElementById('CommentsArea3');
                 //Adding the new Contact Us Item in the List.
-                AddIteminList1(_contactUsTextarea.value);
+                AddIteminList12(_contactUsTextarea.value);
                 _contactUsTextarea.style.visibility = 'hidden';
             }
         });
