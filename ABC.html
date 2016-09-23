@@ -2,12 +2,12 @@
 <head>
 <script type="text/javascript">
 SP.SOD.executeFunc("callout.js", "Callout", function () {    
-    var _link = document.getElementById("ContactusLink1");
+    var _link = document.getElementById("btnSuggest");
     var listCallout = CalloutManager.createNew({ 
         launchPoint: _link,
         beakOrientation: "leftRight", 
-        ID: "CallOutID1", 
-        title: "Feedback", 
+        ID: "CallOutID2", 
+        title: "Suggest Glossary Item", 
         content: "<div class=\"ms-soften\" style=\"margin-top:2px; \"><hr/></div>"
 + "<div id='confirmationBLOCK1' style=\"margin-top:13px;visibility:hidden;\">Thank you for Contacting Us!</div>"
 + "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><textarea maxlength='255' id='CommentsArea1' style=\"width:100%;height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\">Add your Comments here...</textarea></div>", 
@@ -16,7 +16,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
     //Creating a Submit Custom Action
     var customAction = new CalloutActionOptions();
     customAction.text = 'Submit';
-    customAction.tooltip = 'Save Item in Issue List';
+    customAction.tooltip = 'Save Item in Suggestion List';
     customAction.onClickCallback = function(event, action)
     {
         var _contactUsTextarea = document.getElementById('CommentsArea1');
@@ -35,7 +35,7 @@ function AddIteminList1(_contactUsText)
     //var context = new SP.ClientContext.get_current();
     var context = new SP.ClientContext("https://lacoe.sharepoint.com");
     var web = context.get_web();
-    var list = web.get_lists().getByTitle('Feedback');
+    var list = web.get_lists().getByTitle('Glossary Suggestions');
     var listItemCreationInfo = new SP.ListItemCreationInformation();
     var newItem = list.addItem(listItemCreationInfo);
     newItem.set_item('Title', _contactUsText);
@@ -58,7 +58,7 @@ function overriteCustomAction1()
 {    
     //alert('In overriteCustomAction1');
     //Get Existing Callout    
-    var launchPoint = document.getElementById('ContactusLink1');    
+    var launchPoint = document.getElementById('btnSuggest');    
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     //alert('In overriteCustomAction1 callout:=' + callout);
     if (callout != null)
@@ -84,7 +84,7 @@ function overriteCustomAction1()
 }
 function ResetCustomAction1() {
     //Get Existing Callout
-    var launchPoint = document.getElementById('ContactusLink1');
+    var launchPoint = document.getElementById('btnSuggest');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     if (callout != null) {
         var custAct = callout.getActionMenu();
@@ -108,7 +108,7 @@ function ResetCustomAction1() {
 }
 function CallOutonCloseEvent1()
 {
-    var launchPoint = document.getElementById('ContactusLink1');
+    var launchPoint = document.getElementById('btnSuggest');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     if (callout != null)
     {        
@@ -126,7 +126,7 @@ function CallOutonCloseEvent1()
 </head>
 
 <body>
-<a href="javascript:void(0);" id="btnSuggest"> Feedback </a>
+<a href="javascript:void(0);" id="btnSuggest"> Suggest Glossary Item </a>
 </body>
 </html>
 
