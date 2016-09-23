@@ -19,36 +19,36 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
     customAction.onClickCallback = function(event, action)
     {
         //alert('123');
-		var _contactUsTextarea = document.getElementById('CommentsArea3');
+		var _contactUsTextarea2 = document.getElementById('CommentsArea3');
         //Adding the new Contact Us Item in the List.
-        AddIteminList12(_contactUsTextarea.value);
-        _contactUsTextarea.style.visibility='hidden';
+        AddIteminList12(_contactUsTextarea2.value);
+        _contactUsTextarea2.style.visibility='hidden';
     };
     var _newCustomAction = new CalloutAction(customAction);
     listCallout.addAction(_newCustomAction);    
     //listCallout.set({ openOptions: { event: "hover" } });    
 });
-function AddIteminList12(_contactUsText)
+function AddIteminList12(_contactUsText12)
 {
-     alert('In AddIteminList12:=' + _contactUsText);
-    //var context = new SP.ClientContext.get_current();
-    var context = new SP.ClientContext("https://lacoe.sharepoint.com");
-    var web = context.get_web();
+     alert('In AddIteminList12:=' + _contactUsText12);
+    //var ctx = new SP.ClientContext.get_current();
+    var ctx = new SP.ClientContext("https://lacoe.sharepoint.com");
+    var web = ctx.get_web();
     var list = web.get_lists().getByTitle('Feedback');
     var listItemCreationInfo = new SP.ListItemCreationInformation();
     var newItem = list.addItem(listItemCreationInfo);
-    newItem.set_item('Title', _contactUsText);
+    newItem.set_item('Title', _contactUsText12);
     newItem.update();
-    context.executeQueryAsync(Function.createDelegate(this, this.success1), Function.createDelegate(this, this.failed));
+    ctx.executeQueryAsync(Function.createDelegate(this, this.success123), Function.createDelegate(this, this.failed123));
 }
-function success1() { 
+function success123() { 
     var _confirmationBLOCK1 = document.getElementById('confirmationBLOCK3');
-    alert('In success1:-' + _confirmationBLOCK1);
+    alert('In success123:-' + _confirmationBLOCK1);
     _confirmationBLOCK1.style.visibility = 'visible';
     overriteCustomAction1();
     
 }
-function failed(sender, args) { alert('failed to add a List Item:' + args.get_message()); }
+function failed123(sender, args) { alert('failed123 to add a List Item:' + args.get_message()); }
 function overriteCustomAction1()
 {    
     //alert('In overriteCustomAction1');
@@ -86,10 +86,10 @@ function ResetCustomAction1() {
             text: "Submit",
             tooltip: "Save Item in Feedback List",            
             onClickCallback: function () {
-                var _contactUsTextarea = document.getElementById('CommentsArea3');
+                var _contactUsTextarea2 = document.getElementById('CommentsArea3');
                 //Adding the new Contact Us Item in the List.
-                AddIteminList12(_contactUsTextarea.value);
-                _contactUsTextarea.style.visibility = 'hidden';
+                AddIteminList12(_contactUsTextarea2.value);
+                _contactUsTextarea2.style.visibility = 'hidden';
             }
         });
         //Reset to Default.                
