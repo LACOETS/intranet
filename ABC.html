@@ -6,13 +6,12 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
     var listCallout = CalloutManager.createNew({ 
         launchPoint: _link,
         beakOrientation: "leftRight", 
-        ID: "CallOutID2", 
+        ID: "CallOutID1", 
         title: "Feedback", 
         content: "<div class=\"ms-soften\" style=\"margin-top:2px; \"><hr/></div>"
-+ "<div id='confirmationBLOCK2' style=\"margin-top:13px;visibility:hidden;\">Thank you for Contacting Us!</div>"
++ "<div id='confirmationBLOCK3' style=\"margin-top:13px;visibility:hidden;\">Thank you for Contacting Us!</div>"
 + "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><textarea maxlength='255' id='CommentsArea2' style=\"width:100%;height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\">Add your Comments here...</textarea></div>", 
     });
-
     //Creating a Submit Custom Action
     var customAction = new CalloutActionOptions();
     customAction.text = 'Submit';
@@ -28,7 +27,6 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
     listCallout.addAction(_newCustomAction);    
     //listCallout.set({ openOptions: { event: "hover" } });    
 });
-
 function AddIteminList1(_contactUsText)
 {
      alert('In AddIteminList1:=' + _contactUsText);
@@ -42,18 +40,14 @@ function AddIteminList1(_contactUsText)
     newItem.update();
     context.executeQueryAsync(Function.createDelegate(this, this.success1), Function.createDelegate(this, this.failed));
 }
-
 function success1() { 
-
-    var _confirmationBLOCK1 = document.getElementById('confirmationBLOCK2');
+    var _confirmationBLOCK1 = document.getElementById('confirmationBLOCK3');
     alert('In success1:-' + _confirmationBLOCK1);
     _confirmationBLOCK1.style.visibility = 'visible';
     overriteCustomAction1();
     
 }
-
 function failed(sender, args) { alert('failed to add a List Item:' + args.get_message()); }
-
 function overriteCustomAction1()
 {    
     //alert('In overriteCustomAction1');
@@ -72,10 +66,8 @@ function overriteCustomAction1()
                 ResetCustomAction1();
             }
         });
-
         //Handling [X] event
         callout.addEventCallback("closing", function () { CallOutonCloseEvent1(); });
-
         //overwrite the callout action to the callout control.
         //Here only one calloutAction i.e. Submit. So I am using [0] here        
         custAct.getActions()[0] = calloutAction;
@@ -88,14 +80,12 @@ function ResetCustomAction1() {
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     if (callout != null) {
         var custAct = callout.getActionMenu();
-
         //New Call Out Action
         var calloutAction = new CalloutAction({
             text: "Submit",
             tooltip: "Save Item in Feedback List",            
             onClickCallback: function () {
                 var _contactUsTextarea = document.getElementById('CommentsArea2');
-
                 //Adding the new Contact Us Item in the List.
                 AddIteminList1(_contactUsTextarea.value);
                 _contactUsTextarea.style.visibility = 'hidden';
@@ -120,7 +110,6 @@ function CallOutonCloseEvent1()
         }       
     }
 }
-
 </script>
 </head>
 
@@ -128,5 +117,3 @@ function CallOutonCloseEvent1()
 <a href="javascript:void(0);" id="btnSuggest"> Feedback </a>
 </body>
 </html>
-
-
