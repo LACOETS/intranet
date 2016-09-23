@@ -24,7 +24,7 @@
         	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
 			    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
 			      var context = SP.ClientContext.get_current();			      	  
-				  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Glossary')/items?$select=Title,Long_x0020_Name,Description"; 
+				  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Glossary')/items?$select=Id,Title,Long_x0020_Name,Description"; 
 			      $.ajax({
 			        url: queryUrl,
 			        method: "GET",
@@ -40,7 +40,6 @@
         
         function onQuerySuccess(data) {
 		    var results = data.d.results;
-
 		    /*var node = document.createElement("strong");
             var textnode = document.createTextNode("Short Name \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 Long Name");
             node.appendChild(textnode);
@@ -48,15 +47,17 @@
 		    
 		    $.each(results, function(index, dataRec) {
 				var userEntry = {};	
-		
+		        userEntry.ID = dataRec.Id;
+				alert(userEntry.ID);
 				userEntry.Title = dataRec.Title;
 				//alert(userEntry.Title);
 				userEntry.LongName = dataRec.Long_x0020_Name;
 				//userEntry.Description=dataRec.Description;
 				   
-	               
+	            var itemURL = "https://lacoe.sharepoint.com/Lists/Glossary/DispForm.aspx?ID="+userEntry.ID;
+   
 				//$('#ulSearch').append('<li style="height:25px; width:860px">'+'<span">'+'<ul style="width:220px; float:left;">'+'<a href="" target="_blank">'  + userEntry.Title +'</a>'+'</ul>'+'<ul style="width:635px; float:left;">'+userEntry.LongName+'</ul>'+'</span>' + '</li>');
-				$("#ulSearch").append('<li><div class="leftshortnameGA">'+'<a href="#" ONCLICK="GoToLink(this);return false;" target="_blank">'  + userEntry.Title +'</a>'+'</div>'+'<div class="rightlongnamGA">'+userEntry.LongName+'</div><div class="clear"></div></li>');
+				$("#ulSearch").append('<li><div class="leftshortnameGA">'+'<a href="'+itemURL+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + userEntry.Title +'</a>'+'</div>'+'<div class="rightlongnamGA">'+userEntry.LongName+'</div><div class="clear"></div></li>');
 		    });//End of each
 		    
 		    //$('#ulSearch').listnav();
@@ -130,7 +131,6 @@
                 var listItemEnumerator = collListItem.getEnumerator();  
                $("#ulSearch").empty();
                $("#ulSearch2").empty();
-
                    var count = 0;
                    var count = collListItem.get_count(); 
                    if(count>0)  
@@ -169,15 +169,13 @@
                    else
                    {
                     $('#ulSearch-nav').remove();
-                    alert("Items are not available wiht this word");
+                    //alert("Items are not available wiht this word");
+					$("label[for='lblNoWord']").html("Items are not available wiht this word");					
                   
-
                    }
                  document.getElementById('itemCreateion').style.visibility = 'visible';
-
                 
             }
-
             function onQueryFailed(sender, args) {               
                 alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace());
             }
@@ -195,7 +193,6 @@ function openInDialog(dlgWidth, dlgHeight, dlgAllowMaximize,dlgShowClose,needCal
 	}
     SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.showModalDialog', options);
 }
-
 function CloseDialogCallback(dialogResult, returnValue)
 {
 	//if user click on OK or Save
@@ -234,6 +231,9 @@ function CloseDialogCallback(dialogResult, returnValue)
 								<input type="button" value="" onclick="GetBranchByProtocol()">
 						</div>
 						<div class="clear"></div>
+				</div>
+				<div class="msgNoWord">
+					<label for="lblNoWord" style="color: red"></label>
 				</div>
 		</div>
 		<div id="displayDiv" class="aspsd-diplayDiv">
