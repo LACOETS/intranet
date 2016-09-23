@@ -81,18 +81,18 @@ function overriteCustomAction123()
             tooltip: "Close Dialog Box",            
             onClickCallback: function() {                
                 callout.close();
-                ResetCustomAction1();
+                ResetCustomAction123();
             }
         });
         //Handling [X] event
-        callout.addEventCallback("closing", function () { CallOutonCloseEvent1(); });
+        callout.addEventCallback("closing", function () { CallOutonCloseEvent123(); });
         //overwrite the callout action to the callout control.
         //Here only one calloutAction i.e. Submit. So I am using [0] here        
         custAct.getActions()[0] = calloutAction;
         callout.refreshActions();
     }    
 }
-function ResetCustomAction1() {
+function ResetCustomAction123() {
     //Get Existing Callout
     var launchPoint = document.getElementById('btnSuggest');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
@@ -114,7 +114,7 @@ function ResetCustomAction1() {
         callout.refreshActions();
     }
 }
-function CallOutonCloseEvent1()
+function CallOutonCloseEvent123()
 {
     var launchPoint = document.getElementById('btnSuggest');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
@@ -124,12 +124,14 @@ function CallOutonCloseEvent1()
         var actText = custAct.getActions()[0].getText();
         if (actText == "Close window")
         {
-            ResetCustomAction1();
+            ResetCustomAction123();
         }       
     }
 }
 </script>
 </head>
 
-
+<body>
+<a href="javascript:void(0);" id="btnSuggest"> Suggest an Item </a>
+</body>
 </html>
