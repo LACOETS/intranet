@@ -2,24 +2,24 @@
 <head>
 <script type="text/javascript">
 SP.SOD.executeFunc("callout.js", "Callout", function () {    
-    var _link = document.getElementById("btnSuggest");
+    var _link = document.getElementById("ContactusLink1");
     var listCallout = CalloutManager.createNew({ 
         launchPoint: _link,
         beakOrientation: "leftRight", 
         ID: "CallOutID1", 
         title: "Feedback", 
         content: "<div class=\"ms-soften\" style=\"margin-top:2px; \"><hr/></div>"
-+ "<div id='confirmationBLOCK1' style=\"margin-top:13px;visibility:hidden;\">Thank you for for your feedback!</div>"
++ "<div id='confirmationBLOCK1' style=\"margin-top:13px;visibility:hidden;\">Thank you for Contacting Us!</div>"
 + "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><textarea maxlength='255' id='CommentsArea1' style=\"width:100%;height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\">Add your Comments here...</textarea></div>", 
     });
 
     //Creating a Submit Custom Action
     var customAction = new CalloutActionOptions();
     customAction.text = 'Submit';
-    customAction.tooltip = 'Save Item in Feedback List';
+    customAction.tooltip = 'Save Item in Issue List';
     customAction.onClickCallback = function(event, action)
     {
-        var _contactUsTextarea = document.getElementById('CommentsArea2');
+        var _contactUsTextarea = document.getElementById('CommentsArea1');
         //Adding the new Contact Us Item in the List.
         AddIteminList1(_contactUsTextarea.value);
         _contactUsTextarea.style.visibility='hidden';
@@ -31,7 +31,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 
 function AddIteminList1(_contactUsText)
 {
-     alert('In AddIteminList1:=' + _contactUsText);
+   // alert('In AddIteminList1:=' + _contactUsText);
     //var context = new SP.ClientContext.get_current();
     var context = new SP.ClientContext("https://lacoe.sharepoint.com");
     var web = context.get_web();
@@ -46,7 +46,7 @@ function AddIteminList1(_contactUsText)
 function success1() { 
 
     var _confirmationBLOCK1 = document.getElementById('confirmationBLOCK1');
-    alert('In success1:-' + _confirmationBLOCK1);
+    //alert('In success1:-' + _confirmationBLOCK1);
     _confirmationBLOCK1.style.visibility = 'visible';
     overriteCustomAction1();
     
@@ -58,7 +58,7 @@ function overriteCustomAction1()
 {    
     //alert('In overriteCustomAction1');
     //Get Existing Callout    
-    var launchPoint = document.getElementById('btnSuggest');    
+    var launchPoint = document.getElementById('ContactusLink1');    
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     //alert('In overriteCustomAction1 callout:=' + callout);
     if (callout != null)
@@ -84,7 +84,7 @@ function overriteCustomAction1()
 }
 function ResetCustomAction1() {
     //Get Existing Callout
-    var launchPoint = document.getElementById('btnSuggest');
+    var launchPoint = document.getElementById('ContactusLink1');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     if (callout != null) {
         var custAct = callout.getActionMenu();
@@ -94,7 +94,7 @@ function ResetCustomAction1() {
             text: "Submit",
             tooltip: "Save Item in Feedback List",            
             onClickCallback: function () {
-                var _contactUsTextarea = document.getElementById('CommentsArea2');
+                var _contactUsTextarea = document.getElementById('CommentsArea1');
 
                 //Adding the new Contact Us Item in the List.
                 AddIteminList1(_contactUsTextarea.value);
@@ -108,7 +108,7 @@ function ResetCustomAction1() {
 }
 function CallOutonCloseEvent1()
 {
-    var launchPoint = document.getElementById('btnSuggest');
+    var launchPoint = document.getElementById('ContactusLink1');
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
     if (callout != null)
     {        
@@ -121,12 +121,11 @@ function CallOutonCloseEvent1()
     }
 }
 
-
 </script>
 </head>
 
 <body>
-<a href="javascript:void(0);" id="btnSuggest"> Feedback </a>
+<a href="javascript:void(0);" id="ContactusLink1"> Feedback </a>
 </body>
 </html>
 
