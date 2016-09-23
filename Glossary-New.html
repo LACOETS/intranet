@@ -8,6 +8,7 @@
         //Code on page load 
             //onclick="openInDialog(500,500,true,true,true,_spPageContextInfo.webAbsoluteUrl + '/Lists/Glossary/NewForm.aspx?RootFolder=&IsDlg=1');
             $( window ).load(function() {
+             	$("label[for='lblNoWord']").hide();
              	GetAllItems();
 							/*setTimeout(function(){ $('#ulSearch').wrap('<div id="glosarypagination" class="pagination-page"></div>');
 							$('<div class="page_navigation"></div>').insertAfter('#ulSearch');
@@ -170,6 +171,7 @@
                    {
                     $('#ulSearch-nav').remove();
                     //alert("Items are not available wiht this word");
+					$("label[for='lblNoWord']").show();
 					$("label[for='lblNoWord']").html("Items are not available with this word");					
                   
                    }
