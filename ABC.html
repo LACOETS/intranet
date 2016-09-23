@@ -30,7 +30,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 });
 function AddIteminList12(_contactUsText12)
 {
-     alert('In AddIteminList12:=' + _contactUsText12);
+    //alert('In AddIteminList12:=' + _contactUsText12);
     //var ctx = new SP.ClientContext.get_current();
     var ctx = new SP.ClientContext("https://lacoe.sharepoint.com");
     var web = ctx.get_web();
@@ -42,20 +42,20 @@ function AddIteminList12(_contactUsText12)
     ctx.executeQueryAsync(Function.createDelegate(this, this.success123), Function.createDelegate(this, this.failed123));
 }
 function success123() { 
-    var _confirmationBLOCK1 = document.getElementById('confirmationBLOCK3');
-    alert('In success123:-' + _confirmationBLOCK1);
-    _confirmationBLOCK1.style.visibility = 'visible';
-    overriteCustomAction1();
+    var _confirmationBLOCK123 = document.getElementById('confirmationBLOCK3');
+    alert('In success123:-' + _confirmationBLOCK123);
+    _confirmationBLOCK123.style.visibility = 'visible';
+    overriteCustomAction123();
     
 }
 function failed123(sender, args) { alert('failed123 to add a List Item:' + args.get_message()); }
-function overriteCustomAction1()
+function overriteCustomAction123()
 {    
-    //alert('In overriteCustomAction1');
+    alert('In overriteCustomAction123');
     //Get Existing Callout    
     var launchPoint = document.getElementById('btnSuggest');    
     var callout = CalloutManager.getFromLaunchPoint(launchPoint);
-    //alert('In overriteCustomAction1 callout:=' + callout);
+    //alert('In overriteCustomAction123 callout:=' + callout);
     if (callout != null)
     {        
         var custAct = callout.getActionMenu();
