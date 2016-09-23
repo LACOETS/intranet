@@ -45,6 +45,7 @@ function AddIteminList12(_contactUsText12)
     //var ctx = new SP.ClientContext.get_current();
     if(!$.trim($("#CommentsArea3").val())){
     	alert('Please enter a suggestion, textbox cannot be blank !!');
+    	_contactUsTextarea2.style.visibility='visible';
     }
     else{    
 	    var ctx = new SP.ClientContext("https://lacoe.sharepoint.com");
