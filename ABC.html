@@ -9,8 +9,8 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
         ID: "CallOutID2", 
         title: "Suggest Glossary Item", 
         content: "<div class=\"ms-soften\" style=\"margin-top:2px; \"><hr/></div>"
-+ "<div id='confirmationBLOCK1' style=\"margin-top:13px;visibility:hidden;\">Thank you for Contacting Us!</div>"
-+ "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><textarea maxlength='255' id='CommentsArea1' style=\"width:100%;height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\">Add your Comments here...</textarea></div>", 
++ "<div id='confirmationBLOCK2' style=\"margin-top:13px;visibility:hidden;\">Thank you for Contacting Us!</div>"
++ "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><textarea maxlength='255' id='CommentsArea2' style=\"width:100%;height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\">Add your Comments here...</textarea></div>", 
     });
 
     //Creating a Submit Custom Action
@@ -19,7 +19,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
     customAction.tooltip = 'Save Item in Suggestion List';
     customAction.onClickCallback = function(event, action)
     {
-        var _contactUsTextarea = document.getElementById('CommentsArea1');
+        var _contactUsTextarea = document.getElementById('CommentsArea2');
         //Adding the new Contact Us Item in the List.
         AddIteminList1(_contactUsTextarea.value);
         _contactUsTextarea.style.visibility='hidden';
@@ -45,7 +45,7 @@ function AddIteminList1(_contactUsText)
 
 function success1() { 
 
-    var _confirmationBLOCK1 = document.getElementById('confirmationBLOCK1');
+    var _confirmationBLOCK1 = document.getElementById('confirmationBLOCK2');
     //alert('In success1:-' + _confirmationBLOCK1);
     _confirmationBLOCK1.style.visibility = 'visible';
     overriteCustomAction1();
@@ -94,7 +94,7 @@ function ResetCustomAction1() {
             text: "Submit",
             tooltip: "Save Item in Feedback List",            
             onClickCallback: function () {
-                var _contactUsTextarea = document.getElementById('CommentsArea1');
+                var _contactUsTextarea = document.getElementById('CommentsArea2');
 
                 //Adding the new Contact Us Item in the List.
                 AddIteminList1(_contactUsTextarea.value);
