@@ -9,8 +9,8 @@
 <script type="text/javascript">    
         //Code on page load 
             $( window ).load(function() {
-             	$("label[for='lblNoWord']").hide();
-		$("label[for='lblNoWord1']").hide();
+             	//$("label[for='lblNoWord']").hide();
+		//$("label[for='lblNoWord1']").hide();
 		    GetAllItems();
 				GetAllItems2();
 							/*setTimeout(function(){ $('#ulSearch').wrap('<div id="glosarypagination" class="pagination-page"></div>');
@@ -149,7 +149,7 @@
 		
 		
        function GetBranchByProtocol() { 
-         alert('In GetBranchByProtocol');
+        // alert('In GetBranchByProtocol');
          //$("label[for='lblNoWord']").hide();
 	 //$("label[for='lblNoWord1']").hide();
 	       $("#ulSearch").empty();          
@@ -196,7 +196,7 @@
                 var results = data.d.results;
             var count = data.d.results.length;
             if (count > 0) {
-		    alert('In onQuerySucceeded:=' + count);
+		    //alert('In onQuerySucceeded:=' + count);
 		    //$("label[for='lblNoWord']").hide();
 		    //$("label[for='lblNoWord1']").hide();
                 $.each(results, function (index, dataRec) {
@@ -252,7 +252,7 @@
 			
 			function GetBranchByProtocol2(){
             //$("label[for='lblNoWord']").show();
-				$("label[for='lblNoWord1']").hide();
+				//$("label[for='lblNoWord1']").hide();
 				$("#ulSearch3").empty(); 
             var textVal = $("#searchText").val();
             if (textVal != '') {
@@ -295,7 +295,7 @@
             var results = data.d.results;
             var count = data.d.results.length;
             if (count > 0) {
-		    $("label[for='lblNoWord1']").hide();
+		    //$("label[for='lblNoWord1']").hide();
 		    //$("label[for='lblNoWord']").hide();
                 $.each(results, function (index, dataRec) {
                     var userEntry = {};
@@ -401,7 +401,7 @@ function CloseDialogCallback(dialogResult, returnValue)
 			<h3>School Districts</h3>
 		</div>
 	        <div class="msgNoWord">
-			<label for="lblNoWord" style="color: red;font-size: 13px"></label>
+			<label for="lblNoWord" style="color: red;font-size: 13px;display:none;"></label>
 		</div>
 		<div id="displayDiv" class="aspsd-diplayDiv">
 				<div class="searchdivGA">
@@ -419,7 +419,7 @@ function CloseDialogCallback(dialogResult, returnValue)
 
 </div>
 	<div class="msgNoWord">
-		<label for="lblNoWord1" style="color: red;font-size: 13px"></label>
+		<label for="lblNoWord1" style="color: red;font-size: 13px;display:none;"></label>
 	</div>
 		<div id="displayDiv2" class="aspsd-diplayDiv">
 				<div class="searchdivGA">
