@@ -151,7 +151,7 @@
        function GetBranchByProtocol() { 
          alert('In GetBranchByProtocol');
          $("label[for='lblNoWord']").hide();
-	       $("label[for='lblNoWord1']").hide();
+	 $("label[for='lblNoWord1']").hide();
 	       $("#ulSearch").empty();          
             var textVal = $("#searchText").val();
             if (textVal != '') {
@@ -196,6 +196,8 @@
                 var results = data.d.results;
             var count = data.d.results.length;
             if (count > 0) {
+		    $("label[for='lblNoWord']").hide();
+		    //$("label[for='lblNoWord1']").hide();
                 $.each(results, function (index, dataRec) {
                     var userEntry = {};
                     userEntry.ID = dataRec.Id;
@@ -292,6 +294,8 @@
             var results = data.d.results;
             var count = data.d.results.length;
             if (count > 0) {
+		    $("label[for='lblNoWord1']").hide();
+		    $("label[for='lblNoWord']").hide();
                 $.each(results, function (index, dataRec) {
                     var userEntry = {};
                     userEntry.ID = dataRec.Id;
