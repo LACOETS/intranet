@@ -4103,8 +4103,8 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 /*.at-mainbox .tabResult p{padding-bottom:0}*/
 .tc-cols-boxesleft .box-heading h3 i{background-position:-162px -50px}
 .tc-cols-boxesryt .box-heading h3 i{background-position:-137px -51px}
-.tc-cols-boxesleft{min-height:530px;overflow:hidden}
-.tc-cols-boxesryt{min-height:530px; overflow:hidden}
+.tc-cols-boxesleft{min-height:570px;overflow:hidden}
+.tc-cols-boxesryt{min-height:570px; overflow:hidden}
 .tc-cols-cntr{padding-bottom:25px;}
 .tc-search-cntr .search-boxcomn .ms-fullWidth{width:auto; display:inline-block;vertical-align:middle}
 .tc-search-cntr .search-boxcomn{width:auto; vertical-align:middle}
