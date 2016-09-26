@@ -25,7 +25,7 @@
 					});// End of window load
         
         function GetAllItems(){
-		$("label[for='lblNoWord']").hide();
+		//$("label[for='lblNoWord']").hide();
         	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
 			    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
 			      var context = SP.ClientContext.get_current();			      	  
@@ -44,6 +44,7 @@
         }//End of GetAllItems
         
         function onQuerySuccess(data) {
+		$("label[for='lblNoWord']").hide();
 		    var results = data.d.results;	   		    
 		    $.each(results, function(index, dataRec) {
 				var userEntry = {};	
@@ -87,7 +88,7 @@
   }
         
         function GetAllItems2(){
-		$("label[for='lblNoWord1']").hide();
+		//$("label[for='lblNoWord1']").hide();
         	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
 			    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
 			      var context = SP.ClientContext.get_current();			      	  
@@ -107,6 +108,7 @@
 		
 		
 		function onQuerySuccess2(data) {
+			$("label[for='lblNoWord1']").hide();
 		    var results = data.d.results;		    
 		    $.each(results, function(index, dataRec) {
 				var userEntry = {};	
