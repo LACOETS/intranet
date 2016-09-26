@@ -3187,7 +3187,7 @@ ul.dynamic { min-width: 200px; }
 /*.header-right { float: right; padding:0; padding-top:23px; width: 50%; text-align: right; }*/
 
 /*Announcement Start*/
-.announcement-box, .dept-calender, .goal-section, .documents-section, .discussion-section, .project-guestbox, .pictorial-discussion,.what-do-think,.faqs-boxcntr,.document-searchbx { background: #fff; position: relative; border-radius: 2px; /*box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.25);*/ border: 1px solid rgba(0, 0, 0, 0.4); border-top: none; }
+.announcement-box, .dept-calender, .goal-section, .documents-section, .discussion-section, .project-guestbox, .pictorial-discussion,.what-do-think,.faqs-boxcntr,.document-searchbx, .tc-cols-boxesleft, .tc-cols-boxesryt { background: #fff; position: relative; border-radius: 2px; /*box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.25);*/ border: 1px solid rgba(0, 0, 0, 0.4); border-top: none; }
 .announcement-box .box-heading h3 i{background-position:-1px -1px; }
 .image-sliders { float: left; position: relative; width: 56.84%; overflow: hidden }
 .image-sliders .bx-pager .bx-pager-item a { background: #1c7ec7; opacity: 0.5 }
@@ -3411,7 +3411,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .news-info-cntr { padding-left: 10px; width: 75.9%; float:left }
 .news-title-like h4 { float: left; width: 174px; font-weight: 400; color: #1c7ec7; font-size: 1em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
 .news-title-like .like-link-news { float: right; }
-.like-link-news a { background: url(../images/gray-like.png) left center no-repeat; font-size: 0.875em; color: #818181; padding: 0 0 0 23px }
+.like-link-news a { background: url(https://lacoets.github.io/intranet/gray-like.png) left center no-repeat; font-size: 0.875em; color: #818181; padding: 0 0 0 23px }
 .news-activity-dtl .news-submitedby { color: #646464; font-size: 0.875em; padding: 10px 0px 2px 0; font-weight:300 }
 .news-activity-dtl .news-showdate { font-size: 0.785em; color: #000; font-weight: 400 }
 /*.box-paginations { clear: both; padding-top: 10px }
@@ -4082,6 +4082,38 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .cal-view-icon.withsearchbx input[type="submit"], .cal-view-icon.withsearchbx input[type="button"]{padding:1px 10px; color:#fff; border:#fff solid 1px; margin-left:0 }
 .cal-view-icon.withsearchbx input[type="text"]{border-color:#fff; padding:4px 5px; margin-right:10px; color:#fff; margin-top:-1px;}
 .cal-view-icon.withsearchbx input[type="submit"]:hover, .cal-view-icon.withsearchbx input[type="button"]:hover{background-color:#00497e}
+
+/*training classes page*/
+.search-boxcomn { /*background: #fff none repeat scroll 0 0; border: 1px solid #1c7ec7;*/ display: inline-block; width: 250px; }
+.search-boxcomn input[type="text"] { float: left; padding: 6px 0 6px 10px; border: none; width: 81%; margin-left:0 }
+.search-boxcomn input[type="button"] { float: left; padding: 5px 0; margin-left: 0; min-width: 0; width: 15%; background: url(../images/gray-search-small.png) center center no-repeat }
+.tc-search-cntr { padding: 25px 0; }
+.tc-search-cntr .search-boxcomn + .search-boxcomn { margin-left: 25px; }
+.l-t-box-pagination { padding: 15px 15px 25px 15px; }
+.lt-rowbox .date-showbox { float: left }
+.lt-row-desc{float:left; margin-left:15px; width:85%; position:relative}
+.lt-row-desc h4{color:#1c7ec7; font-size:16px; font-weight:400; text-overflow: ellipsis; overflow:hidden;white-space: nowrap; width:80%;}
+.lt-row-desc h4 a{color:#1c7ec7;}
+.lt-row-desc p.traingsbrif{font-size:14px;text-overflow: ellipsis; overflow:hidden;white-space: nowrap; width:100%; padding:8px 0}
+.lt-row-desc p.traingsbrif-submit{font-size:14px;text-overflow: ellipsis; overflow:hidden;white-space: nowrap; width:100%; font-weight:300; color:#646464}
+.lt-row-desc p.traingsbrif-submit strong{font-weight:400}
+.lt-row-desc .like-link-news{position:absolute; top:0; right:0}
+.l-t-box-pagination ul li{margin-bottom:15px;}
+.at-mainbox .tabResult{padding:0}
+.at-mainbox .tabResult p{padding-bottom:0}
+.tc-cols-boxesleft .box-heading h3 i{background-position:-162px -50px}
+.tc-cols-boxesryt .box-heading h3 i{background-position:-137px -51px}
+.tc-cols-boxesleft{min-height:530px;overflow:hidden}
+.tc-cols-boxesryt{min-height:530px; overflow:hidden}
+.tc-cols-cntr{padding-bottom:25px;}
+.tc-search-cntr .search-boxcomn .ms-fullWidth{width:auto; display:inline-block;vertical-align:middle}
+.tc-search-cntr .search-boxcomn{width:auto; vertical-align:middle}
+.tc-search-cntr .search-boxcomn img.ms-srch-sbLarge-searchImg{top: -51px;left: -30px;}
+.tc-search-cntr .search-boxcomn img.ms-srch-sbLarge-searchImg:hover{top: -51px;left: -30px;}
+/*Training classes page end*/
+
+
+
 
 /*======================================= Content Area CSS End ========================================*/
 

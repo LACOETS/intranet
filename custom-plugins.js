@@ -153,7 +153,18 @@ $(window).load(function(){
 		num_page_links_to_display :false,
 		items_per_page : 10	
 	});
-	
+	$('#lt-pagination').pajinate({
+			num_page_links_to_display :false,
+			items_per_page : 5	
+	});
+	$('#at-all').pajinate({
+		num_page_links_to_display :false,
+		items_per_page : 5	
+	});
+	$('#at-rt-paging').pajinate({
+		num_page_links_to_display :false,
+		items_per_page : 5	
+	});
 });
 
 /*$(window).load(function(){
