@@ -9,8 +9,8 @@
 <script type="text/javascript">    
         //Code on page load 
             $( window ).load(function() {
-             	//$("label[for='lblNoWord']").hide();
-		//$("label[for='lblNoWord1']").hide();
+             	PressEnterkey();
+		
 		    GetAllItems();
 				GetAllItems2();
 							/*setTimeout(function(){ $('#ulSearch').wrap('<div id="glosarypagination" class="pagination-page"></div>');
@@ -24,7 +24,17 @@
          			
 					});// End of window load
         
-        function GetAllItems(){
+        function PressEnterkey()
+		{        
+		$("#searchText").keypress(function(event){
+			   if(event.keyCode == 13){
+				$("#searchbtn").click();
+					}
+				}); 
+		}
+	
+	
+	function GetAllItems(){
 		//$("label[for='lblNoWord']").hide();
         	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
 			    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
@@ -394,7 +404,7 @@ function CloseDialogCallback(dialogResult, returnValue)
 								<input type="text" id="searchText" placeholder="Search">
 						</div>
 						<div class="Searchbtngsry">
-						<input type="button" value="" onclick="GetBranchByProtocol()"/>
+						<input type="button" id="searchbtn" value="" onclick="GetBranchByProtocol()"/>
 								
 						</div>
 						<div class="clear"></div>
