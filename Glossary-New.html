@@ -8,7 +8,8 @@
         //Code on page load 
             //onclick="openInDialog(500,500,true,true,true,_spPageContextInfo.webAbsoluteUrl + '/Lists/Glossary/NewForm.aspx?RootFolder=&IsDlg=1');
             $( window ).load(function() {
-             	$("label[for='lblNoWord']").hide();
+             	PressEnterkey();
+		    $("label[for='lblNoWord']").hide();
              	GetAllItems();
 							/*setTimeout(function(){ $('#ulSearch').wrap('<div id="glosarypagination" class="pagination-page"></div>');
 							$('<div class="page_navigation"></div>').insertAfter('#ulSearch');
@@ -21,7 +22,16 @@
          			
 					});// End of window load
         
-        function GetAllItems(){
+        function PressEnterkey()
+		{        
+		$("#searchText").keypress(function(event){
+			   if(event.keyCode == 13){
+				$("#searchbtn").click();
+					}
+				}); 
+		}	
+	
+	function GetAllItems(){
         	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
 			    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
 			      var context = SP.ClientContext.get_current();			      	  
@@ -232,7 +242,7 @@ function CloseDialogCallback(dialogResult, returnValue)
 								<input type="text" id="searchText" placeholder="Search">
 						</div>
 						<div class="Searchbtngsry">
-								<input type="button" value="" onclick="GetBranchByProtocol()">
+								<input type="button" id="searchbtn" value="" onclick="GetBranchByProtocol()">
 						</div>
 						<div class="clear"></div>
 				</div>
