@@ -196,7 +196,7 @@
                 var results = data.d.results;
             var count = data.d.results.length;
             if (count > 0) {
-		    $("label[for='lblNoWord']").hide();
+		    //$("label[for='lblNoWord']").hide();
 		    //$("label[for='lblNoWord1']").hide();
                 $.each(results, function (index, dataRec) {
                     var userEntry = {};
@@ -250,7 +250,7 @@
 			
 			
 			function GetBranchByProtocol2(){
-            $("label[for='lblNoWord']").show();
+            //$("label[for='lblNoWord']").show();
 				$("label[for='lblNoWord1']").hide();
 				$("#ulSearch3").empty(); 
             var textVal = $("#searchText").val();
