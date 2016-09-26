@@ -9,7 +9,8 @@
 <script type="text/javascript">    
         //Code on page load 
             $( window ).load(function() {
-             	GetAllItems();
+             	$("label[for='lblNoWord']").hide();
+		    GetAllItems();
 				GetAllItems2();
 							/*setTimeout(function(){ $('#ulSearch').wrap('<div id="glosarypagination" class="pagination-page"></div>');
 							$('<div class="page_navigation"></div>').insertAfter('#ulSearch');
@@ -148,7 +149,8 @@
 		
        function GetBranchByProtocol() { 
          //alert();
-         $("#ulSearch").empty();          
+         $("label[for='lblNoWord']").hide();
+	       $("#ulSearch").empty();          
             var textVal = $("#searchText").val();
             if (textVal != '') {
             SP.SOD.executeFunc("sp.js", "SP.ClientContext", function () {
@@ -225,7 +227,9 @@
                    else
                    {
                     $('#ulSearch-nav').remove();
-                    alert("Items are not available with this word in School Districts");
+                    //alert("Items are not available with this word in School Districts");
+		     $("label[for='lblNoWord']").show();
+		     $("label[for='lblNoWord']").html("Items are not available with this word");   
                   
                    }
 				   GetBranchByProtocol2();
@@ -242,7 +246,8 @@
 			
 			
 			function GetBranchByProtocol2(){
-            $("#ulSearch3").empty(); 
+            $("label[for='lblNoWord']").hide();
+				$("#ulSearch3").empty(); 
             var textVal = $("#searchText").val();
             if (textVal != '') {
 			
@@ -316,7 +321,9 @@
             }
             else {
                 $('#ulSearch3-nav').remove();
-                alert("Items are not available with this word in College Districts");
+                //alert("Items are not available with this word in College Districts");
+		$("label[for='lblNoWord']").show();
+		$("label[for='lblNoWord']").html("Items are not available with this word");
             }
         document.getElementById('itemCreateion').style.visibility = 'visible';
         }//End of onQuerySuccess
@@ -379,6 +386,9 @@ function CloseDialogCallback(dialogResult, returnValue)
 								
 						</div>
 						<div class="clear"></div>
+				</div>
+			        <div class="msgNoWord">
+					<label for="lblNoWord" style="color: red;font-size: 13px"></label>
 				</div>
 		</div>		
 		<div id="itemCreateion" class="aspsd-itemCreateion"> <!--visibility:hidden-->
