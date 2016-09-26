@@ -197,7 +197,7 @@
             var count = data.d.results.length;
             if (count > 0) {
 		    //alert('In onQuerySucceeded:=' + count);
-		    //$("label[for='lblNoWord']").hide();
+		    $("label[for='lblNoWord']").hide();
 		    //$("label[for='lblNoWord1']").hide();
                 $.each(results, function (index, dataRec) {
                     var userEntry = {};
@@ -295,7 +295,7 @@
             var results = data.d.results;
             var count = data.d.results.length;
             if (count > 0) {
-		    //$("label[for='lblNoWord1']").hide();
+		    $("label[for='lblNoWord1']").hide();
 		    //$("label[for='lblNoWord']").hide();
                 $.each(results, function (index, dataRec) {
                     var userEntry = {};
