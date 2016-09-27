@@ -32,8 +32,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
 });
 
 function AddIteminList(_contactUsText)
-{
-    alert();
+{    
 	if(!$.trim($("#CommentsArea").val())){
     	$("label[for='lblNoItem1']").css("display","block");
     	$("label[for='lblNoItem1']").html("Please report an Issue");
