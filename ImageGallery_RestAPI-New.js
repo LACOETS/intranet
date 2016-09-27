@@ -259,11 +259,7 @@
 <body>
 
 <section class="training-classescntr">
-				<div class="container">
-						<div class="fullslider-images">
-								<ul class="tc-slider">	
-								</ul>
-						</div>
+				<div class="container">						
 						<div class="tc-cols-cntr">
 								<div class="tc-search-cntr">
 										<div class="search-boxcomn">
