@@ -9,6 +9,12 @@
             $( window ).load(function() {
              	$("label[for='lblNoWord']").hide();
 				GetAllItems();
+				$('#resetbtn').click(function() 
+					{			
+						$("#searchText").val('');					
+						$('ul.pagination-rowholder').empty();
+						GetAllItems();               
+					});
              	PressEnterkey();
 							/*setTimeout(function(){ $('#ulSearch').wrap('<div id="glosarypagination" class="pagination-page"></div>');
 							$('<div class="page_navigation"></div>').insertAfter('#ulSearch');
@@ -20,6 +26,7 @@
 				}); }, 500);            	
          			
 					});// End of window load
+					
 					
     //Start Trigger a button click on the Enter key in a text box//////////////////			
 	  			function PressEnterkey()
@@ -237,6 +244,7 @@ function CloseDialogCallback(dialogResult, returnValue)
 						</div>
 						<div class="clear"></div>
 				</div>
+				<input type="button" value="Reset" id="resetbtn" style="display:inline-block; vertical-align:top">
 				<div class="msgNoWord">
 					<label for="lblNoWord" style="color: red;font-size: 13px"></label>
 				</div>
