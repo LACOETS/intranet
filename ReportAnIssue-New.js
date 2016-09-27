@@ -7,7 +7,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
         title: "Report an Issue", 
         content: "<div class=\"ms-soften\" style=\"margin-top:2px; \"><hr/></div>"
 + "<div id='confirmationBLOCK' style=\"margin-top:13px;visibility:hidden;\">Thank you for Contacting Us!</div>"
-+ "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><label for='lblNoItem1' style='display:none;color:red;font-size:13px;'></label><label for='lblmsg1'>Add your Comments here...</label><textarea maxlength='255' id='CommentsArea' style=\"width:100%;height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\"></textarea></div>", 
++ "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:200px; \"><label for='lblNoItem1' style='display:none;color:red;font-size:13px;'></label><label for='lblmsg1'>Add your Comments here...</label><textarea maxlength='255' id='CommentsArea' style=\"width:100%;height: 95%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\"></textarea></div>", 
     });
 
     //Creating a Submit Custom Action
@@ -57,7 +57,7 @@ function success() {
     var _confirmationblock = document.getElementById('confirmationBLOCK');
 	$("label[for='lblmsg1']").hide();
     $("label[for='lblNoItem1']").css("display","none");
-    _confirmationblock.style.visibility = 'visible';
+        $('#confirmationBLOCK').css('display','block');
     overriteCustomAction();
     
 }
