@@ -4148,7 +4148,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 
 /*======================================= Above (768px) ipad Portrait  End ========================================*/
 
-
+/*
 .slider-pro { position: relative; margin: 0 auto; -moz-box-sizing: content-box; box-sizing: content-box; }
 .sp-slides-container { position: relative; }
 .sp-mask { position: relative; overflow: hidden; }
@@ -4299,7 +4299,7 @@ a.sp-video:after { content: '\25B6'; position: absolute; width: 45px; padding-le
 #example5 .sp-thumbnail-text { width: 120px; }
 #example5 .sp-thumbnail-title { font-size: 12px; text-transform: uppercase; }
 #example5 .sp-thumbnail-description { display: none; }
-}
+}*/
 /*****************Design Team CSS End***************/
 
 /*a[href*='/TechSvcs/Lists/DepartmentLinks/AllItems.aspx']{ display: none }
