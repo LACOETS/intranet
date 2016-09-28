@@ -75,8 +75,8 @@ $(window).load(function() {
 	$("#example5 ul.sp-slides").find("li").addClass("sp-slide");
 	$("#example5 ul.sp-thumbnails").find("li").addClass("sp-thumbnail");
 	
-	$('.home-landingslider ul.sp-slides .sp-slide img').nailthumb({width:664,height:336,method:'resize',fitDirection:'center center'});
-	$('.smallSlider ul.sp-slides .sp-slide img').nailthumb({width:450,height:336,method:'resize',fitDirection:'center center'});
+	$('.home-landingslider ul.sp-slides .sp-image').nailthumb({width:664,height:336,method:'resize',fitDirection:'center center'});
+	$('.smallSlider ul.sp-slides .sp-image').nailthumb({width:450,height:336,method:'resize',fitDirection:'center center'});
  	
 	annoucslider=$('#example5').sliderPro({
 			loop: true,
