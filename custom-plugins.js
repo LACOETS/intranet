@@ -173,7 +173,7 @@ $(function(){
 	/*hiding title landing*/
 	
 	/* announcement controls */
-	$(document).on('click','#anslider-first',function(){
+	/*$(document).on('click','#anslider-first',function(){
 		$('#example5').sliderPro( 'gotoSlide', 0 );
 	});
 	$(document).on('click','#anslider-prev',function(){
@@ -185,7 +185,7 @@ $(function(){
 	$(document).on('click','#anslider-last',function(){
 		var totalcount=$('#two .sp-thumbnail').length
 		$('#example5').sliderPro( 'gotoSlide', totalcount-1 );
-	});
+	});*/
 	
 });
 $(window).load(function(){
