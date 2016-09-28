@@ -28,7 +28,7 @@ function fixedfooter(){}function fixButtonHeights(){var e=new Array;$(".common-h
 $(function(){
 	//setTimeout(function(){ $("img.lazy").lazyload();}, 1000);
 });
-var annoucslider;
+/*var annoucslider;
 $(document).ready(function($){
 	annoucslider=$('#example5').sliderPro({
 			loop: true,
@@ -59,7 +59,7 @@ $(document).ready(function($){
 		}
 	}
 });
-});
+});*/
 
 
 
