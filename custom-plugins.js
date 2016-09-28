@@ -79,8 +79,8 @@ $(window).load(function() {
 	annoucslider=$('#example5').sliderPro({
 			loop: true,
 			
-			thumbnailWidth: 516,
-			thumbnailHeight: 48,
+			/*thumbnailWidth: 516,
+			thumbnailHeight: 48,*/
 			autoHeight: true,
 			arrows: true,
 			buttons: false,
