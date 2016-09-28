@@ -31,6 +31,7 @@ $(function(){
 
 
 var annoucslider;
+var sliderwidth;
 $(window).load(function() {
 	setTimeout(function(){ $("img.lazy").lazyload();}, 250);
 	
@@ -70,7 +71,14 @@ $(window).load(function() {
 			
 			}, 1500);
 	});*/
-	
+	if($('.smallSlider').length)
+	{
+		sliderwidth= 450;
+	}
+	else
+	{
+		sliderwidth= 664;
+	}
 	/* code for announcement slider */
 	$("#example5 ul.sp-slides").find("li").addClass("sp-slide");
 	$("#example5 ul.sp-thumbnails").find("li").addClass("sp-thumbnail");
@@ -78,9 +86,9 @@ $(window).load(function() {
 	
 	annoucslider=$('#example5').sliderPro({
 			loop: true,
-			
-			/*thumbnailWidth: 516,
-			thumbnailHeight: 48,*/
+			width:sliderwidth,
+			thumbnailWidth: 516,
+			thumbnailHeight: 48,
 			autoHeight: true,
 			arrows: true,
 			buttons: false,
