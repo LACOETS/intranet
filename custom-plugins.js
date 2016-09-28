@@ -34,8 +34,10 @@ var annoucslider;
 $(window).load(function() {
 	setTimeout(function(){ $("img.lazy").lazyload();}, 250);
 	
- 	$('.home-landingslider .image-sliders .image-slidersimgcntr img').nailthumb({width:664,height:336,method:'resize',fitDirection:'center center'});
- 	$('.smallSlider .image-sliders .image-slidersimgcntr img').nailthumb({width:450,height:336,method:'resize',fitDirection:'center center'});
+ 	//$('.home-landingslider .image-sliders .image-slidersimgcntr img').nailthumb({width:664,height:336,method:'resize',fitDirection:'center center'});
+ 	//$('.smallSlider .image-sliders .image-slidersimgcntr img').nailthumb({width:450,height:336,method:'resize',fitDirection:'center center'});
+	$('.home-landingslider ul.sp-slides .sp-image-container img').nailthumb({width:664,height:336,method:'resize',fitDirection:'center center'});
+	$('.smallSlider ul.sp-slides .sp-image-container img').nailthumb({width:450,height:336,method:'resize',fitDirection:'center center'});
  	
  	/*$('#more20pagination1').pajinate({
 			num_page_links_to_display :false,
