@@ -4155,7 +4155,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .sp-slides { position: relative; -webkit-backface-visibility: hidden; -webkit-perspective: 1000; }
 .sp-slides .image-slidersimgcntr{height:auto;}
 .sp-slides .sp-image-container{height:336px!important;}
-.sp-slides .sp-thumbnail-text, .sp-thumbnails .sp-caption{display:none;}
+.sp-slides .sp-thumbnail-text{display:none;}
 .sp-slide { position: absolute; }
 .sp-image-container { overflow: hidden; }
 .sp-image { position: relative; display: block; border: none; }
@@ -4209,7 +4209,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .sp-button { width: 10px; height: 10px; border: 2px solid #000; border-radius: 50%; margin: 4px; display: inline-block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; cursor: pointer; }
 .sp-selected-button { background-color: #000; }
 .sp-caption{display:block !important; position:absolute; width:100%; left:0; bottom:0; color:#fff; padding:10px; background:rgba(0,0,0,0.5)}
-
+.sp-thumbnails .sp-caption{display:none!important;}
 .announcement-box .box-paginations{position:absolute; right:4px; bottom:4px;}
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
