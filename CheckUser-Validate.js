@@ -14,13 +14,13 @@ function PreSaveAction() {
 		
 	}
 	else{
+		//***put your code here to add user into specific group***///
 		return true;
 	}	
 }//End of PreSaveAction
 
 function checkDuplicateEntry()
 { 	var _PeoplePicker = $("div[title='Employee Name']");
-	//debugger;
     var _PeoplePickerTopId = _PeoplePicker.attr('id') + '_HiddenInput';
 	var _peoplepickerXmlvalue=$("input[id='"+ _PeoplePickerTopId +"']");
 	var _PeoplePickerEmailID = _peoplepickerXmlvalue.attr('value');
@@ -40,7 +40,10 @@ function checkDuplicateEntry()
          },
   success: function (data) {
   if($(data.d.results).length == 0) 
-  {result = false;}
+  {
+	  result = false;
+	  return result;
+	}
    
   },
   error: function () {
