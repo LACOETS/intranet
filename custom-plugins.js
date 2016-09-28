@@ -66,7 +66,7 @@ $(function(){
 
 
 $(window).load(function() {
-	setTimeout(function(){ $("img.lazy").lazyload();}, 250);
+	//setTimeout(function(){ $("img.lazy").lazyload();}, 250);
 	
  	$('.home-landingslider .image-sliders .image-slidersimgcntr img').nailthumb({width:664,height:336,method:'resize',fitDirection:'center center'});
  	$('.smallSlider .image-sliders .image-slidersimgcntr img').nailthumb({width:450,height:336,method:'resize',fitDirection:'center center'});
