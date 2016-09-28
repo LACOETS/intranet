@@ -16,6 +16,7 @@ function PreSaveAction() {
 
 function checkDuplicateEntry()
 { 	var _PeoplePicker = $("div[title='Employee Name']");
+console.log(_PeoplePicker);
     var _PeoplePickerTopId = _PeoplePicker.attr('id');
 	alert(_PeoplePickerTopId);
 	var result = false;
