@@ -4153,6 +4153,8 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .sp-slides-container { position: relative; }
 .sp-mask { position: relative; overflow: hidden; }
 .sp-slides { position: relative; -webkit-backface-visibility: hidden; -webkit-perspective: 1000; }
+.sp-slides .image-slidersimgcntr{height:auto;}
+.sp-slides .sp-thumbnail-text{display:none;}
 .sp-slide { position: absolute; }
 .sp-image-container { overflow: hidden; }
 .sp-image { position: relative; display: block; border: none; }
