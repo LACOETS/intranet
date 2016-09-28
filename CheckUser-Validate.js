@@ -3,7 +3,8 @@ var editorNames = "", groupID, groupIDTest, userEmail, userNameOnForm;
 var returnValue="";
 function PreSaveAction() {	
 	//alert('In PreSaveAction');
-	getEditorPeoplePickerValues("Employee Name");
+	var isducplicate=checkDuplicateEntry("Employee Name")
+	//getEditorPeoplePickerValues("Employee Name");
 	//AddUserToGroup(editorNames);
 	if(returnValue){
 		return false;
@@ -12,6 +13,35 @@ function PreSaveAction() {
 		return true;
 	}	
 }//End of PreSaveAction
+
+function checkDuplicateEntry()
+{ 	var _PeoplePicker = $("div[title='Employee Name']");
+    var _PeoplePickerTopId = _PeoplePicker.attr('id');
+	alert(_PeoplePickerTopId);
+	var result = false;
+	//var value=$("select[title=MyColumn] option:selected").text();
+	var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/getbytitle('Key%20Contact')/Items?$select=KeyContacts_x0020_EmployeeNameId&$filter=KeyContacts_x0020_EmployeeNameId eq '" + _PeoplePickerTopId;
+ $.ajax
+ ({
+  url: requestUri,
+  type: "GET",
+  cache: true,
+  async: false,
+  headers:{
+  "ACCEPT": "application/json;odata=verbose"
+         },
+  success: function (data) {
+  if($(data.d.results).length == 0) 
+   result = true;
+  else
+   alert("Retry!!!"); 
+  },
+  error: function () {
+  }
+ });
+ return result;
+}
+
 
 // Get People Picker Values
 function getEditorPeoplePickerValues(fieldName) { // Field Title  
