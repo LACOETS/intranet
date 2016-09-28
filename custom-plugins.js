@@ -65,7 +65,7 @@ $(document).ready(function($){
 
 
 
-
+var annoucslider;
 $(window).load(function() {
 	setTimeout(function(){ $("img.lazy").lazyload();}, 250);
 	
@@ -105,6 +105,36 @@ $(window).load(function() {
 			
 			}, 1500);
 	});*/
+	
+	annoucslider=$('#example5').sliderPro({
+			loop: true,
+			width:664,
+			thumbnailWidth: 516,
+			thumbnailHeight: 48,
+			autoHeight: true,
+			arrows: true,
+			buttons: false,
+			thumbnailsPosition: 'right',
+			thumbnailArrows:false,
+			thumbnailPointer: true,
+			autoplay: true,
+			waitForLayers: true,
+			gotoSlide: function( event ) {
+        console.log( event.index );
+	    },
+		breakpoints: {
+			800: {
+				thumbnailsPosition: 'bottom',
+				thumbnailWidth: 270,
+				thumbnailHeight: 100
+			},
+			500: {
+				thumbnailsPosition: 'bottom',
+				thumbnailWidth: 120,
+				thumbnailHeight: 50
+			}
+		}
+	});
  });
 
 
