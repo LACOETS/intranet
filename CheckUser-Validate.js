@@ -27,7 +27,7 @@ function checkDuplicateEntry()
 	_PeoplePickerEmailID=_PeoplePickerEmailID.substring(_PeoplePickerEmailID.indexOf("Email")+8,_PeoplePickerEmailID.indexOf("MobilePhone")-3)+"'";
 	console.log(_PeoplePickerEmailID);
 	//alert(_PeoplePickerTopId);
-	var result = false;
+	var result = true;
 	var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/getbytitle('Key%20Contact')/items?$select=KeyContacts_x0020_EmployeeName/EMail,KeyContacts_x0020_EmployeeName/Name,KeyContacts_x0020_EmployeeName/FirstName&$expand=KeyContacts_x0020_EmployeeName/EMail&$filter=KeyContacts_x0020_EmployeeName/EMail eq '" + _PeoplePickerEmailID;
  $.ajax
  ({
@@ -40,7 +40,8 @@ function checkDuplicateEntry()
          },
   success: function (data) {
   if($(data.d.results).length == 0) 
-   result = true;
+  {result = false;}
+   
   },
   error: function () {
   }
