@@ -16,13 +16,17 @@ function PreSaveAction() {
 
 function checkDuplicateEntry()
 { 	var _PeoplePicker = $("div[title='Employee Name']");
-	alert(_PeoplePicker);
 	debugger;
-    var _PeoplePickerTopId = _PeoplePicker.attr('value');
-	alert(_PeoplePickerTopId);
+    var _PeoplePickerTopId = _PeoplePicker.attr('id') + '_HiddenInput';
+	var _peoplepickerXmlvalue=$("input[id='"+ _PeoplePickerTopId +"']");
+	var _PeoplePickerEmailID = _peoplepickerXmlvalue.attr('value');
+	_PeoplePickerEmailID=_PeoplePickerEmailID.substring(_PeoplePickerEmailID.indexOf("Email")+8,_PeoplePickerEmailID.indexOf("MobilePhone")-3);
+	console.log(_PeoplePickerEmailID);
+	//alert(_PeoplePickerTopId);
 	var result = false;
 	//var value=$("select[title=MyColumn] option:selected").text();
-	var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/getbytitle('Key%20Contact')/Items?$select=KeyContacts_x0020_EmployeeNameId&$filter=KeyContacts_x0020_EmployeeNameId eq '" + _PeoplePickerTopId;
+	//var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/getbytitle('Key%20Contact')/Items?$select=KeyContacts_x0020_EmployeeNameId&$filter=KeyContacts_x0020_EmployeeNameId eq '" + _PeoplePickerTopId;
+	var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/getbytitle('Key%20Contact')/items?$select=KeyContacts_x0020_EmployeeName/EMail,KeyContacts_x0020_EmployeeName/Name,KeyContacts_x0020_EmployeeName/FirstName&$expand=KeyContacts_x0020_EmployeeName/EMail&$filter=KeyContacts_x0020_EmployeeName/EMail eq '" + _PeoplePickerTopId;
  $.ajax
  ({
   url: requestUri,
