@@ -70,6 +70,8 @@ $(window).load(function() {
 			
 			}, 1500);
 	});*/
+	
+	/* code for announcement slider */
 	$("#example5 ul.sp-slides").find("li").addClass("sp-slide");
 	$("#example5 ul.sp-thumbnails").find("li").addClass("sp-thumbnail");
 	
@@ -102,6 +104,7 @@ $(window).load(function() {
 			}
 		}
 	});
+	
  });
 
 
@@ -154,6 +157,20 @@ $(function(){
       }
 	/*hiding title landing*/
 	
+	/* announcement controls */
+	$(document).on('click','#anslider-first',function(){
+		$('#example5').sliderPro( 'gotoSlide', 0 );
+	});
+	$(document).on('click','#anslider-prev',function(){
+		$('#example5').sliderPro( 'previousSlide' );
+	})
+	$(document).on('click','#anslider-next',function(){
+		$('#example5').sliderPro( 'nextSlide');
+	})
+	$(document).on('click','#anslider-last',function(){
+		var totalcount=$('#two .sp-thumbnail').length
+		$('#example5').sliderPro( 'gotoSlide', totalcount-1 );
+	});
 	
 });
 $(window).load(function(){
