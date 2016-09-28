@@ -87,7 +87,7 @@ $(window).load(function() {
 			autoplay: true,
 			waitForLayers: true,
 			gotoSlide: function( event ) {
-        console.log( event.index );
+        
 	    },
 		breakpoints: {
 			800: {
