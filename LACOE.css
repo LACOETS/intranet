@@ -4154,6 +4154,8 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .sp-mask { position: relative; overflow: hidden; }
 .sp-slides { position: relative; -webkit-backface-visibility: hidden; -webkit-perspective: 1000; }
 .sp-slides .image-slidersimgcntr{height:auto;}
+.dept-announcement .sp-slides-container{width:58.46%;}
+.dept-announcement .sp-thumbnails-container{width:41.542%;}
 .sp-slides .sp-thumbnail-text{display:none;}
 .sp-slide { position: absolute; background-color:#000; }
 .sp-image-container { overflow: hidden; }
