@@ -129,7 +129,7 @@ $().SPServices({
 }//End of AddUserUsingSPServices 
 
 function AddUserUsingREST(groupName, groupId){
-//alert('In AddUserUsingREST:=' + groupName + " " + editorNames + " " + groupId);
+alert('In AddUserUsingREST:=' + groupName + " " + editorNames + " " + groupId);
 //var groupId = "1763";
 SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
