@@ -27,7 +27,7 @@ function checkDuplicateEntry()
 	var _peoplepickerXmlvalue=$("input[id='"+ _PeoplePickerTopId +"']");
 	var _PeoplePickerEmailID = _peoplepickerXmlvalue.attr('value');
 	_PeoplePickerEmailID=_PeoplePickerEmailID.substring(_PeoplePickerEmailID.indexOf("Email")+8,_PeoplePickerEmailID.indexOf("MobilePhone")-3)+"'";
-        editorNames = _PeoplePickerEmailID.substring(_PeoplePickerEmailID.indexOf("Email")+8,_PeoplePickerEmailID.indexOf("MobilePhone")-3)";	
+        editorNames = _PeoplePickerEmailID.substring(_PeoplePickerEmailID.indexOf("Email")+8,_PeoplePickerEmailID.indexOf("MobilePhone")-3);	
         alert(editorNames);
 	//alert(_PeoplePickerTopId);
 	var result = true;
