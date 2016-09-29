@@ -30,7 +30,7 @@ function checkDuplicateEntry()
  //alert(_PeoplePickerEmailID);       
  editorNames = _PeoplePickerEmailID;
  editorNames = "i:0#.f|membership|" + editorNames.split("'")[0];
-        alert(editorNames);
+        //alert(editorNames);
 	//alert(_PeoplePickerTopId);
 	var result = true;
 	var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/getbytitle('Key%20Contact')/items?$select=KeyContacts_x0020_EmployeeName/EMail,KeyContacts_x0020_EmployeeName/Name,KeyContacts_x0020_EmployeeName/FirstName&$expand=KeyContacts_x0020_EmployeeName/EMail&$filter=KeyContacts_x0020_EmployeeName/EMail eq '" + _PeoplePickerEmailID;
