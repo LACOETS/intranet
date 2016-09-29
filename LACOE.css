@@ -4148,19 +4148,19 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 
 /*======================================= Above (768px) ipad Portrait  End ========================================*/
 
-/*
-.slider-pro { position: relative; margin: 0 auto; -moz-box-sizing: content-box; box-sizing: content-box; }
+
+.slider-pro { position: relative; /*margin: 0 auto;*/ -moz-box-sizing: content-box; box-sizing: content-box; }
 .sp-slides-container { position: relative; }
 .sp-mask { position: relative; overflow: hidden; }
 .sp-slides { position: relative; -webkit-backface-visibility: hidden; -webkit-perspective: 1000; }
 .sp-slides .image-slidersimgcntr{height:auto;}
-.dept-announcement .sp-slides-container{width:58.46%;}
-.dept-announcement .sp-thumbnails-container{width:41.542%;}
+/*.dept-announcement .sp-slides-container{width:58.46%;}
+.dept-announcement .sp-thumbnails-container{width:41.542%;}*/
 
 .sp-slides .sp-thumbnail-text{display:none;}
 .sp-slide { position: absolute; background-color:#000; }
 .sp-image-container { overflow: hidden; }
-.sp-image { position: relative; display: block; border: none; }
+.sp-image { position: relative; display: block; border: none; margin-left:0 !important }
 .sp-no-js { overflow: hidden; max-width: 100% }
 .sp-thumbnails-container { position: relative; overflow: hidden; direction: ltr; }
 .sp-bottom-thumbnails, .sp-top-thumbnails { left: 0; margin: 0 auto; }
@@ -4181,7 +4181,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .sp-left-thumbnails .sp-thumbnail-container:last-child, .sp-right-thumbnails .sp-thumbnail-container:last-child { margin-bottom: 0; }
 .sp-right-thumbnails.sp-has-pointer { margin-left: -13px; }
 .sp-right-thumbnails.sp-has-pointer .sp-thumbnail { position: absolute; left: 13px; margin-left: 0!important; width:100%; }
-.sp-right-thumbnails.sp-has-pointer .sp-selected-thumbnail{}
+.sp-thumbnail img{display:none !important}
 .sp-left-thumbnails.sp-has-pointer { margin-right: -13px; }
 .sp-left-thumbnails.sp-has-pointer .sp-thumbnail { position: absolute; right: 18px; }
 
@@ -4225,7 +4225,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 @media only screen and (min-width:320px) and (max-width:568px) {
 .sp-button { width: 18px; height: 18px; }
 }
-.sp-arrows { position: absolute; display:none;}
+.sp-arrows { position: absolute;}
 .sp-fade-arrows { opacity: 0; -webkit-transition: opacity .5s; transition: opacity .5s; }
 .sp-slides-container:hover .sp-fade-arrows { opacity: 1; }
 .sp-horizontal .sp-arrows { width: 100%; left: 0; top: 50%; margin-top: -15px; }
@@ -4292,14 +4292,14 @@ a.sp-video:after { content: '\25B6'; position: absolute; width: 45px; padding-le
 
 .sp-right-thumbnails.sp-has-pointer .sp-selected-thumbnail .sp-thumbnail-text{background:#e1e1e0;}
 .sp-thumbnail-container{text-overflow:ellipsis; white-space: nowrap;overflow: hidden; width:100%;}
-
+.sp-caption a{color:#fff}
 @media (max-width: 500px) {
 #example5 .sp-thumbnail { text-align: center; }
 #example5 .sp-thumbnail-image-container { display: none; }
 #example5 .sp-thumbnail-text { width: 120px; }
 #example5 .sp-thumbnail-title { font-size: 12px; text-transform: uppercase; }
 #example5 .sp-thumbnail-description { display: none; }
-}*/
+}
 /*****************Design Team CSS End***************/
 
 /*a[href*='/TechSvcs/Lists/DepartmentLinks/AllItems.aspx']{ display: none }
