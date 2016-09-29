@@ -15,6 +15,7 @@ function PreSaveAction() {
 	}
 	else{
 		//***put your code here to add user into specific group***///
+		alert('123');
 		CallMasterList();
 		return true;
 	}	
