@@ -150,7 +150,7 @@ function onQueryError1234(error) {
     
 //Call to Approvers List - Master List to get group name
 function CallMasterList(){
-//alert('In CallMasterList');
+alert('In CallMasterList');
 	//GetGroupNamefromList();
 	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
@@ -195,7 +195,7 @@ var results = data.d.results;
 	$.each(results, function(index, dataRec) {
 		var userEntry = {};
 		userEntry.Group = dataRec.Approvers_x0020_Group.Title;
-		//alert('Group Name:=' + userEntry.Group);
+		alert('Group Name:=' + userEntry.Group);
 		//AddUserUsingREST(userEntry.Group);
 		//AddUserUsingSPServices(userEntry.Group);
 		GetGroupID(userEntry.Group);
@@ -229,7 +229,7 @@ $().SPServices({
 }//End of AddUserUsingSPServices 
 
 function AddUserUsingREST(groupName, groupId){
-//alert('In AddUserUsingREST:=' + groupName + " " + editorNames + " " + groupId);
+alert('In AddUserUsingREST:=' + groupName + " " + groupId);
 //var groupId = "1763";
 SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
@@ -260,7 +260,7 @@ function onQueryError(error) {
   }//End of onQueryError
   
 function GetGroupID(groupName){
-//alert('In GetGroupID:=' + " " + groupName);
+alert('In GetGroupID:=' + " " + groupName);
 SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/sitegroups/getbyname('"+groupName+"')?$select=Id";   //?$select=id";
