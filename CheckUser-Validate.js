@@ -30,7 +30,7 @@ function checkDuplicateEntry()
  //alert(_PeoplePickerEmailID);       
  editorNames = _PeoplePickerEmailID;
  editorNames = "i:0#.f|membership|" + editorNames.split("'")[0];
-        alert(editorNames);
+        //alert(editorNames);
 	//alert(_PeoplePickerTopId);
 	var result = true;
 	var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/getbytitle('Key%20Contact')/items?$select=KeyContacts_x0020_EmployeeName/EMail,KeyContacts_x0020_EmployeeName/Name,KeyContacts_x0020_EmployeeName/FirstName&$expand=KeyContacts_x0020_EmployeeName/EMail&$filter=KeyContacts_x0020_EmployeeName/EMail eq '" + _PeoplePickerEmailID;
@@ -198,7 +198,7 @@ var results = data.d.results;
 	$.each(results, function(index, dataRec) {
 		var userEntry = {};
 		userEntry.Group = dataRec.Approvers_x0020_Group.Title;
-		alert('Group Name:=' + userEntry.Group);
+		//alert('Group Name:=' + userEntry.Group);
 		//AddUserUsingREST(userEntry.Group);
 		//AddUserUsingSPServices(userEntry.Group);
 		GetGroupID(userEntry.Group);
@@ -259,7 +259,7 @@ function onQuerySuccess(data) {
 		alert("New User added successfully in SharePoint Group");     
      }//End of onQuerySuccess
 function onQueryError(error) {
-   		alert("error in AddUserUsingREST: " + JSON.stringify(error));
+   		//alert("error in AddUserUsingREST: " + JSON.stringify(error));
   }//End of onQueryError
   
 function GetGroupID(groupName){
