@@ -1,16 +1,61 @@
-<script type="text/javascript">
-var editorNames = "", groupID, groupIDTest;
+﻿<script type="text/javascript">
+var editorNames = "", groupID, groupIDTest, userEmail, userNameOnForm;
 var returnValue="";
 function PreSaveAction() {	
-	getEditorPeoplePickerValues("Employee Name");
+	//alert('In PreSaveAction');
+	var isducplicate=checkDuplicateEntry("Employee Name")
+	
+	//getEditorPeoplePickerValues("Employee Name");
 	//AddUserToGroup(editorNames);
-	if(returnValue){
+	if(isducplicate){
+	//if(returnValue){
+		alert('Duplicate record');
 		return false;
+		
 	}
 	else{
+		//***code to add user into specific group***///		
+		CallMasterList();
 		return true;
 	}	
 }//End of PreSaveAction
+
+function checkDuplicateEntry()
+{ 	var _PeoplePicker = $("div[title='Employee Name']");
+    var _PeoplePickerTopId = _PeoplePicker.attr('id') + '_HiddenInput';
+	var _peoplepickerXmlvalue=$("input[id='"+ _PeoplePickerTopId +"']");
+	var _PeoplePickerEmailID = _peoplepickerXmlvalue.attr('value');
+	_PeoplePickerEmailID=_PeoplePickerEmailID.substring(_PeoplePickerEmailID.indexOf("Email")+8,_PeoplePickerEmailID.indexOf("MobilePhone")-3)+"'";
+ //alert(_PeoplePickerEmailID);       
+ editorNames = _PeoplePickerEmailID;
+ editorNames = "i:0#.f|membership|" + editorNames.split("'")[0];
+        //alert(editorNames);
+	//alert(_PeoplePickerTopId);
+	var result = true;
+	var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_api/Web/Lists/getbytitle('Key%20Contact')/items?$select=KeyContacts_x0020_EmployeeName/EMail,KeyContacts_x0020_EmployeeName/Name,KeyContacts_x0020_EmployeeName/FirstName&$expand=KeyContacts_x0020_EmployeeName/EMail&$filter=KeyContacts_x0020_EmployeeName/EMail eq '" + _PeoplePickerEmailID;
+ $.ajax
+ ({
+  url: requestUri,
+  type: "GET",
+  cache: true,
+  async: false,
+  headers:{
+  "ACCEPT": "application/json;odata=verbose"
+         },
+  success: function (data) {
+  if($(data.d.results).length == 0) 
+  {
+	  result = false;
+	  return result;
+	}
+   
+  },
+  error: function () {
+  }
+ });
+ return result;
+}
+
 
 // Get People Picker Values
 function getEditorPeoplePickerValues(fieldName) { // Field Title  
@@ -26,9 +71,9 @@ function getEditorPeoplePickerValues(fieldName) { // Field Title
         var i;
         for (i = 0; i < editorsInfo.length; ++i) {
             editorNames += editorsInfo[i].Key;  //Key EntityData.Email DisplayText 
-            //alert(editorNames);            
-            CallMasterList();
-            //GetUserLoginName(editorNames);
+            //alert(editorNames);			
+			//CallMasterList();
+            GetUserLoginName(editorNames);
         }
 }//End of getEditorPeoplePickerValues    
 
@@ -41,11 +86,68 @@ $().SPServices({
     emailXml: "<Users><User Email='"+editorNames+"'/></Users>",
         completefunc: function (xData, Status) {
         $(xData.responseXML).find("User").each(function() {                    
-                    alert($(this).attr("Login"));
+                    //alert($(this).attr("Login"));
+					var delimiter='|';
+					var start=2;
+					var tokensNew = $(this).attr("Login").split(delimiter).slice(start);
+					userEmail = tokensNew.join(delimiter);
+					//alert(userEmail);
+					userNameOnForm = userEmail.split('@')[0];
+					//alert(userNameOnForm);
+					CallKeyContactsList(userNameOnForm);
                 })
         }
 	});//End of SPServices
 }//End of GetUserLoginName
+
+function CallKeyContactsList(userNameOnForm){
+//alert('In CallKeyContactsList:=' + userEmail);
+SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
+	  //var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_EmployeeName/EMail,KeyContacts_x0020_EmployeeName/Name&$expand=KeyContacts_x0020_EmployeeName/Id&$filter=KeyContacts_x0020_EmployeeName eq '"+userNameOnForm+"'";
+	  //var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_EmployeeName/EMail&$expand=KeyContacts_x0020_EmployeeName/Id&$filter=KeyContacts_x0020_EmployeeName/EMail eq '"+userEmail+"'";
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=KeyContacts_x0020_EmployeeName/EMail,KeyContacts_x0020_EmployeeName/Name,KeyContacts_x0020_EmployeeName/FirstName&$expand=KeyContacts_x0020_EmployeeName/Id";
+
+	  //alert(queryUrl);      
+      $.ajax({
+        url: queryUrl,
+        method: "GET",          
+	    headers: {  
+	    	"Accept": "application/json; odata=verbose",	    	  
+		}, 
+        success: onQuerySuccess1234,
+        error: onQueryError1234
+      });
+    });
+  });
+
+
+}//End of CallKeyContactsList
+
+function onQuerySuccess1234(data) {
+//alert('Email from People picker field :=' + userEmail);
+var results = data.d.results;
+//alert(results.length);
+$.each(results, function(index, dataRec) {
+	var userEntry = {};
+	userEntry.Name = dataRec.KeyContacts_x0020_EmployeeName.Name;
+	alert('Employee email from List:=' + userEntry.Name);
+	/*if($.trim(userEntry.EmpEmail.toLowerCase()) == $.trim(userEmail.toLowerCase())){
+		alert('User Already in the list, please edit the existing entry !!');
+		//returnValue = true;
+	}
+	else
+	{
+		alert('User not in list');
+	}*/
+			
+});//End of each
+}//End of onQuerySuccess1234
+function onQueryError1234(error) {
+   		alert("error: in onQueryError1234" + JSON.stringify(error));
+  }//End of onQueryError1234
+
+
 
     
 //Call to Approvers List - Master List to get group name
@@ -129,7 +231,7 @@ $().SPServices({
 }//End of AddUserUsingSPServices 
 
 function AddUserUsingREST(groupName, groupId){
-alert('In AddUserUsingREST:=' + groupName + " " + editorNames + " " + groupId);
+//alert('In AddUserUsingREST:=' + groupName + " " + groupId);
 //var groupId = "1763";
 SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
