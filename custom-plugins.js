@@ -1312,7 +1312,7 @@ $(window).load(function() {
         thumbnailsPosition: 'right',
         thumbnailArrows: false,
         thumbnailPointer: true,
-        autoplay: false,
+        autoplay: true,
         waitForLayers: true,
         responsive:true,
         gotoSlide: function(event) {
