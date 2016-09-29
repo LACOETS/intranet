@@ -29,7 +29,7 @@ function checkDuplicateEntry()
 	_PeoplePickerEmailID=_PeoplePickerEmailID.substring(_PeoplePickerEmailID.indexOf("Email")+8,_PeoplePickerEmailID.indexOf("MobilePhone")-3)+"'";
  //alert(_PeoplePickerEmailID);       
  editorNames = _PeoplePickerEmailID;
- editorNames = editorNames.split("'")[0];
+ editorNames = "i:0#.f|membership|" + editorNames.split("'")[0];
         alert(editorNames);
 	//alert(_PeoplePickerTopId);
 	var result = true;
