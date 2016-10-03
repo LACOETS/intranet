@@ -58,7 +58,7 @@ function checkDuplicateEntry()
   //alert($(data.d.results).length);
   if($(data.d.results).length == 0) 
   {
-	  alert('In If');
+	  //alert('In If');
 	  result = false;
 	  return result;
 	}
