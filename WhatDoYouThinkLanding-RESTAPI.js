@@ -108,7 +108,7 @@ function getTodaysSurvey() {
   }//End of onQuerySuccess1
  */
  function onQueryError1(error) {
- 			alert('error :=' + error.statusText);
+ 			//alert('error :=' + error.statusText);
     } //End of onQueryError1
 
 function GenerateAnswer(val) {
