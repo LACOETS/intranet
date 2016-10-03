@@ -1,10 +1,7 @@
-
-/* <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>  */
 <script src="//lacoets.github.io/intranet/Chart.min.js"></script>
-
 <script>
-  
+/* <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>  */  
 // Declare the variables.
 var sitesGoalsChart = sitesGoalsChart || {};
 // Array with colors for the pie chart.
