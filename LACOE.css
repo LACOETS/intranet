@@ -4112,7 +4112,18 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .tc-search-cntr .search-boxcomn img.ms-srch-sbLarge-searchImg:hover{top: -51px;left: -30px;}
 /*Training classes page end*/
 
-
+/*Bredcrumbs start*/
+.sitebreacrumbs .ms-breadcrumb li,.sitebreacrumbs ul {
+   display: inline-block;  margin-left:2px; vertical-align:middle   
+ }
+ .sitebreacrumbs .ms-breadcrumb li a,.sitebreacrumbs .ms-breadcrumb li span{font-size:12px; text-transform:capitalize !important; height:18px;}
+ .sitebreacrumbs .ms-breadcrumb li span,.sitebreacrumbs ul span{display:inline-block; vertical-align:middle}
+ .sitebreacrumbs .ms-breadcrumb > li:first-child  > span:first-child{
+   display:none }
+  .sitebreacrumbs  ul.ms-breadcrumbRootNode, .sitebreacrumbs ul.ms-breadcrumbNode{margin-top:0}
+  .sitebreacrumbs .ms-breadcrumb li span.s4-breadcrumb-arrowcont{width:12px;}
+  .sitebreacrumbs{margin-left:-13px;}
+ /*Breadcrimbs end*/
 
 
 /*======================================= Content Area CSS End ========================================*/
@@ -4148,7 +4159,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 
 /*======================================= Above (768px) ipad Portrait  End ========================================*/
 
-
+/*Annoucemnet slider css*/
 .slider-pro { position: relative; /*margin: 0 auto;*/ -moz-box-sizing: content-box; box-sizing: content-box; }
 .sp-slides-container { position: relative; }
 .sp-mask { position: relative; overflow: hidden; }
@@ -4300,6 +4311,11 @@ a.sp-video:after { content: '\25B6'; position: absolute; width: 45px; padding-le
 #example5 .sp-thumbnail-title { font-size: 12px; text-transform: uppercase; }
 #example5 .sp-thumbnail-description { display: none; }
 }
+
+/*Annoucemnet slider css end*/
+
+
+
 /*****************Design Team CSS End***************/
 
 /*a[href*='/TechSvcs/Lists/DepartmentLinks/AllItems.aspx']{ display: none }
