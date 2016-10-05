@@ -70,7 +70,7 @@ function renderSuccess(data)
   }
   
   n = document.getElementById('htmlout');
-  n.innerHTML=str+"<h1></h1>";
+  n.innerHTML=str+"";
 }
  
 function renderFail(data, errorCode, errorMessage) 
