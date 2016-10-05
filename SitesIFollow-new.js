@@ -39,17 +39,23 @@ function renderSuccess(data)
   n.innerHTML=data.body;
   var results = jsonObject.d.Followed.results;
   var str = '';
+  var swapstr = '';
   var old = -1;
   var img = null;
+  var SectionCount=0;
+  var totalcount=0;
 
   for (j=0;j<4;j++)
   {
-    str += "<div class=\"accordion following-accordion following-block"+j+"\"><dl>";
+	SectionCount=0;
+	swapstr='';
+    //str += "<div class=\"accordion following-accordion following-block"+j+"\"><dl>";
     for (i=0;i<results.length;i++)
     {
       if (j!=results[i].ActorType) continue;
-      if ( old != results[i].ActorType ) str += "<dt>"+ headline[results[i].ActorType]+"</dt><dd><ul>";
-      
+      //if ( old != results[i].ActorType ) str += "<dt>"+ headline[results[i].ActorType]+"</dt><dd><ul>";
+      SectionCount=SectionCount+1;
+	  totalcount=totalcount+1;
       img = results[i].ImageUri;
 			if (img==null) img=ActorImg[results[i].ActorType];
 
@@ -57,20 +63,33 @@ function renderSuccess(data)
 			{
 					case 0:
 					  // Use case: depending on ActorType if you want to use indiviual markup for every item-type
-					  str += "<li><a title=\""+results[i].Name+"\" class=\"link"+results[i].ActorType+"\" style=\"background-image:url("+img+")\" href=\""+results[i].Uri+"\">"+results[i].Name+"</a></li>";
+					  swapstr += "<li><a title=\""+results[i].Name+"\" class=\"link"+results[i].ActorType+"\" style=\"background-image:url("+img+")\" href=\""+results[i].Uri+"\">"+results[i].Name+"</a></li>";
 					  break;
 					default:			
-					  str += "<li><a title=\""+results[i].Name+"\" class=\"link"+results[i].ActorType+"\" style=\"background-image:url("+img+")\" href=\""+results[i].Uri+"\">"+results[i].Name+"</a></li>";
+					  swapstr += "<li><a title=\""+results[i].Name+"\" class=\"link"+results[i].ActorType+"\" style=\"background-image:url("+img+")\" href=\""+results[i].Uri+"\">"+results[i].Name+"</a></li>";
 					  break;					
 			}
 
       old = results[i].ActorType;
     }
-    str +="</ul></dd></dl></div>";
+	if(SectionCount>0)
+	{
+		str+="<div class=\"accordion following-accordion following-block"+j+"\"><dl><dt>"+ headline[j]+" ("+SectionCount+")</dt><dd><ul>" + swapstr;
+		str +="</ul></dd></dl></div>";
+	}
+    
   }
   
   n = document.getElementById('htmlout');
-  n.innerHTML=str+"";
+  if(totalcount>0)
+  {
+	n.innerHTML=str+"";  
+  }
+  else
+  {
+	  n.innerHTML="You are not following any People/Document/Site/#Tag";
+  }
+  
 }
  
 function renderFail(data, errorCode, errorMessage) 
