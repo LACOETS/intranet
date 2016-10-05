@@ -70,7 +70,7 @@ function renderSuccess(data)
   }
   
   n = document.getElementById('htmlout');
-  n.innerHTML=str+"<h1></h1>";
+  //n.innerHTML=str+"<h1></h1>";
 }
  
 function renderFail(data, errorCode, errorMessage) 
@@ -83,7 +83,7 @@ function renderFail(data, errorCode, errorMessage)
 
 <div class="classic">
 <pre id="jsonout" style="display:none;"></pre>
-<div id="htmlout"></div>
+<div id="htmlout" class="sitesfollow-box"></div>
 </div>
 
 <script type="text/javascript">
