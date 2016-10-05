@@ -48,7 +48,7 @@ function renderSuccess(data)
     for (i=0;i<results.length;i++)
     {
       if (j!=results[i].ActorType) continue;
-      if ( old != results[i].ActorType ) str += "<dt><h1 class=\"headline"+results[i].ActorType+"\">"+headline[results[i].ActorType]+"</h1></dt><dd><ul>";
+      if ( old != results[i].ActorType ) str += "<dt>"+ headline[results[i].ActorType]+"</dt><dd><ul>";
       
       img = results[i].ImageUri;
 			if (img==null) img=ActorImg[results[i].ActorType];
