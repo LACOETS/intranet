@@ -4124,6 +4124,27 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
   .sitebreacrumbs .ms-breadcrumb li span.s4-breadcrumb-arrowcont{width:12px;}
   .sitebreacrumbs{margin-left:-13px;}
  /*Breadcrimbs end*/
+ 
+ /*My Desk*/
+ .my-desk-activity .discussion-section.grid-12{margin-bottom:22px;}
+ .my-desk-activity .documents-section.grid-12{margin-bottom:0}
+ .sitefollw-section{min-height:560px;}
+ .sitesfollow-box{padding-top:10px;}
+ .sitefollw-section .box-contentinfos{overflow-y:scroll; height:527px;}
+ .sitefollw-section .box-contentinfos .following-accordion ul li{margin-top:10px !important}
+ .sitefollw-section .box-contentinfos{padding-left:0; padding-right:0}
+ .sitefollw-section .box-contentinfos .following-accordion.accordion dl{border-bottom:1px solid #e4e4e4;padding-left:11px; padding-right:11px; margin-top:8px; margin-bottom:9px; padding-bottom:10px;}
+ .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block3 dl dd a{text-indent:0}
+ /*My desk*/
+ 
+ /*Trending tags*/
+ .trendingtag-box{min-height:269px;}
+  .trendingtag-box .ms-WPBody > div:first-child{display:none}
+  .small-report-card .box-style.lcoe-report-card{min-height:0}
+  .small-report-card  .box-style.lcoe-report-card .box-contentinfos {height: 236px;text-align: center;}
+  .sitefeed-box .box-style {min-height: 269px;}
+  .sitefeed-box {margin-bottom: 22px;}
+ /*Trending tags*/
 
 
 /*======================================= Content Area CSS End ========================================*/
