@@ -69,8 +69,8 @@ function renderSuccess(data)
     str +="</ul></dd></dl></div>";
   }
   
-  //n = document.getElementById('htmlout');
-  //n.innerHTML=str+"<h1></h1>";
+  n = document.getElementById('htmlout');
+  n.innerHTML=str+"<h1></h1>";
 }
  
 function renderFail(data, errorCode, errorMessage) 
