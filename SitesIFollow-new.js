@@ -15,6 +15,7 @@
 <script type="text/javascript">
 var headline = new Array("People","Documents","Sites","HashTags");
 var ActorImg = new Array("/_layouts/15/images/person.gif","/_layouts/15/images/lg_ICGEN.gif","/_layouts/15/images/siteicon_16x16.png");
+var ActorSiteUrl = new Array("//lacoe-my.sharepoint.com/MyPeople.aspx","//lacoe-my.sharepoint.com/_layouts/15/MySite.aspx?MySiteRedirect=FollowedDocuments","//lacoe-my.sharepoint.com/_layouts/15/MySite.aspx?MySiteRedirect=AllSites","//lacoe-my.sharepoint.com/_layouts/15/followedtags.aspx");
 
 function doJSON(RESTuri, success, fail) 
 {
@@ -40,15 +41,18 @@ function renderSuccess(data)
   var results = jsonObject.d.Followed.results;
   var str = '';
   var swapstr = '';
+  var followstr='';
   var old = -1;
   var img = null;
   var SectionCount=0;
   var totalcount=0;
+  var type=0;
 
   for (j=0;j<4;j++)
   {
 	SectionCount=0;
 	swapstr='';
+	followstr='';
     //str += "<div class=\"accordion following-accordion following-block"+j+"\"><dl>";
     for (i=0;i<results.length;i++)
     {
@@ -72,23 +76,14 @@ function renderSuccess(data)
 
       old = results[i].ActorType;
     }
-	if(SectionCount>0)
-	{
-		str+="<div class=\"accordion following-accordion following-block"+j+"\"><dl><dt>"+ headline[j]+" ("+SectionCount+")</dt><dd><ul>" + swapstr;
-		str +="</ul></dd></dl></div>";
-	}
-    
+	
+		followstr= "<li><a title=\""+headline[j]+"\" class=\"link"+type+"\" href=\""+ActorSiteUrl[j]+"\"><img src='/_layouts/15/images/NowFollowing.11x11x32.png' alt='Follow'/> Follow "+headline[j]+"</a></li>" + swapstr;
+		str+="<div class=\"accordion following-accordion following-block"+j+"\"><dl><dt>"+ headline[j]+" ("+SectionCount+")</dt><dd><ul>" + followstr +"</ul></dd></dl></div>";
+	
   }
   
   n = document.getElementById('htmlout');
-  if(totalcount>0)
-  {
-	n.innerHTML=str+"";  
-  }
-  else
-  {
-	  n.innerHTML="You are not following any People/Document/Site/#Tag";
-  }
+  n.innerHTML=str+"";  
   
 }
  
