@@ -4135,7 +4135,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
  .sitefollw-section .box-contentinfos .following-accordion ul li{margin-top:10px !important}
  .sitefollw-section .box-contentinfos{padding-left:0; padding-right:0}
  .sitefollw-section .box-contentinfos .following-accordion.accordion dl{border-bottom:1px solid #e4e4e4;padding-left:11px; padding-right:11px; margin-top:8px; margin-bottom:9px; padding-bottom:10px;}
- .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block3 dl dd a{text-indent:0}
+ .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion dl dd a{text-indent:0; background:none !important}
  .sitefollw-section .box-heading h3 i{background-position:-112px -50px}
  .mysites-box .box-heading h3 i{background-position:-87px -50px}
  .trendingtag-box .box-heading h3 i{background-position:-202px -23px}
