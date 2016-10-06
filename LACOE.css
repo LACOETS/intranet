@@ -3997,7 +3997,7 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 
 .keycontact-cntr .keycontact-viewlink{width:100%;}
 .select-filtercaldr .input-type-select{width:250px}
-.select-filtercaldr .input-type-select select{width:100%;}
+.select-filtercaldr .input-type-select select{width:100%; height:22px;}
 
 .innergoalspage #department-box .pagination-page table td table td.ms-cellstyle:nth-child(1) img{
 opacity:0;
@@ -4114,15 +4114,16 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 
 /*Bredcrumbs start*/
 .sitebreacrumbs .ms-breadcrumb li,.sitebreacrumbs ul {
-   display: inline-block;  margin-left:2px; vertical-align:middle   
+   display: inline-block;  margin-left:2px;    
  }
- .sitebreacrumbs .ms-breadcrumb li a,.sitebreacrumbs .ms-breadcrumb li span{font-size:12px; text-transform:capitalize !important; height:18px;}
- .sitebreacrumbs .ms-breadcrumb li span,.sitebreacrumbs ul span{display:inline-block; vertical-align:middle}
+ .sitebreacrumbs .ms-breadcrumb li a,.sitebreacrumbs .ms-breadcrumb li span{font-size:12px; text-transform:capitalize !important;}
+ .sitebreacrumbs .ms-breadcrumb li span,.sitebreacrumbs ul span{display:inline-block;}
  .sitebreacrumbs .ms-breadcrumb > li:first-child  > span:first-child{
    display:none }
   .sitebreacrumbs  ul.ms-breadcrumbRootNode, .sitebreacrumbs ul.ms-breadcrumbNode{margin-top:0}
   .sitebreacrumbs .ms-breadcrumb li span.s4-breadcrumb-arrowcont{width:12px;}
   .sitebreacrumbs{margin-left:-13px;}
+  .sitebreacrumbs ul li span.s4-clust.s4-breadcrumb{vertical-align:middle}
  /*Breadcrimbs end*/
  
  /*My Desk*/
@@ -4135,6 +4136,15 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
  .sitefollw-section .box-contentinfos{padding-left:0; padding-right:0}
  .sitefollw-section .box-contentinfos .following-accordion.accordion dl{border-bottom:1px solid #e4e4e4;padding-left:11px; padding-right:11px; margin-top:8px; margin-bottom:9px; padding-bottom:10px;}
  .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block3 dl dd a{text-indent:0}
+ .sitefollw-section .box-heading h3 i{background-position:-112px -50px}
+ .mysites-box .box-heading h3 i{background-position:-87px -50px}
+ .trendingtag-box .box-heading h3 i{background-position:-88px -75px}
+ .trendingtag-box .box-contentinfos{padding:0}
+ .trendingtag-box div[id$="_results"] > div{padding:7px 13px;border-bottom:1px solid #e4e4e4;}
+ .trendingtag-box div[id$="_results"] .ms-noWrap{max-width:100% !important}
+ .trendingtag-box div[id$="_results"] .ms-noWrap{padding-bottom:2px !important}
+ .trendingtag-box div[id$="_results"] .ms-noWrap.ms-metadata{padding-bottom:0 !important}
+ .trendingtag-box div[id$="_results"]{overflow:hidden; overflow-y:scroll; height:236px;}
  /*My desk*/
  
  /*Trending tags*/
