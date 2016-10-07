@@ -4145,6 +4145,20 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
  .trendingtag-box div[id$="_results"] .ms-noWrap{padding-bottom:2px !important}
  .trendingtag-box div[id$="_results"] .ms-noWrap.ms-metadata{padding-bottom:0 !important}
  .trendingtag-box div[id$="_results"]{overflow:hidden; overflow-y:scroll; height:236px;}
+ .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion dl dd li .link0 img{display:none}
+ .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion dl dd ul{margin-left:38px;}
+ .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion dl dd li:first-child .link0{font-weight:700; color:#1c7ec7; font-size:14px; text-indent:0}
+ .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion dl dd li:first-child{margin-top:0 !important}
+ .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block0 dl dd li:first-child{background:url("https://lacoets.github.io/intranet/im-peopleicon.png") no-repeat scroll 0 center;
+line-height: 27px;padding-left: 25px;text-align: left;text-indent:0;vertical-align: middle; line-height:28px;}
+.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block1 dl dd li:first-child{background:url("https://lacoets.github.io/intranet/im-documenticon.png") no-repeat scroll 0 center;
+padding-left: 20px;text-align: left;text-indent: 0;vertical-align: middle; line-height:27px;}
+.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block2 dl dd li:first-child{background:url("https://lacoets.github.io/intranet/im-siteicon.png") no-repeat scroll 0 center;
+padding-left: 22px;text-align: left;text-indent: 0;vertical-align: middle;}
+.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block3 dl dd li:first-child{background:url("https://lacoets.github.io/intranet/im-hashicon.png") no-repeat scroll 0 center;
+padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
+
+ 
  /*My desk*/
  
  /*Trending tags*/
