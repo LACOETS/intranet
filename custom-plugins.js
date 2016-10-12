@@ -98,15 +98,15 @@ $(window).load(function(){
 	});
 	$('#application-pagination').pajinate({
 		num_page_links_to_display :false,
-		items_per_page : 5	
+		items_per_page : 4	
 	});
 	$('#form-pagination').pajinate({
 		num_page_links_to_display :false,
-		items_per_page : 5	
+		items_per_page : 4	
 	});
 	$('#policies-pagination').pajinate({
 		num_page_links_to_display :false,
-		items_per_page : 5	
+		items_per_page : 4	
 	});
 	$('#aniversary-pagination').pajinate({
 		num_page_links_to_display :false,

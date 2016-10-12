@@ -3187,7 +3187,7 @@ ul.dynamic { min-width: 200px; }
 /*.header-right { float: right; padding:0; padding-top:23px; width: 50%; text-align: right; }*/
 
 /*Announcement Start*/
-.announcement-box, .dept-calender, .goal-section, .documents-section, .discussion-section, .project-guestbox, .pictorial-discussion,.what-do-think,.faqs-boxcntr,.document-searchbx, .tc-cols-boxesleft, .tc-cols-boxesryt { background: #fff; position: relative; border-radius: 2px; /*box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.25);*/ border: 1px solid rgba(0, 0, 0, 0.4); border-top: none; }
+.announcement-box, .dept-calender, .goal-section, .documents-section, .discussion-section, .project-guestbox, .pictorial-discussion,.what-do-think,.faqs-boxcntr,.document-searchbx, .tc-cols-boxesleft, .tc-cols-boxesryt,.myactivty-box { background: #fff; position: relative; border-radius: 2px; /*box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.25);*/ border: 1px solid rgba(0, 0, 0, 0.4); border-top: none; }
 .announcement-box .box-heading h3 i{background-position:-1px -1px; }
 .image-sliders { float: left; position: relative; width: 56.84%; overflow: hidden }
 .image-sliders .bx-pager .bx-pager-item a { background: #1c7ec7; opacity: 0.5 }
@@ -3388,7 +3388,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .box-style.dept-quicklinks, .announcement-box.dept-announcement { min-height: 369px; }
 .resource-link-section.box-style, .dept-calender, .pictorial-discussion { min-height: 269px; }
 .blog-section.box-style, .goal-section, .top-contributor, .whats-happening, .feeds-section { min-height: 269px; }
-.box-style.lcoe-report-card { min-height: 560px; }
+.box-style.lcoe-report-card { min-height: 528px; }
 .document-searchbx{min-height:327px;}
 .document-searchbx.standardformsrch{min-height:577px;}
 .documents-section.grid-12, .discussion-section.grid-12 { min-height: 269px; background: #fff; }
@@ -3841,7 +3841,7 @@ span.sep-spotlight{display:inline-block;vertical-align:; padding:0 5px; color:#6
 .quicklink-paginations {padding-top:13px;}
 .quicklink-paginations dl dd{margin-bottom:12px;}
 .quicklink-paginations .page_navigation {bottom: 7px;right: 7px;}
-.quicklinks-section.landing-quicklink .box-contentinfos{min-height:527px;position: relative;}
+.quicklinks-section.landing-quicklink .box-contentinfos{min-height:336px;position: relative;}
 .news-section .box-contentinfos{min-height:527px;}
 .upcoming-event-box.cal-view-icon .OrgEvent{float:none}
 .upcoming-event-box.cal-view-icon .box-paginations {bottom: -7px;right: -18px;}
@@ -4136,9 +4136,9 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
  .sitefollw-section .box-contentinfos{padding-left:0; padding-right:0}
  .sitefollw-section .box-contentinfos .following-accordion.accordion dl{border-bottom:1px solid #e4e4e4;padding-left:11px; padding-right:11px; margin-top:8px; margin-bottom:9px; padding-bottom:10px;}
  .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block1 dl dd a,.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block2 dl dd a,.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block3 dl dd a{text-indent:0; background:none !important}
- .sitefollw-section .box-heading h3 i{background-position:-112px -50px}
+ .sitefollw-section .box-heading h3 i{background-position:-202px -23px}
  .mysites-box .box-heading h3 i{background-position:-87px -50px}
- .trendingtag-box .box-heading h3 i{background-position:-202px -23px}
+ .trendingtag-box .box-heading h3 i{background-position:-112px -50px}
  .trendingtag-box .box-contentinfos{padding:0}
  .trendingtag-box div[id$="_results"] > div{padding:7px 13px;border-bottom:1px solid #e4e4e4;}
  .trendingtag-box div[id$="_results"] .ms-noWrap{max-width:100% !important}
@@ -4157,18 +4157,44 @@ padding-left: 20px;text-align: left;text-indent: 0;vertical-align: middle; line-
 padding-left: 22px;text-align: left;text-indent: 0;vertical-align: middle;}
 .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block3 dl dd li:first-child{background:url("https://lacoets.github.io/intranet/im-hashicon.png") no-repeat scroll 0 center;
 padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
-
+.myactivty-box{min-height:269px;}
+.myactivty-box .box-heading h3 i{background-position:-102px -1px;}
  
  /*My desk*/
  
  /*Trending tags*/
  .trendingtag-box{min-height:269px;}
   .trendingtag-box .ms-WPBody > div:first-child{display:none}
+  .trendingtag-box.sitefollw-section .ms-WPBody > div:first-child{display:block}
   .small-report-card .box-style.lcoe-report-card{min-height:0}
   .small-report-card  .box-style.lcoe-report-card .box-contentinfos {height: 236px;text-align: center;}
   .sitefeed-box .box-style {min-height: 269px;}
   .sitefeed-box {margin-bottom: 22px;}
  /*Trending tags*/
+.announcement-sliders.sm-landingslider{overflow:hidden}
+.announcement-sliders .calenader-loading{background-image:none}
+.landingtrend-box  .box-heading h3 i{background-position: -202px -23px;}
+.landingtrend-box div[id$="_results"] { height: 495px;}
+
+.trendingtag-box.sitefollw-section .box-contentinfos{height:236px}
+
+/*My desk news feed*/
+.newsfeeds-desk .ms-microfeed-fullMicrofeedDiv{min-width:100%}
+.newsfeeds-desk .ms-microfeed-microblogpart,.newsfeeds-desk .ms-microfeed-feedPart,.newsfeeds-desk .ms-microfeed-thread,.newsfeeds-desk .ms-microfeed-rootText{min-width:100%; max-width:100%;}
+.newsfeeds-desk .box-contentinfos{padding-left:13px; padding-right:13px;}
+.newsfeeds-desk .ms-microfeed-shareWith{padding:10px 0}
+.newsfeeds-desk .ms-microfeed-shareWith .ms-textLarge{font-size:1em}
+.newsfeeds-desk .ms-microfeed-postBox{height:23px !important;}
+.newsfeeds-desk .ms-microfeed-titleArea .ms-pivotControl-container{margin-right:0}
+.newsfeeds-desk .ms-microfeed-titleArea .ms-textXLarge{font-size:1.2em}
+.newsfeeds-desk .ms-pivotControl-surfacedOpt,.newsfeeds-desk .ms-pivotControl-surfacedOpt-selected{margin-right:15px;}
+.newsfeeds-desk .ms-webpart-zone,.newsfeeds-desk .ms-webpart-cell-vertical,.newsfeeds-desk .ms-webpart-chrome-vertical{display:block;}
+.newsfeeds-desk .ms-microfeed-threadsDiv{height:280px !important}
+.newsfeeds-desk #ms-showMoreThreadsButtonContainer #ms-showMoreThreadsButton #ms-MoreThreadsButtonLabel{background:#1c7ec7; color:#fff !important; margin:15px 0;}
+.newsfeeds-desk .ms-core-menu-box ul li{margin:0 !important}
+.newsfeeds-desk .ms-microfeed-titlePivotControl .ms-core-menu-box{left:210px!important;}
+.newsfeeds-desk .ms-microfeed-rootText{font-size:14px;}
+/*My desk news feed*/
 
 
 /*======================================= Content Area CSS End ========================================*/
