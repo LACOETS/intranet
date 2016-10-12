@@ -13,7 +13,8 @@ function getTodaysSurvey() {
     //alert('In getTodaysSurvey');    
     //checkUserResponse();
     var date = new Date();
-    var todaysDate = date.getFullYear() + '-' + (date.getMonth() < 10 ? '0' : '') + getmonth(date) + '-' + (date.getDate() < 10 ? '0' : '') + date.getDate();
+    //var todaysDate = date.getFullYear() + '-' + (date.getMonth() < 10 ? '0' : '') + getmonth(date) + '-' + (date.getDate() < 10 ? '0' : '') + date.getDate();
+    var todaysDate = date.getFullYear() + '-' + getmonth(date) + '-' + (date.getDate() < 10 ? '0' : '') + date.getDate();
     //alert('todaysDate:-' + todaysDate);
     SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
