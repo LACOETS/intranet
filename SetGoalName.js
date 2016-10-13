@@ -9,7 +9,7 @@ $(document).ready(function(){
 		//goalID = document.referrer;
 		//goalID = goalID.split('SelectedID=')[1];
 		if(windowURL.indexOf('SelectedID') > -1){
-			alert('In If');
+			//alert('In If');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			goalID = goalID.split('&')[0];
 			goalID = goalID.split('=')[1];
