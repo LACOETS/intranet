@@ -11,7 +11,7 @@ $(document).ready(function(){
 		goalID = goalID.split('=')[1];
 		//goalID = decodeURIComponent(windowURL.split('?')[1].split('=')[1]);
 		//goalID = goalID.split('?')[1].split('=')[1].split('&')[0];		
-		alert(goalID);
+		//alert(goalID);
 	}//End of If
 	else if(windowURL.indexOf('EditForm.aspx') > -1)
 	{
@@ -52,16 +52,16 @@ var results = data.d.results;
 				name:dataRec.OrgGoals_x0020_GoalName		
 		});//End of push    
  });//End of each
- alert(userEntry.length);
+ //alert(userEntry.length);
 	for(var j=0;j<userEntry.length;j++){
-	alert('In For');
-	 alert(userEntry[j].id + " " + userEntry[j].name);
+	//alert('In For');
+	 //alert(userEntry[j].id + " " + userEntry[j].name);
 	 $('select[title="Goal Name Required Field"]').append($('<option>', { value: userEntry[j].id,text : userEntry[j].name}));	
   	}//End of for
   	//$('select[title="Goal Name Required Field"]').prop("disabled", true);
 }//End of onQuerySuccess
 
 function onQueryError(error) {
-    alert(error.statusText);
+    //alert(error.statusText);
   }//End of onQueryError
 </script>
