@@ -4189,11 +4189,12 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .newsfeeds-desk .ms-microfeed-titleArea .ms-textXLarge{font-size:1.2em}
 .newsfeeds-desk .ms-pivotControl-surfacedOpt,.newsfeeds-desk .ms-pivotControl-surfacedOpt-selected{margin-right:15px;}
 .newsfeeds-desk .ms-webpart-zone,.newsfeeds-desk .ms-webpart-cell-vertical,.newsfeeds-desk .ms-webpart-chrome-vertical{display:block;}
-.newsfeeds-desk .ms-microfeed-threadsDiv{height:280px !important}
+.newsfeeds-desk .ms-microfeed-threadsDiv{height:auto !important}
 .newsfeeds-desk #ms-showMoreThreadsButtonContainer #ms-showMoreThreadsButton #ms-MoreThreadsButtonLabel{background:#1c7ec7; color:#fff !important; margin:15px 0;}
 .newsfeeds-desk .ms-core-menu-box ul li{margin:0 !important}
 .newsfeeds-desk .ms-microfeed-titlePivotControl .ms-core-menu-box{left:210px!important;}
 .newsfeeds-desk .ms-microfeed-rootText{font-size:14px;}
+.newsfeeds-desk .ms-microfeed-replyArea{min-width:81%; max-width:100%;}
 /*My desk news feed*/
 
 
