@@ -10,16 +10,19 @@ $(document).ready(function(){
 		//goalID = goalID.split('SelectedID=')[1];
 		if(windowURL.indexOf('SelectedID') > -1){
 			//alert('In If');
-			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
-			goalID = goalID.split('&')[0];
-			goalID = goalID.split('=')[1];
+			
+			goalID = getParameterByName('SelectedID');
+			
+			//goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
+			//goalID = goalID.split('&')[0];
+			//goalID = goalID.split('=')[1];
 			GetGoalName(goalID);
 		}
 		else if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx") {
 			//alert('In else If');
 			GetFirstItemID();
 		}		
-		//alert(goalID);
+	alert(goalID);
 	}//End of If for New form
 	else if(windowURL.indexOf('EditForm.aspx') > -1)
 	{
@@ -29,6 +32,13 @@ $(document).ready(function(){
 	}//End of Else If for Edit form
 	//GetGoalName(goalID);
 });//End of Doc ready
+
+function getParameterByName(name) {
+ name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+ var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+ results = regex.exec(location.search);
+ return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
 function GetFirstItemID(){
 	//alert('In GetFirstItemID');
