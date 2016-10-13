@@ -19,7 +19,8 @@ $(document).ready(function(){
 });//End of Doc ready
 
 function GetGoalName(goalID){
-SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+alert('In GetGoalName:=' + goalID);
+	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id,OrgGoals_x0020_GoalName,Title&$filter=Id eq '" + goalID + "'"; 
       //alert(queryUrl);
@@ -37,6 +38,7 @@ SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
 }//End of GetGoalName
 
 function onQuerySuccess(data) {
+alert('In onQuerySuccess');
 $('select[title="Goal Name Required Field"]').empty();
 var userEntry = [];
 var results = data.d.results;	
