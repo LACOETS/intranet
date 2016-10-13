@@ -10,19 +10,16 @@ $(document).ready(function(){
 		//goalID = goalID.split('SelectedID=')[1];
 		if(windowURL.indexOf('SelectedID') > -1){
 			//alert('In If');
-			
-			goalID = getParameterByName('SelectedID');
-			
-			//goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
-			//goalID = goalID.split('&')[0];
-			//goalID = goalID.split('=')[1];
+			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
+			goalID = goalID.split('&')[0];
+			goalID = goalID.split('=')[1];
 			GetGoalName(goalID);
 		}
 		else if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx") {
 			//alert('In else If');
 			GetFirstItemID();
 		}		
-	alert(goalID);
+	  //alert(goalID);
 	}//End of If for New form
 	else if(windowURL.indexOf('EditForm.aspx') > -1)
 	{
