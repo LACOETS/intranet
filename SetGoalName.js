@@ -8,10 +8,14 @@ $(document).ready(function(){
 	if(windowURL.indexOf('NewForm.aspx') > -1){
 		//goalID = document.referrer;
 		//goalID = goalID.split('SelectedID=')[1];
-		goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
-		goalID = goalID.split('&')[0];
-		goalID = goalID.split('=')[1];
-		
+		if(windowURL.indexOf('SelectedID') > -1){
+			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
+			goalID = goalID.split('&')[0];
+			goalID = goalID.split('=')[1];		
+		}
+		else {
+			goalID = GetFirstItemID();
+		}
 		
 		//goalID = decodeURIComponent(windowURL.split('?')[1].split('=')[1]);
 		//goalID = goalID.split('?')[1].split('=')[1].split('&')[0];		
@@ -25,6 +29,38 @@ $(document).ready(function(){
 	}
 	GetGoalName(goalID);
 });//End of Doc ready
+
+function GetFirstItemID(){
+SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id&$top 1"; 
+      //alert(queryUrl);
+	  $.ajax({
+        url: queryUrl,
+        method: "GET",
+        headers: {
+          "Accept": "application/json; odata=verbose"
+        },
+        success: onQuerySuccess23,
+        error: onQueryError23
+      });
+    });
+  });
+
+}//End of GetFirstItemID
+
+function onQuerySuccess23(data) {
+//alert('In onQuerySuccess23');
+var results = data.d.results;	
+    $.each(results, function(index, dataRec) {    
+        
+ });//End of each
+ 
+}//End of onQuerySuccess23
+
+function onQueryError23(error) {
+    //alert(error.statusText);
+  }//End of onQueryError23
 
 function GetGoalName(goalID){
 //alert('In GetGoalName:=' + goalID);
