@@ -7,7 +7,7 @@ $(document).ready(function(){
 	if(window.location.href.indexOf('NewForm.aspx') > -1){
 		goalID = decodeURIComponent(window.location.href.split('?')[1].split('=')[1]);
 		goalID = goalID.split('?')[1].split('=')[1].split('&')[0];
-		alert('In If goalID:=' + goalID);
+		//alert('In If goalID:=' + goalID);
 	}//End of If
 	else if(window.location.href.indexOf('EditForm.aspx') > -1)
 	{
@@ -19,11 +19,11 @@ $(document).ready(function(){
 });//End of Doc ready
 
 function GetGoalName(goalID){
-alert('In GetGoalName:=' + goalID);
+//alert('In GetGoalName:=' + goalID);
 	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id,OrgGoals_x0020_GoalName,Title&$filter=Id eq '" + goalID + "'"; 
-      //alert(queryUrl);
+      alert(queryUrl);
 	  $.ajax({
         url: queryUrl,
         method: "GET",
@@ -38,7 +38,7 @@ alert('In GetGoalName:=' + goalID);
 }//End of GetGoalName
 
 function onQuerySuccess(data) {
-alert('In onQuerySuccess');
+//alert('In onQuerySuccess');
 $('select[title="Goal Name Required Field"]').empty();
 var userEntry = [];
 var results = data.d.results;	
@@ -48,7 +48,8 @@ var results = data.d.results;
 				name:dataRec.OrgGoals_x0020_GoalName		
 		});//End of push    
  });//End of each
- for(var j=0;j<userEntry.length;j++){
+ alert(userEntry.length);
+	for(var j=0;j<userEntry.length;j++){
 	alert('In For');
 	 alert(userEntry[j].id + " " + userEntry[j].name);
 	 $('select[title="Goal Name Required Field"]').append($('<option>', { value: userEntry[j].id,text : userEntry[j].name}));	
