@@ -9,11 +9,13 @@ $(document).ready(function(){
 		//goalID = document.referrer;
 		//goalID = goalID.split('SelectedID=')[1];
 		if(windowURL.indexOf('SelectedID') > -1){
+			alert('In If');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			goalID = goalID.split('&')[0];
 			goalID = goalID.split('=')[1];		
 		}
 		else {
+			alert('In else');
 			goalID = GetFirstItemID();
 		}
 		
@@ -41,25 +43,21 @@ SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
         headers: {
           "Accept": "application/json; odata=verbose"
         },
-        success: onQuerySuccess23,
+        success: function (data) {
+		  var results = data.d.results;	
+			$.each(results, function(index, dataRec) {    
+			var userEntry = {};
+			userEntry.Id = dataRec.Id;
+			goalID = userEntry.Id;
+		 });//End of each
+	 ,
         error: onQueryError23
       });
     });
   });
-
+return goalID;
 }//End of GetFirstItemID
-
-function onQuerySuccess23(data) {
-//alert('In onQuerySuccess23');
-var results = data.d.results;	
-    $.each(results, function(index, dataRec) {    
-        var userEntry = {};
-	userEntry.Id = dataRec.Id;
-	    goalID = userEntry.Id;
- });//End of each
- return goalID;
-}//End of onQuerySuccess23
-
+		   
 function onQueryError23(error) {
     //alert(error.statusText);
   }//End of onQueryError23
