@@ -48,7 +48,9 @@ SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
 			$.each(results, function(index, dataRec) {    
 				var userEntry = {};
 				userEntry.Id = dataRec.Id;
-				goalID = userEntry.Id;});,
+				goalID = userEntry.Id;
+			});
+	},
         error: onQueryError23
       });
     });
