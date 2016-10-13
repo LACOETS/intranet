@@ -17,8 +17,10 @@ $(document).ready(function(){
 		}
 		else if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') > -1){
 			alert('In first Else if');
-			goalID = decodeURIComponent(windowURL.split('SelectedID=')[1]);
+			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			alert(goalID);
+			goalID = goalID.split('=')[1];
+		        alert(goalID);
 			goalID = goalID.split('#')[0];
 		        alert(goalID);
 			GetGoalName(goalID);
