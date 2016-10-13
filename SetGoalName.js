@@ -33,10 +33,10 @@ $(document).ready(function(){
 });//End of Doc ready
 
 function GetFirstItemID(){
-	alert('In GetFirstItemID');
+	//alert('In GetFirstItemID');
 SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
-	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id"; 
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id&$top=1&$orderby=Id desc"; 
       //alert(queryUrl);
 	  $.ajax({
         url: queryUrl,
@@ -46,16 +46,14 @@ SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
         },
         success: function (data) {
 		        var results = data.d.results;	
-			var i=0;
-			if(i==0){
+			var i=0;			
 			$.each(results, function(index, dataRec) {    
 				var userEntry = {};
 				userEntry.Id = dataRec.Id;
-				goalID = userEntry.Id;
-				i=1;
+				goalID = userEntry.Id;				
 				alert(goalID);			
 			   });//End of each
-			}
+			
 	},
         error: onQueryError23
       });
