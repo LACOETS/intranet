@@ -15,21 +15,18 @@ $(document).ready(function(){
 			goalID = goalID.split('=')[1];
 			GetGoalName(goalID);
 		}
-		else {
-			//alert('In else');
+		else if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx") {
+			//alert('In else If');
 			GetFirstItemID();
-		}
-		
-		//goalID = decodeURIComponent(windowURL.split('?')[1].split('=')[1]);
-		//goalID = goalID.split('?')[1].split('=')[1].split('&')[0];		
+		}		
 		//alert(goalID);
-	}//End of If
+	}//End of If for New form
 	else if(windowURL.indexOf('EditForm.aspx') > -1)
 	{
 		goalID = decodeURIComponent(window.location.href.split('?')[1]);
 		goalID = goalID.split('?')[1].split('=')[1];
 		//alert('In Else goalID:=' + goalID);
-	}
+	}//End of Else If for Edit form
 	//GetGoalName(goalID);
 });//End of Doc ready
 
