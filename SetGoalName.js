@@ -49,7 +49,9 @@ var results = data.d.results;
 		});//End of push    
  });//End of each
  for(var j=0;j<userEntry.length;j++){
-			$('select[title="Goal Name Required Field"]').append($('<option>', { value: userEntry[j].id,text : userEntry[j].name}));	
+	alert('In For');
+	 alert(userEntry[j].id + " " + userEntry[j].name);
+	 $('select[title="Goal Name Required Field"]').append($('<option>', { value: userEntry[j].id,text : userEntry[j].name}));	
   	}//End of for
   	//$('select[title="Goal Name Required Field"]').prop("disabled", true);
 }//End of onQuerySuccess
