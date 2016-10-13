@@ -1,7 +1,7 @@
 <style type="text/css">
 
-.classic #htmlout a {background-repeat:no-repeat;background-position:0% 50%;height:16px;vertical-align:center;background-size:16px 16px;
-                     display:block;text-indent:20px;line-height:16px;padding:2px 2px 2px 2px}
+.classic #htmlout a {background-repeat:no-repeat;background-position:0% 50%;vertical-align:center;background-size:16px 16px;
+                     display:block;text-indent:20px;padding:2px 2px 2px 2px}
 .classic #htmlout .link0 {background-repeat:no-repeat;background-position:0% 50%;height:32px;vertical-align:center;background-size:32px 32px;
                      display:block;text-indent:40px;line-height:32px}
 .classic #htmlout h1 {margin-top:12px;clear:both}
