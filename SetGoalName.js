@@ -7,7 +7,7 @@ $(document).ready(function(){
 	if(window.location.href.indexOf('NewForm.aspx') > -1){
 		goalID = decodeURIComponent(window.location.href.split('?')[1].split('=')[1]);
 		goalID = goalID.split('?')[1].split('=')[1].split('&')[0];
-		alert('In If goalID:=' + goalID);
+		//alert('In If goalID:=' + goalID);
 	}//End of If
 	else if(window.location.href.indexOf('EditForm.aspx') > -1)
 	{
