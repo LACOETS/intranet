@@ -15,13 +15,13 @@ $(document).ready(function(){
 			goalID = goalID.split('=')[1];		
 		}
 		else {
-			alert('In else');
+			//alert('In else');
 			goalID = GetFirstItemID();
 		}
 		
 		//goalID = decodeURIComponent(windowURL.split('?')[1].split('=')[1]);
 		//goalID = goalID.split('?')[1].split('=')[1].split('&')[0];		
-		alert(goalID);
+		//alert(goalID);
 	}//End of If
 	else if(windowURL.indexOf('EditForm.aspx') > -1)
 	{
@@ -33,11 +33,11 @@ $(document).ready(function(){
 });//End of Doc ready
 
 function GetFirstItemID(){
-	alert('In GetFirstItemID');
+	//alert('In GetFirstItemID');
 SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id&$top 1"; 
-      alert(queryUrl);
+      //alert(queryUrl);
 	  $.ajax({
         url: queryUrl,
         method: "GET",
@@ -50,7 +50,7 @@ SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
 				var userEntry = {};
 				userEntry.Id = dataRec.Id;
 				goalID = userEntry.Id;
-				alert(goalID);
+				//alert(goalID);
 			});
 	},
         error: onQueryError23
