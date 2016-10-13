@@ -8,7 +8,7 @@ $(document).ready(function(){
 	if(windowURL.indexOf('NewForm.aspx') > -1){
 		//goalID = document.referrer;
 		//goalID = goalID.split('SelectedID=')[1];
-		if(windowURL.indexOf('SelectedID') > -1){
+		if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') < -1){
 			alert('In If');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			goalID = goalID.split('&')[0];
