@@ -9,20 +9,20 @@ $(document).ready(function(){
 		//goalID = document.referrer;
 		//goalID = goalID.split('SelectedID=')[1];
 		if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') < -1){
-			alert('In If');
+			//alert('In If');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			goalID = goalID.split('&')[0];
 			goalID = goalID.split('=')[1];
 			GetGoalName(goalID);
 		}
 		else if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') > -1){
-			alert('In first Else if');
+			//alert('In first Else if');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
-			alert(goalID);
+			//alert(goalID);
 			goalID = goalID.split('=')[1];
-		        alert(goalID);
+		        //alert(goalID);
 			goalID = goalID.split('#')[0];
-		        alert(goalID);
+		        //alert(goalID);
 			GetGoalName(goalID);
 		}		
 		else if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx") {
