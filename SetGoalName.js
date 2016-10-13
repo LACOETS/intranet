@@ -6,9 +6,10 @@ var goalID;
 var windowURL = window.location.href;
 $(document).ready(function(){	
 	if(windowURL.indexOf('NewForm.aspx') > -1){
-		goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
-		//goalID = decodeURIComponent(windowURL.split('?')[1].split('=')[1]);
-		//goalID = goalID.split('?')[1].split('=')[1].split('&')[0];		
+		//goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
+		//goalID = goalID.split('&')[0];
+		goalID = decodeURIComponent(windowURL.split('?')[1].split('=')[1]);
+		goalID = goalID.split('?')[1].split('=')[1].split('&')[0];		
 		alert(goalID);
 	}//End of If
 	else if(windowURL.indexOf('EditForm.aspx') > -1)
