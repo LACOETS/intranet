@@ -36,7 +36,7 @@ function GetFirstItemID(){
 	//alert('In GetFirstItemID');
 SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
-	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id&$top=1&$orderby=Id desc"; 
+	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id&$top=1&$orderby=Modified desc"; 
       //alert(queryUrl);
 	  $.ajax({
         url: queryUrl,
