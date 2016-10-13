@@ -53,9 +53,11 @@ function onQuerySuccess23(data) {
 //alert('In onQuerySuccess23');
 var results = data.d.results;	
     $.each(results, function(index, dataRec) {    
-        
+        var userEntry = {};
+	userEntry.Id = dataRec.Id;
+	    goalID = userEntry.Id;
  });//End of each
- 
+ return goalID;
 }//End of onQuerySuccess23
 
 function onQueryError23(error) {
