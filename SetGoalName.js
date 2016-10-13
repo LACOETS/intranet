@@ -9,22 +9,23 @@ $(document).ready(function(){
 		//goalID = document.referrer;
 		//goalID = goalID.split('SelectedID=')[1];
 		if(windowURL.indexOf('SelectedID') > -1){
-			//alert('In If');
+			alert('In If');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			goalID = goalID.split('&')[0];
 			goalID = goalID.split('=')[1];
 			GetGoalName(goalID);
 		}
 		else if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') > -1){
+			alert('In first Else if');
 			goalID = decodeURIComponent(windowURL.split('SelectedID=')[1]);
 			goalID = goalID.split('#')[0];
 		        GetGoalName(goalID);
 		}		
 		else if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx") {
-			//alert('In else If');
+			//alert('In second else If');
 			GetFirstItemID();
 		}		
-	  //alert(goalID);
+	  alert(goalID);
 	}//End of If for New form
 	else if(windowURL.indexOf('EditForm.aspx') > -1)
 	{
