@@ -44,13 +44,11 @@ SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
           "Accept": "application/json; odata=verbose"
         },
         success: function (data) {
-		  var results = data.d.results;	
+		        var results = data.d.results;	
 			$.each(results, function(index, dataRec) {    
-			var userEntry = {};
-			userEntry.Id = dataRec.Id;
-			goalID = userEntry.Id;
-		 });//End of each
-	 ,
+				var userEntry = {};
+				userEntry.Id = dataRec.Id;
+				goalID = userEntry.Id;});,
         error: onQueryError23
       });
     });
