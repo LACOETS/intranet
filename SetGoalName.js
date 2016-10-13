@@ -3,13 +3,15 @@
 
 <script type="text/javascript">
 var goalID;
-$(document).ready(function(){
-	if(window.location.href.indexOf('NewForm.aspx') > -1){
-		goalID = decodeURIComponent(window.location.href.split('?')[1].split('=')[1]);
-		goalID = goalID.split('?')[1].split('=')[1].split('&')[0];
-		//alert('In If goalID:=' + goalID);
+var windowURL = window.location.href;
+$(document).ready(function(){	
+	if(windowURL.indexOf('NewForm.aspx') > -1){
+		goalID = windowURL.split('SelectedID')[1];
+		//goalID = decodeURIComponent(windowURL.split('?')[1].split('=')[1]);
+		//goalID = goalID.split('?')[1].split('=')[1].split('&')[0];		
+		alert('In If goalID:=' + goalID);
 	}//End of If
-	else if(window.location.href.indexOf('EditForm.aspx') > -1)
+	else if(windowURL.indexOf('EditForm.aspx') > -1)
 	{
 		goalID = decodeURIComponent(window.location.href.split('?')[1]);
 		goalID = goalID.split('?')[1].split('=')[1];
@@ -23,7 +25,7 @@ function GetGoalName(goalID){
 	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id,OrgGoals_x0020_GoalName,Title&$filter=Id eq '" + goalID + "'"; 
-      alert(queryUrl);
+      //alert(queryUrl);
 	  $.ajax({
         url: queryUrl,
         method: "GET",
