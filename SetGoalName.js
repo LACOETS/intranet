@@ -12,11 +12,12 @@ $(document).ready(function(){
 			alert('In If');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			goalID = goalID.split('&')[0];
-			goalID = goalID.split('=')[1];		
+			goalID = goalID.split('=')[1];
+			GetGoalName(goalID);
 		}
 		else {
 			//alert('In else');
-			goalID = GetFirstItemID();
+			GetFirstItemID();
 		}
 		
 		//goalID = decodeURIComponent(windowURL.split('?')[1].split('=')[1]);
@@ -29,7 +30,7 @@ $(document).ready(function(){
 		goalID = goalID.split('?')[1].split('=')[1];
 		//alert('In Else goalID:=' + goalID);
 	}
-	GetGoalName(goalID);
+	//GetGoalName(goalID);
 });//End of Doc ready
 
 function GetFirstItemID(){
@@ -51,7 +52,8 @@ SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
 				var userEntry = {};
 				userEntry.Id = dataRec.Id;
 				goalID = userEntry.Id;				
-				alert(goalID);			
+				//alert(goalID);
+				GetGoalName(goalID);
 			   });//End of each
 			
 	},
@@ -59,7 +61,7 @@ SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
       });
     });
   });
-return goalID;
+//return goalID;
 }//End of GetFirstItemID
 		   
 function onQueryError23(error) {
