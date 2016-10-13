@@ -15,6 +15,11 @@ $(document).ready(function(){
 			goalID = goalID.split('=')[1];
 			GetGoalName(goalID);
 		}
+		else if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') > -1){
+			goalID = decodeURIComponent(windowURL.split('SelectedID=')[1]);
+			goalID = goalID.split('#')[0];
+		        GetGoalName(goalID);
+		}		
 		else if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx") {
 			//alert('In else If');
 			GetFirstItemID();
