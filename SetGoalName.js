@@ -15,11 +15,13 @@ $(document).ready(function(){
 		}
 		
 		else if(windowURL.indexOf('SelectedID') > -1){ 
-			alert('In first else If');			
-			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
-			goalID = goalID.split('&')[0];
-			goalID = goalID.split('=')[1];
-			GetGoalName(goalID);		    
+			if(windowURL.indexOf('InplviewHash') < -1){
+				alert('In first else If');			
+				goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
+				goalID = goalID.split('&')[0];
+				goalID = goalID.split('=')[1];
+				GetGoalName(goalID);
+		     }
 		}
 		else if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') > -1){
 			alert('In second Else if');
