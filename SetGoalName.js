@@ -12,12 +12,12 @@ $(document).ready(function(){
 		//&& windowURL.indexOf('InplviewHash') < -1
 		/*
 		if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx") {
-			alert('In If');
+			//alert('In If');
 			GetFirstItemID();
 		}*/
 		
 		if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') > -1){
-			alert('In first Else if');
+			//alert('In first Else if');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			//alert(goalID);
 			goalID = goalID.split('=')[1];
@@ -28,7 +28,7 @@ $(document).ready(function(){
 		}
 		
 		else if(windowURL.indexOf('SelectedID') > -1){			
-				alert('In second else If');			
+				//alert('In second else If');			
 				goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 				goalID = goalID.split('&')[0];
 				goalID = goalID.split('=')[1];
@@ -96,7 +96,7 @@ function onQueryError23(error) {
   }//End of onQueryError23
 
 function GetGoalName(goalID){
-//alert('In GetGoalName:=' + goalID);
+alert('In GetGoalName:=' + goalID);
 	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id,OrgGoals_x0020_GoalName,Title&$filter=Id eq '" + goalID + "'"; 
