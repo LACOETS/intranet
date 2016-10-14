@@ -38,7 +38,7 @@ $(document).ready(function(){
 			//alert('In third else If');
 			GetFirstItemID();
 		}
-		else()	
+		else{}	
 	  //alert(goalID);
 	}//End of If for New form
 	else if(windowURL.indexOf('EditForm.aspx') > -1)
