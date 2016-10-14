@@ -14,17 +14,8 @@ $(document).ready(function(){
 			GetFirstItemID();
 		}
 		
-		else if(windowURL.indexOf('SelectedID') > -1){ 
-			if(windowURL.indexOf('InplviewHash') < -1){
-				alert('In first else If');			
-				goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
-				goalID = goalID.split('&')[0];
-				goalID = goalID.split('=')[1];
-				GetGoalName(goalID);
-		     }
-		}
 		else if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') > -1){
-			alert('In second Else if');
+			alert('In first Else if');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			//alert(goalID);
 			goalID = goalID.split('=')[1];
@@ -32,7 +23,17 @@ $(document).ready(function(){
 			goalID = goalID.split('#')[0];
 		        //alert(goalID);
 			GetGoalName(goalID);
-		}		
+		}
+		
+		else if(windowURL.indexOf('SelectedID') > -1){			
+				alert('In second else If');			
+				goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
+				goalID = goalID.split('&')[0];
+				goalID = goalID.split('=')[1];
+				GetGoalName(goalID);
+		     
+		}
+				
 		else{}		
 	  //alert(goalID);
 	}//End of If for New form
