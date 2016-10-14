@@ -34,7 +34,11 @@ $(document).ready(function(){
 		     
 		}
 				
-		else{}		
+		else if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx" && windowURL.indexOf('InplviewHash') > -1){
+			//alert('In third else If');
+			GetFirstItemID();
+		}
+		else()	
 	  //alert(goalID);
 	}//End of If for New form
 	else if(windowURL.indexOf('EditForm.aspx') > -1)
