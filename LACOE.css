@@ -4197,7 +4197,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .newsfeeds-desk .ms-microfeed-replyArea{min-width:81%; max-width:100%;}
 /*My desk news feed*/
  
-.box-style.lcoe-report-card.small-reportcard .box-contentinfos{height:auto; padding-top:45px;}
+.box-style.lcoe-report-card.small-reportcard .box-contentinfos{height:auto; padding-top:0px;}
 .box-style.lcoe-report-card.small-reportcard {min-height: 369px;}
 .landing-what-dobox{height: 336px;overflow-x: hidden;overflow-y: scroll;}
 .whatdo-youthinklanding .box-contentinfos{padding:0}
