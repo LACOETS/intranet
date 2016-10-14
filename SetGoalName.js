@@ -42,7 +42,7 @@ $(document).ready(function(){
 			GetFirstItemID();
 		}*/
 		else{
-			alert('In else');
+			//alert('In else');
 			GetFirstItemID();
 		}	
 	  //alert(goalID);
@@ -99,7 +99,7 @@ function onQueryError23(error) {
   }//End of onQueryError23
 
 function GetGoalName(goalID){
-alert('In GetGoalName:=' + goalID);
+//alert('In GetGoalName:=' + goalID);
 	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
     SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {      	  
 	  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Goals')/items?$select=Id,OrgGoals_x0020_GoalName,Title&$filter=Id eq '" + goalID + "'"; 
