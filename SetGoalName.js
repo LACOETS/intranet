@@ -43,7 +43,7 @@ $(document).ready(function(){
 		}*/
 		else{
 			//alert('In else');
-			GetFirstItemID();
+			//GetFirstItemID();
 		}	
 	  //alert(goalID);
 	}//End of If for New form
