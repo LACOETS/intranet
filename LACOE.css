@@ -4174,7 +4174,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .announcement-sliders.sm-landingslider{overflow:hidden}
 .announcement-sliders .calenader-loading{background-image:none}
 .landingtrend-box  .box-heading h3 i{background-position: -202px -23px;}
-.landingtrend-box div[id$="_results"] { height: 495px;}
+.landingtrend-box div[id$="_results"] { height: 336px;}
 
 .trendingtag-box.sitefollw-section .box-contentinfos{height:236px}
 
@@ -4196,7 +4196,16 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .newsfeeds-desk .ms-microfeed-rootText{font-size:14px;}
 .newsfeeds-desk .ms-microfeed-replyArea{min-width:81%; max-width:100%;}
 /*My desk news feed*/
+ 
+.box-style.lcoe-report-card.small-reportcard .box-contentinfos{height:auto; padding-top:45px;}
+.box-style.lcoe-report-card.small-reportcard {min-height: 369px;}
+.landing-what-dobox{height: 336px;overflow-x: hidden;overflow-y: scroll;}
+.whatdo-youthinklanding .box-contentinfos{padding:0}
+.whatdo-youthinklanding .landing-what-dobox{padding:15px;}
 
+ .landingtrend-box div[id$="_results"] > div{padding:0; border:none}
+ .landingtrend-box div[id$="_results"] .mCSB_container > div{padding:7px 15px;border-bottom:1px solid #e4e4e4;}
+ 
 
 /*======================================= Content Area CSS End ========================================*/
 
