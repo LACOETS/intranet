@@ -41,7 +41,10 @@ $(document).ready(function(){
 			//alert('In third else If');
 			GetFirstItemID();
 		}*/
-		else{}	
+		else{
+			alert('In else');
+			GetFirstItemID();
+		}	
 	  //alert(goalID);
 	}//End of If for New form
 	else if(windowURL.indexOf('EditForm.aspx') > -1)
