@@ -10,12 +10,12 @@ $(document).ready(function(){
 		//goalID = goalID.split('SelectedID=')[1];
 		//&& windowURL.indexOf('InplviewHash') < -1
 		if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx") {
-			alert('In If');
+			//alert('In If');
 			GetFirstItemID();
 		}
 		
 		else if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') > -1){
-			alert('In first Else if');
+			//alert('In first Else if');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			//alert(goalID);
 			goalID = goalID.split('=')[1];
@@ -26,7 +26,7 @@ $(document).ready(function(){
 		}
 		
 		else if(windowURL.indexOf('SelectedID') > -1){			
-				alert('In second else If');			
+				//alert('In second else If');			
 				goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 				goalID = goalID.split('&')[0];
 				goalID = goalID.split('=')[1];
