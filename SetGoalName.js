@@ -10,12 +10,13 @@ $(document).ready(function(){
 		//goalID = document.referrer;
 		//goalID = goalID.split('SelectedID=')[1];
 		//&& windowURL.indexOf('InplviewHash') < -1
+		/*
 		if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx") {
 			alert('In If');
 			GetFirstItemID();
-		}
+		}*/
 		
-		else if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') > -1){
+		if(windowURL.indexOf('SelectedID') > -1 && windowURL.indexOf('InplviewHash') > -1){
 			alert('In first Else if');
 			goalID = decodeURIComponent(windowURL.split('SelectedID')[1]);
 			//alert(goalID);
@@ -35,10 +36,11 @@ $(document).ready(function(){
 		     
 		}
 				
+		/*
 		else if(windowURL == "https://lacoe.sharepoint.com/TS/Pages/Goals.aspx" && windowURL.indexOf('InplviewHash') > -1){
 			//alert('In third else If');
 			GetFirstItemID();
-		}
+		}*/
 		else{}	
 	  //alert(goalID);
 	}//End of If for New form
