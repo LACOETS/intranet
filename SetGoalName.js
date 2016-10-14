@@ -5,6 +5,7 @@
 var goalID;
 var windowURL = window.location.href;
 $(document).ready(function(){	
+	alert(selectedgoalName);
 	if(windowURL.indexOf('NewForm.aspx') > -1){
 		//goalID = document.referrer;
 		//goalID = goalID.split('SelectedID=')[1];
