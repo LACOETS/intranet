@@ -114,11 +114,11 @@ $(window).load(function(){
 	});
 	$('#form-pagination').pajinate({
 		num_page_links_to_display :false,
-		items_per_page : 4	
+		items_per_page : 10	
 	});
 	$('#policies-pagination').pajinate({
 		num_page_links_to_display :false,
-		items_per_page : 4	
+		items_per_page : 10	
 	});
 	$('#aniversary-pagination').pajinate({
 		num_page_links_to_display :false,
@@ -286,8 +286,8 @@ $(window).load(function() {
     /* code for announcement slider */
     if($('.announcement-sliders').hasClass('sm-landingslider'))
     {
-    	sliderwidth= 450;
-    	thumbwidth = 332;
+    	sliderwidth= 387;
+    	thumbwidth = 400;
     	
     }
     else
@@ -312,7 +312,7 @@ $(window).load(function() {
         thumbnailsPosition: 'right',
         thumbnailArrows: false,
         thumbnailPointer: true,
-        autoplay: true,
+        autoplay: false,
         waitForLayers: true,
         responsive:true,
         gotoSlide: function(event) {
@@ -333,7 +333,7 @@ $(window).load(function() {
     });
     
      $("#example5 ul.sp-slides").find("li").find('img').wrap('<div class="imageSliderresize" style="position:relative"></div>'); 
-     $('.sm-landingslider ul.sp-slides .imageSliderresize').nailthumb({width:450,height:336,method:'resize',fitDirection:'center center'});
+     $('.sm-landingslider ul.sp-slides .imageSliderresize').nailthumb({width:387,height:336,method:'resize',fitDirection:'center center'});
      $('.big-landingslider ul.sp-slides .imageSliderresize').nailthumb({width:664,height:336,method:'resize',fitDirection:'center center'});
     
 });
