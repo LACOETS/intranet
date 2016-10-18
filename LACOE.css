@@ -4180,7 +4180,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 
 /*My desk news feed*/
 .newsfeeds-desk .ms-microfeed-fullMicrofeedDiv{min-width:100%}
-.newsfeeds-desk .ms-microfeed-microblogpart,.newsfeeds-desk .ms-microfeed-feedPart,.newsfeeds-desk .ms-microfeed-thread,.newsfeeds-desk .ms-microfeed-rootText{min-width:100%; max-width:100%;}
+.newsfeeds-desk .ms-microfeed-microblogpart,.newsfeeds-desk .ms-microfeed-feedPart,.newsfeeds-desk .ms-microfeed-thread,.newsfeeds-desk .ms-microfeed-rootText,.newsfeeds-desk .ms-microfeed-replyText{min-width:100%; max-width:100%;}
 .newsfeeds-desk .box-contentinfos{padding-left:13px; padding-right:13px;}
 .newsfeeds-desk .ms-microfeed-shareWith{padding:10px 0}
 .newsfeeds-desk .ms-microfeed-shareWith .ms-textLarge{font-size:1em}
