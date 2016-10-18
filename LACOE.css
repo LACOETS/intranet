@@ -4184,7 +4184,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .newsfeeds-desk .box-contentinfos{padding-left:13px; padding-right:13px;}
 .newsfeeds-desk .ms-microfeed-shareWith{padding:10px 0}
 .newsfeeds-desk .ms-microfeed-shareWith .ms-textLarge{font-size:1em}
-.newsfeeds-desk .ms-microfeed-postBox{height:23px !important;}
+.newsfeeds-desk .ms-microfeed-postBox{/*height:23px !important;*/}
 .newsfeeds-desk .ms-microfeed-titleArea .ms-pivotControl-container{margin-right:0}
 .newsfeeds-desk .ms-microfeed-titleArea .ms-textXLarge{font-size:1.2em}
 .newsfeeds-desk .ms-pivotControl-surfacedOpt,.newsfeeds-desk .ms-pivotControl-surfacedOpt-selected{margin-right:15px;}
