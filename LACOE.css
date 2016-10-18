@@ -3684,7 +3684,7 @@ select:focus{outline:none;}
 .resource-link-section table.ms-listviewtable td:hover{background-color:#E1E1E2}
 .resource-link-section table.ms-listviewtable tr:last-child{border-bottom:none;}
 .resource-link-section table.ms-listviewtable td{width: 100% !important; padding:0 !important; border:none !important;}
-.resource-link-section table.ms-listviewtable td a{padding: 9px 15px 10px 15px;font-size: 1em; display:block; color:#585858}
+.resource-link-section table.ms-listviewtable td a{padding: 5px 15px 5px 15px;font-size: 13px; display:block; color:#585858}
 .resource-link-section table.ms-listviewtable td a:visited{color:#585858}
 .resource-link-section table.ms-listviewtable tbody{position:relative;display:block}
 .resource-link-section table.ms-listviewtable tbody tr{display:block}
@@ -4048,6 +4048,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .LocalFilter .ms-rte-embedcode.ms-rte-embedwp input[type="text"] + input[type="button"]{margin-left:0}
 #shared-box .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto; font-size:14px;}
 #published-box .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto; font-size:14px;}
+#EmpDocs .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto; font-size:14px;}
 #shared-box .docRytSide .ms-webpart-zone.ms-fullWidth h3{margin-bottom:10px; vertical-align:middle}
 #published-box  .docRytSide .ms-webpart-zone.ms-fullWidth h3{margin-bottom:10px; vertical-align:middle}
 #next30days-box-doc .docRytSide .ms-webpart-zone.ms-fullWidth,#past30days-box-doc .docRytSide .ms-webpart-zone.ms-fullWidth{padding:15px 0 0 0; display:block;width:96%; margin:0 auto; font-size:14px;}
@@ -4228,6 +4229,28 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .quicklink-paginations{padding-top:0}
 .landing-quicklink .news-title-like h4{font-size:13px;}
 .sitefollw-section.newsfeeds-desk.box-style .icon-common{background-position:-212px -75px}
+
+.upc-events-tabs .tabResult{padding:0}
+.select-filtercaldr{margin-right:0; padding-bottom:0}
+.upc-events-tabs{min-height:260px;}
+.lcoe-report-card .btn-wrapper{float:none}
+.lcoe-report-card .btn-wrapper:after{content:''; display:block; float:none; clear:both}
+.lcoe-report-card .btn-wrapper #view-members-link{float:left}
+.lcoe-report-card .btn-wrapper #AllGoals{float:right; margin-right:4px;}
+
+.newsfeed-innerbox{margin-bottom:10px;}
+.big-newsfeedbox .newsfeeds-desk .ms-microfeed-replyArea{max-width: 92%; min-width:92%;}
+.big-newsfeedbox .ms-microfeed-feedPart{margin-left:0; padding-left:10px;}
+.big-newsfeedbox .ms-microfeed-fullMicrofeedDiv{float:none !important; background-color:transparent !important; border-radius:0 !important; margin-bottom:0 !important}
+.big-newsfeedbox .newsfeeds-desk .ms-microfeed-shareWith{padding-left:10px; padding-bottom:0}
+/*.big-newsfeedbox .newsfeeds-desk .ms-microfeed-threadsDiv{height:200px !important}*/
+.big-newsfeedbox .sitefollw-section{min-height:470px;}
+.big-newsfeedbox .ms-floatRight{float:left; margin-left:95px;}
+.big-newsfeedbox .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{right:auto; left:0; margin-left:120px;}
+.upc-events-tabs .cal-li-width1{width:10%}
+.upc-events-tabs .cal-li-width7{width:52%}
+.upc-events-tabs .cal-li-width5{width:7%}
+.big-newsfeedbox #ms-ErrorMessage{padding:10px}
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
