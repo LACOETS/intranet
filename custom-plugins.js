@@ -336,6 +336,16 @@ $(window).load(function() {
      $('.sm-landingslider ul.sp-slides .imageSliderresize').nailthumb({width:387,height:336,method:'resize',fitDirection:'center center'});
      $('.big-landingslider ul.sp-slides .imageSliderresize').nailthumb({width:664,height:336,method:'resize',fitDirection:'center center'});
     
+    $(".landing-what-dobox").mCustomScrollbar({
+		theme:"minimal"
+	});
+	
+	setTimeout(function(){
+		$('.landingtrend-box div[id$="_results"]').mCustomScrollbar({
+			theme:"minimal"
+		});
+	},1000);
+	
 });
 
 	
@@ -360,12 +370,7 @@ $(function(){
 
 $(window).load(function(){			
 	/*Scrollbar calling*/
-	$(".landing-what-dobox").mCustomScrollbar({
-		theme:"minimal"
-	});
-	$('.landingtrend-box div[id$="_results"]').mCustomScrollbar({
-		theme:"minimal"
-	});
+	
 	/*Scrollbar calling end*/
 });
 /*Tabination active class after refresh start*/
