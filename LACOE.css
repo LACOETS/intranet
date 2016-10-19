@@ -1,4 +1,4 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700,800,300,500);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700,800,300,500);
 /* Work Sans:
 Thin 100
 Light 300
@@ -3333,6 +3333,7 @@ ul.dynamic { min-width: 200px; }
 .blog-section .box-heading h3 i{ background-position:-127px -1px }
 /*.blog-section .link-content li { font: 100 1em/23px "Work Sans", sans-serif; padding: 15px; width: 100%; word-break: break-all; }*/
 .resource-link-section .bx-viewport, .blog-section .bx-viewport { height: 197px !important }
+.mydesk-new .resource-link-section .bx-viewport{height: 236px !important;}
 .resource-link-section .box-contentinfos .ms-webpart-zone, .resource-link-section .box-contentinfos .ms-webpart-cell-vertical { display: block }
 .resource-link-section .box-contentinfos .ms-webpart-chrome-vertical { display: block }
 .blog-section .link-content li a { display: block; white-space: nowrap;  overflow: hidden;text-overflow: ellipsis;  }
@@ -3388,12 +3389,14 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .box-style.dept-quicklinks, .announcement-box.dept-announcement { min-height: 369px; }
 .resource-link-section.box-style, .dept-calender, .pictorial-discussion { min-height: 269px; }
 .blog-section.box-style, .goal-section, .top-contributor, .whats-happening, .feeds-section { min-height: 269px; }
-.box-style.lcoe-report-card { min-height: 528px; }
+.box-style.lcoe-report-card { min-height: 528px;}
+.department-new .box-style.lcoe-report-card { min-height:236px; }
 .document-searchbx{min-height:327px;}
 .document-searchbx.standardformsrch{min-height:577px;}
-.documents-section.grid-12, .discussion-section.grid-12 { min-height: 269px; background: #fff; }
-.documents-section.grid-12 { margin: 0 0 10px; padding: 0; }
-.discussion-section.grid-12 { padding: 0 }
+.documents-section.grid-12, .discussion-section.grid-12 {  background: #fff; }
+.documents-section.grid-12 { min-height: 269px; margin: 0 0 10px;  padding: 0; }
+.department-new .documents-section.grid-12{min-height: 528px;margin:0 0 0;}
+.discussion-section.grid-12 {min-height: 269px;  padding: 0 }
 .alternate-iconlink i { display: inline-block; height: 17px; width: 17px; margin-left: 5px; vertical-align: top; background: url(../images/alternate-icon.png) 0 0 no-repeat }
 .alternate-iconlink.active i { background-position: 0 -17px }
 /*Box structure Start*/
@@ -3434,7 +3437,9 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .info-guest-proj p:last-child { margin-bottom: 0 }
 .banner-guestproj #DivImage img { width: 100% !important; }
 .spacingtwoblocks { margin-bottom: 10px }
-.box-style.lcoe-report-card .box-contentinfos { height: 515px; }
+.box-style.lcoe-report-card .box-contentinfos { height: 515px;}
+.department-new .box-style.lcoe-report-card .box-contentinfos { height:236px; text-align:center;}
+.department-new .box-style.lcoe-report-card .box-contentinfos img{height:190px; margin-top:-5px;}
 /*Project Guest end*/
 
 /*Full Banner*/
@@ -3685,9 +3690,11 @@ select:focus{outline:none;}
 .resource-link-section table.ms-listviewtable tr:last-child{border-bottom:none;}
 .resource-link-section table.ms-listviewtable td{width: 100% !important; padding:0 !important; border:none !important;}
 .resource-link-section table.ms-listviewtable td a{padding: 5px 15px 5px 15px;font-size: 13px; display:block; color:#585858}
+.mydesk-new .resource-link-section table.ms-listviewtable td a{font-size: 15px;}
 .resource-link-section table.ms-listviewtable td a:visited{color:#585858}
 .resource-link-section table.ms-listviewtable tbody{position:relative;display:block}
 .resource-link-section table.ms-listviewtable tbody tr{display:block}
+.mydesk-new .resource-link-section table.ms-listviewtable tbody tr{padding:9.2px 0px;}
 .resource-link-section table.ms-listviewtable .ms-itmHoverEnabled:hover > *{background-color:#E1E1E2; border:none}
 /*New theme resouce link end*/
 
@@ -4241,10 +4248,13 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .newsfeed-innerbox{margin-bottom:10px;}
 .big-newsfeedbox .newsfeeds-desk .ms-microfeed-replyArea{max-width: 92%; min-width:92%;}
 .big-newsfeedbox .ms-microfeed-feedPart{margin-left:0; padding-left:10px;}
+.department-new .big-newsfeedbox .ms-microfeed-feedPart{padding-left:0px;}
 .big-newsfeedbox .ms-microfeed-fullMicrofeedDiv{float:none !important; background-color:transparent !important; border-radius:0 !important; margin-bottom:0 !important}
 .big-newsfeedbox .newsfeeds-desk .ms-microfeed-shareWith{padding-left:10px; padding-bottom:0}
 /*.big-newsfeedbox .newsfeeds-desk .ms-microfeed-threadsDiv{height:200px !important}*/
 .big-newsfeedbox .sitefollw-section{min-height:470px;}
+.department-new .big-newsfeedbox .sitefollw-section{min-height:528px;}
+.department-new .big-newsfeedbox .sitefollw-section .ms-webpart-zone{height:493px; overflow:auto; padding:0px 13px;}
 .big-newsfeedbox .ms-floatRight{float:left; margin-left:95px;}
 .big-newsfeedbox .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{right:auto; left:0; margin-left:120px;}
 .upc-events-tabs .cal-li-width1{width:10%}
