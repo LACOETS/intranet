@@ -13,7 +13,7 @@ $(document).ready(function ()
 	var sliderstuc='<ul id="ulResourceLink" class="link-content resourcelink-slider"></ul>'
 	$('.empty-addresource').find('.ms-rtestate-field').html(sliderstuc + pagination);*/
    //$('#ulResourceLink').empty();
-   
+   alert(GetMySiteURL());
 
    var p = GetMySiteURL().split("/personal")[0] + "/person.aspx";
    var od = GetMySiteURL().replace("Blog/default.aspx","_layouts/15/onedrive.aspx");
