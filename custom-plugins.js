@@ -140,6 +140,15 @@ $(window).load(function(){
 		num_page_links_to_display :false,
 		items_per_page : 5	
 	});
+	$('.department-new .documents-section.grid-12 #page_10').pajinate({
+		num_page_links_to_display :false,
+		items_per_page : 9	
+	});
+	$('.department-new .documents-section.grid-12 #page_11').pajinate({
+		num_page_links_to_display :false,
+		items_per_page : 9	
+	});
+
 });
 
 /*$(window).load(function(){
@@ -339,6 +348,7 @@ $(window).load(function() {
     $(".landing-what-dobox").mCustomScrollbar({
 		theme:"minimal"
 	});
+	
 	
 	setTimeout(function(){
 		$('.landingtrend-box div[id$="_results"]').mCustomScrollbar({

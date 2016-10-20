@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700,800,300,500);
+﻿@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600,700,800,300,500);
 /* Work Sans:
 Thin 100
 Light 300
@@ -4248,7 +4248,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .newsfeed-innerbox{margin-bottom:10px;}
 .big-newsfeedbox .newsfeeds-desk .ms-microfeed-replyArea{max-width: 92%; min-width:92%;}
 .big-newsfeedbox .ms-microfeed-feedPart{margin-left:0; padding-left:10px;}
-.department-new .big-newsfeedbox .ms-microfeed-feedPart{padding-left:0px;}
+.department-new .big-newsfeedbox .ms-microfeed-feedPart{padding-left:0px; padding-top:0;}
 .big-newsfeedbox .ms-microfeed-fullMicrofeedDiv{float:none !important; background-color:transparent !important; border-radius:0 !important; margin-bottom:0 !important}
 .big-newsfeedbox .newsfeeds-desk .ms-microfeed-shareWith{padding-left:10px; padding-bottom:0}
 /*.big-newsfeedbox .newsfeeds-desk .ms-microfeed-threadsDiv{height:200px !important}*/
@@ -4256,11 +4256,21 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .department-new .big-newsfeedbox .sitefollw-section{min-height:528px;}
 .department-new .big-newsfeedbox .sitefollw-section .ms-webpart-zone{height:493px; overflow:auto; padding:0px 13px;}
 .big-newsfeedbox .ms-floatRight{float:left; margin-left:95px;}
-.big-newsfeedbox .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{right:auto; left:0; margin-left:120px;}
+.big-newsfeedbox .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{right:auto; left:0; margin-left:160px;}
 .upc-events-tabs .cal-li-width1{width:10%}
 .upc-events-tabs .cal-li-width7{width:52%}
 .upc-events-tabs .cal-li-width5{width:7%}
-.big-newsfeedbox #ms-ErrorMessage{padding:10px}
+.upcoming-event-box .btn-container {border-top:none}
+.big-newsfeedbox .sitefollw-section #ms-ErrorMessage{padding:10px}
+
+.department-new .documents-section.grid-12 .dataviewWebpart-table table + table{display:none}
+
+.big-newsfeedbox .generic_heading3 h2{font:500 16px "Work Sans",sans-serif; padding-top:10px;}
+.big-newsfeedbox .ms-microfeed-focusBox{width:95%}
+.big-newsfeedbox .ms-textSmall, .big-newsfeedbox .ms-textXSmall, .big-newsfeedbox .ms-metadata, .big-newsfeedbox .ms-descriptiontext, .big-newsfeedbox .ms-secondaryCommandLink{font-size:0.8em}
+.big-newsfeedbox .ms-microfeed-thread{margin-bottom:3px;}
+.big-newsfeedbox .ms-microfeed-userName.ms-textLarge.ms-subtleLink,.big-newsfeedbox .ms-microfeed-userName.ms-textLarge.ms-subtleLink a{font-size:14px; font-weight:500; color:#1c7ec7 !important}
+.big-newsfeedbox .ms-microfeed-likesIndicatorText{padding-top:0; padding-bottom:0}
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
