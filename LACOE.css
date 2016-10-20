@@ -3438,8 +3438,8 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .banner-guestproj #DivImage img { width: 100% !important; }
 .spacingtwoblocks { margin-bottom: 10px }
 .box-style.lcoe-report-card .box-contentinfos { height: 515px;}
-.department-new .box-style.lcoe-report-card .box-contentinfos { height:236px; text-align:center;}
-.department-new .box-style.lcoe-report-card .box-contentinfos img{height:190px; margin-top:-5px;}
+.department-new .box-style.lcoe-report-card .box-contentinfos { height:236px; text-align:center; padding-top:5px}
+/*.department-new .box-style.lcoe-report-card .box-contentinfos img{height:190px; margin-top:-5px;}*/
 /*Project Guest end*/
 
 /*Full Banner*/
