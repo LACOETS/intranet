@@ -350,9 +350,13 @@ $(window).load(function() {
 	});
 	
 	
+	
 	setTimeout(function(){
 		$('.landingtrend-box div[id$="_results"]').mCustomScrollbar({
 			theme:"minimal"
+		});
+		$(".department-new .big-newsfeedbox .sitefollw-section .bigsitefeed").mCustomScrollbar({
+		theme:"minimal"
 		});
 	},1000);
 	

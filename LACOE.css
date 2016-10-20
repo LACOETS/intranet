@@ -4254,7 +4254,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 /*.big-newsfeedbox .newsfeeds-desk .ms-microfeed-threadsDiv{height:200px !important}*/
 .big-newsfeedbox .sitefollw-section{min-height:470px;}
 .department-new .big-newsfeedbox .sitefollw-section{min-height:528px;}
-.department-new .big-newsfeedbox .sitefollw-section .ms-webpart-zone{height:493px; overflow:auto; padding:0px 13px;}
+.department-new .big-newsfeedbox .sitefollw-section .bigsitefeed{height:493px; overflow-x:hidden; overflow-y:scroll; padding:0px 13px;}
 .big-newsfeedbox .ms-floatRight{float:left; margin-left:95px;}
 .big-newsfeedbox .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{right:auto; left:0; margin-left:160px;}
 .upc-events-tabs .cal-li-width1{width:10%}
