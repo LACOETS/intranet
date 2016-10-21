@@ -3890,7 +3890,7 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 .didyouknwbx .didyouknw-txt{}
 
 .dataviewWebpart-table .pagination-page table{width:100% !important}
-.dataviewWebpart-table .pagination-page table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px; overflow:hidden; text-overflow:ellipsis}
+.dataviewWebpart-table .pagination-page table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px; overflow:hidden; text-overflow: ellipsis;}
 .dataviewWebpart-table .pagination-page table{table-layout: fixed; border-collapse:collapse}
 .dataviewWebpart-table .pagination-page table.ms-listviewtable{border-collapse:collapse}
 
