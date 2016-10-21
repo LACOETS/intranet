@@ -241,7 +241,7 @@ ul.ms-lightbox-cmdbar>li { margin-right: 19px; }
 .ms-uppercase { text-transform: uppercase; }
 .ms-helperText, input.ms-helperText { /* [ReplaceColor(themeColor:"SubtleBodyText")] */ color: #777; }
 .ms-atMention, .ms-hashTag { font-weight: bold; }
-.ms-subtleLink:link, .ms-subtleLink:visited, .ms-atMention:link, .ms-atMention:visited, .ms-hashTag:link, .ms-hashTag:visited { /* [ReplaceColor(themeColor:"BodyText")] */ color: #444; }
+.ms-subtleLink:link, .ms-subtleLink:visited, .ms-atMention:link, .ms-atMention:visited, .ms-hashTag:link, .ms-hashTag:visited { /* [ReplaceColor(themeColor:"BodyText")] */ color: #444; font-weight:400 !important }
 .ms-subtleLink:hover, .ms-atMention:hover, .ms-hashTag:hover { /* [ReplaceColor(themeColor:"CommandLinksHover")] */ color: #0072c6; text-decoration: none; }
 .ms-subtleLink:active, .ms-atMention:active, .ms-hashTag:active { /* [ReplaceColor(themeColor:"CommandLinksPressed")] */ color: #004d85; text-decoration: none; }
 .ms-calloutLink:link, a.ms-calloutLink:visited, .ms-calloutLinkDisabled { font-size: 1em; }
@@ -3890,7 +3890,7 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 .didyouknwbx .didyouknw-txt{}
 
 .dataviewWebpart-table .pagination-page table{width:100% !important}
-.dataviewWebpart-table .pagination-page table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px;}
+.dataviewWebpart-table .pagination-page table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px; overflow:hidden; text-overflow:ellipsis}
 .dataviewWebpart-table .pagination-page table{table-layout: fixed; border-collapse:collapse}
 .dataviewWebpart-table .pagination-page table.ms-listviewtable{border-collapse:collapse}
 
