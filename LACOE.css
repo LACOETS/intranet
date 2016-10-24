@@ -3096,7 +3096,7 @@ h6 { font-size: 0.750em; }
 .nav li a:hover, .nav li.has-sub-menu:hover > a { background: #0c6eb7; color: #fff; }
 .logo .ms-siteicon-a { max-height: none; max-width: none; display: block; padding-top: 13px }
 #siteIcon { height: auto; line-height: normal; margin-right: auto; }
-.logo .ms-siteicon-img { max-width: 50%; }
+.logo .ms-siteicon-img { /*max-width: 50%;*/ width:170px; }
 /*Sub Nav*/
 .nav li.has-sub-menu:hover a { }
 .nav li:hover .sub-menu { height: 300px; padding: 13px 0 0; }
@@ -3288,12 +3288,12 @@ ul.dynamic { min-width: 200px; }
 .dept-web-link a { color: #004d9c; }
 .dept-events-tabs .box-paginations, .resource-link-section .box-paginations, .documents-section .box-paginations, .discussion-section .box-paginations, #Topcontributor .box-paginations, .blog-section .box-paginations { padding: 7px; }
 .pagination-page dl dt .dept-caldr-header li { font-size: 0.750em; line-height: 38px }
-.pagination-page dl dd .dept-content li { font: 300 0.875em "Work Sans", sans-serif; }
+.pagination-page dl dd .dept-content li { font: 300 13px "Work Sans", sans-serif; }
 .pagination-page dl dd .dept-content li a { color: #004d9c; text-decoration: underline }
 .pagination-page dl dd {/*background: -webkit-linear-gradient(#f7f8f8, #ffffff);background: -o-linear-gradient(#f7f8f8, #ffffff);background: -moz-linear-gradient(#f7f8f8, #ffffff);background: linear-gradient(#f7f8f8, #ffffff);*/ width:100% !important }
 .pagination-page dl dd:nth-child(2n) { background: #f7f8f8 }
 .pagination-page dl dd { border-bottom: #e4e4e4 solid 1px }
-.tbl-content { display: table; height: 41px; }
+.tbl-content { display: table; height: 25px; }
 .tbl-contentcell { display: table-cell; vertical-align: middle; word-break: break-all }
 .pagination-page dl dd:nth-child(1), .pagination-page dl dd:nth-child(2), .pagination-page dl dd:nth-child(3) { display: block }
 .dept-caldr-header.nogrid-header1 li { float: left; padding: 0 1%; }
@@ -3722,7 +3722,7 @@ select:focus{outline:none;}
 .pagination-page table thead{display:none}
 .pagination-page div[id^="scriptPaging"]{display: block;margin: 0 auto;position:absolute; right:0%; bottom:0px}
 .pagination-page table{width:100% !important}
-.pagination-page table td table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.pagination-page table td table td{padding:0 7px; font:300 13px "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:28px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .pagination-page table td table{table-layout: fixed; border-collapse:collapse}
 .pagination-page table.ms-listviewtable{border-collapse:collapse}
 .pagination-page table td table td.ms-paging{padding-left:4px;}
@@ -3890,7 +3890,7 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 .didyouknwbx .didyouknw-txt{}
 
 .dataviewWebpart-table .pagination-page table{width:100% !important}
-.dataviewWebpart-table .pagination-page table td{padding:0 7px; font:300 0.875em "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:41px; overflow:hidden; text-overflow: ellipsis;}
+.dataviewWebpart-table .pagination-page table td{padding:0 7px; font:300 13px "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:28px; overflow:hidden; text-overflow:ellipsis}
 .dataviewWebpart-table .pagination-page table{table-layout: fixed; border-collapse:collapse}
 .dataviewWebpart-table .pagination-page table.ms-listviewtable{border-collapse:collapse}
 
@@ -4088,7 +4088,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 
 
 .cal-view-icon.withsearchbx input[type="submit"], .cal-view-icon.withsearchbx input[type="button"]{padding:1px 10px; color:#fff; border:#fff solid 1px; margin-left:0 }
-.cal-view-icon.withsearchbx input[type="text"]{border-color:#fff; padding:4px 5px; margin-right:10px; color:#fff; margin-top:-1px;}
+.cal-view-icon.withsearchbx input[type="text"]{border-color:#fff; background:#fff; padding:4px 5px; margin-right:10px; color:#000; margin-top:-1px;}
 .cal-view-icon.withsearchbx input[type="submit"]:hover, .cal-view-icon.withsearchbx input[type="button"]:hover{background-color:#00497e}
 
 /*training classes page*/
@@ -4271,6 +4271,24 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .big-newsfeedbox .ms-microfeed-thread{margin-bottom:3px;}
 .big-newsfeedbox .ms-microfeed-userName.ms-textLarge.ms-subtleLink,.big-newsfeedbox .ms-microfeed-userName.ms-textLarge.ms-subtleLink a{font-size:14px; font-weight:500; color:#1c7ec7 !important}
 .big-newsfeedbox .ms-microfeed-likesIndicatorText{padding-top:0; padding-bottom:0}
+
+/*Header ticker*/
+.header .placeholder-cnt{float:right; width:55%; margin-top:20px; margin-right:4%;}
+.header .placeholder-cnt .placeholder{border:none; background:none; border-radius:0; font-size:13px; padding-top:0; padding-bottom:0; font-style:italic}
+/*Header ticker*/
+
+.banner-guestproj{width:27.8%}
+.info-guest-proj{width:72.2%}
+
+.project-sitefeed #ms-titlebararea{display:none}
+.project-sitefeed .newsfeeds-desk .ms-microfeed-threadsDiv{height:auto !important}
+.project-sitefeed .project-sitefeedbox{padding:13px 0px 0px 13px}
+.big-newsfeedbox .ms-microfeed-postBox{height:auto; resize:none}
+.big-newsfeedbox .project-sitefeedbox{height:495px; overflow:hidden; overflow-y:scroll}
+.big-newsfeedbox.project-sitefeed .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{margin-left:175px;}
+.sitefollw-section.newsfeeds-desk .ms-microfeed-postBox{height:auto; resize:none}
+
+
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
@@ -4306,6 +4324,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 
 /*Annoucemnet slider css*/
 .slider-pro { position: relative; /*margin: 0 auto;*/ -moz-box-sizing: content-box; box-sizing: content-box; }
+.slider-pro::after {background: #000;content: "";height: 100%;left: 50%;position: absolute;top: 0;width: 2px;}
 .sp-slides-container { position: relative; }
 .sp-mask { position: relative; overflow: hidden; }
 .sp-slides { position: relative; -webkit-backface-visibility: hidden; -webkit-perspective: 1000; }
