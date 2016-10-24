@@ -4324,7 +4324,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 
 /*Annoucemnet slider css*/
 .slider-pro { position: relative; /*margin: 0 auto;*/ -moz-box-sizing: content-box; box-sizing: content-box; }
-.slider-pro::after {background: #000;content: "";height: 100%;left: 50%;position: absolute;top: 0;width: 2px;}
+.slider-pro::after {background:rgba(0,0,0,0.3);content: "";height: 100%;left: 50%;position: absolute;top: 0;width: 1px;}
 .sp-slides-container { position: relative; }
 .sp-mask { position: relative; overflow: hidden; }
 .sp-slides { position: relative; -webkit-backface-visibility: hidden; -webkit-perspective: 1000; }
