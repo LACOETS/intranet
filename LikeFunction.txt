@@ -111,5 +111,23 @@ ExecuteOrDelayUntilScriptLoaded(GetLikeCount, "sp.js");
     $("a.LikeButton").click(function () {
        LikePage();
     });
+	hideColumn("Start Date");
+	hideColumn("End Date");
+	hideColumn("Picture URL");
+	hideColumn("Site Name");
+	hideColumn("IsNews");
+	hideColumn("Post To Extranet");
+	hideColumn("Post To Intranet");
+	hideColumn("Number of Likes");
 });
+// Function to hide a column's row in the form
+function hideColumn(c) {
+
+	//debugger;
+	  $(".ms-standardheader").filter(function() {
+	    var thisText = $.trim($(this).clone().children().remove().end().text());
+	   //alert("::" + thisText + "::");
+	    return thisText.indexOf(c) === 0 && thisText.length === c.length;
+	  }).closest("tr").hide();
+	}
 </script>
