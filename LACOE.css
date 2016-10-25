@@ -4010,7 +4010,7 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 opacity:0;
 }
 .innergoalspage #department-box .pagination-page table td table td.ms-cellstyle:nth-child(1){
-background: url(https://lacoets.github.io/intranet/Select.png) 27px 14px no-repeat transparent;
+background: url(https://lacoets.github.io/intranet/Select.png) 27px 8px no-repeat transparent;
 }
 
 .innergoalspage #department-box .pagination-page table td table td.ms-cellstyle:nth-child(1) a{
