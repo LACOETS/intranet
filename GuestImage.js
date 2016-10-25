@@ -33,7 +33,7 @@ $(function($, undefined)
 		//var splittedImageIcon = userEntry.GuestImage.split(',')[1];
 		//var splittedImageURL = userEntry.GuestImage.split(',')[0];
 
-	     $("#imgGuestImage").attr('src',userEntry.GuestImage);
+	     //$("#imgGuestImage").attr('src',userEntry.GuestImage);
     });
   }
   function onQueryError(error) {
@@ -45,6 +45,6 @@ $(function($, undefined)
 
 </head>
 <body>
-<div id="DivImage"><img src="" id="imgGuestImage" alt="Guest Image" style="width:97%;height:100%"/></div>
+<div id="DivImage"><img src="https://lacoets.github.io/intranet/small-banner1.jpg" id="imgGuestImage" alt="Guest Image" style="width:97%;height:100%"/></div>
 </body>
 </html> 
