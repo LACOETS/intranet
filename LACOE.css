@@ -3971,14 +3971,8 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 
 /*Documents inner page Sidebar*/
 .DocumentswithSidebar{}
-.docLeftside{width:20%; background:#f7f8f8;border-right:1px solid #e4e4e4; min-height:500px;display:table-cell;
-  vertical-align:top;}
-.docRytSide {
-  width: 80%;
-  padding-bottom:48px;
-  display:table-cell;
-  vertical-align:top;
-}
+.docLeftside{width:17%; background:#f7f8f8;border-right:1px solid #e4e4e4; min-height:500px;display:table-cell;vertical-align:top; height:100%}
+.docRytSide {width: 65%;padding-bottom:48px;display:table-cell;vertical-align:top;height:100%}
 .docRytSide .pagination-page dd{display:block}
 .docLeftside .ms-ref-refiner{padding-right:0}
 .docLeftside .ms-ref-refiner #Container{padding:20px; border-bottom:1px solid #e4e4e4}
