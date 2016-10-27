@@ -41,7 +41,8 @@ $(function(){
 	setTimeout(function(){ $("img.lazy").lazyload();}, 250);
 	
 	$(document).on('click', '.quicklinks-section.landing-quicklink .page_navigation a', function(){
-		$("img.lazy").lazyload();
+		setTimeout(function(){ $("img.lazy").lazyload();}, 50);
+		alert();
 	})
 });
 
