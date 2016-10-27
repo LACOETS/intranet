@@ -4262,7 +4262,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .department-new .documents-section.grid-12 .dataviewWebpart-table table + table{display:none}
 
 .big-newsfeedbox .generic_heading3 h2{font:500 16px "Work Sans",sans-serif; padding-top:10px;}
-.big-newsfeedbox .ms-microfeed-focusBox{width:100%; margin-left:0; border-radius:30px}
+.big-newsfeedbox .ms-microfeed-focusBox{width:100%; margin-left:0; border-radius:30px;padding-left:15px;}
 .big-newsfeedbox .ms-textSmall, .big-newsfeedbox .ms-textXSmall, .big-newsfeedbox .ms-metadata, .big-newsfeedbox .ms-descriptiontext, .big-newsfeedbox .ms-secondaryCommandLink{font-size:0.8em}
 .big-newsfeedbox .ms-microfeed-thread{margin-bottom:3px;}
 .big-newsfeedbox .ms-microfeed-userName.ms-textLarge.ms-subtleLink,.big-newsfeedbox .ms-microfeed-userName.ms-textLarge.ms-subtleLink a{font-size:14px; font-weight:500; color:#1c7ec7 !important}
@@ -4281,7 +4281,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .project-sitefeed .project-sitefeedbox{padding:13px 0px 0px 13px}
 .big-newsfeedbox .ms-microfeed-postBox{height:auto; resize:none}
 .big-newsfeedbox .project-sitefeedbox{height:495px; overflow:hidden; overflow-y:scroll}
-.big-newsfeedbox.project-sitefeed .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{margin-left:175px; padding-left:15px;}
+.big-newsfeedbox.project-sitefeed .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{margin-left:175px;}
 .big-newsfeedbox.project-sitefeed .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan button{padding:2px 0}
 .sitefollw-section.newsfeeds-desk .ms-microfeed-postBox{height:auto; resize:none}
 .big-newsfeedbox.project-sitefeed .ms-microfeed-focusBox{border-radius:25px; width:97%;}
