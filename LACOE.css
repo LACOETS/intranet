@@ -4262,7 +4262,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .department-new .documents-section.grid-12 .dataviewWebpart-table table + table{display:none}
 
 .big-newsfeedbox .generic_heading3 h2{font:500 16px "Work Sans",sans-serif; padding-top:10px;}
-.big-newsfeedbox .ms-microfeed-focusBox{width:100%}
+.big-newsfeedbox .ms-microfeed-focusBox{width:100%; margin-left:0}
 .big-newsfeedbox .ms-textSmall, .big-newsfeedbox .ms-textXSmall, .big-newsfeedbox .ms-metadata, .big-newsfeedbox .ms-descriptiontext, .big-newsfeedbox .ms-secondaryCommandLink{font-size:0.8em}
 .big-newsfeedbox .ms-microfeed-thread{margin-bottom:3px;}
 .big-newsfeedbox .ms-microfeed-userName.ms-textLarge.ms-subtleLink,.big-newsfeedbox .ms-microfeed-userName.ms-textLarge.ms-subtleLink a{font-size:14px; font-weight:500; color:#1c7ec7 !important}
