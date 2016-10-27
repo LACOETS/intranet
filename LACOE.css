@@ -2975,7 +2975,7 @@ margin: 0 auto; width: 1170px }
 .Lacoefooter .Footercontainer { padding: 20px 0 10px;width: 100%;max-width: 1170px; margin: 0 auto;height: 173px !important; }
 .Lacoefooter p { text-align: center; font: 300 15px 'Work Sans', sans-serif; padding-bottom: 10px; }*/
 
-.Lacoefooter { width: 100%; font: 1em "Open Sans", serif; background: #1c7ec7; color: #fff; /*position:absolute; left:0; bottom:0; width:100%;*/ }
+.Lacoefooter { width: 100%; font: 1em "Open Sans", serif; background: #1c7ec7; color: #fff; position:absolute; left:0; bottom:0; width:100%;}
 .Lacoefooter p { text-align: left; font: 300 0.875em 'Work Sans', sans-serif; padding-bottom: 0px; margin-top: -13px }
 .Lacoefooter .Footercontainer { padding: 10px 0 10px; }
 .Footercontainer { max-width: 1170px; width: 100%; margin: 0 auto; }
@@ -3053,7 +3053,7 @@ table { border-collapse: collapse; border-spacing: 0 }
 /*======================================= Restored default Browsers styles End ========================================*/
 /*======================================= fixed Global Classes ========================================*/
 a { text-decoration: none; outline: none; transition: all 300ms ease; -moz-transition: all 300ms ease; -webkit-transition: all 300ms ease; color: #585858 }
-body { line-height: 1; font: 16px 'Work Sans', sans-serif; background-color: #f2f2f0 !important; overflow: visible; overflow-x: visible }
+body { line-height: 1; font: 16px 'Work Sans', sans-serif; background-color: #f2f2f0 !important; overflow: visible; overflow-x: visible; position:relative }
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -ms-word-break: keep-all; word-break: keep-all; -webkit-word-break: keep-all; -moz-word-break: keep-all; word-wrap: break-word; }
 img { vertical-align: middle }
 .container { margin: 0 auto; max-width: 1170px; }
@@ -4291,7 +4291,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 
 .docLeftside .ms-ref-refiner #Value, .docLeftside .ms-ref-unsel-toggle, .docLeftside #OtherValue, .docLeftside #SubmitValue{padding:2px 0; font-size:13px;}
 .dept-calender.cal-view-icon.withsearchbx,.noheight-min{min-height:0}
-
+#main-page-theming #s4-workspace{position:static}
 /*.innergoalspage .dept-events-tabs #department-box #page_5 .ms-webpart-zone.ms-fullWidth > div:first-child{display:none}*/
 /*======================================= Content Area CSS End ========================================*/
 
