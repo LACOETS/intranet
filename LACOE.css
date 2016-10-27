@@ -4252,7 +4252,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .department-new .big-newsfeedbox .sitefollw-section{min-height:528px;}
 .department-new .big-newsfeedbox .sitefollw-section .bigsitefeed{height:493px; overflow-x:hidden; overflow-y:scroll; padding:0px 13px;}
 .big-newsfeedbox .ms-floatRight{float:left; margin-left:95px;}
-.big-newsfeedbox .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{right:auto; left:0; margin-left:160px;}
+.big-newsfeedbox .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{right:auto; left:0; margin-left:185px;}
 .upc-events-tabs .cal-li-width1{width:10%}
 .upc-events-tabs .cal-li-width7{width:52%}
 .upc-events-tabs .cal-li-width5{width:7%}
@@ -4262,7 +4262,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .department-new .documents-section.grid-12 .dataviewWebpart-table table + table{display:none}
 
 .big-newsfeedbox .generic_heading3 h2{font:500 16px "Work Sans",sans-serif; padding-top:10px;}
-.big-newsfeedbox .ms-microfeed-focusBox{width:95%}
+.big-newsfeedbox .ms-microfeed-focusBox{width:100%}
 .big-newsfeedbox .ms-textSmall, .big-newsfeedbox .ms-textXSmall, .big-newsfeedbox .ms-metadata, .big-newsfeedbox .ms-descriptiontext, .big-newsfeedbox .ms-secondaryCommandLink{font-size:0.8em}
 .big-newsfeedbox .ms-microfeed-thread{margin-bottom:3px;}
 .big-newsfeedbox .ms-microfeed-userName.ms-textLarge.ms-subtleLink,.big-newsfeedbox .ms-microfeed-userName.ms-textLarge.ms-subtleLink a{font-size:14px; font-weight:500; color:#1c7ec7 !important}
