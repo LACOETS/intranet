@@ -2976,7 +2976,7 @@ margin: 0 auto; width: 1170px }
 .Lacoefooter p { text-align: center; font: 300 15px 'Work Sans', sans-serif; padding-bottom: 10px; }*/
 
 .Lacoefooter { width: 100%; font: 1em "Open Sans", serif; background: #1c7ec7; color: #fff; /*position:absolute; left:0; bottom:0; width:100%;*/ }
-.Lacoefooter p { text-align: left; font: 300 0.875em 'Work Sans', sans-serif; padding-bottom: 0px; margin-top: -13px }
+.Lacoefooter p { text-align: left; font: 300 0.875em 'Work Sans', sans-serif; padding-bottom: 0px; margin-top: -25px }
 .Lacoefooter .Footercontainer { padding: 10px 0 10px; }
 .Footercontainer { max-width: 1170px; width: 100%; margin: 0 auto; }
 .footer-links { text-align: left; float: left; }
@@ -4238,7 +4238,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .upc-events-tabs{min-height:260px;}
 .lcoe-report-card .btn-wrapper{float:none}
 .lcoe-report-card .btn-wrapper:after{content:''; display:block; float:none; clear:both}
-.lcoe-report-card .btn-wrapper #view-members-link{float:left}
+.lcoe-report-card .btn-wrapper #view-members-link,.lcoe-report-card .btn-wrapper #view-LacoePage{float:left}
 .lcoe-report-card .btn-wrapper #AllGoals{float:right; margin-right:4px;}
 
 .newsfeed-innerbox{margin-bottom:10px;}
