@@ -4238,7 +4238,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .upc-events-tabs{min-height:260px;}
 .lcoe-report-card .btn-wrapper{float:none}
 .lcoe-report-card .btn-wrapper:after{content:''; display:block; float:none; clear:both}
-.lcoe-report-card .btn-wrapper #view-members-link,.lcoe-report-card .btn-wrapper #view-LacoePage{float:left}
+.lcoe-report-card .btn-wrapper #view-members-link,.lcoe-report-card .btn-wrapper a:first-child{float:left}
 .lcoe-report-card .btn-wrapper #AllGoals{float:right; margin-right:4px;}
 
 .newsfeed-innerbox{margin-bottom:10px;}
@@ -4328,7 +4328,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 
 /*Annoucemnet slider css*/
 .slider-pro { position: relative; /*margin: 0 auto;*/ -moz-box-sizing: content-box; box-sizing: content-box; }
-.slider-pro::after {background:rgba(0,0,0,0.3);content: "";height: 100%;left: 50%;position: absolute;top: 0;width: 1px;}
+.slider-pro::after {background:rgba(0,0,0,0.3);content: "";height: 100%;left: 50%;position: absolute;top: 0;width: 1px; margin-left:-1px;}
 .sp-slides-container { position: relative; }
 .sp-mask { position: relative; overflow: hidden; }
 .sp-slides { position: relative; -webkit-backface-visibility: hidden; -webkit-perspective: 1000; }
