@@ -4290,7 +4290,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .big-newsfeedbox .box-paginations{display:none}
 
 .docLeftside .ms-ref-refiner #Value, .docLeftside .ms-ref-unsel-toggle, .docLeftside #OtherValue, .docLeftside #SubmitValue{padding:2px 0; font-size:13px;}
-
+.dept-calender.cal-view-icon.withsearchbx{min-height:0}
 
 /*.innergoalspage .dept-events-tabs #department-box #page_5 .ms-webpart-zone.ms-fullWidth > div:first-child{display:none}*/
 /*======================================= Content Area CSS End ========================================*/
