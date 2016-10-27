@@ -217,6 +217,7 @@ position: relative;
 white-space: nowrap;
 }
 </style>
+
 <script>
 $(document).ready(function() {
 $('.ms-microfeed-thread:gt(3)').hide(); //hides all posts after the three latests
