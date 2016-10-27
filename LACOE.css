@@ -4282,6 +4282,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .big-newsfeedbox .ms-microfeed-postBox{height:auto; resize:none}
 .big-newsfeedbox .project-sitefeedbox{height:495px; overflow:hidden; overflow-y:scroll}
 .big-newsfeedbox.project-sitefeed .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan{margin-left:175px;}
+.big-newsfeedbox.project-sitefeed .ms-microfeed-microblogpart .ms-microfeed-postButtonSpan button{padding:2px 0}
 .sitefollw-section.newsfeeds-desk .ms-microfeed-postBox{height:auto; resize:none}
 .big-newsfeedbox.project-sitefeed .ms-microfeed-focusBox{border-radius:25px; width:97%;}
 .big-newsfeedbox.project-sitefeed .ms-microfeed-focusBox textarea{padding:5px 10px}
