@@ -4292,7 +4292,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 
 .hidepagination .dataviewWebpart-table table + table{display:none}
 .big-newsfeedbox .box-paginations{display:none}
-.innergoalspage .dept-events-tabs #department-box #page_5 .ms-webpart-zone.ms-fullWidth > div:first-child{display:none}
+/*.innergoalspage .dept-events-tabs #department-box #page_5 .ms-webpart-zone.ms-fullWidth > div:first-child{display:none}*/
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
