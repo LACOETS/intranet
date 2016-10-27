@@ -3975,7 +3975,7 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 .docRytSide {width: 65%;padding-bottom:48px;display:table-cell;vertical-align:top;height:100%}
 .docRytSide .pagination-page dd{display:block}
 .docLeftside .ms-ref-refiner{padding-right:0}
-.docLeftside .ms-ref-refiner #Container{padding:20px; border-bottom:1px solid #e4e4e4}
+.docLeftside .ms-ref-refiner #Container{padding:10px 20px; border-bottom:1px solid #e4e4e4}
 .docLeftside .ms-disabled.ms-alignCenter{padding:5px;}
 .dataComesoon{padding:10px; color:#f00}
 
@@ -4289,7 +4289,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .hidepagination .dataviewWebpart-table table + table{display:none}
 .big-newsfeedbox .box-paginations{display:none}
 
-.docLeftside .ms-ref-refiner #Value, .docLeftside .ms-ref-unsel-toggle, .docLeftside #OtherValue, .docLeftside #SubmitValue{padding:2px 0; font-size:14px;}
+.docLeftside .ms-ref-refiner #Value, .docLeftside .ms-ref-unsel-toggle, .docLeftside #OtherValue, .docLeftside #SubmitValue{padding:2px 0; font-size:13px;}
 
 
 /*.innergoalspage .dept-events-tabs #department-box #page_5 .ms-webpart-zone.ms-fullWidth > div:first-child{display:none}*/
