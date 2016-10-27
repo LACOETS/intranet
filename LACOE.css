@@ -4291,6 +4291,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .big-newsfeedbox.project-sitefeed .ms-microfeed-focusBox textarea{padding:5px 10px}
 
 .hidepagination .dataviewWebpart-table table + table{display:none}
+.big-newsfeedbox .box-paginations{display:none}
 /*======================================= Content Area CSS End ========================================*/
 
 /*Loader*/
