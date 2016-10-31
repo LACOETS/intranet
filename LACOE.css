@@ -4293,6 +4293,8 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .docLeftside .ms-ref-refiner #Value, .docLeftside .ms-ref-unsel-toggle, .docLeftside #OtherValue, .docLeftside #SubmitValue{padding:2px 0; font-size:13px;}
 .dept-calender.cal-view-icon.withsearchbx,.noheight-min{min-height:0}
 
+.dept-events-tabs.dept-events-tabsextra .ms-promlink-header.eventsposdiv-pagin{list-style:none}
+
 /*.innergoalspage .dept-events-tabs #department-box #page_5 .ms-webpart-zone.ms-fullWidth > div:first-child{display:none}*/
 /*======================================= Content Area CSS End ========================================*/
 
