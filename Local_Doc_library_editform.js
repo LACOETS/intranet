@@ -2,6 +2,7 @@
  $( document ).ready(function() {
 	 alert('Item updated successfully');
 	 alert($("select[title='Belongs to Project Required Field']option:selected").text());
+	 debugger;
 	 if ($("select[title='Belongs to Project Required Field']option:selected").text() == "")
 	{
 		
