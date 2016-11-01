@@ -1,7 +1,7 @@
 <script>
  $( document ).ready(function() {
-	 console.log('hi');
-	 console.log($("select[title='Belongs to Project Required Field']option:selected").text());
+	 alert('Item updated successfully');
+	 alert($("select[title='Belongs to Project Required Field']option:selected").text());
 	 if ($("select[title='Belongs to Project Required Field']option:selected").text() == "")
 	{
 		
