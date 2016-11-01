@@ -5,7 +5,7 @@
 var goalID;
 var windowURL = window.location.href;
 $(document).ready(function(){	
-	alert(goalID);
+	alert('Hello';
 	if(windowURL.indexOf('NewForm.aspx') > -1){
 		//goalID = document.referrer;
 		//goalID = goalID.split('SelectedID=')[1];
@@ -25,6 +25,7 @@ $(document).ready(function(){
 			goalID = goalID.split('#')[0];
 		        //alert(goalID);
 			GetGoalName(goalID);
+			alert(goalID);
 		}
 		
 		else if(windowURL.indexOf('SelectedID') > -1){			
@@ -51,7 +52,7 @@ $(document).ready(function(){
 	{
 		goalID = decodeURIComponent(window.location.href.split('?')[1]);
 		goalID = goalID.split('?')[1].split('=')[1];
-		alert('In Else goalID:=' + goalID);
+		//alert('In Else goalID:=' + goalID);
 	}//End of Else If for Edit form
 	//GetGoalName(goalID);
 });//End of Doc ready
