@@ -51,7 +51,7 @@ $(document).ready(function(){
 	{
 		goalID = decodeURIComponent(window.location.href.split('?')[1]);
 		goalID = goalID.split('?')[1].split('=')[1];
-		//alert('In Else goalID:=' + goalID);
+		alert('In Else goalID:=' + goalID);
 	}//End of Else If for Edit form
 	//GetGoalName(goalID);
 });//End of Doc ready
