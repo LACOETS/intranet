@@ -1,0 +1,455 @@
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>Public School Directory</title>
+
+
+<script type="text/javascript" src="https://lacoets.github.io/intranet/jquery-listnav.js"></script>
+<link rel="stylesheet" href="https://lacoets.github.io/intranet/listnav.css">
+<link rel="stylesheet" href="https://lacoets.github.io/intranet/style.css">
+<script type="text/javascript">    
+        //Code on page load 
+            $( window ).load(function() {
+             	PressEnterkey();
+		$('#resetbtn').click(function() 
+					{			
+					 $("#searchText").val('');			
+						               
+					});
+		    GetAllItems();
+				GetAllItems2();
+							/*setTimeout(function(){ $('#ulSearch').wrap('<div id="glosarypagination" class="pagination-page"></div>');
+							$('<div class="page_navigation"></div>').insertAfter('#ulSearch');
+							 }, 100);*/
+				
+				setTimeout(function(){ $('#glosarypagination').pajinate({
+                    items_per_page : 10,
+                    abort_on_small_lists: true
+				}); }, 500);            	
+         			
+					});// End of window load
+        
+        function PressEnterkey()
+		{        
+		$("#searchText").keypress(function(event){
+			   if(event.keyCode == 13){
+				$("#searchbtn").click();
+					}
+				}); 
+		}
+	
+	
+	function GetAllItems(){
+		//$("label[for='lblNoWord']").hide();
+        	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+			    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
+			      var context = SP.ClientContext.get_current();			      	  
+				  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('School Districts')/items?$select=Id,Title,Address,WebSite,Contact_x0020_Number"; 
+			      $.ajax({
+			        url: queryUrl,
+			        method: "GET",
+			        headers: {
+			          "Accept": "application/json; odata=verbose"
+			        },
+			        success: onQuerySuccess,
+			        error: onQueryError
+			      });
+			    });
+			  });
+        }//End of GetAllItems
+        
+        function onQuerySuccess(data) {
+		$("label[for='lblNoWord']").hide();
+		    var results = data.d.results;	   		    
+		    $.each(results, function(index, dataRec) {
+				var userEntry = {};	
+		        userEntry.ID = dataRec.Id;
+				userEntry.Title = dataRec.Title;
+				//alert(userEntry.Title);
+				userEntry.Address = dataRec.Address;
+				userEntry.ContactNumber= dataRec.Contact_x0020_Number;
+				userEntry.WebSite = dataRec.WebSite;
+				//var urlText=userEntry.WebSite;
+				var itemURL = "https://lacoe.sharepoint.com/Lists/School%20Districts/DispForm.aspx?ID="+userEntry.ID;
+
+				var notdefined="---";
+				if(userEntry.WebSite!=null)
+				{
+				$("#ulSearch").append('<li><div class="leftshortnameGA new-GA-1">'+'<a href="'+itemURL+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + userEntry.Title +'</a>'+'</div>'+'<div class="rightlongnamGA new-GA-2">'+userEntry.Address+', '+userEntry.ContactNumber+'</div>'+'<div class="rightlongnamGA new-GA-3">'+'<a href="'+userEntry.WebSite.Url+'" target="_blank">Click here</a>'+'</div>'+'<div class="clear"></div></li>');
+				}
+				else
+				{
+				$("#ulSearch").append('<li><div class="leftshortnameGA new-GA-1">'+'<a href="'+itemURL+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + userEntry.Title +'</a>'+'</div>'+'<div class="rightlongnamGA new-GA-2">'+userEntry.Address+', '+userEntry.ContactNumber+'</div>'+'<div class="rightlongnamGA new-GA-3">'+notdefined+'</div>'+'<div class="clear"></div></li>');
+				}  
+				
+		    });//End of each		    
+		   
+			if ($('#ulSearch-nav').length > 0) {                   
+                $('#ulSearch-nav').remove();                                                      
+                $('#ulSearch').listnav();
+                $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));                
+								$("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">School Districts</div><div class="longnamTXtGA new-GA-2">Address / Contact number</div><div class="longnamTXtGA new-GA-3">WebSite</div><div class="clear"></div></div>');
+              }
+	          else{                      
+		           $('#ulSearch').listnav();                       
+		           $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));		          
+							$("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">School Districts</div><div class="longnamTXtGA new-GA-2">Address / Contact number</div><div class="longnamTXtGA new-GA-3">WebSite</div><div class="clear"></div></div>');
+	           }  
+			
+			
+  		}//End of onQuerySuccess
+  function onQueryError(error) {
+    alert(error.statusText)
+  }
+        
+        function GetAllItems2(){
+		//$("label[for='lblNoWord1']").hide();
+        	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+			    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
+			      var context = SP.ClientContext.get_current();			      	  
+				  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('College Districts')/items?$select=Id,Title,Address,WebSite,Contact_x0020_Number"; 
+			      $.ajax({
+			        url: queryUrl,
+			        method: "GET",
+			        headers: {
+			          "Accept": "application/json; odata=verbose"
+			        },
+			        success: onQuerySuccess2,
+			        error: onQueryError2
+			      });
+			    });
+			  });
+        }//End of GetAllItems2
+		
+		
+		function onQuerySuccess2(data) {
+			$("label[for='lblNoWord1']").hide();
+		    var results = data.d.results;		    
+		    $.each(results, function(index, dataRec) {
+				var userEntry = {};	
+		        userEntry.ID = dataRec.Id;
+
+				userEntry.Title = dataRec.Title;
+				//alert(userEntry.Title);
+				userEntry.Address= dataRec.Address;
+				userEntry.ContactNumber= dataRec.Contact_x0020_Number;
+				userEntry.WebSite = dataRec.WebSite;
+				
+				var itemURL = "https://lacoe.sharepoint.com/Lists/College%20Districts/DispForm.aspx?ID="+userEntry.ID;
+
+				
+				var notdefined='---';
+				if(userEntry.WebSite!=null)
+				{
+				$("#ulSearch3").append('<li><div class="leftshortnameGA new-GA-1">'+'<a href="'+itemURL+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + userEntry.Title +'</a>'+'</div>'+'<div class="rightlongnamGA new-GA-2">'+userEntry.Address+', '+userEntry.ContactNumber+'</div>'+'<div class="rightlongnamGA new-GA-3">'+'<a href="'+userEntry.WebSite.Url+'" target="_blank">Click here</a>'+'</div>'+'<div class="clear"></div></li>');
+				}
+				else
+				{
+				$("#ulSearch3").append('<li><div class="leftshortnameGA new-GA-1">'+'<a href="'+itemURL+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + userEntry.Title +'</a>'+'</div>'+'<div class="rightlongnamGA new-GA-2">'+userEntry.Address+', '+userEntry.ContactNumber+'</div>'+'<div class="rightlongnamGA new-GA-3">'+notdefined+'</div>'+'<div class="clear"></div></li>');
+				}
+		    });//End of each
+		    if ($('#ulSearch3-nav').length > 0) {                   
+                $('#ulSearch3-nav').remove();                                                      
+                $('#ulSearch3').listnav();
+                $('#ulSearch3-nav').clone(true).appendTo($('#ulSearch4'));
+               				$("#ulSearch3-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">College Name</div><div class="longnamTXtGA new-GA-2">Address / Contact number</div><div class="longnamTXtGA new-GA-3">WebSite</div><div class="clear"></div></div>');
+              }
+	          else{                      
+		           $('#ulSearch3').listnav();                       
+		           $('#ulSearch3-nav').clone(true).appendTo($('#ulSearch4'));
+		        $("#ulSearch3-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">College Name</div><div class="longnamTXtGA new-GA-2">Address / Contact number</div><div class="longnamTXtGA new-GA-3">WebSite</div><div class="clear"></div></div>');   
+	           }  
+			
+			
+  		}//End of onQuerySuccess
+  function onQueryError2(error) {
+    alert(error.statusText)
+  }
+		
+		
+       function GetBranchByProtocol() { 
+        // alert('In GetBranchByProtocol');
+         //$("label[for='lblNoWord']").hide();
+	//$("label[for='lblNoWord1']").hide();
+	       $("#ulSearch").empty();          
+            var textVal = $("#searchText").val();
+            if (textVal != '') {
+            SP.SOD.executeFunc("sp.js", "SP.ClientContext", function () {
+                    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function () {
+					var context = SP.ClientContext.get_current();
+					var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('School Districts')/Items?$filter=substringof('"+textVal+"',Title)";
+                            $.ajax({
+                            url: queryUrl,
+                            method: "GET",
+                            headers: {
+                                "Accept": "application/json; odata=verbose"
+                            },
+                            success: onQuerySucceeded,
+                            error: onQueryFailed
+                        });
+                    });
+                });
+            }//End of if
+            else {
+            //alert('In else');
+                $("#ulSearch").empty();
+                if ($('#ulSearch-nav').length > 0) {                	 
+                	$('#ulSearch-nav').remove();
+                    $('#ulSearch-nav').remove();
+                    //document.getElementById('itemCreateion').style.visibility = 'hidden';
+                    GetAllItems();
+                }//End of if
+                else{
+                	GetAllItems();
+                }
+				GetBranchByProtocol2();
+                //alert('Search box cannot leave empty');
+            }//End of else           
+        }
+         
+		 
+		 
+		 function onQuerySucceeded(data) {                  
+               $("#ulSearch").empty();
+               $("#ulSearch2").empty();
+                var results = data.d.results;
+            var count = data.d.results.length;
+            if (count > 0) {
+		    //alert('In onQuerySucceeded:=' + count);
+		    $("label[for='lblNoWord']").hide();
+		    //$("label[for='lblNoWord1']").hide();
+                $.each(results, function (index, dataRec) {
+                    var userEntry = {};
+                    userEntry.ID = dataRec.Id;
+
+					userEntry.Title = dataRec.Title;
+                    userEntry.ContactNumber= dataRec.Contact_x0020_Number;
+                    userEntry.Address = dataRec.Address;
+                    userEntry.WebSite = dataRec.WebSite;
+                    var itemURL = "https://lacoe.sharepoint.com/Lists/School%20Districts/DispForm.aspx?ID="+userEntry.ID;
+
+					var notdefined = '---';
+                    if (userEntry.WebSite != null) {
+                        $("#ulSearch").append('<li><div class="leftshortnameGA new-GA-1">' + '<a href="'+itemURL+'" ONCLICK="GoToLink(this);return false;" target="_blank">' + userEntry.Title + '</a>' + '</div>' + '<div class="rightlongnamGA new-GA-2">'+userEntry.Address+', '+userEntry.ContactNumber+'</div>' + '<div class="rightlongnamGA new-GA-3">' + '<a href="' + userEntry.WebSite.Url + '" target="_blank">Click here</a>' + '</div>' + '<div class="clear"></div></li>');
+                    }
+                    else {
+                        $("#ulSearch").append('<li><div class="leftshortnameGA new-GA-1">' + '<a href="'+itemURL+'" ONCLICK="GoToLink(this);return false;" target="_blank">' + userEntry.Title + '</a>' + '</div>' + '<div class="rightlongnamGA new-GA-2">'+userEntry.Address+', '+userEntry.ContactNumber+'</div>' + '<div class="rightlongnamGA new-GA-3">' + notdefined + '</div>' + '<div class="clear"></div></li>');
+                    }
+                })                   
+                    if ($('#ulSearch-nav').length > 0) {                   
+                    $('#ulSearch-nav').remove();                                                      
+                    $('#ulSearch').listnav();
+                    $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
+                     $("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">School Name</div><div class="longnamTXtGA new-GA-2">Address/Contact number</div><div class="longnamTXtGA new-GA-3">WebSite</div><div class="clear"></div></div>'); 
+                      }
+                      else{                      
+                       $('#ulSearch').listnav();                       
+                       $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
+                       $("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">School Name</div><div class="longnamTXtGA new-GA-2">Address/Contact number</div><div class="longnamTXtGA new-GA-3">WebSite</div><div class="clear"></div></div>');  
+                       }              
+                   }
+                   else
+                   {
+                    $('#ulSearch-nav').remove();
+                    //alert("Items are not available with this word in School Districts");
+		     $("label[for='lblNoWord']").show();
+		     $("label[for='lblNoWord']").html("Items are not available with this word in School Districts");   
+                  
+                   }
+				   GetBranchByProtocol2();
+                 document.getElementById('itemCreateion').style.visibility = 'visible';
+                
+            }
+		 
+		 
+        
+            function onQueryFailed(sender, args) {               
+                alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace());
+            }
+			
+			
+			
+			function GetBranchByProtocol2(){
+            //$("label[for='lblNoWord']").show();
+				$("label[for='lblNoWord1']").hide();
+				$("#ulSearch3").empty(); 
+            var textVal = $("#searchText").val();
+            if (textVal != '') {
+			
+                SP.SOD.executeFunc("sp.js", "SP.ClientContext", function () {
+                    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function () {
+					var context = SP.ClientContext.get_current();
+					var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('College Districts')/Items?$filter=substringof('"+textVal+"',Title)";
+                            $.ajax({
+                            url: queryUrl,
+                            method: "GET",
+                            headers: {
+                                "Accept": "application/json; odata=verbose"
+                            },
+                            success: onQuerySuccessee2,
+                            error: onQueryErroree2
+                        });
+                    });
+                });
+            }
+            else {
+                //alert('In else');
+                $("#ulSearch3").empty();
+                if ($('#ulSearch3-nav').length > 0) {
+                    $('#ulSearch3-nav').remove();
+                    $('#ulSearch3-nav').remove();
+                    GetAllItems2();
+                }//End of if
+                else {
+                    GetAllItems2();
+                }
+            }
+        }
+			
+        function onQuerySuccessee2(data) {
+		//alert('Calling success');
+		//debugger;
+            $("#ulSearch3").empty();
+            $("#ulSearch4").empty();
+            var results = data.d.results;
+            var count = data.d.results.length;
+            if (count > 0) {
+		    $("label[for='lblNoWord1']").hide();
+		    //$("label[for='lblNoWord']").hide();
+                $.each(results, function (index, dataRec) {
+                    var userEntry = {};
+                    userEntry.ID = dataRec.Id;
+
+					userEntry.Title = dataRec.Title;
+                    userEntry.Address = dataRec.Address;
+                    userEntry.ContactNumber= dataRec.Contact_x0020_Number;
+                    userEntry.WebSite = dataRec.WebSite;
+                    var notdefined = '---';
+                    var itemURL = "https://lacoe.sharepoint.com/Lists/College%20Districts/DispForm.aspx?ID="+userEntry.ID;
+
+					if (userEntry.WebSite != null) {
+                        $("#ulSearch3").append('<li><div class="leftshortnameGA new-GA-1">' + '<a href="'+itemURL+'" ONCLICK="GoToLink(this);return false;" target="_blank">' + userEntry.Title + '</a>' + '</div>' + '<div class="rightlongnamGA new-GA-2">'+userEntry.Address+', '+userEntry.ContactNumber+'</div>' + '<div class="rightlongnamGA new-GA-3">' + '<a href="' + userEntry.WebSite.Url + '" target="_blank">Click here</a>' + '</div>' + '<div class="clear"></div></li>');
+                    }
+                    else {
+                        $("#ulSearch3").append('<li><div class="leftshortnameGA new-GA-1">' + '<a href="'+itemURL+'" ONCLICK="GoToLink(this);return false;" target="_blank">' + userEntry.Title + '</a>' + '</div>' + '<div class="rightlongnamGA new-GA-2">'+userEntry.Address+', '+userEntry.ContactNumber+'</div>' + '<div class="rightlongnamGA new-GA-3">' + notdefined + '</div>' + '<div class="clear"></div></li>');
+                    }
+                });//End of each
+                if ($('#ulSearch3-nav').length > 0) {
+                    $('#ulSearch3-nav').remove();
+                    $('#ulSearch3').listnav();
+                    $('#ulSearch3-nav').clone(true).appendTo($('#ulSearch4'));
+                    $("#ulSearch3-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">College Name</div><div class="longnamTXtGA new-GA-2">Address/Contact number</div><div class="longnamTXtGA new-GA-3">WebSite</div><div class="clear"></div></div>');
+                }
+                else {
+                    $('#ulSearch3').listnav();
+                    $('#ulSearch3-nav').clone(true).appendTo($('#ulSearch4'));
+                    $("#ulSearch3-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">College Name</div><div class="longnamTXtGA new-GA-2">Address/Contact number</div><div class="longnamTXtGA new-GA-3">WebSite</div><div class="clear"></div></div>');
+                }
+            }
+            else {
+                $('#ulSearch3-nav').remove();
+                //alert("Items are not available with this word in College Districts");
+		$("label[for='lblNoWord1']").show();
+		$("label[for='lblNoWord1']").html("Items are not available with this word in College Districts");
+            }
+        document.getElementById('itemCreateion').style.visibility = 'visible';
+        }//End of onQuerySuccess
+        function onQueryErroree2(error) {
+            alert(error.statusText)
+        }
+			
+			
+			
+            
+//function to open pages in a dialog
+function openInDialog(dlgWidth, dlgHeight, dlgAllowMaximize,dlgShowClose,needCallbackFunction, pageUrl) 
+{    
+    var options = { url: pageUrl, width: dlgWidth, height: dlgHeight, allowMaximize: dlgAllowMaximize,
+        showClose: dlgShowClose		
+		};
+		
+	if(needCallbackFunction)
+	{
+		options.dialogReturnValueCallback = Function.createDelegate(null, CloseDialogCallback);
+	}
+    SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.showModalDialog', options);
+}
+function CloseDialogCallback(dialogResult, returnValue)
+{
+	//if user click on OK or Save
+     if(dialogResult == SP.UI.DialogResult.OK)
+     {  // refresh parent page
+ 		SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.RefreshPage', SP.UI.DialogResult.OK); 	 		
+     }
+     // if user click on Close or Cancel
+     else if(dialogResult == SP.UI.DialogResult.cancel)
+     {	// Do Nothing or add any logic you want 
+     }
+     else
+     {//alert("else " + dialogResult);
+     }
+}             
+</script>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:Extranet_x0020_Approval msdt:dt="string"></mso:Extranet_x0020_Approval>
+<mso:Unit_x0020_Approval msdt:dt="string"></mso:Unit_x0020_Approval>
+<mso:Division_x0020_Approval msdt:dt="string"></mso:Division_x0020_Approval>
+<mso:Section_x0020_Approval msdt:dt="string"></mso:Section_x0020_Approval>
+<mso:Department_x0020_Approval msdt:dt="string"></mso:Department_x0020_Approval>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+<div class="GAcontainer">
+		<div class="glosarySearch">
+				<div class="searchCntrglry">
+						<div class="SearchTxtbxgsry">
+								<input type="text" id="searchText" placeholder="Search">
+						</div>
+						<div class="Searchbtngsry">
+						<input type="button" id="searchbtn" value="" onclick="GetBranchByProtocol()"/>
+								
+						</div>
+						<div class="clear"></div>
+				</div>
+				<input type="button" value="Reset" id="resetbtn" style="display:inline-block; vertical-align:top">
+			        
+		</div>		
+		<div id="itemCreateion" class="aspsd-itemCreateion"> <!--visibility:hidden-->
+			<h3>School Districts</h3>
+		</div>
+	        <div class="msgNoWord">
+			<label for="lblNoWord" style="color: red;font-size: 13px;display:none;"></label>
+		</div>
+		<div id="displayDiv" class="aspsd-diplayDiv">
+				<div class="searchdivGA">
+						<ul id="ulSearch" class="pagination-rowholder">
+						</ul>
+				</div>
+		</div>
+		<div id="ulSearchBottom" class="aspsd-ulSearchBottom" style="position:relative;">
+				<ul id="ulSearch2" class="pagination-rowholder">
+				</ul>
+		</div>
+		
+		<div id="itemCreateion2" class="aspsd-itemCreateion"> <!--visibility:hidden-->
+<h3>College Districts</h3>
+
+</div>
+	<div class="msgNoWord">
+		<label for="lblNoWord1" style="color: red;font-size: 13px;display:none;"></label>
+	</div>
+		<div id="displayDiv2" class="aspsd-diplayDiv">
+				<div class="searchdivGA">
+						<ul id="ulSearch3" class="pagination-rowholder">
+						</ul>
+				</div>
+		</div>
+		
+		<div id="ulSearchBottom2" class="aspsd-ulSearchBottom" style="position:relative;">
+				<ul id="ulSearch4" class="pagination-rowholder">
+				</ul>
+		</div>
+</div></body>
+</html>
