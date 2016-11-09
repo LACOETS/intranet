@@ -1,0 +1,263 @@
+﻿<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+<title>Key Contact</title>
+<script type="text/javascript" src="https://lacoets.github.io/intranet/jquery-listnav.js"></script>
+<link rel="stylesheet" href="https://lacoets.github.io/intranet/listnav.css">
+<link rel="stylesheet" href="https://lacoets.github.io/intranet/style.css">
+<script type="text/javascript">    
+        //Code on page load 
+            $( window ).load(function() {
+             	$("label[for='lblNoWord']").hide();
+				GetAllItems();
+				$('#resetbtn').click(function() 
+					{			
+					  $("#searchText").val('');		
+						               
+					});
+             	PressEnterkey();
+							/*setTimeout(function(){ $('#ulSearch').wrap('<div id="glosarypagination" class="pagination-page"></div>');
+							$('<div class="page_navigation"></div>').insertAfter('#ulSearch');
+							 }, 100);*/
+				
+				setTimeout(function(){ $('#glosarypagination').pajinate({
+                    items_per_page : 10,
+                    abort_on_small_lists: true
+				}); }, 500);            	
+         			
+					});// End of window load
+					
+					
+    //Start Trigger a button click on the Enter key in a text box//////////////////			
+	  			function PressEnterkey()
+	  			{	
+	  			 $("#searchText").keypress(function(event)
+					{
+					    if(event.keyCode == 13)
+						{
+				        $("#searchbtn").click();
+				    }
+				 }); 
+				}
+   //End Trigger a button click on the Enter key in a text box//////////////////
+ 
+        function GetAllItems(){
+        	SP.SOD.executeFunc("sp.js", "SP.ClientContext", function() {
+			    SP.SOD.executeFunc("sp.runtime.js", "SP.ClientContext", function() {
+			      var context = SP.ClientContext.get_current();			      	  
+				  var queryUrl = _spPageContextInfo.webAbsoluteUrl + "/_api/web/lists/getbytitle('Key Contact')/items?$select=Title,Email_x0020_Address,Contact_x0020_number,Last_x0020_Name,Function"; 
+			      $.ajax({
+			        url: queryUrl,
+			        method: "GET",
+			        headers: {
+			          "Accept": "application/json; odata=verbose"
+			        },
+			        success: onQuerySuccess,
+			        error: onQueryError
+			      });
+			    });
+			  });
+        }//End of GetAllItems
+        
+        function onQuerySuccess(data) {
+		    var results = data.d.results;		    
+		    $.each(results, function(index, dataRec) {
+				var userEntry = {};	
+		
+				userEntry.FirstName = dataRec.Title;
+				//alert(userEntry.Title);
+				userEntry.EmailAddress = dataRec.Email_x0020_Address;
+				userEntry.ContactNumber= dataRec.Contact_x0020_number;
+				userEntry.LastName = dataRec.Last_x0020_Name;
+				userEntry.Function= dataRec.Function;
+
+
+				//$("#ulSearch").append('<li><div class="leftshortnameGA">'+'<a href="#" ONCLICK="GoToLink(this);return false;" target="_blank">'  + userEntry.Title +'</a>'+'</div>'+'<div class="rightlongnamGA">'+userEntry.EmailAddress+'</div><div class="clear"></div></li>');
+                $("#ulSearch").append('<li><div class="leftshortnameGA new-GA-1">'+'' + userEntry.FirstName +' '+'</div>'+'<div class="leftshortnameGA new-GA-2">'+'' + userEntry.LastName +' '+'</div>'+'<div class="rightlongnamGA new-GA-3">'+userEntry.EmailAddress+', '+userEntry.ContactNumber+'</div>'+'<div class="leftshortnameGA new-GA-4">'+'' + userEntry.Function +' '+'</div><div class="clear"></div></li>');
+				//$("#ulSearch").append('<li><div class="leftshortnameGA">'+'' + userEntry.FirstName +''+'</div>'+'<div class="rightlongnamGA">'+userEntry.EmailAddress+', '+userEntry.ContactNumber+'</div><div class="clear"></div></li>');
+		    });//End of each
+		    
+		    //$('#ulSearch').listnav();
+		    //$('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
+			if ($('#ulSearch-nav').length > 0) {                   
+                $('#ulSearch-nav').remove();                                                      
+                $('#ulSearch').listnav();
+                $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
+				//$("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA">First Name</div><div class="longnamTXtGA">Email Address / Contact Number</div><div class="clear"></div></div>');
+                $("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">First Name</div><div class="shortnamTXtGA new-GA-2">Last Name</div><div class="longnamTXtGA new-GA-3">Email Address / Contact Number</div><div class="shortnamTXtGA new-GA-4">Function</div><div class="clear"></div></div>');
+              }
+	          else{                      
+		           $('#ulSearch').listnav();                       
+		           $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
+				   //$("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA">First Name</div><div class="longnamTXtGA">Email Address / Contact Number</div><div class="clear"></div></div>');   
+	           $("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">First Name</div><div class="shortnamTXtGA new-GA-2">Last Name</div><div class="longnamTXtGA new-GA-3">Email Address / Contact Number</div><div class="shortnamTXtGA new-GA-4">Function</div><div class="clear"></div></div>');
+	           }  
+			
+			
+  		}//End of onQuerySuccess
+  function onQueryError(error) {
+    alert(error.statusText)
+  }
+        
+        
+        function GetBranchByProtocol() { 
+         //alert();
+		$("label[for='lblNoWord']").hide();
+         $("#ulSearch").empty();          
+            var textVal = $("#searchText").val();
+            if (textVal != '') {
+            var listName='Key Contact';
+                var clientContext = new SP.ClientContext.get_current();
+                var site = clientContext.get_site();
+                var web = clientContext.get_web();
+                var oList = clientContext.get_web().get_lists().getByTitle(listName);
+                var camlQuery = new SP.CamlQuery();
+                //camlQuery.set_viewXml('<View><Query><Where><Contains><FieldRef Name=\'Title\'/><Value Type=\'Text\'>' + textVal + '</Value></Contains></Where></Query></View>');
+                camlQuery.set_viewXml('<View><Query><Where><Or><Contains><FieldRef Name=\'Title\'/><Value Type=\'Text\'>' + textVal + '</Value></Contains><Contains><FieldRef Name=\'Last_x0020_Name\'/><Value Type=\'Text\'>' + textVal + '</Value></Contains></Or></Where></Query></View>');
+                //camlQuery.set_viewXml('');
+                this.collListItem = oList.getItems(camlQuery);
+                clientContext.load(collListItem);
+                clientContext.load(site,'ServerRelativeUrl', 'Url');
+                clientContext.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded), Function.createDelegate(this, this.onQueryFailed));
+               
+            }//End of if
+            else {
+            //alert('In else');
+                $("#ulSearch").empty();
+                if ($('#ulSearch-nav').length > 0) {                	 
+                	$('#ulSearch-nav').remove();
+                    $('#ulSearch-nav').remove();
+                    //document.getElementById('itemCreateion').style.visibility = 'hidden';
+                    GetAllItems();
+                }//End of if
+                else{
+                	GetAllItems();
+                }
+                //alert('Search box cannot leave empty');
+            }//End of else           
+        }
+         
+         function onQuerySucceeded(sender, args) {
+                var listItemFirstName = '';
+                var listItemLongName = '';
+                var listItemUrl = '';
+                var listItemEnumerator = collListItem.getEnumerator();  
+               $("#ulSearch").empty();
+               $("#ulSearch2").empty();
+                   var count = 0;
+                   var count = collListItem.get_count(); 
+                   if(count>0)  
+                   {    
+                    while (listItemEnumerator.moveNext()) {
+                        var oListItem = listItemEnumerator.get_current();
+                        listItemFirstName = oListItem.get_item("Title");
+                        listItemEmailAddress = oListItem.get_item("Email_x0020_Address");
+                        listItemContactNumber = oListItem.get_item("Contact_x0020_number");
+                        listItemLastName = oListItem.get_item("Last_x0020_Name");
+                        listItemFunction = oListItem.get_item("Function");
+
+                        listItemID= oListItem.get_item("ID");
+                        var string1="https://lacoe.sharepoint.com/Lists/Key Contact/DispForm.aspx?ID="+listItemID;
+                        //$("#ulSearch").append('<li><div class="leftshortnameGA">'+'<a href="'+string1+'" ONCLICK="GoToLink(this);return false;" target="_blank">'  + listItemFirstName +'</a>'+'</div>'+'<div class="rightlongnamGA">'+listItemLongName +'</div><div class="clear"></div></li>');	 
+                       $("#ulSearch").append('<li><div class="leftshortnameGA new-GA-1">'+'' + listItemFirstName +' '+'</div>'+'<div class="leftshortnameGA new-GA-2">'+'' + listItemLastName +' '+'</div>'+'<div class="rightlongnamGA new-GA-3">'+listItemEmailAddress +', '+listItemContactNumber +'</div>'+'<div class="leftshortnameGA new-GA-4">'+'' + listItemFunction +' '+'</div><div class="clear"></div></li>');
+                       //$("#ulSearch").append('<li><div class="leftshortnameGA">'+'' + listItemFirstName +' '+'</div>'+'<div class="rightlongnamGA">'+listItemEmailAddress +', '+listItemContactNumber +'</div><div class="clear"></div></li>');	
+                      }                    
+                    if ($('#ulSearch-nav').length > 0) {                   
+                    $('#ulSearch-nav').remove();                                                      
+                    $('#ulSearch').listnav();
+                    $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
+                    $("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">First Name</div><div class="shortnamTXtGA new-GA-2">Last Name</div><div class="longnamTXtGA new-GA-3">Email Address / Contact Number</div><div class="shortnamTXtGA new-GA-4">Function</div><div class="clear"></div></div>');
+					//$("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA">First Name</div><div class="longnamTXtGA">Email Address / Contact Number</div><div class="clear"></div></div>'); 
+                      }
+                      else{                      
+                       $('#ulSearch').listnav();                       
+                       $('#ulSearch-nav').clone(true).appendTo($('#ulSearch2'));
+					   //$("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA">First Name</div><div class="longnamTXtGA">Email Address / Contact Number</div><div class="clear"></div></div>');  
+                       $("#ulSearch-nav").append('<div class="navtexthedng"><div class="shortnamTXtGA new-GA-1">First Name</div><div class="shortnamTXtGA new-GA-2">Last Name</div><div class="longnamTXtGA new-GA-3">Email Address / Contact Number</div><div class="shortnamTXtGA new-GA-4">Function</div><div class="clear"></div></div>'); 
+                       }                         
+                                       
+                   }
+                   else
+                   {
+                    $('#ulSearch-nav').remove();
+                    //alert("Items are not available wiht this word");
+					$("label[for='lblNoWord']").show();
+					$("label[for='lblNoWord']").html("Items are not available with this word");
+                  
+                   }
+                 document.getElementById('itemCreateion').style.visibility = 'visible';
+                
+            }
+            function onQueryFailed(sender, args) {               
+                alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace());
+            }
+            
+//function to open pages in a dialog
+function openInDialog(dlgWidth, dlgHeight, dlgAllowMaximize,dlgShowClose,needCallbackFunction, pageUrl) 
+{    
+    var options = { url: pageUrl, width: dlgWidth, height: dlgHeight, allowMaximize: dlgAllowMaximize,
+        showClose: dlgShowClose		
+		};
+		
+	if(needCallbackFunction)
+	{
+		options.dialogReturnValueCallback = Function.createDelegate(null, CloseDialogCallback);
+	}
+    SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.showModalDialog', options);
+}
+function CloseDialogCallback(dialogResult, returnValue)
+{
+	//if user click on OK or Save
+     if(dialogResult == SP.UI.DialogResult.OK)
+     {  // refresh parent page
+ 		SP.SOD.execute('sp.ui.dialog.js', 'SP.UI.ModalDialog.RefreshPage', SP.UI.DialogResult.OK); 	 		
+     }
+     // if user click on Close or Cancel
+     else if(dialogResult == SP.UI.DialogResult.cancel)
+     {	// Do Nothing or add any logic you want 
+     }
+     else
+     {//alert("else " + dialogResult);
+     }
+}             
+</script>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:Extranet_x0020_Approval msdt:dt="string"></mso:Extranet_x0020_Approval>
+<mso:Unit_x0020_Approval msdt:dt="string"></mso:Unit_x0020_Approval>
+<mso:Division_x0020_Approval msdt:dt="string"></mso:Division_x0020_Approval>
+<mso:Section_x0020_Approval msdt:dt="string"></mso:Section_x0020_Approval>
+<mso:Department_x0020_Approval msdt:dt="string"></mso:Department_x0020_Approval>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+<div class="GAcontainer">
+		<div class="glosarySearch">
+				<div class="searchCntrglry">
+						<div class="SearchTxtbxgsry">
+								<input type="text" id="searchText" placeholder="Search">
+						</div>
+						<div class="Searchbtngsry">
+								<input type="button" value="" id="searchbtn"onclick="GetBranchByProtocol()">
+						</div>
+						<div class="clear"></div>
+				</div>
+				<input type="button" value="Reset" id="resetbtn" style="display:inline-block; vertical-align:top">
+				<div class="msgNoWord">
+					<label for="lblNoWord" style="color: red;font-size: 13px"></label>
+				</div>
+		</div>
+		<div id="displayDiv" class="aspsd-diplayDiv">
+				<div class="searchdivGA fourcolsearch">
+						<ul id="ulSearch" class="pagination-rowholder">
+						</ul>
+				</div>
+		</div>
+		<div id="ulSearchBottom" class="aspsd-ulSearchBottom" style="position:relative">
+				<ul id="ulSearch2">
+				</ul>
+		</div>
+</div>
+</body>
+</html>
