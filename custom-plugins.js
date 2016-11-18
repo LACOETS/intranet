@@ -82,7 +82,6 @@ $(function(){
 		controls:false,
 		infiniteLoop: false
 	});
-	var rowCount = $('.resource-link-section table.ms-listviewtable tbody tr').length;
 	$('#resourcelink-next').click(function(){
 	newresource.goToNextSlide();
 	return false;
