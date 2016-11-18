@@ -147,6 +147,7 @@ ul.dynamic{display:none !important}
 
 /* ======================== below ipad ======================== */
 @media (max-width:767px){
+	.landingtrend-box div[id$="_results"] {height: 272px;}
 	.poll-block .poll-vote-list.poll-vote-listquestn .input-type-radio label{ width: 109px;}
 	.search_wrapper{position: relative; position: absolute; right: 14px; top: 14px; width: 247px; height: 31px;}
 	#DeltaPlaceHolderMain{padding: 0 10px;}
@@ -248,7 +249,7 @@ ul.dynamic{display:none !important}
 	.top-contributor .box-contentinfos{padding-bottom:0;}
 	.top-contributor .box-contentinfos .box-paginations{padding-top:25px !important;}
 	.poll-results-list.final-result-poll li{float:none; width:100%; padding-right:0}
-	.percentage{bottom:1px;}
+	.percentage{bottom:6px;}
 	ul.poll-results-list li:last-child{width:100%; float:none; text-align:center}
 	ul.poll-results-list li span{font-size:0.875em}
 	.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a > .dynamic-children.additional-background, .ms-core-listMenu-horizontalBox .dynamic-children.additional-background{background-image:none !important}
@@ -272,7 +273,7 @@ ul.dynamic{display:none !important}
 	.landing-quicklink #application-box,.landing-quicklink #forms-box,.landing-quicklink #policies-box{margin-left:auto; margin-right:auto;}
 	.quicklinks-section.landing-quicklink .box-contentinfos{min-height:auto; padding-bottom:0; padding-left:0; padding-right:0}
 	.landing-quicklink .keycontact-viewlink,.keycontact-viewlink{width:100%; text-align:center; margin-top: 10px; float: none;}
-	.tabBx .keycontact-viewlink{width: 50%;float: right; margin-top: -27px;}
+	.tabBx .keycontact-viewlink{width: 31%;float: right; margin-top: -27px; padding-right: 0px;}
 	.btn-wrapper{float:none; padding: 0px 3px 7px 3px;}
 	#plusCal + #anchor-cal-view{text-indent:-999px; width:0; overflow:hidden; padding-left:18px; height:18px; margin-top:2px;}
 	.upcoming-event-box.cal-view-icon .tabResult .tabBx .content{position:relative}
