@@ -146,7 +146,7 @@ ul.dynamic{display:none !important}
 
 /* ======================== below ipad ======================== */
 @media (max-width:767px){
-	.search_wrapper{position: relative; position: absolute; right: 14px; top: 14px;}
+	.search_wrapper{position: relative; position: absolute; right: 14px; top: 14px; width: 247px; height: 31px;}
 	#DeltaPlaceHolderMain{padding: 0 10px;}
 	.event-search-pagin ul li{width: 48% !important;}
 	.traning_mobile .ms-webpart-zone, .traning_mobile .ms-webpart-cell-vertical, .traning_mobile .ms-webpart-chrome-vertical{ display:block;}
@@ -182,15 +182,15 @@ ul.dynamic{display:none !important}
 	.keyprofilepic {text-align: center;}
 	#siteIcon {width: auto;}
 	#siteIcon > #DeltaSiteLogo {display: inline-block;width: 150px;}
-	.new-searchbox{display:block; width:247px; margin:0 auto; float:none;position: absolute;right: 14px; top: 14px;}
+	.new-searchbox{display:block; width:247px; margin:0 auto; float:none;position: absolute;right: 0px; top: 0px;}
 	.new-searchbox .ms-mpSearchBox{position: relative;}
-	.new-searchbox #searchInputBox{-webkit-transition:  width 1s; transition: width 1s; width: 29px;overflow: hidden;}
+	.new-searchbox #SearchBox{-webkit-transition:  width 1s; transition: width 1s; width: 29px;overflow: hidden;}
 	.ms-srch-sb > .ms-srch-sb-searchLink{position: absolute;right: 5px;display:none; top: 5px;}
 	.ms-srch-sb > .ms-srch-sb-navLink{position: absolute;display:none; right: 24px; top: 5px;}
 	.active_input .ms-srch-sb > .ms-srch-sb-searchLink{display:block;}
 	.active_input .ms-srch-sb > .ms-srch-sb-navLink{display:block;}
 
-	.active_input.new-searchbox #searchInputBox{width : 247px;}
+	.active_input.new-searchbox #SearchBox{width : 247px;}
 
 	.header .placeholder-cnt{padding:10px 0 5px 0; clear:both;}
 	.logo .ms-siteicon-img {max-width: none;width: 100%;}
