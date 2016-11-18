@@ -167,8 +167,9 @@ ul.dynamic{display:none !important}
     .ms-srch-sbLarge-fullWidth{width: 85%;}
 	.pictorial-discussion .pagination-cntrbx{width: auto;display: inline-block;}
 	.mobile_search_button img{display:block;}
-	.mobile_search_button{z-index: 1; width: 20px; height:20px; display: inline-block; cursor : pointer; position: absolute; right: 4px;    overflow: hidden; top:6px;}
+	.mobile_search_button{z-index: 1; width: 31px; height:231px; display: inline-block; cursor : pointer; position: absolute; right: 0px;    overflow: hidden; top:0px;}
 	.mobile_search_button.unfocused{display:none;}
+	.mobile_search_button .ms-srch-sb-searchImg{ left: -28px; top: -52px;}
 	#SearchBox .ms-srch-sb > input{text-indent:-9999px;}
 	.active_input #SearchBox .ms-srch-sb > input{text-indent:0px;}
 	.sitefollw-section{min-height: 288px;}
