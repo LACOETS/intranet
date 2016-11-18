@@ -146,6 +146,7 @@ ul.dynamic{display:none !important}
 
 /* ======================== below ipad ======================== */
 @media (max-width:767px){
+	.poll-block .poll-vote-list.poll-vote-listquestn .input-type-radio label{ width: 109px;}
 	.search_wrapper{position: relative; position: absolute; right: 14px; top: 14px; width: 247px; height: 31px;}
 	#DeltaPlaceHolderMain{padding: 0 10px;}
 	.event-search-pagin ul li{width: 48% !important;}
