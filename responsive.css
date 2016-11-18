@@ -146,6 +146,7 @@ ul.dynamic{display:none !important}
 
 /* ======================== below ipad ======================== */
 @media (max-width:767px){
+	.search_wrapper{position: relative; position: absolute; right: 14px; top: 14px;}
 	#DeltaPlaceHolderMain{padding: 0 10px;}
 	.event-search-pagin ul li{width: 48% !important;}
 	.traning_mobile .ms-webpart-zone, .traning_mobile .ms-webpart-cell-vertical, .traning_mobile .ms-webpart-chrome-vertical{ display:block;}
@@ -166,7 +167,7 @@ ul.dynamic{display:none !important}
     .ms-srch-sbLarge-fullWidth{width: 85%;}
 	.pictorial-discussion .pagination-cntrbx{width: auto;display: inline-block;}
 	.mobile_search_button img{display:block;}
-	.mobile_search_button{width: 20px; height:20px; display: inline-block; cursor : pointer; position: absolute; right: 4px;    overflow: hidden; top:6px;}
+	.mobile_search_button{z-index: 1; width: 20px; height:20px; display: inline-block; cursor : pointer; position: absolute; right: 4px;    overflow: hidden; top:6px;}
 	.mobile_search_button.unfocused{display:none;}
 	#SearchBox .ms-srch-sb > input{text-indent:-9999px;}
 	.active_input #SearchBox .ms-srch-sb > input{text-indent:0px;}
