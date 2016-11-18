@@ -147,6 +147,8 @@ ul.dynamic{display:none !important}
 
 /* ======================== below ipad ======================== */
 @media (max-width:767px){
+	.lcoe-report-card .btn-wrapper{padding: 7px 3px 7px 3px;}
+	.box-heading h3{ width: 100%;}
 	.landingtrend-box div[id$="_results"] {height: 272px;}
 	.poll-block .poll-vote-list.poll-vote-listquestn .input-type-radio label{ width: 109px;}
 	.search_wrapper{position: relative; position: absolute; right: 14px; top: 14px; width: 247px; height: 31px;}
