@@ -76,7 +76,7 @@
 .nav-icon { display: block; padding-right: 10px; padding-top: 10px; }
 .nav .container{width:100%;}
 .nav{position:relative}
-.nav li{float:none; display:block}
+.nav li{float:none; display:block; margin: 4px 0px;}
 .nav li a{display:block;}
 .nav li a span.dynamic-children{background-position:right center; display:block;position:relative; z-index:99}
 .nav ul{position:static !important}
@@ -84,13 +84,13 @@ ul.dynamic{display:none !important}
 .nav ul.root.ms-core-listMenu-root.static{display:block}
 .nav .container{display:none;}
 .nav .container.open{display:block;}
-.mobiledrop-down {position:absolute; right:0; top:0; background:#fff;height: 22px;width: 22px; z-index:999}
-.mobiledrop-down:after{content:'+'; font-style:normal; position:absolute; text-align:center; width:100%; color:black; line-height:18px; font-size:21px}
+.mobiledrop-down {position:absolute; right:0; top:0; background:#fff;height: 25px;width: 25px; z-index:999}
+.mobiledrop-down:after{content:'+'; font-style:normal; position:absolute; text-align:center; width:100%; color:black; line-height:22px; font-size:21px}
 .mobiledrop-down.mble-active:after{content:'-'}
 .mbldynamic{list-style-type:disc !important}
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li ul li a{color:#fff;}
 	ul.mbldynamic{padding-left:15px !important; width:100% !important}
-	.mobiledrop-down{top:8px; right:20px}
+	.mobiledrop-down{top:4px; right:20px}
 	.nav li.dynamic{display:block !important; position:relative !important}
 	.nav li.dynamic .mobiledrop-down{right:20px; top:0}
 	.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li ul li a{display:block !important}
@@ -122,7 +122,7 @@ ul.dynamic{display:none !important}
 	ul.poll-results-list li{padding-right:3%;}
 	ul.poll-results-list li span{font-size:0.875em}
 	.ms-core-listMenu-horizontalBox .dynamic .dynamic-children.additional-background{background-image:none}
-	ul#zz11_RootAspMenu > li.static span, ul#zz11_RootAspMenu > li.static a,.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a, .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children, .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li ul li a{width:90% !important; background-image:none !important}
+	ul#zz11_RootAspMenu > li.static span, ul#zz11_RootAspMenu > li.static a,.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a, .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children, .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li ul li a{width:88% !important; background-image:none !important}
 	#txtSearchPlaceHolder{apperance:none; border-radius:0}
 	
 	.docLeftside{display:block; width:100%; min-height:auto;}
@@ -193,7 +193,7 @@ ul.dynamic{display:none !important}
 	.active_input .ms-srch-sb > .ms-srch-sb-searchLink{display:block;}
 	.active_input .ms-srch-sb > .ms-srch-sb-navLink{display:block;}
 
-	.active_input.new-searchbox #SearchBox{width : 247px;}
+	.active_input.new-searchbox #SearchBox{width : 200px;}
 
 	.header .placeholder-cnt{padding:10px 0 5px 0; clear:both;}
 	.logo .ms-siteicon-img {max-width: none;width: 100%;}
@@ -212,7 +212,7 @@ ul.dynamic{display:none !important}
 	.resource-link-section.box-style, .dept-calender, .pictorial-discussion{min-height:0;}
 	.blog-section.box-style, .goal-section, .top-contributor, .whats-happening, .feeds-section{min-height:0;}
 	.documents-section.grid-12, .discussion-section.grid-12{min-height:0}
-	.page_navigation,.pagination-cntrbx{position:static; width:102px; margin:0 auto; float:none;margin-top:14px;}
+	.page_navigation,.pagination-cntrbx{position:static; width:102px; margin:0 auto; float:left;margin-top:14px; margin-left: 8px;}
 	.dept-events-tabs:after{content:''; clear:both; display:block; float:none}
 	.boxes-cntr .grid-4{clear:both}
 	.owner-info ul li span{width:68%;}
@@ -271,7 +271,7 @@ ul.dynamic{display:none !important}
 	.landing-quicklink #form-pagination, .landing-quicklink #policies-pagination,.landing-quicklink #application-box .pagination-page{margin-left:-3.3%; margin-right:-3.3%;}
 	.landing-quicklink #application-box,.landing-quicklink #forms-box,.landing-quicklink #policies-box{margin-left:auto; margin-right:auto;}
 	.quicklinks-section.landing-quicklink .box-contentinfos{min-height:auto; padding-bottom:0; padding-left:0; padding-right:0}
-	.landing-quicklink .keycontact-viewlink,.keycontact-viewlink{width:100%; text-align:center; margin-top: 7px;}
+	.landing-quicklink .keycontact-viewlink,.keycontact-viewlink{width:50%; text-align:center; margin-top: 7px;}
 	.btn-wrapper{float:none; padding: 0px 3px 7px 3px;}
 	#plusCal + #anchor-cal-view{text-indent:-999px; width:0; overflow:hidden; padding-left:18px; height:18px; margin-top:2px;}
 	.upcoming-event-box.cal-view-icon .tabResult .tabBx .content{position:relative}
