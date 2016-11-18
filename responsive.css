@@ -1,5 +1,6 @@
 ﻿.tabResult .tabBx .mobile-menu{display:none}
 @media (max-width:1170px) {
+#contentBox { width: 750px; overflow: auto;}
 .container,.Footercontainer{max-width:100%; width:983px;}
 .header-right{width:600px;}
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a,.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children,.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li ul li a{font-size:13px; padding-left:15px; padding-right:15px}
