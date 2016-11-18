@@ -139,6 +139,7 @@ color: #1c7ec7; font-size: 1.500em; font-weight: 500; font-family: 'Work Sans', 
 .ms-input-divAroundTextArea { /* [ReplaceColor(themeColor:"Lines")] */ border: 1px solid #ababab; padding: 4px; }
 #searchInputBox { /*margin-bottom:12px;*/
 float: right; }
+.mobile_search_button img{display:none;}
 .ms-srch-sb { /*display:inline-block;*/
 }
 .ms-core-header .ms-srch-sb { /* [ReplaceColor(themeColor:"HeaderBackground",opacity:"1")] */ background-color: #fff; /* [ReplaceColor(themeColor:"HeaderBackground")] */ background-color: rgba( 255,255,255,0.85 ); }
@@ -1506,15 +1507,15 @@ a.ms-navedit-linkDialogIcon { margin-right: 3px; }
 .ms-navedit-titleBoxListItem { position: absolute; z-index: 99; }
 .ms-displayInline { display: inline; }
 .ms-navedit-errorMsg { max-width: 400px; overflow: hidden; text-overflow: ellipsis; }
-.ms-core-listMenu-horizontalBox .dynamic-children.additional-background { padding-right: 26px; /* [RecolorImage(themeColor:"BodyText",method:"Filling")] */ background-image: url("https://lacoets.github.io/intranet/menu-down.gif"); background-repeat: no-repeat; background-position: right center; cursor: pointer; }
-.ms-core-listMenu-horizontalBox .dynamic .dynamic-children.additional-background { /* [RecolorImage(themeColor:"BodyText",method:"Filling")] */ background-image: url("https://lacoets.github.io/intranet/menu-right.gif"); }
+.ms-core-listMenu-horizontalBox .dynamic-children.additional-background { padding-right: 26px; /* [RecolorImage(themeColor:"BodyText",method:"Filling")] */ background-image: url("https://cdnlacoe.azureedge.net/menu-down.gif"); background-repeat: no-repeat; background-position: right center; cursor: pointer; }
+.ms-core-listMenu-horizontalBox .dynamic .dynamic-children.additional-background { /* [RecolorImage(themeColor:"BodyText",method:"Filling")] */ background-image: url("https://cdnlacoe.azureedge.net/menu-right.gif"); }
 /*Sheetal Changes Start*/
 .dynamic.dynamic-children.hover, .dynamic a.dynamic:hover { background: #1C7EC7; }
-.static.dynamic-children.hover > ul .dynamic.dynamic-children.hover > a .additional-background { background-image: url("https://lacoets.github.io/intranet/menu-right-hover.gif"); }
+.static.dynamic-children.hover > ul .dynamic.dynamic-children.hover > a .additional-background { background-image: url("https://cdnlacoe.azureedge.net/menu-right-hover.gif"); }
 .static.dynamic-children.hover > ul .dynamic.dynamic-children.hover > a, .dynamic a.dynamic:hover { color: #fff !important; }
 }
 /*Sheetal Changes End*/
-.ms-core-listMenu-verticalBox .dynamic-children.additional-background { padding-right: 26px; /* [RecolorImage(themeColor:"BodyText",method:"Filling")] */ background-image: url("https://lacoets.github.io/intranet/menu-right.gif"); background-repeat: no-repeat; background-position: right center; cursor: pointer; }
+.ms-core-listMenu-verticalBox .dynamic-children.additional-background { padding-right: 26px; /* [RecolorImage(themeColor:"BodyText",method:"Filling")] */ background-image: url("https://cdnlacoe.azureedge.net/menu-right.gif"); background-repeat: no-repeat; background-position: right center; cursor: pointer; }
 .menu-horizontal .menu-item-text { white-space: nowrap; color: white; }
 .ms-navedit-linkCell { word-wrap: break-word; word-break: break-all; }
 .ms-core-listMenu-horizontalBox .ms-navedit-deletelinkCell { width: 20px; }
@@ -2980,13 +2981,13 @@ margin: 0 auto; width: 1170px }
 .Lacoefooter .Footercontainer { padding: 10px 0 10px; }
 .Footercontainer { max-width: 1170px; width: 100%; margin: 0 auto; }
 .footer-links { text-align: left; float: left; }
-.footer-links ul li { border-right: 1px solid #fff; display: inline-block; margin:0 0 8px 0; padding: 0 9px; }
+.footer-links ul li { border-right: 1px solid #fff; /*display: inline-block;*/ margin:0 0 8px 0; padding: 0 9px; }
 .footer-links ul li:first-child { padding-left: 0; }
 .footer-links ul li:last-child { padding-right: 0; border: none; }
 .footer-links ul li a { display: block; font: 300 0.875em 'Work Sans', sans-serif; color: #fff; }
 .social-media { float: right; margin-top: 9px; margin-bottom: 0px; text-align: center; }
 .social-media li { display: inline-block; margin: 0 5px; }
-.social-media li a { background:url("https://lacoets.github.io/intranet/sprite.png") 0 0 no-repeat; display: block; width: 44px; height: 42px; }
+.social-media li a { background:url("https://cdnlacoe.azureedge.net/sprite.png") 0 0 no-repeat; display: block; width: 44px; height: 42px; }
 .social-media li a.fb { background-position:1px -49px; }
 .social-media li a.fb:hover {background-position:1px -92px; }
 .social-media li a.tw { background-position:1px -134px;  }
@@ -3132,7 +3133,7 @@ h6 { font-size: 0.750em; }
 .newdeltatopNav #zz13_RootAspMenu:after { content: ''; display: block; float: none; clear: both }
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a { border: none; color: #ffffff; display: block; font: 300 1em "Work Sans", sans-serif; padding: 7px 17px 8px; }
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a:hover, .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a.ms-core-listMenu-selected { background: #0c6eb7; color: #fff !important; }
-.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a > .dynamic-children.additional-background, .ms-core-listMenu-horizontalBox .dynamic-children.additional-background { padding-right: 15px; background: url("https://lacoets.github.io/intranet/navigation-arrow.png") right center no-repeat; }
+.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a > .dynamic-children.additional-background, .ms-core-listMenu-horizontalBox .dynamic-children.additional-background { padding-right: 15px; background: url("https://cdnlacoe.azureedge.net/navigation-arrow.png") right center no-repeat; }
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children > .additional-background{font-weight:300; color:#fff}
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children > .additional-background >span{font-weight:300;}
 .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children{padding:7px 17px 8px;font-weight:300;}
@@ -3201,8 +3202,8 @@ ul.dynamic { min-width: 200px; }
 .image-infoslider .bx-controls-direction a:hover{background-color:#e3e3e3 !important}
 .image-infoslider ul li.active-slide { background: #e1e1e0 }
 .image-infoslider .bx-controls-direction a, .calender-slider .bx-controls-direction a { outline: 0 none; text-indent: -9999px; bottom: 0%; width: 26px; z-index: 9999; overflow: hidden; text-align: left; display: inline-block; padding: 4px 0; text-align: center; vertical-align: middle; border-left: #e0e0e0 solid 1px; }
-.image-infoslider .bx-controls-direction a.bx-prev, .calender-slider .bx-controls-direction a.bx-prev { background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -52px -274px; left: 0; }
-.image-infoslider .bx-controls-direction a.bx-next, .calender-slider .bx-controls-direction a.bx-next { background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -79px -274px; right: 0; margin-right: 25px; border-right: #e0e0e0 solid 1px; }
+.image-infoslider .bx-controls-direction a.bx-prev, .calender-slider .bx-controls-direction a.bx-prev { background: url(https://cdnlacoe.azureedge.net/sprite.png) no-repeat -52px -274px; left: 0; }
+.image-infoslider .bx-controls-direction a.bx-next, .calender-slider .bx-controls-direction a.bx-next { background: url(https://cdnlacoe.azureedge.net/sprite.png) no-repeat -79px -274px; right: 0; margin-right: 25px; border-right: #e0e0e0 solid 1px; }
 .image-infoslider .bx-has-controls-direction, .calender-slider .bx-has-controls-direction { position: relative; text-align: right }
 .image-infoslider .bx-controls-direction, .calender-slider .bx-controls-direction { display: inline-block; position: relative; background: #f3f3f3; border: #e0e0e0 solid 1px; width: 105px; border-radius: 2px; overflow: hidden; margin-right: 7px; margin-top: -3px }
 .image-infoslider .bx-viewport { height: 303px !important }
@@ -3263,7 +3264,7 @@ ul.dynamic { min-width: 200px; }
 .owner-info li { font: 100 1em "Work Sans", sans-serif; }
 .owner-info li span { font-weight: 400; }
 .dept-quicklinks .box-contentinfos { padding: 0; }
-.btn-wrapper { float: left; padding: 10px 3px 10px 7px; }
+.btn-wrapper { float: left; padding: 5px 3px 5px 7px; }
 .btn-wrapper a { background: #1c7ec7 none repeat scroll 0 0; color: #fff; padding: 3px 5px; }
 .dept-quicklinks .box-contentinfos ul li { margin-top: 0px; }
 .dept-quicklinks .box-contentinfos ul li:last-child { margin-bottom: 0px; margin-top: 0 }
@@ -3316,7 +3317,7 @@ ul.dynamic { min-width: 200px; }
 .dept-caldr-header .tbl-content { line-height: 15px; }
 .pagination-page dl dt { background: #f0f0f0 none repeat scroll 0 0; border-bottom: 1px solid #cdcdcd; box-shadow: inset 0px 0px 4px -2px rgba(0,0,0,0.5); }
 .cal-view-icon .box-heading h3 #anchor-cal-view { float: right; position:relative; color: #ffffff; font-size: 0.875em; font-weight: 400; line-height: 21px; margin-left: 25px; padding-left: 25px; vertical-align: middle; margin-right: 20px; margin-top: 3px }
-.cal-view-icon .box-heading h3 #anchor-cal-view b{position:absolute; left:0; top:0; font-weight:normal; width:18px; height:18px;background: url("https://lacoets.github.io/intranet/sprite.png") no-repeat -183px -26px;}
+.cal-view-icon .box-heading h3 #anchor-cal-view b{position:absolute; left:0; top:0; font-weight:normal; width:18px; height:18px;background: url("https://cdnlacoe.azureedge.net/sprite.png") no-repeat -183px -26px;}
 .cal-view-icon .box-heading h3:after { clear: both; display: block; content: ''; float: none }
 #plusCal + #anchor-cal-view {margin-left: 15px;margin-right: 15px;}
 .ellipse { display: none !important }
@@ -3387,7 +3388,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 /*tab Layout Css End*/
 
 .box-style.dept-quicklinks, .announcement-box.dept-announcement { min-height: 369px; }
-.resource-link-section.box-style, .dept-calender, .pictorial-discussion { min-height: 269px; }
+.resource-link-section.box-style, .dept-calender, .pictorial-discussion { min-height: 269px; overflow: hidden;}
 .blog-section.box-style, .goal-section, .top-contributor, .whats-happening, .feeds-section { min-height: 269px; }
 .box-style.lcoe-report-card { min-height: 528px;}
 .department-new .box-style.lcoe-report-card { min-height:236px; }
@@ -3403,7 +3404,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .boxes-cntr { margin: 0 -0.5% }
 .box-heading { margin: 0 0px 0 0px; border-top-left-radius: 2px; border-top-right-radius: 2px; }
 .box-heading h3 { border-top-left-radius: 2px; border-top-right-radius: 2px; color: #fff; font-weight: 400; font-size: 1.250em; padding: 4px 0 4px 45px; position:relative;background:#1c7ec7; /*border-bottom: #9b9b9b solid 1px*/ }
-.box-heading h3 i{background:url(https://lacoets.github.io/intranet/sprite.png) 0 0 no-repeat; position:absolute; left:12px; top:4px; height:24px; width:24px;}
+.box-heading h3 i{background:url(https://cdnlacoe.azureedge.net/sprite.png) 0 0 no-repeat; position:absolute; left:12px; top:4px; height:24px; width:24px;}
 .box-style { position: relative; border-radius: 2px; /*box-shadow: 0px 0px 5px 1px rgba(0,0,0, 0.25);*/ border: 1px solid rgba(0, 0, 0, 0.4); border-top: none; background: #fff; }
 .box-style .box-contentinfos { overflow: hidden; }
 .box-contentinfos { padding: 0 13px 13px }
@@ -3414,7 +3415,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 .news-info-cntr { padding-left: 10px; width: 75.9%; float:left }
 .news-title-like h4 { float: left; width: 174px; font-weight: 400; color: #1c7ec7; font-size: 1em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
 .news-title-like .like-link-news { float: right; }
-.like-link-news a { background: url(https://lacoets.github.io/intranet/gray-like.png) left center no-repeat; font-size: 0.875em; color: #818181; padding: 0 0 0 23px }
+.like-link-news a { background: url(https://cdnlacoe.azureedge.net/gray-like.png) left center no-repeat; font-size: 0.875em; color: #818181; padding: 0 0 0 23px }
 .news-activity-dtl .news-submitedby { color: #646464; font-size: 0.875em; padding: 10px 0px 2px 0; font-weight:300 }
 .news-activity-dtl .news-showdate { font-size: 0.785em; color: #000; font-weight: 400 }
 /*.box-paginations { clear: both; padding-top: 10px }
@@ -3464,7 +3465,7 @@ textarea.ms-microfeed-rootOrReplyPostBox { border: none; outline: none }
 .lacoe-reportcard-box .ms-webpart-zone { position: relative }
 .lacoe-reportcard-box .ms-webpart-zone .s4-wpcell-plain { position: absolute; left: 0; top: 0; z-index: 0; background: #fff; width: 100% !important }
 .lacoe-reportcard-box .ms-webpart-zone .s4-wpcell-plain:first-child { z-index: 1; }
-.icon-common { float: right; margin-right: 10px; margin-left:0 !important; margin-top: 2px; height:20px; width:20px; background: url('https://lacoets.github.io/intranet/sprite.png') -1px -27px no-repeat;}
+.icon-common { float: right; margin-right: 10px; margin-left:0 !important; margin-top: 2px; height:20px; width:20px; background: url('https://cdnlacoe.azureedge.net/sprite.png') -1px -27px no-repeat;}
 .icon-common:hover{text-decoration:none}
 .icon-common:after { content: ''; clear: both; float: none; display: block }
 /*Pictorial Discussion start  */
@@ -3505,7 +3506,7 @@ body.fontIncrease { font-size: 109%; }
 /*Websitefont increase end*/
 .placeholder-cnt .placeholder { overflow: hidden; background-color: #e7f3fa; border: 1px solid #1c7ec7; border-radius: 2px; color: #4f5356; font: 1em "Work Sans", sans-serif; padding: 8px 12px; }
 .placeholder-cnt .placeholder ul {display:table; }
-.placeholder-cnt .placeholder ul li {display:table-cell; white-space:nowrap; padding-right: 20px; background: url('https://lacoets.github.io/intranet/sprite.png') -291px -284px no-repeat; padding-left: 17px }
+.placeholder-cnt .placeholder ul li {display:table-cell; white-space:nowrap; padding-right: 20px; background: url('https://cdnlacoe.azureedge.net/sprite.png') -291px -284px no-repeat; padding-left: 17px }
 .placeholder-cnt .placeholder ul li:last-child { padding-right: 0 }
 .placeholder-cnt .placeholder ul:after{content:''; clear:both; display:block; float:none;}
 .box-paginations { position: absolute; right: 0; bottom: 0 }
@@ -3545,7 +3546,7 @@ ul.poll-results-list li:last-child { width: 14%; float: left; padding: 0 0 0 0; 
 .submit-button { background: #1c7ec7; border: none; display: inline-block; vertical-align: middle; color: #fff; font: 15px 'Work Sans', sans-serif; padding: 6px 15px; cursor: pointer }
 .submit-button a { color: #fff; }
 .input-type-radio input[type='radio'] { display: none }
-.input-type-radio label { display: inline-block; vertical-align: middle; color: #000; font-size: 1.250em; background: url('https://lacoets.github.io/intranet/radio.png') 0 2px no-repeat; padding: 0 0 0 18px; line-height: 15px; cursor: pointer }
+.input-type-radio label { display: inline-block; vertical-align: middle; color: #000; font-size: 1.250em; background: url('https://cdnlacoe.azureedge.net/radio.png') 0 2px no-repeat; padding: 0 0 0 18px; line-height: 15px; cursor: pointer }
 .input-type-radio input[type='radio']:checked + label { background-position: 0 -13px }
 .yes-no-option ul li { margin-top: 0; margin-bottom: 15px }
 input[type="submit"], input[type="button"],.box-btn,input[type="reset"] { background: #1c7ec7; border: none; display: inline-block; vertical-align: middle; color: #fff; font: 0.938em 'Work Sans', sans-serif; padding: 6px 15px; cursor: pointer }
@@ -3560,8 +3561,8 @@ input[type="submit"], input[type="button"],.box-btn,input[type="reset"] { backgr
 .accordion { }
 .accordion dl { border-bottom: 1px dashed #bebebe; border-radius: 0; margin-bottom: 15px; padding-bottom: 20px }
 .accordion dl dt { color: #050505; cursor: pointer; font-size: 1em; padding: 5px 10px 5px 40px; position: relative; font-weight: 300 }
-.accordion dl dt:after { border: 1px solid #666666; border-radius: 2px; content: ""; height: 20px; margin: 6px 1%; position: absolute; left: 0; text-align: center; top: -1px; width: 20px; color: #2c6a90; background: url("https://lacoets.github.io/intranet/plus-minus.png") no-repeat scroll -1px 2px; }
-.accordion dl.active dt:after { background: url("https://lacoets.github.io/intranet/plus-minus.png") no-repeat scroll -1px -15px; }
+.accordion dl dt:after { border: 1px solid #666666; border-radius: 2px; content: ""; height: 20px; margin: 6px 1%; position: absolute; left: 0; text-align: center; top: -1px; width: 20px; color: #2c6a90; background: url("https://cdnlacoe.azureedge.net/plus-minus.png") no-repeat scroll -1px 2px; }
+.accordion dl.active dt:after { background: url("https://cdnlacoe.azureedge.net/plus-minus.png") no-repeat scroll -1px -15px; }
 .accordion dl dd { display: none; padding: 10px 1%; font-size: 0.875em; color: #050505; font-weight: 300 }
 .accordion dl dd p { font-size: 0.875em; color: #050505; padding-bottom: 0; line-height: 20px }
 .faqs-boxcntr .accordion { padding-top: 15px }
@@ -3593,14 +3594,14 @@ input[type="submit"], input[type="button"],.box-btn,input[type="reset"] { backgr
 .whats-happening .box-heading h3 i{background-position:-108px -25px}
 .top-contributor .box-heading h3 i{background-position:-158px -25px}
 .searchicon-box{position: relative;border: 0;display:block;width: 26px;height: 22px;margin: 0px 0 0 0px;
-background: url('https://lacoets.github.io/intranet/searchresultui.png') no-repeat;-webkit-transition: all 300ms ease-in-out;
+background: url('https://cdnlacoe.azureedge.net/searchresultui.png') no-repeat;-webkit-transition: all 300ms ease-in-out;
 -moz-transition: all 300ms ease-in-out;-ms-transition: all 300ms ease-in-out;-o-transition: all 300ms ease-in-out;
 transition: all 300ms ease-in-out;
 /* background-position: 0; *//* background-position-x: 0; *//* background-position-y: 0; */
 background-position: 2;background-position: 0 -68px;}
 .selectdropwn-search .ms-srch-sb-searchLink:hover, .ms-srch-sb-navLink:hover{background-color:transparent}
 .input-type-select{position:relative}
-.input-type-select:after{content:''; width:30px; height:24px; right:0; top:0; position:absolute; background:url("https://lacoets.github.io/intranet/sprite.png") -260px -65px no-repeat; pointer-events: none;}
+.input-type-select:after{content:''; width:30px; height:24px; right:0; top:0; position:absolute; background:url("https://cdnlacoe.azureedge.net/sprite.png") -260px -65px no-repeat; pointer-events: none;}
 .selectdropwn-search #SmallSearchInputBox1{position: absolute;width: 165px;height:24px;left:0px;outline: none;}
 .selectdropwn-search .input-type-select{width:86%; float:left; overflow:hidden;position:relative;}
 .selectdropwn-search .input-type-select select{width:100%; border:none; outline:none}
@@ -3619,7 +3620,7 @@ select:focus{outline:none;}
 .search-resultcntr .documentsearch-box{padding:5px 5px 0 5px}
 .documentsearch-box #MSOZoneCell_WebPartWPQ3{display:none}
 .documentsearch-box .ms-srch-sb-border,.documentsearch-box .ms-srch-sb-borderFocused{padding:0px 5px 0px 5px; border:1px solid transparent !important; display:block}
-.documentsearch-box .ms-srch-sb-border input[type='text'],.documentsearch-box .ms-srch-sb-borderFocused input[type='text']{border:1px solid #ababab !important;width:85%}
+.documentsearch-box .ms-srch-sb-border input[type='text'],.documentsearch-box .ms-srch-sb-borderFocused input[type='text']{border:1px solid #ababab !important;width:82%}
 .documentsearch-box .ms-floatLeft{float:none}
 .documentsearch-box:after{clear:both; float:none; display:block; content:'';}
 .benifits-heading{padding:10px 10px 10px 11px;}
@@ -3669,10 +3670,10 @@ select:focus{outline:none;}
 .overall-size-fonts{display:none}
 
 /*sprite image css added*/
-.last-prev-img,.page_navigation .first_link{background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -1px -275px;}
-.pagi-prev-img,.page_navigation .previous_link{background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -52px -275px;}
-.pagi-next-img,.page_navigation .next_link{background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -79px -275px;}
-.last-next-img,.page_navigation .last_link{background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -26px -275px;}
+.last-prev-img,.page_navigation .first_link{background: url(https://cdnlacoe.azureedge.net/sprite.png) no-repeat -1px -275px;}
+.pagi-prev-img,.page_navigation .previous_link{background: url(https://cdnlacoe.azureedge.net/sprite.png) no-repeat -52px -275px;}
+.pagi-next-img,.page_navigation .next_link{background: url(https://cdnlacoe.azureedge.net/sprite.png) no-repeat -79px -275px;}
+.last-next-img,.page_navigation .last_link{background: url(https://cdnlacoe.azureedge.net/sprite.png) no-repeat -26px -275px;}
 
 .o365cs-base.o365cs-topnavBGColor-2{background-color:#0072c6 !important}
 .ms-cui-topBar2 {border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
@@ -3816,7 +3817,7 @@ select:focus{outline:none;}
 .doyouthinkbox h4 { font-size: 1.125em; color: #1c7ec7; font-weight: 400 }
 .doyouthinkbox p { font-size: 1em; color: #000; padding: 15px 0 15px 0 }
 .input-type-radio input[type='radio'] { display: none }
-.input-type-radio label { display: inline-block; vertical-align: middle; color: #000; font-size: 1.250em; background: url(https://lacoets.github.io/intranet/radio.png) 0 2px no-repeat; padding: 0 0 0 18px; line-height: 15px; cursor: pointer }
+.input-type-radio label { display: inline-block; vertical-align: middle; color: #000; font-size: 1.250em; background: url(https://cdnlacoe.azureedge.net/radio.png) 0 2px no-repeat; padding: 0 0 0 18px; line-height: 15px; cursor: pointer }
 .input-type-radio input[type='radio']:checked + label { background-position: 0 -13px }
 .yes-no-option ul li { margin-top: 0; margin-bottom: 15px }
 input[type="submit"], input[type="button"] { background: #1c7ec7; border: none; display: inline-block; vertical-align: middle; color: #fff; font: 0.938em 'Work Sans', sans-serif; padding: 6px 15px; cursor: pointer }
@@ -3881,7 +3882,7 @@ span.sep-spotlight{display:inline-block;vertical-align:; padding:0 5px; color:#6
 .innergoals-events-tabs .pagination-page div.ms-webpart-zone{min-height:207px}
 .upcoming-event-box.cal-view-icon .tabResult{height:256px; overflow:hidden}
 
-.upcoming-event-box.cal-view-icon .tabResult .calenader-loading {min-height: 50px;background: url(https://lacoets.github.io/intranet/ajax-loader.gif) center center no-repeat #fff;
+.upcoming-event-box.cal-view-icon .tabResult .calenader-loading {min-height: 50px;background: url(https://cdnlacoe.azureedge.net/ajax-loader.gif) center center no-repeat #fff;
 height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 
 .emp-spotlight-box .ms-webpart-zone,.emp-spotlight-box .ms-webpart-cell-vertical,.emp-spotlight-box .ms-webpart-chrome-vertical{display:block}
@@ -3925,9 +3926,9 @@ table[id^="bottomPaging"] td table td{height:25px; padding:0 2px !important}
 table[id^="bottomPaging"] td table td a{border:none}
 table[id^="bottomPaging"] td table td a img{visibility:hidden}
 table[id^="bottomPaging"] td table td.ms-paging{padding:0 5px !important}
-table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:last-child{background:url("https://lacoets.github.io/intranet/sprite.png") no-repeat scroll -78px -274px;border-left:1px solid #e0e0e0 !important}
+table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:last-child{background:url("https://cdnlacoe.azureedge.net/sprite.png") no-repeat scroll -78px -274px;border-left:1px solid #e0e0e0 !important}
 table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:last-child a.ms-promlink-button-enabled{background-color:transparent;}
-table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:first-child{background:url("https://lacoets.github.io/intranet/sprite.png") no-repeat scroll -50px -274px;border-right:1px solid #e0e0e0 !important;}
+table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:first-child{background:url("https://cdnlacoe.azureedge.net/sprite.png") no-repeat scroll -50px -274px;border-right:1px solid #e0e0e0 !important;}
 table[id^="bottomPaging"] td table td[id^="pagingWPQ"]:first-child a.ms-promlink-button-enabled{background-color:transparent;}
 table[id^="bottomPaging"] td table td:hover{background-color: #e3e3e3 !important;}
 
@@ -3963,7 +3964,7 @@ table[id^="bottomPaging"] td table td:hover{background-color: #e3e3e3 !important
 .connectedwp .goal-section{min-height:277px;}
 .dept-announcement .image-sliders{height:336px; overflow:hidden !important}
 .image-slidersimgcntr img{width:100%;}
-.calenader-loading {min-height: 50px;background: url(https://lacoets.github.io/intranet/ajax-loader.gif) center center no-repeat #fff;
+.calenader-loading {min-height: 50px;background: url(https://cdnlacoe.azureedge.net/ajax-loader.gif) center center no-repeat #fff;
 height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 .image-sliders ul li{background:#000}
 .announcement-sliders .calenader-loading{height:336px; top:0}
@@ -4006,14 +4007,14 @@ height: 100%;width: 100%;position: absolute;top: 0;left: 0;z-index: 2000;}
 opacity:0;
 }
 .innergoalspage #department-box .pagination-page table td table td.ms-cellstyle:nth-child(1){
-background: url(https://lacoets.github.io/intranet/Select.png) 27px 8px no-repeat transparent;
+background: url(https://cdnlacoe.azureedge.net/Select.png) 27px 8px no-repeat transparent;
 }
 
 .innergoalspage #department-box .pagination-page table td table td.ms-cellstyle:nth-child(1) a{
-	background: url(https://lacoets.github.io/intranet/delesect.png) 20px 3px no-repeat transparent;
+	background: url(https://cdnlacoe.azureedge.net/delesect.png) 20px 3px no-repeat transparent;
 }
 
-.arrowboxinergol .box-heading h3:after{background: url(https://lacoets.github.io/intranet/Triangle.png) 0px 0px no-repeat transparent; content:''; width:30px; position:absolute; left:20px; height:50px; top:-15px}
+.arrowboxinergol .box-heading h3:after{background: url(https://cdnlacoe.azureedge.net/Triangle.png) 0px 0px no-repeat transparent; content:''; width:30px; position:absolute; left:20px; height:50px; top:-15px}
 
 .docRytSide.localsinglRyt{float:none; width:100%;}
 .dept-events-tabsextra .DocumentswithSidebar .docRytSide.localsinglRyt .ms-webpart-zone.ms-fullWidth div.s4-wpcell-plain:first-child{right:0; top:4px; position:absolute; width:31.7%; }
@@ -4035,8 +4036,8 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
   width: 25px;
 }
 .eventsposdiv-pagin .ms-promlink-headerNav{background: #f3f3f3 none repeat scroll 0 0;border: 1px solid #e0e0e0;border-radius: 2px;}
-.eventsposdiv-pagin .ms-promlink-headerNav a:first-child{background:url("https://lacoets.github.io/intranet/sprite.png") no-repeat scroll -52px -275px}
-.eventsposdiv-pagin .ms-promlink-headerNav a:last-child{border-left:#e0e0e0 solid 1px;background:url("https://lacoets.github.io/intranet/sprite.png") no-repeat scroll -79px -275px;}
+.eventsposdiv-pagin .ms-promlink-headerNav a:first-child{background:url("https://cdnlacoe.azureedge.net/sprite.png") no-repeat scroll -52px -275px}
+.eventsposdiv-pagin .ms-promlink-headerNav a:last-child{border-left:#e0e0e0 solid 1px;background:url("https://cdnlacoe.azureedge.net/sprite.png") no-repeat scroll -79px -275px;}
 .eventsposdiv-pagin .ms-promlink-headerNav a:hover{background-color: #e3e3e3;}
 .eventsposdiv-pagin .ms-promlink-headerNav a img{opacity:0}
 .eventspaginatnstle + .ms-srch-result-noResults{color: red;
@@ -4058,7 +4059,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 
 .lcoe-report-card .keycontact-viewlink{width:100%}
 .header .ms-srch-sb > .ms-srch-sb-navLink{margin-left:-5px;}
-.keycontact-cntr .keyprofilepic{width:109px; height:109px; border:#ccc solid 1px; background:url("https://lacoets.github.io/intranet/key-contact-profile-default-image.png") center center no-repeat;}
+.keycontact-cntr .keyprofilepic{width:109px; height:109px; border:#ccc solid 1px; background:url("https://cdnlacoe.azureedge.net/key-contact-profile-default-image.png") center center no-repeat;}
 
 .innerwhatdo-think .poll-block .poll-vote-list.poll-vote-listquestn li{float:left; width:50%;}
 .innerwhatdo-think .poll-block .poll-vote-list.poll-vote-listquestn li:last-child{float:none; width:100%; clear:both; padding-bottom:0}
@@ -4095,7 +4096,7 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
 .tc-search-cntr .search-boxcomn + .search-boxcomn { margin-left: 25px; }
 .l-t-box-pagination { padding: 15px 15px 25px 15px; }
 .lt-rowbox .date-showbox { float: left }
-.lt-row-desc{float:left; margin-left:15px; width:85%; position:relative}
+.lt-row-desc{float:left; margin-left:15px; width:77%; position:relative}
 .lt-row-desc h4{color:#1c7ec7; font-size:16px; font-weight:400; text-overflow: ellipsis; overflow:hidden;white-space: nowrap; width:80%;}
 .lt-row-desc h4 a{color:#1c7ec7;}
 .lt-row-desc p.traingsbrif{font-size:14px;text-overflow: ellipsis; overflow:hidden;white-space: nowrap; width:100%; padding:8px 0}
@@ -4153,13 +4154,13 @@ ul.eventspaginatnstle > li:nth-child(3n){background:#f7f8f8}
  .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion dl dd ul{margin-left:38px;}
  .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion dl dd li:first-child .link0{font-weight:700; color:#1c7ec7; font-size:14px; text-indent:0}
  .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion dl dd li:first-child{margin-top:0 !important}
- .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block0 dl dd li:first-child{background:url("https://lacoets.github.io/intranet/im-peopleicon.png") no-repeat scroll 0 center;
+ .sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block0 dl dd li:first-child{background:url("https://cdnlacoe.azureedge.net/im-peopleicon.png") no-repeat scroll 0 center;
 line-height: 27px;padding-left: 25px;text-align: left;text-indent:0;vertical-align: middle; line-height:28px;}
-.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block1 dl dd li:first-child{background:url("https://lacoets.github.io/intranet/im-documenticon.png") no-repeat scroll 0 center;
+.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block1 dl dd li:first-child{background:url("https://cdnlacoe.azureedge.net/im-documenticon.png") no-repeat scroll 0 center;
 padding-left: 20px;text-align: left;text-indent: 0;vertical-align: middle; line-height:27px;}
-.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block2 dl dd li:first-child{background:url("https://lacoets.github.io/intranet/im-siteicon.png") no-repeat scroll 0 center;
+.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block2 dl dd li:first-child{background:url("https://cdnlacoe.azureedge.net/im-siteicon.png") no-repeat scroll 0 center;
 padding-left: 22px;text-align: left;text-indent: 0;vertical-align: middle;}
-.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block3 dl dd li:first-child{background:url("https://lacoets.github.io/intranet/im-hashicon.png") no-repeat scroll 0 center;
+.sitefollw-section .box-contentinfos .classic #htmlout .following-accordion.following-block3 dl dd li:first-child{background:url("https://cdnlacoe.azureedge.net/im-hashicon.png") no-repeat scroll 0 center;
 padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .myactivty-box{min-height:269px;}
 .myactivty-box .box-heading h3 i{background-position:-102px -1px;}
@@ -4260,6 +4261,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .big-newsfeedbox .sitefollw-section #ms-ErrorMessage{padding:10px}
 
 .department-new .documents-section.grid-12 .dataviewWebpart-table table + table{display:none}
+.dataviewWebpart-table table + table{display:none}
 
 .big-newsfeedbox .generic_heading3 h2{font:500 16px "Work Sans",sans-serif; padding-top:10px;}
 .big-newsfeedbox .ms-microfeed-focusBox{width:100%; margin-left:0; border-radius:30px;padding-left:15px;}
@@ -4294,6 +4296,9 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .dept-calender.cal-view-icon.withsearchbx,.noheight-min{min-height:0}
 
 .dept-events-tabs.dept-events-tabsextra .ms-promlink-header.eventsposdiv-pagin{list-style:none}
+.container .boxes-cntr .boxes-cntr{margin:0}
+
+
 
 /*.innergoalspage .dept-events-tabs #department-box #page_5 .ms-webpart-zone.ms-fullWidth > div:first-child{display:none}*/
 /*======================================= Content Area CSS End ========================================*/
@@ -4309,7 +4314,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 
 /*======================================= Above (768px) ipad Portrait ========================================*/
 /*For Desktop Only*/
-.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-new, .dept-call-email, .dept-caldr-place { float: left; padding: 0 0.5% }
+/*.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-new, .dept-call-email, .dept-caldr-place { float: left; padding: 0 0.5% }
 .grid-layout { margin: 0 -0.5% }
 .grid-new { width: 20%; }
 .grid-12 { width: 100%; float: none; }
@@ -4323,9 +4328,11 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .grid-4 { width: 33.33333333333333% }
 .grid-3 { width: 25% }
 .grid-2 { width: 16.666666666666664% }
-.grid-1 { width: 8.333333333333332% }
+.grid-1 { width: 8.333333333333332% }*/
 .scrollTop { position: fixed; right: 20px; bottom: 20px; z-index: 6; display: none; }
-.scrollTop a { display: block; color: #fff; width: 40px; height: 40px; background: url(https://lacoets.github.io/intranet/sprite.png) no-repeat -256px 7px #1C7EC7; }
+.scrollTop a { display: block; color: #fff; width: 40px; height: 40px; background: url(https://cdnlacoe.azureedge.net/sprite.png) no-repeat -256px 7px #1C7EC7; }
+
+
 
 /*======================================= Above (768px) ipad Portrait  End ========================================*/
 
@@ -4396,17 +4403,6 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 .sp-thumbnails .sp-caption{display:none!important;}
 .announcement-box .box-paginations{position:absolute; right:4px; bottom:4px;}
 
-@media only screen and (min-width:768px) and (max-width:1024px) {
-.sp-button { width: 14px; height: 14px; }
-}
-
-@media only screen and (min-width:568px) and (max-width:768px) {
-.sp-button { width: 16px; height: 16px; }
-}
-
-@media only screen and (min-width:320px) and (max-width:568px) {
-.sp-button { width: 18px; height: 18px; }
-}
 .sp-arrows { position: absolute;}
 .sp-fade-arrows { opacity: 0; -webkit-transition: opacity .5s; transition: opacity .5s; }
 .sp-slides-container:hover .sp-fade-arrows { opacity: 1; }
@@ -4470,7 +4466,7 @@ a.sp-video:after { content: '\25B6'; position: absolute; width: 45px; padding-le
 #example5 .sp-thumbnail-image { height: 100%; }
 #example5 .sp-thumbnail-text { width:100%; }
 #example5 .sp-thumbnail-title { margin-bottom: 5px; text-transform: uppercase; color: #333; }
-#example5 .sp-thumbnail-description { font-size: 15px; color: #333;padding:10px 16px;width:100%; }
+#example5 .sp-thumbnail-description { font-size: 15px; color: #333;padding:9px 16px;width:100%; }
 
 .sp-right-thumbnails.sp-has-pointer .sp-selected-thumbnail .sp-thumbnail-text{background:#e1e1e0;}
 .sp-thumbnail-container{ width:100%;}
@@ -4478,7 +4474,19 @@ a.sp-video:after { content: '\25B6'; position: absolute; width: 45px; padding-le
 
 .sp-thumbnail-container{height:auto !important; border-bottom:solid 1px #e4e4e4}
 .sp-right-thumbnails.sp-has-pointer .sp-thumbnail{position:static}
-#two{padding-left:13px}
+#two{padding-left:13px;}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+.sp-button { width: 14px; height: 14px; }
+}
+
+@media only screen and (min-width:568px) and (max-width:768px) {
+.sp-button { width: 16px; height: 16px; }
+}
+
+@media only screen and (min-width:320px) and (max-width:568px) {
+.sp-button { width: 18px; height: 18px; }
+}
 
 @media (max-width: 500px) {
 #example5 .sp-thumbnail { text-align: center; }
@@ -4489,6 +4497,26 @@ a.sp-video:after { content: '\25B6'; position: absolute; width: 45px; padding-le
 }
 
 /*Annoucemnet slider css end*/
+
+
+
+/*bootstrap css start*/
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, 
+.col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, 
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, 
+.col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, 
+.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, 
+.col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, 
+.col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
+	    padding: 0 0.5%;}
+.row{margin: 0 -0.5%;}
+.footer-links ul{display:inline-block; margin-top:4px;}
+.footer-links ul li{float:left;}
+
+/*bootstrap css end*/
+
+
 
 
 

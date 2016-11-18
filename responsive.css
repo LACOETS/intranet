@@ -1,8 +1,8 @@
 ﻿.tabResult .tabBx .mobile-menu{display:none}
 @media (max-width:1170px) {
-.container,.Footercontainer{max-width:100%; width:96%;}
+.container,.Footercontainer{max-width:100%; width:983px;}
 .header-right{width:600px;}
-.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a,.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children,.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li ul li a{font-size:0.95em; padding-left:10px; padding-right:10px}
+.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a,.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children,.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li ul li a{font-size:13px; padding-left:15px; padding-right:15px}
 .dept-announcement .image-sliders{width:56%;}
 .dept-announcement .image-infoslider{width:44%;}
 #contentBox{width:100%;}
@@ -15,22 +15,34 @@
 .footer-links{float:none; text-align:center}
 .social-media{width:175px; margin:0 auto; padding:10px 0; float:none}
 .Lacoefooter p{margin-top:0; text-align:center}
-.Lacoefooter{margin-top:25px;}
+.Lacoefooter{margin-top:0px;}
 .custom-noresult{background:none !important}
 .overall-size-fonts{margin-top:-3px;}
+.upcoming-event-box.cal-view-icon .custom-noresult{background:#fff !important}
+.header .placeholder-cnt{width:48%}
+#example5 .sp-thumbnail-description{font-size:13px;}
+.lcoe-report-card img{max-width:100%;}
+.poll-block .poll-vote-list.poll-vote-listquestn .input-type-radio label{font-size:13px;}
+.poll-block h2{font-size:16px;}
+.trendingtag-box div[id$="_results"] .ms-noWrap .ms-textLarge{font-size:16px;}
+.DocumentswithSidebar .docRytSide .ms-srch-item-body{display:block; overflow:visible}
+.DocumentswithSidebar .docRytSide .ms-srch-item{width:450px;}
 }
 @media (max-width:980px){
-.logo .ms-siteicon-img{width:85%;}
-#siteIcon{width:45%;}
+.documentsearch-box .ms-srch-sb-border input[type="text"], .documentsearch-box .ms-srch-sb-borderFocused input[type="text"]{width: 78%;}
+.container, .Footercontainer {max-width: 100%;width: 750px;}
+.logo .ms-siteicon-img{width:170px;}
+#siteIcon{width:23%;}
 .header-right{width:55%;}
 .main-page-search{width:79%;}
 .overall-size-fonts{width:16%; margin-right:5%;}
 .page-heading h1{font-size:1.25em;}
 .box-heading h3{font-size:1em; padding-top:7px; padding-bottom:7px;}
-.boxes-cntr .grid-8{float:none; width:100%;padding-bottom:25px;}
-.boxes-cntr .grid-4{float:none; width:100%;padding-bottom:25px;}
+.boxes-cntr .grid-8{float:none; width:100%;padding-bottom:11px;}
+.boxes-cntr .grid-4{float:none; width:100%;padding-bottom:0px;}
+.boxes-cntr .grid-8 + .grid-4{padding-bottom:0px;}
 .image-infoslider .bx-viewport{width:100.1% !important}
-.content-area .container{padding-bottom:0}
+.content-area .container{padding-bottom:11px}
 .owner-info ul li abbr{width:100px;}
 .owner-info ul li span{width:85%;}
 .pagination-page .grid-4{width:33.3333%; float:left; padding-bottom:0}
@@ -38,7 +50,7 @@
 .box-style.lcoe-report-card .lacoe-reportcard-box div{width:100% !important}
 .pagination-page dl dd .dept-content li{font-size:0.75em}
 .resource-link-section .link-content li, .blog-section .link-content li{font-size:0.875em}
-.resource-link-section .bx-viewport, .blog-section .bx-viewport{height:180px !important}
+.resource-link-section .bx-viewport, .blog-section .bx-viewport{height:195px !important}
 .mobile-nav-icon{display:block; position:relative}
 
 /*Menu Animation*/
@@ -100,21 +112,66 @@ ul.dynamic{display:none !important}
 	.input-type-radio label{font-size:1em;}
 	.Lacoefooter .Footercontainer{width:97%;}
 	.footer-links ul li a{font-size:0.75em}
-	.footer-links ul li{margin:0 0 5px; padding:0 5px;}
+	.footer-links ul li{margin:0 0 5px; padding:0 5px; display: inline-block; float: none;}
 	.footer-links{float:none; text-align:center}
 	.social-media{width:175px; margin:0 auto; padding:10px 0; float:none}
 	.Lacoefooter p{margin-top:0; font-size:0.75em; text-align:center}
-	.Lacoefooter{margin-top:25px;}
+	.Lacoefooter{margin-top:0px;}
 	ul.poll-results-list li:last-child{width:25%;}
 	ul.poll-results-list li{padding-right:3%;}
 	ul.poll-results-list li span{font-size:0.875em}
 	.ms-core-listMenu-horizontalBox .dynamic .dynamic-children.additional-background{background-image:none}
 	ul#zz11_RootAspMenu > li.static span, ul#zz11_RootAspMenu > li.static a,.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a, .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > span.dynamic-children, .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li ul li a{width:90% !important; background-image:none !important}
 	#txtSearchPlaceHolder{apperance:none; border-radius:0}
+	
+	.docLeftside{display:block; width:100%; min-height:auto;}
+	.docRytSide{display:block; width:100%;}
+	.docLeftside .ms-ref-refiner{display:inline-block; vertical-align:top}
+	.docLeftside .ms-ref-refiner #Container{border-bottom:none}
+	.header .placeholder-cnt{width:100%; float:none; margin:0 auto; margin-top: 19px;}
+	
+	.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a > .dynamic-children.additional-background, .ms-core-listMenu-horizontalBox .dynamic-children.additional-background{background-image:none !important}
+	.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a:hover, .newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a.ms-core-listMenu-selected{background:none !important}
+	.boxes-cntr .grid-4{padding-bottom:11px;}
+	.boxes-cntr .grid-4:nth-child(3){padding-bottom:0}
+	.landing-quicklink #application-box table td[id^="scriptWPQ"] table td:first-child img{width:18px;}
+	.box-contentinfos .poll-block .poll-vote-list  li{margin-top:10px;}
+	.box-contentinfos .poll-block .poll-vote-list li:first-child{margin-top:20px;}
+	.lcoe-report-card .box-contentinfos{text-align:center}
+	
+	.boxes-cntr .pagination-page .grid-4{padding-bottom:0}
+	.sitefollw-section{ min-height: 350px;}	
+	.sitefollw-section .box-contentinfos{height: 100%;}
 }
 
 /* ======================== below ipad ======================== */
 @media (max-width:767px){
+	#DeltaPlaceHolderMain{padding: 0 10px;}
+	.event-search-pagin ul li{width: 48% !important;}
+	.traning_mobile .ms-webpart-zone, .traning_mobile .ms-webpart-cell-vertical, .traning_mobile .ms-webpart-chrome-vertical{ display:block;}
+	.traning_mobile .lt-row-desc{width: 100%;margin-left: 0px;}
+	.traning_mobile .date-showbox{float:none; display:block; margin:0 auto; margin-bottom: 5px;}
+	.traning_mobile .l-t-box-pagination ul li{margin-bottom: 20px;}
+	.fullstaticslider1 li img, .fullstaticslider1 li{width:100%}
+	.benifits_mobile{padding: 0 6px;}
+	.benifits_mobile_scroll dl{width: 200%;}
+	.benifits_mobile_scroll{overflow: hidden; overflow-x: scroll;}
+	.documentsearch-box .ms-webpart-zone.ms-fullWidth{width: 67%;}
+    .ms-srch-item-path,#SearchBox,#SearchBox .ms-srch-sbLarge{width: 100%;}
+    .faqs-boxcntr .accordion dl dt{padding: 5px 10px 5px 47px;}
+    .faqs-boxcntr .accordion dl dt:after{left: 12px;}
+    .faqs-boxcntr .accordion dl dd{padding: 10px 5%;}
+    .ms-srch-hover-outerContainer{left: 29px !important;}
+    .DocumentswithSidebar .docRytSide .ms-srch-item{width:100%;}
+    .ms-srch-sbLarge-fullWidth{width: 85%;}
+	.pictorial-discussion .pagination-cntrbx{width: auto;display: inline-block;}
+	.mobile_search_button img{display:block;}
+	.mobile_search_button{width: 20px; height:20px; display: inline-block; cursor : pointer; position: absolute; right: 4px;    overflow: hidden; top:6px;}
+	.mobile_search_button.unfocused{display:none;}
+	#SearchBox .ms-srch-sb > input{text-indent:-9999px;}
+	.active_input #SearchBox .ms-srch-sb > input{text-indent:0px;}
+	.sitefollw-section{min-height: 288px;}
+	.container, .Footercontainer{width:96%;}
 	.header-right,.dept-announcement .image-sliders,.dept-announcement .image-infoslider{width:100%;}
 	.normal-search {width: 30%;}
 	.overall-size-fonts {margin-right: 0;width: 20%;}
@@ -122,8 +179,19 @@ ul.dynamic{display:none !important}
 	.selectdropwn-search .input-type-select{width:82%;}
 	.selectdropwn-search input[type="text"]{font-size:0.775em}
 	.keyprofilepic {text-align: center;}
-	#siteIcon {width: 100%;}
-	#siteIcon > #DeltaSiteLogo {display: inline-block;width: 180px;}
+	#siteIcon {width: auto;}
+	#siteIcon > #DeltaSiteLogo {display: inline-block;width: 150px;}
+	.new-searchbox{display:block; width:247px; margin:0 auto; float:none;position: absolute;right: 14px; top: 14px;}
+	.new-searchbox .ms-mpSearchBox{position: relative;}
+	.new-searchbox #searchInputBox{-webkit-transition:  width 1s; transition: width 1s; width: 29px;overflow: hidden;}
+	.ms-srch-sb > .ms-srch-sb-searchLink{position: absolute;right: 5px;display:none; top: 5px;}
+	.ms-srch-sb > .ms-srch-sb-navLink{position: absolute;display:none; right: 24px; top: 5px;}
+	.active_input .ms-srch-sb > .ms-srch-sb-searchLink{display:block;}
+	.active_input .ms-srch-sb > .ms-srch-sb-navLink{display:block;}
+
+	.active_input.new-searchbox #searchInputBox{width : 247px;}
+
+	.header .placeholder-cnt{padding:10px 0 5px 0; clear:both;}
 	.logo .ms-siteicon-img {max-width: none;width: 100%;}
 	/*tab Layout Css*/
 	.tabNav{display:none}
@@ -131,7 +199,10 @@ ul.dynamic{display:none !important}
 	.tabResult .tabBx{display:block !important;border:1px solid #ccc;margin-bottom:10px;border-radius:5px; width:95%; margin-left:auto; margin-right:auto}
 	.tabResult .tabBx .content{display:none;padding:10px 3%;}
 	.tabResult .tabBx .mobile-menu {display:block;font:600 14px "Open Sans", sans-serif;color:#fff;background:#eee;border-radius:3px 3px 0 0;}
-	.tabResult .tabBx .mobile-menu a{display:block;padding:10px 3%;}
+	.tabResult .tabBx .mobile-menu a{display:block;padding:10px 3% 10px 40px; position: relative;}
+	.tabResult .tabBx .mobile-menu a:after{border: 1px solid #666666;border-radius: 2px;content: "";height: 20px;margin: 6px 1%;position: absolute;left: 5px;text-align: center;top: 4px;width: 20px;color: #2c6a90;background: url(https://cdnlacoe.azureedge.net/plus-minus.png) no-repeat scroll -1px 2px;
+	}
+	.tabResult .tabBx .mobile-menu.accp_open a:after{background-position:  -1px -15px;}
 	.keycontact-viewlink{position:static}
 	.box-style.dept-quicklinks, .announcement-box.dept-announcement{min-height:0}
 	.resource-link-section.box-style, .dept-calender, .pictorial-discussion{min-height:0;}
@@ -151,8 +222,8 @@ ul.dynamic{display:none !important}
 	.boxes-cntr .pagination-page .grid-4{clear:none}
 	.footer-links{float:none; text-align:center}
 	.social-media{float:none; width:175px; margin:0 auto; padding-top:10px; padding-bottom:5px}
-	.Lacoefooter p{margin-top:0; text-align:center}
-	.cal-view-icon .box-heading h3 #anchor-cal-view{margin-top:0}
+	.Lacoefooter p{margin-top:0; text-align:center; padding: 0 44px;}
+	.cal-view-icon .box-heading h3 #anchor-cal-view{margin-top:0; font-size:0px;}
 	.overall-size-fonts{margin-top:-3px;}
 	.footer-links ul li{margin:0 0 3px; padding:0 5px}
 	.scrollTop{right:5px; bottom:5px; width:25px; height:25px}
@@ -165,7 +236,7 @@ ul.dynamic{display:none !important}
 	.input-type-radio label{font-size:0.875em}
 	.poll-vote-list li{margin-bottom:5px;}
 	.poll-vote-list li:last-child{float:none; clear:both; display:block; text-align:center; padding-top:15px}
-	.Lacoefooter{margin-top:25px}
+	.Lacoefooter{margin-top:0px}
 	.footer-links ul li a{font-size:0.75em}
 	.pictorial-discussion-cnt ul li{width:153px !important; padding:25px 0}
 	.pictorial-discussion-cnt .box-paginations{padding:10px 7px 7px 7px}
@@ -177,6 +248,51 @@ ul.dynamic{display:none !important}
 	ul.poll-results-list li:last-child{width:100%; float:none; text-align:center}
 	ul.poll-results-list li span{font-size:0.875em}
 	.newdeltatopNav > .ms-core-listMenu-horizontalBox > ul > li > a > .dynamic-children.additional-background, .ms-core-listMenu-horizontalBox .dynamic-children.additional-background{background-image:none !important}
+	
+	#example5{padding-right:0 !important; max-width:100% !important; width:100% !important}
+	.sp-left-thumbnails, .sp-right-thumbnails{position:static}
+	#example5 .sp-thumbnail-description{display:block}
+	.slider-pro::after{display:none}
+	.sp-mask.sp-grab{width:100% !important}
+	.sp-slide{width:100% !important}
+	.sp-image-container{width:100% !important}
+	.imageSliderresize.nailthumb-container{width:100% !important}
+	#example5 .sp-thumbnail-text{width:100%;}
+	#WPZAnouncement.OrgAnnouncement #two,#WPZAnouncement.OrgAnnouncement .sp-thumbnail-container{display:block; width:100% !important; text-align:left !important}
+	#WPZAnouncement.OrgAnnouncement .ms-webpart-zone,#WPZAnouncement.OrgAnnouncement .ms-webpart-chrome-vertical,#WPZAnouncement.OrgAnnouncement .ms-webpart-cell-vertical{display:block}
+	
+	.sp-thumbnail-description a{display:block; text-align:left}
+	#WPZAnouncement.OrgAnnouncement .announcement-sliders{padding-bottom:45px;}
+	.announcement-box .box-paginations{margin-left:-51px; left:50%; right:auto; bottom:9px}
+	.landing-quicklink #form-pagination, .landing-quicklink #policies-pagination,.landing-quicklink #application-box .pagination-page{margin-left:-3.3%; margin-right:-3.3%;}
+	.landing-quicklink #application-box,.landing-quicklink #forms-box,.landing-quicklink #policies-box{margin-left:auto; margin-right:auto;}
+	.quicklinks-section.landing-quicklink .box-contentinfos{min-height:auto; padding-bottom:0; padding-left:0; padding-right:0}
+	.landing-quicklink .keycontact-viewlink,.keycontact-viewlink{width:100%; text-align:center}
+	.btn-wrapper{float:none; padding: 0px 3px 7px 3px;}
+	#plusCal + #anchor-cal-view{text-indent:-999px; width:0; overflow:hidden; padding-left:18px; height:18px; margin-top:2px;}
+	.upcoming-event-box.cal-view-icon .tabResult .tabBx .content{position:relative}
+	.upcoming-event-box.cal-view-icon .custom-noresult{top:0}
+	.select-filtercaldr .input-type-select{width:100%; margin-bottom:10px}
+	.lcoe-report-card .btn-wrapper{padding-left:0; padding-right:0}
+	.pagination-page .mobile-wrap{padding-bottom:10px}
+	.box-style.lcoe-report-card.small-reportcard{min-height:auto}
+	.box-style.lcoe-report-card.small-reportcard .box-contentinfos{padding-bottom:0}
+	.lcoe-report-card img{width:280px; margin:0 auto}
+	#WPZAnouncement.OrgAnnouncement .sp-image{width:100% !important; height:auto !important}
+	
+	.landing-quicklink #forms-box .content, .landing-quicklink #policies-box .content{padding-bottom:0}
+	.lcoe-report-card .keycontact-viewlink{padding:0;}
+	.lcoe-report-card .btn-wrapper #AllGoals{margin-right:0}
+	.tabResult .tabBx .content{position:relative;overflow:hidden}
+	.tabResult .tabBx .content .custom-noresult{top:0; left:0; position:absolute; width:100%; height:92%; background:#fff !important; padding-left:8px}
+	.department-new .documents-section.grid-12{min-height:auto}
+	.department-new .box-style.lcoe-report-card .box-contentinfos{min-height:auto; padding-bottom:0; height:auto}
+	.department-new .box-style.lcoe-report-card{min-height:auto}
+	dl.double_width_header{width: 400% !important;}
+	.report_card_acc_content{height: 360px;}
+	.box-style.lcoe-report-card .box-contentinfos.report_block{height: 571px;}
+	.myactivty-box{min-height: 229px;}
+	.scrollTop a{background: url(https://cdnlacoe.azureedge.net/sprite.png) no-repeat -264px 0px #1C7EC7;}
 }
 @media (max-width:568px){
 .tabResult{padding-top:3% !important}
@@ -194,4 +310,22 @@ ul.dynamic{display:none !important}
 
 @media (max-width:340px){
 .pictorial-discussion-cnt ul li{width:152px !important}
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) {
+.social-media{float: left;}
+.Lacoefooter p{float: right;margin-top: -37px; padding-left: 0px; padding-right: 73px;}
+.scrollTop{right: 22px; bottom: 27px;}
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait){
+.social-media{float: left;}
+.Lacoefooter p{float: right;margin-top: -37px;}
+.scrollTop{bottom: 56px;}
 }
