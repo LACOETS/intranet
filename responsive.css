@@ -28,7 +28,12 @@
 .DocumentswithSidebar .docRytSide .ms-srch-item-body{display:block; overflow:visible}
 .DocumentswithSidebar .docRytSide .ms-srch-item{width:450px;}
 }
+@media (max-width:1024px) {
+	#contentBox{width: 100%;}
+}
 @media (max-width:980px){
+.landing-quicklink .keycontact-viewlink{bottom: 1px;}
+.icon-common{margin-top: 0px;}
 .documentsearch-box .ms-srch-sb-border input[type="text"], .documentsearch-box .ms-srch-sb-borderFocused input[type="text"]{width: 78%;}
 .container, .Footercontainer {max-width: 100%;width: 750px;}
 .logo .ms-siteicon-img{width:170px;}
@@ -230,7 +235,7 @@ ul.dynamic{display:none !important}
 	.footer-links{float:none; text-align:center}
 	.social-media{float:none; width:175px; margin:0 auto; padding-top:10px; padding-bottom:5px}
 	.Lacoefooter p{margin-top:0; text-align:center; padding: 0 44px;}
-	.cal-view-icon .box-heading h3 #anchor-cal-view{margin-top:0; font-size:0px;}
+	.cal-view-icon .box-heading h3 #anchor-cal-view{margin-top:0;}
 	.overall-size-fonts{margin-top:-3px;}
 	.footer-links ul li{margin:0 0 3px; padding:0 5px}
 	.scrollTop{right:5px; bottom:5px; width:25px; height:25px}
@@ -304,7 +309,7 @@ ul.dynamic{display:none !important}
 }
 @media (max-width:568px){
 .tabResult{padding-top:3% !important}
-.box-style.lcoe-report-card .tabNav{display:block}
+/*.box-style.lcoe-report-card .tabNav{display:block}*/
 }
 @media (max-width:460px){
 	.box-style.lcoe-report-card .box-contentinfos .tabNav ul li a br{display:block}
