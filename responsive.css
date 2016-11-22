@@ -29,9 +29,20 @@
 .DocumentswithSidebar .docRytSide .ms-srch-item{width:450px;}
 }
 @media (max-width:1024px) {
+	.cal-view-icon.withsearchbx .box-heading{width:100%; display: block;padding-bottom: 5px;}
+	.cal-view-icon.withsearchbx .box-heading h3 + div.ms-webpart-chrome-fullWidth{padding-left: 10px;}
 	#contentBox{width: 100%;}
+	.social-media{float: right;}
+	.Lacoefooter p{float: left;margin-top: -42px;}
+	.scrollTop{bottom: 77px;}
+	.poll-results-list.final-result-poll li{ width: 46%; margin-right: 4%; padding: 0px;}
+
+}
+@media only screen and (max-width: 768px) and (min-width: 767px;){
 }
 @media (max-width:980px){
+.landing-what-dobox{height: 403px;}
+.sp-right-thumbnails{right: -1px;}
 .landing-quicklink .keycontact-viewlink{bottom: 1px;}
 .icon-common{margin-top: 0px;}
 .documentsearch-box .ms-srch-sb-border input[type="text"], .documentsearch-box .ms-srch-sb-borderFocused input[type="text"]{width: 78%;}
@@ -111,7 +122,7 @@ ul.dynamic{display:none !important}
 	.banner-guestproj{width:50%;}
 	.info-guest-proj{width:50%;}
 	.box-style.lcoe-report-card .lacoe-reportcard-box div iframe{height:102% !important}
-	.project-guestbox{margin-bottom:25px}
+	/*.project-guestbox{margin-bottom:25px}*/
 	.dept-calender{min-height:275px}
 	.poll-block{width:82%; padding:0}
 	.input-type-radio label{font-size:1em;}
@@ -151,6 +162,25 @@ ul.dynamic{display:none !important}
 
 /* ======================== below ipad ======================== */
 @media (max-width:767px){
+	
+	.pictorial-discussion-cnt .box-paginations .pagination-cntrbx{ margin-bottom: 11px;}
+	.block_discussion .tabResult .tabBx .content ,.department_discussion .tabResult .tabBx .content{display: block !important;}
+	.Lacoefooter p{float:none;}
+	.landing-what-dobox {height: 336px;}
+	.innergoalspage #department-box .pagination-page table td table td.ms-cellstyle:nth-child(1) a{background-position: 23px 3px;}
+	#department-box .pagination-page div[id^="scriptPaging"]{ right: 4%;bottom: 5%}
+	#department-box{padding-bottom: 42px;}
+	#department-box .content{display: block;}
+	.cal-view-icon.withsearchbx .box-heading{ padding-bottom: 5px;}
+	.cal-view-icon.withsearchbx input[type="text"]{ width: 34%;}
+	.mbldynamic	li.dynamic{background-position: left 9px !important;}
+	.icon-common {margin-top: -1px;}
+	.pagination-page table td table td{padding: 0 4px;}
+	.discussion-tabs .tabResult .tabBx .content{padding-bottom: 42px;}
+	.keycontact-cntr .keycontact-viewlink{ padding-top: 11px;}
+	.dept-quicklinks .box-contentinfos .owner-info ul li{ padding-bottom: 6px;}
+	.box-style.lcoe-report-card{min-height: inherit;}
+	.box-style.lcoe-report-card .box-contentinfos{ height: auto;}
 	#contentBox { width: 100%; overflow: auto;}
 	.box-heading{ background: #1c7ec7;}
 	.lcoe-report-card .btn-wrapper{padding: 7px 3px 7px 3px;}
@@ -235,7 +265,7 @@ ul.dynamic{display:none !important}
 	.footer-links{float:none; text-align:center}
 	.social-media{float:none; width:175px; margin:0 auto; padding-top:10px; padding-bottom:5px}
 	.Lacoefooter p{margin-top:0; text-align:center; padding: 0 44px;}
-	.cal-view-icon .box-heading h3 #anchor-cal-view{margin-top:0;}
+	.cal-view-icon .box-heading h3 #anchor-cal-view{margin-top:0; margin-right: 11px;}
 	.overall-size-fonts{margin-top:-3px;}
 	.footer-links ul li{margin:0 0 3px; padding:0 5px}
 	.scrollTop{right:5px; bottom:5px; width:25px; height:25px}
@@ -338,7 +368,7 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait){
-.social-media{float: left;}
-.Lacoefooter p{float: right;margin-top: -37px;}
-.scrollTop{bottom: 56px;}
+.social-media{float: right;}
+.Lacoefooter p{float: left;margin-top: -42px;}
+.scrollTop{bottom: 77px;}
 }
