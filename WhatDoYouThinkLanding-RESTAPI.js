@@ -127,7 +127,7 @@ function GenerateAnswer(val) {
     }
     $('.poll-vote-list').empty();
     $('.poll-vote-list').append(tags);
-    $('.poll-vote-list').append('<li class=""> <a class="submit-button box-btn" href="javascript:void(0)" onclick="CreateNewItem();">Submit</a> </li>');
+    $('.poll-vote-list').append('<li class=""> <a class="submit-button box-btn" href="#" onclick="CreateNewItem();">Submit</a> </li>');
 }//End of GenerateAnswer
 
 function CreateNewItem() {
