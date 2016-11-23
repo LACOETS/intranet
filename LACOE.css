@@ -3454,6 +3454,7 @@ ul.discuss-content > li { padding-bottom: 11px; }
 /*Full Banner*/
 /*Our Vision*/
 #WebPartWPQ3 .ms-rtestate-field { padding-bottom: 30px }
+.project-guestbox WebPartWPQ3 .ms-rtestate-field {padding-bottom: 0px;}
 .banner-guestproj #WebPartWPQ3 .ms-rtestate-field { padding-bottom: 0 }
 /*Our Vision*/
 
