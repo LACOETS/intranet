@@ -34,7 +34,7 @@
 	#contentBox{width: 100%;}
 	.social-media{float: right;}
 	.Lacoefooter p{float: left;margin-top: -42px;}
-	.scrollTop{bottom: 77px;}
+	.scrollTop{bottom: 75px;}
 	.poll-results-list.final-result-poll li{ width: 46%; margin-right: 4%; padding: 0px;}
 
 }
@@ -130,8 +130,8 @@ ul.dynamic{display:none !important}
 	.footer-links ul li a{font-size:0.75em}
 	.footer-links ul li{margin:0 0 5px; padding:0 5px; display: inline-block; float: none;}
 	.footer-links{float:none; text-align:center}
-	.social-media{width:175px; margin:0 auto; padding:10px 0; float:none}
-	.Lacoefooter p{margin-top:0; font-size:0.75em; text-align:center}
+	.social-media{width:175px; margin:0 auto; padding:10px 0;}
+	.Lacoefooter p{font-size:0.75em; text-align:center}
 	.Lacoefooter{margin-top:0px;}
 	ul.poll-results-list li:last-child{width:25%;}
 	ul.poll-results-list li{padding-right:3%;}
