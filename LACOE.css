@@ -4476,6 +4476,10 @@ a.sp-video:after { content: '\25B6'; position: absolute; width: 45px; padding-le
 .sp-thumbnail-container{height:auto !important; border-bottom:solid 1px #e4e4e4}
 .sp-right-thumbnails.sp-has-pointer .sp-thumbnail{position:static}
 #two{padding-left:13px;}
+.community_pictorial{padding-bottom: 10px;}
+.community_documents-section .documents-section.grid-12{margin-bottom: 0px;}
+.community.top-contributor{ height: 369px;}
+.community_feed .big-newsfeedbox .sitefollw-section{ min-height: 536px;}
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 .sp-button { width: 14px; height: 14px; }
