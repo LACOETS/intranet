@@ -4481,6 +4481,7 @@ a.sp-video:after { content: '\25B6'; position: absolute; width: 45px; padding-le
 .community_documents-section .documents-section.grid-12{margin-bottom: 0px;}
 .community.top-contributor{ height: 369px;}
 .community_feed .big-newsfeedbox .sitefollw-section{ min-height: 546px;}
+.community.top-contributor #Topcontributor .bx-viewport {height: 271px !important;}
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 .sp-button { width: 14px; height: 14px; }
