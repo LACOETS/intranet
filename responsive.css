@@ -36,6 +36,7 @@
 	.Lacoefooter p{float: left;margin-top: -42px;}
 	.scrollTop{bottom: 75px;}
 	.poll-results-list.final-result-poll li{ width: 46%; margin-right: 4%; padding: 0px;}
+	.box-heading h3{font-size: 1.20em;}
 
 }
 @media only screen and (max-width: 768px) and (min-width: 767px;){
