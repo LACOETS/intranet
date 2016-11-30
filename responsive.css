@@ -163,8 +163,6 @@ ul.dynamic{display:none !important}
 
 /* ======================== below ipad ======================== */
 @media (max-width:767px){
-	.pagination-page div[id^="scriptPaging"]{position: static; float:right;}
-	.ec_discussion_content{padding: 10px 3%;}
 	.universal_second_scroller dl{width: 200%;}
 	.universal_second_scroller{overflow: hidden; overflow-x: scroll;}
 	.universal_doc_mobile_scroll .documents-tabs{padding: 10px 3%;}
@@ -181,6 +179,7 @@ ul.dynamic{display:none !important}
 	.mbldynamic	li.dynamic{background-position: left 9px !important;}
 	.icon-common {margin-top: -1px;}
 	.pagination-page table td table td{padding: 0 4px;}
+	.discussion-tabs .tabResult .tabBx .content{padding-bottom: 42px;}
 	.keycontact-cntr .keycontact-viewlink{ padding-top: 11px;}
 	.dept-quicklinks .box-contentinfos .owner-info ul li{ padding-bottom: 6px;}
 	.box-style.lcoe-report-card{min-height: inherit;}
