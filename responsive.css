@@ -163,6 +163,7 @@ ul.dynamic{display:none !important}
 
 /* ======================== below ipad ======================== */
 @media (max-width:767px){
+	.pagination-page div[id^="scriptPaging"]{position: static; float:right;}
 	.ec_discussion_content{padding: 10px 3%;}
 	.universal_second_scroller dl{width: 200%;}
 	.universal_second_scroller{overflow: hidden; overflow-x: scroll;}
