@@ -4298,7 +4298,7 @@ padding-left: 25px;text-align: left;text-indent: 0;vertical-align: middle;}
 
 .dept-events-tabs.dept-events-tabsextra .ms-promlink-header.eventsposdiv-pagin{list-style:none}
 .container .boxes-cntr .boxes-cntr{margin:0}
-
+.employee_sitefeed.big-newsfeedbox .project-sitefeedbox{ height: 514px;}
 
 
 /*.innergoalspage .dept-events-tabs #department-box #page_5 .ms-webpart-zone.ms-fullWidth > div:first-child{display:none}*/
@@ -4476,6 +4476,12 @@ a.sp-video:after { content: '\25B6'; position: absolute; width: 45px; padding-le
 .sp-thumbnail-container{height:auto !important; border-bottom:solid 1px #e4e4e4}
 .sp-right-thumbnails.sp-has-pointer .sp-thumbnail{position:static}
 #two{padding-left:13px;}
+.community_calender{margin-bottom: 10px;}
+.community_pictorial{padding-bottom: 10px;}
+.community_documents-section .documents-section.grid-12{margin-bottom: 0px;}
+.community.top-contributor{ height: 369px;}
+.community_feed .big-newsfeedbox .sitefollw-section{ min-height: 546px;}
+.community.top-contributor #Topcontributor .bx-viewport {height: 271px !important;}
 
 @media only screen and (min-width:768px) and (max-width:1024px) {
 .sp-button { width: 14px; height: 14px; }
