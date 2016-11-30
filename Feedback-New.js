@@ -7,7 +7,7 @@ SP.SOD.executeFunc("callout.js", "Callout", function () {
         title: "Feedback", 
         content: "<div class=\"ms-soften\" style=\"margin-top:2px; \"><hr/></div>"
 + "<div id='confirmationBLOCK1' style=\"margin-top:13px;display:none;\">Thank you for Contacting Us!</div>"
-+ "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:190px; \"><label for='lblNoItem2' style='display:none;color:red;font-size:13px;'></label><label for='lblmsg2'>Add your Comments here...</label><textarea maxlength='255' id='CommentsArea1' style=\"width:100%;height: 90%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\"></textarea></div>", 
++ "<div class=\"callout-section\" style=\"margin-top:2px;width:95%;Height:190px; \"><label for='lblNoItem2' style='display:none;color:red;font-size:13px;'></label><label for='lblmsg2'>Add your Comments here..</br><i>(Accepts only 255 characters)</i></label><textarea maxlength='255' id='CommentsArea1' style=\"width:100%;height: 60%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;\"></textarea><label for='lblmsg2'><i>For Long message, please feel free to send us an email at<a href="mailto: OurLacoe@lacoe.edu" style="color:blue">OurLacoe@lacoe.edu</a></label> </i></label></div>", 
     });
 
     //Creating a Submit Custom Action
