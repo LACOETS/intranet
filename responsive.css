@@ -242,7 +242,7 @@ ul.dynamic{display:none !important}
 	.tabNav{display:none}
 	.tabResult{padding:20px 0;}
 	.tabResult .tabBx{display:block !important;border:1px solid #ccc;margin-bottom:10px;border-radius:5px; width:95%; margin-left:auto; margin-right:auto}
-	.tabResult .tabBx .content{display:none;padding:10px 3%;}
+	.tabResult .tabBx .content{display:none;padding:10px 3%; padding-bottom: 44px;}
 	.tabResult .tabBx .mobile-menu {display:block;font:600 14px "Open Sans", sans-serif;color:#fff;background:#eee;border-radius:3px 3px 0 0;}
 	.tabResult .tabBx .mobile-menu a{display:block;padding:10px 3% 10px 40px; position: relative;}
 	.tabResult .tabBx .mobile-menu a:after{border: 1px solid #666666;border-radius: 2px;content: "";height: 20px;margin: 6px 1%;position: absolute;left: 5px;text-align: center;top: 4px;width: 20px;color: #2c6a90;background: url(https://cdnlacoe.azureedge.net/plus-minus.png) no-repeat scroll -1px 2px;
