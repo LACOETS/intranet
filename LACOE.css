@@ -3722,7 +3722,7 @@ select:focus{outline:none;}
 .pagination-page .ms-webpart-chrome-vertical{display:block; border:none;}
 .pagination-page table{width:100%}
 .pagination-page table thead{display:none}
-.pagination-page div[id^="scriptPaging"]{display: block;margin: 0 auto;position:absolute; right:0%; bottom:0px}
+.pagination-page div[id^="scriptPaging"]{display: block;margin: 0 auto;}
 .pagination-page table{width:100% !important}
 .pagination-page table td table td{padding:0 7px; font:300 13px "Work Sans", sans-serif; vertical-align:middle; border:none !important; text-align:left !important; height:28px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
 .pagination-page table td table{table-layout: fixed; border-collapse:collapse}
