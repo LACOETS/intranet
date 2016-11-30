@@ -3293,7 +3293,7 @@ ul.dynamic { min-width: 200px; }
 .pagination-page dl dd .dept-content li a { color: #004d9c; text-decoration: underline }
 .pagination-page dl dd {/*background: -webkit-linear-gradient(#f7f8f8, #ffffff);background: -o-linear-gradient(#f7f8f8, #ffffff);background: -moz-linear-gradient(#f7f8f8, #ffffff);background: linear-gradient(#f7f8f8, #ffffff);*/ width:100% !important }
 .pagination-page dl dd:nth-child(2n) { background: #f7f8f8 }
-.pagination-page dl dd { border-bottom: #e4e4e4 solid 1px }
+.pagination-page dl dd { /*border-bottom: #e4e4e4 solid 1px*/ }
 .tbl-content { display: table; height: 25px; }
 .tbl-contentcell { display: table-cell; vertical-align: middle; word-break: break-all }
 .pagination-page dl dd:nth-child(1), .pagination-page dl dd:nth-child(2), .pagination-page dl dd:nth-child(3) { display: block }
