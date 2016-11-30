@@ -472,3 +472,22 @@ $(window).load(function(){
 });*/
 
 /*Tabination active class after refresh end*/
+
+//Added by vishal(Temprory sections)
+//Start----This section highlights the acitive navigation menu (Temprory sections)
+$('a[class="dynamic dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode"]').each(function(){
+
+	if($(this).attr("href")!="/")
+	{
+	$(this).css('font-weight', 'bold');	
+	}
+});
+
+$('a[class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode"]').each(function(){
+if($(this).attr("href")!="/")
+{
+	$(this).css('font-weight', 'bold');	
+//$(this).css('background-color', 'red');	
+}
+});
+//End----This section highlights the acitive navigation menu (Temprory sections)
