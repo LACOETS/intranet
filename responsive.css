@@ -253,7 +253,7 @@ ul.dynamic{display:none !important}
 	.resource-link-section.box-style, .dept-calender, .pictorial-discussion{min-height:0;}
 	.blog-section.box-style, .goal-section, .top-contributor, .whats-happening, .feeds-section{min-height:0;}
 	.documents-section.grid-12, .discussion-section.grid-12{min-height:0}
-	.page_navigation,.pagination-cntrbx{position:static; width:102px; margin:0 auto; float:left;margin-top:14px; margin-left: 8px;}
+	.page_navigation,.pagination-cntrbx{/*position:static;*/ width:102px; margin:0 auto; float:left;margin-top:14px; margin-left: 8px;}
 	.dept-events-tabs:after{content:''; clear:both; display:block; float:none}
 	.boxes-cntr .grid-4{clear:both}
 	.owner-info ul li span{width:68%;}
