@@ -241,7 +241,7 @@ ul.dynamic{display:none !important}
 	/*tab Layout Css*/
 	.tabNav{display:none}
 	.tabResult{padding:20px 0;}
-	.tabResult .tabBx{display:block !important;border:1px solid #ccc;margin-bottom:10px;border-radius:5px; width:95%; margin-left:auto; margin-right:auto}
+	.tabResult .tabBx{overflow: hidden; display :block !important;border:1px solid #ccc;margin-bottom:10px;border-radius:5px; width:95%; margin-left:auto; margin-right:auto}
 	.tabResult .tabBx .content{display:none;padding:10px 3%; padding-bottom: 44px;}
 	.tabResult .tabBx .mobile-menu {display:block;font:600 14px "Open Sans", sans-serif;color:#fff;background:#eee;border-radius:3px 3px 0 0;}
 	.tabResult .tabBx .mobile-menu a{display:block;padding:10px 3% 10px 40px; position: relative;}
